@@ -1,0 +1,28 @@
+# -*- tcl -*- tcl.tk//DSL tcltest//EN//2.0
+## (c) 2021 Andreas Kupries
+# # ## ### ##### ######## ############# #####################
+## Ankh testsuite
+## - API testing
+#
+## ak hash list
+
+kt check Tcl     8.5
+kt check tcltest 2
+
+kt local testing ankh
+
+# # ## ### ##### ######## ############# #####################
+
+tcltest::test ankh-list-1.0 {ak hash list, wrong#args} -body {
+    ak hash list X
+} -returnCodes error -result {wrong # args: should be "ak hash list"}
+
+# - -- --- ----- -------- ------------- ---------------------
+
+tcltest::test ankh-list-2.0 {ak hash list} -body {
+    ak hash list
+} -result {md4 md5 sha1 sha2 sha3}
+
+# # ## ### ##### ######## ############# #####################
+cleanupTests
+return

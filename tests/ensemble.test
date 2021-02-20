@@ -1,0 +1,63 @@
+# -*- tcl -*- tcl.tk//DSL tcltest//EN//2.0
+## (c) 2021 Andreas Kupries
+# # ## ### ##### ######## ############# #####################
+## Ankh testsuite
+## - API testing
+#
+
+kt check Tcl     8.5
+kt check tcltest 2
+
+kt local testing ankh
+
+# # ## ### ##### ######## ############# #####################
+
+foreach {name pattern commands} {
+    ak             - hash
+    ak::hash       - {list md4 md5 sha1 sha2 sha3 version}
+    ak::hash::md4  - {channel path references size string}
+    ak::hash::md5  - {channel path references size string}
+    ak::hash::sha1 - {channel path references size string}
+    ak::hash::sha2 - {channel path references size string}
+    ak::hash::sha3 - {channel path references size string}
+} {
+    if {$pattern eq "-"} { set pattern {[a-z]*} }
+    # - -- --- ----- -------- -------------
+
+    if {[llength $commands] > 1} {
+	set clist [linsert [join $commands {, }] end-1 or]
+    } else {
+	set clist $commands
+    }
+    # - -- --- ----- -------- -------------
+
+    test ankh-ensemble-${name}-1.0 "ensemble $name - ok" -body {
+	namespace ensemble exists $name
+    } -result 1
+
+    test ankh-ensemble-${name}-1.1 "ensemble $name - config -subcommands" -body {
+	namespace ensemble configure $name -subcommands
+    } -result {}
+
+    test ankh-ensemble-${name}-1.2 "ensemble $name - exported command set" -body {
+	lsort -dict [lmap w [info commands "${name}::${pattern}"] { namespace tail $w }]
+    } -cleanup {
+	unset w
+    } -result $commands
+
+    # - -- --- ----- -------- ------------- ---------------------
+
+    tcltest::test ankh-ensemble-2.0 "$name, missing method" -body {
+	$name
+    } -returnCodes error -result "wrong # args: should be \"$name subcommand ?arg ...?\""
+
+    tcltest::test ankh-ensemble-2.1 "$name, bogus method" -body {
+	$name bogus
+    } -returnCodes error -result "unknown or ambiguous subcommand \"bogus\": must be $clist"
+
+    # - -- --- ----- -------- ------------- ---------------------
+}
+
+# # ## ### ##### ######## ############# #####################
+cleanupTests
+return

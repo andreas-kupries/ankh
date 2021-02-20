@@ -1,0 +1,28 @@
+# -*- tcl -*- tcl.tk//DSL tcltest//EN//2.0
+## (c) 2021 Andreas Kupries
+# # ## ### ##### ######## ############# #####################
+## Ankh testsuite
+## - API testing
+#
+## ak hash version
+
+kt check Tcl     8.5
+kt check tcltest 2
+
+kt local testing ankh
+
+# # ## ### ##### ######## ############# #####################
+
+tcltest::test ankh-version-1.0 {ak hash version, wrong#args} -body {
+    ak hash version X
+} -returnCodes error -result {wrong # args: should be "ak hash version"}
+
+# - -- --- ----- -------- ------------- ---------------------
+
+tcltest::test ankh-version-2.0 {ak hash version} -body {
+    ak hash version
+} -result {0.0}
+
+# # ## ### ##### ######## ############# #####################
+cleanupTests
+return
