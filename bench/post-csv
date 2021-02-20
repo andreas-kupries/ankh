@@ -1,0 +1,29 @@
+#!/usr/bin/env tclsh
+
+package require csv
+lassign $argv logdir
+set data $logdir/B.results
+set chan [open $data r]
+
+close stdout
+open $logdir/B.csv w
+
+puts [csv::join [list Digest Method Bytes Microseconds Bytes/Microsecond MiB/Second Microseconds/Byte]]
+
+while {[gets $chan line] > 0} {
+    if {$line eq {}} break
+    #puts $line
+    #puts [csv::split $line]
+    lassign [csv::split $line] shell version bench _ title microseconds
+    lassign [split $title] digest method size
+    set bm [format %.2f [expr {double($size)/double($microseconds)}]]
+    # bytes/microsecond
+    set mb [format %.4f [expr {double($microseconds)/double($size)}]]
+    # microseconds/byte
+    set bmi [format %.2f [expr {$bm * 1000000./(1024*1024)}]]
+    # megabytes/second (binary megabytes)
+
+    puts [csv::join [list $digest $method $size [format %.3f $microseconds] $bm $bmi $mb]]
+}
+
+exit

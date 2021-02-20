@@ -1,0 +1,21 @@
+# -*- tcl -*- tcl.tk//DSL tclbench//EN//
+## (c) 2021 Andreas Kupries
+# # ## ### ##### ######## ############# #####################
+## Ankh Benchmarks
+
+kb check Tcl 8.5
+
+kb local benchmark ankh
+
+#package require tweezer
+
+# # ## ### ##### ######## ############# #####################
+
+foreach hash {
+    md4 md5 sha1 sha2 sha3
+} {
+    kb source hash.suite
+}
+
+# # ## ### ##### ######## ############# #####################
+return

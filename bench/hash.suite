@@ -1,0 +1,100 @@
+# -*- tcl -*- 
+## (c) 2021 Andreas Kupries
+# # ## ### ##### ######## ############# #####################
+## Ankh Benchmarks - Generic suite
+
+set chan 1 ;# System verifies result integrity.
+set strg 0 ;# Measure only one method, the others
+set path 0 ;# behave the same [ O(n) ].
+
+# # ## ### ##### ######## ############# #####################
+
+if {![info exists hash]} {
+    error "Hash definition missing."
+}
+
+if {![llength [info commands ak::hash::$hash]]} {
+    error "Bad hash definition. $hash is not known."
+}
+
+proc cat {path} {
+    set c [open $path rb]
+    set d [read $c]
+    close $c
+    return $d
+}
+
+# # ## ### ##### ######## ############# #####################
+
+set in [bench_tmpfile]
+
+# # ## ### ##### ######## ############# #####################
+
+set max 30 ;# 1024 MiB ~ 1 GiB
+set max 22 ;#    4 MiB
+set max 26 ;#   64 MiB
+set k   64 ;# Starting at 5 bits.
+
+for {set i 5} {$i < $max} {incr i} {
+    # Generate randomized content of the required size
+    exec head -c$k /dev/urandom > $in
+    incr k $k
+    
+    # Verify results ... Check that the chan, path, and string methods
+    # deliver the same digest. Performance does not matter if the
+    # result is wrong.
+
+    set d [cat $in]
+    set z [file size $in]
+
+    bench_puts D:hash:$hash
+    bench_puts D:size:$z
+    #bench_puts D:type:[tweezer type $d]
+    #bench_puts D:refc:[tweezer refcount $d]
+
+    set x [open $in rb]
+    bench_puts D:conf:[fconfigure $x]
+    
+    set c [binary encode hex [ak hash $hash channel $x]] ; close $x ; unset x
+    set p [binary encode hex [ak hash $hash path $in]]
+    set s [binary encode hex [ak hash $hash string $d]]
+
+    bench_puts D:chan:$c
+    bench_puts D:path:$p
+    bench_puts D:strg:$s
+
+    if {($c ne $p) || ($c ne $s)} {
+	bench_puts "ERROR: Mismatch at $z"
+	continue
+    }
+
+    # Now run the benchmarks.
+    
+    if {$chan} {
+	bench -desc "$hash chan $z" -body {
+	    set c [open $in rb]
+	    ak hash $hash channel $c
+	    close $c
+	}
+    }
+
+    if {$path} {
+	bench -desc "$hash path $z" -body {
+	    ak hash $hash path $in
+	}
+    }
+
+    if {$strg} {
+	bench -desc "$hash strg $z" -body {
+	    ak hash $hash string $d
+	}
+    }
+
+    unset d z c p s
+    #double $in
+}
+
+# # ## ### ##### ######## ############# #####################
+
+bench_rm $in
+return

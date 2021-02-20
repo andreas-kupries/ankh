@@ -1,0 +1,58 @@
+#!/usr/bin/env tclsh
+
+package require csv
+lassign $argv logdir
+set data $logdir/B.results
+set chan [open $data r]
+
+close stdout
+open $logdir/B.md w
+
+puts |Digest|Method|Bytes|Microseconds|Bytes/Microsecond|MiB/Second|Microseconds/Byte|
+puts |---|---|---:|---:|---:|---:|---:|
+
+set max 0
+set ml   {}
+set last {}
+
+while {[gets $chan line] > 0} {
+    if {$line eq {}} break
+    #puts $line
+    #puts [csv::split $line]
+    lassign [csv::split $line] shell version bench _ title microseconds
+    lassign [split $title] digest method size
+
+    set bm [format %.2f [expr {double($size)/double($microseconds)}]]
+    # bytes/microsecond
+    set mb [format %.4f [expr {double($microseconds)/double($size)}]]
+    # microseconds/byte
+    set bmi [format %.2f [expr {$bm * 1000000./(1024*1024)}]]
+    # megabytes/second (binary megabytes)
+    
+    if {($digest ne $last) && ($last ne {})} {
+	lappend maxima $ml
+	puts ||||||||
+	set max 0
+	set ml  {}
+    }
+    puts |$digest|$method|$size|[format %.3f $microseconds]|$bm|$bmi|$mb|
+    if {$bm > $max} {
+	set max $bm
+	set ml |$digest|$method|$size|[format %.3f $microseconds]|$bm|$bmi|$mb|
+    }
+    
+    set last $digest
+}
+
+lappend maxima $ml
+
+puts ||||||||
+puts |Maxima||||MB/Second|||
+puts |Digest|Method|Bytes|Microseconds|Bytes/Microsecond|MiB/Second|Microseconds/Byte|
+puts ||||||||
+foreach ml $maxima {
+    if {$ml eq {}} continue
+    puts $ml
+}
+
+exit
