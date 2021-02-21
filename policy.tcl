@@ -10,11 +10,11 @@ foreach hash {
     md4 md5 sha1 sha2 sha3
 } {
     namespace eval ::ak::hash [list namespace export $hash]
+    # All the aggregated commands are defined as cprocs and cconsts.
     namespace eval ::ak::hash::${hash} {
 	namespace export   path channel string size references
 	namespace ensemble create
     }
-    # All the aggregated commands are defined as cprocs and cconsts.
 }
 
 namespace eval ::ak::hash {

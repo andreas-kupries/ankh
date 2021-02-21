@@ -14,23 +14,21 @@ critcl::ccode {
 # Introspect the set of builtin hashes
 critcl::cconst ::ak::hash::list char* "\"[lsort -dict [dict keys [hashes]]]\""
 
-# (***) Get all the headers first.
+# (***) Get all the headers and sources first.
 dict for {hash spec} [hashes] {
-    critcl::include [dict get $spec header]
-}
+    set h [dict get $spec header]
+    set c [dict get $spec csource]
 
-# Custom shim for SHA3 to match the interface expected by the code here
-critcl::ccode [string map [list @@ [dict get [hashes] sha3 hsize]] {
-    static void sha3_Final (char* digest, sha3_context* context) {
-	char* hash = sha3_Finalize (context);
-	memcpy (digest, hash, @@);
-    }
-}]
+    critcl::csources $c
+    critcl::cheaders $h
+    critcl::include  [file tail $h]
+}
 
 dict for {hash spec} [hashes] {
     dict with spec {}
     # - refs	References to articles, implementations, ...
     # - hsize	Size of hash digest, numeric, or symbolic
+    # - csource Name of C source file to compile (IGNORED HERE, see (***))
     # - header  Name of header file to include (IGNORED HERE, see (***))
     # - context Name of C type for the internal hash state
     # - init    Name of C function to initialize the hash state

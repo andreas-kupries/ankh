@@ -64,30 +64,11 @@ critcl::ccode {
 # # ## ### ##### ######## #############
 ## C side - Support code implementing the hashes
 
-critcl::cheaders c/*/*.h
-
-# Using an explicit list prevents inclusion of various test, check,
-# app, and other irrelevant code here.
-critcl::csources c/md4/md4.c
-critcl::csources c/md5/md5.c
-critcl::csources c/sha1/sha1.c
-critcl::csources c/sha2/sha256.c
-critcl::csources c/sha3/sha3.c
-
-# TODO: x-compilation capability
-
-if {$tcl_platform(byteOrder) eq "littleEndian"} {
-    set byteOrder 1234
-} else {
-    set byteOrder 4321
-}
-
-critcl::cflags -DTCL_BYTE_ORDER=$byteOrder
+critcl::source hashes.tcl
 
 # # ## ### ##### ######## #############
 ## C/Tcl glue - Command implementations
 
-critcl::source hashes.tcl
 critcl::source glue.tcl
 
 # # ## ### ##### ######## #############

@@ -11,15 +11,19 @@ kt check tcltest 2
 
 kt local testing ankh
 
+kt source support/util.tcl
+
 # # ## ### ##### ######## ############# #####################
 
-foreach {hash references} {
-    md4  {https://en.wikipedia.org/wiki/MD4}
-    md5  {https://en.wikipedia.org/wiki/MD5}
-    sha1 {https://en.wikipedia.org/wiki/SHA-1}
-    sha2 {https://en.wikipedia.org/wiki/SHA-2}
-    sha3 {https://en.wikipedia.org/wiki/SHA-3 http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf https://github.com/brainhub/SHA3IUF MIT}
+foreach hash {
+    md4
+    md5
+    sha1
+    sha2
+    sha3
 } {
+    # - -- --- ----- -------- ------------- ---------------------
+
     tcltest::test ankh-${hash}-references-1.0 "ak hash $hash references, wrong#args" -body {
 	ak hash $hash references X
     } -returnCodes error -result "wrong # args: should be \"ak hash $hash references\""
@@ -27,8 +31,10 @@ foreach {hash references} {
     # - -- --- ----- -------- ------------- ---------------------
 
     tcltest::test ankh-${hash}-references-2.0 "ak hash $hash references" -body {
-	ak hash $hash references
-    } -result $references
+	join [ak hash $hash references] \n
+    } -result [v $hash/references]
+
+    # - -- --- ----- -------- ------------- ---------------------
 }
 
 # # ## ### ##### ######## ############# #####################
