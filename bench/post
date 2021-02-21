@@ -4,7 +4,7 @@ bindir="$(dirname "$0")"
 "${bindir}"/post-csv      "$1"
 "${bindir}"/post-markdown "$1"
 
-pandoc -s -f markdown -t man                 "$1/B.md" > "$1/B.man"
-pandoc    -f markdown -t latex -o "$1/B.pdf" "$1/B.md"
-pandoc -s -f markdown -t html                "$1/B.md" > "$1/B.html"
+pandoc -s -f markdown -t man                     "$1/bench.md" > "$1/bench.man"
+pandoc -s -f markdown -t html                    "$1/bench.md" > "$1/bench.html"
+pandoc    -f markdown -t latex -o "$1/bench.pdf" "$1/bench.md"
 exit

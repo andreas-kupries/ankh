@@ -2,17 +2,16 @@
 
 package require csv
 lassign $argv logdir
-set data $logdir/B.results
+set data $logdir/bench.results
 set chan [open $data r]
 
 close stdout
-open $logdir/B.md w
+open $logdir/bench.md w
 
-puts |Digest|Method|Bytes|Microseconds|Bytes/Microsecond|MiB/Second|Microseconds/Byte|
+puts |Digest|Method|Bytes|Microseconds|MB/Second|MiB/Second|Microseconds/Byte|
 puts |---|---|---:|---:|---:|---:|---:|
 
-set max 0
-set ml   {}
+set max  {}
 set last {}
 
 while {[gets $chan line] > 0} {
@@ -30,29 +29,43 @@ while {[gets $chan line] > 0} {
     # megabytes/second (binary megabytes)
     
     if {($digest ne $last) && ($last ne {})} {
-	lappend maxima $ml
 	puts ||||||||
-	set max 0
-	set ml  {}
     }
     puts |$digest|$method|$size|[format %.3f $microseconds]|$bm|$bmi|$mb|
-    if {$bm > $max} {
-	set max $bm
-	set ml |$digest|$method|$size|[format %.3f $microseconds]|$bm|$bmi|$mb|
+
+    if {![dict exists $max $digest] || ($bm > [dict get $max $digest val])} {
+	dict set max $digest val $bm
+	dict set max $digest def [list $method $size [format %.3f $microseconds] $bmi $mb]
     }
-    
     set last $digest
 }
 
-lappend maxima $ml
-
-puts ||||||||
-puts |Maxima||||MB/Second|||
-puts |Digest|Method|Bytes|Microseconds|Bytes/Microsecond|MiB/Second|Microseconds/Byte|
-puts ||||||||
-foreach ml $maxima {
-    if {$ml eq {}} continue
-    puts $ml
+set maxima {}
+dict for {digest max} $max {
+    lappend maxima [list $digest [dict get $max val] {*}[dict get $max def]]
 }
 
+set defs [lsort -increasing -real -index 1 $maxima]
+
+set prev  [lindex $defs 0 1]
+set worst [lindex $defs 0 1]
+set gain  {}
+foreach def $defs {
+    lassign $def digest bm 
+    set rgain [format %.3f [expr {$bm/$prev }]]
+    set again [format %.3f [expr {$bm/$worst}]]
+    dict set gain $digest [list $rgain $again]
+    set prev $bm
+}
+
+puts "# Maxima"
+
+puts |Digest|Method|Bytes|Micros|MB/Second|MiB/Second|Micros/Byte|Gain|R/Gain|
+puts |---|---|---:|---:|---:|---:|---:|---:|---:|
+
+foreach def [lreverse $defs] {
+    lassign $def digest bm method size micro bmi mb
+    lassign [dict get $gain $digest] rgain again
+    puts |$digest|$method|$size|$micro|$bm|$bmi|$mb|$again|$rgain|
+}
 exit

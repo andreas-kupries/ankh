@@ -2,11 +2,11 @@
 
 package require csv
 lassign $argv logdir
-set data $logdir/B.results
+set data $logdir/bench.results
 set chan [open $data r]
 
 close stdout
-open $logdir/B.csv w
+open $logdir/bench.csv w
 
 puts [csv::join [list Digest Method Bytes Microseconds Bytes/Microsecond MiB/Second Microseconds/Byte]]
 
