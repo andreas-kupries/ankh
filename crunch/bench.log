@@ -3,958 +3,958 @@
 @@ Host hephaistos
 @@ Platform Linux-5.4.0-65-generic-x86_64
 @@ BenchDir /home/aku/Development/Tcl/Meine/Ankh/w-main/bench
-@@ LocalDir /home/aku/Development/Tcl/Meine/Ankh/w-main/.kettle_bench_install_1060049_1613818237_1613818237573_hephaistos_aku
+@@ LocalDir /home/aku/Development/Tcl/Meine/Ankh/w-main/.kettle_bench_install_1137349_1613925268_1613925268756_hephaistos_aku
 @@ BenchCWD /home/aku/Development/Tcl/Meine/Ankh/w-main/bench
 @@ Shell /home/aku/opt/ActiveTcl/bin/tclsh
 @@ Tcl 8.6.10
 @@ Benchmark /home/aku/Development/Tcl/Meine/Ankh/w-main/bench/hash.bench
-@@ Start 1613818238
+@@ Start 1613925269
 SYSTEM - Tcl 8.6.10
 LOCAL  % ankh 0.0
 @@ Feedback D:hash:md4
 @@ Feedback D:size:64
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:e01a606e69a1a9d5a861ebac6cfaedf3
-@@ Feedback D:path:e01a606e69a1a9d5a861ebac6cfaedf3
-@@ Feedback D:strg:e01a606e69a1a9d5a861ebac6cfaedf3
+@@ Feedback D:chan:49f0b161c3488cd50587fb86f8710b85
+@@ Feedback D:path:49f0b161c3488cd50587fb86f8710b85
+@@ Feedback D:strg:49f0b161c3488cd50587fb86f8710b85
 @@ Feedback {{Running <md4 chan 64>}}
 @@ StartBench {{md4 chan 64} 1000}
-@@ Result {{md4 chan 64} 10.905}
+@@ Result {{md4 chan 64} 11.498}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:128
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:dedee4ab6751e1d7c90db6a91ae461c3
-@@ Feedback D:path:dedee4ab6751e1d7c90db6a91ae461c3
-@@ Feedback D:strg:dedee4ab6751e1d7c90db6a91ae461c3
+@@ Feedback D:chan:05f0ee97e6169a93edad98362d96d699
+@@ Feedback D:path:05f0ee97e6169a93edad98362d96d699
+@@ Feedback D:strg:05f0ee97e6169a93edad98362d96d699
 @@ Feedback {{Running <md4 chan 128>}}
 @@ StartBench {{md4 chan 128} 1000}
-@@ Result {{md4 chan 128} 10.231}
+@@ Result {{md4 chan 128} 9.278}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:256
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:ded92bc4bb465512d6f7ef20951517e5
-@@ Feedback D:path:ded92bc4bb465512d6f7ef20951517e5
-@@ Feedback D:strg:ded92bc4bb465512d6f7ef20951517e5
+@@ Feedback D:chan:ca73a40faf3e46c6e91db8588af19060
+@@ Feedback D:path:ca73a40faf3e46c6e91db8588af19060
+@@ Feedback D:strg:ca73a40faf3e46c6e91db8588af19060
 @@ Feedback {{Running <md4 chan 256>}}
 @@ StartBench {{md4 chan 256} 1000}
-@@ Result {{md4 chan 256} 11.697}
+@@ Result {{md4 chan 256} 12.441}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:512
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:1585157075a3b83c4fc7c84bae0e1eb7
-@@ Feedback D:path:1585157075a3b83c4fc7c84bae0e1eb7
-@@ Feedback D:strg:1585157075a3b83c4fc7c84bae0e1eb7
+@@ Feedback D:chan:e8ba6a9bee49d6c1962c43b5d03eb013
+@@ Feedback D:path:e8ba6a9bee49d6c1962c43b5d03eb013
+@@ Feedback D:strg:e8ba6a9bee49d6c1962c43b5d03eb013
 @@ Feedback {{Running <md4 chan 512>}}
 @@ StartBench {{md4 chan 512} 1000}
-@@ Result {{md4 chan 512} 13.171}
+@@ Result {{md4 chan 512} 9.869}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:1024
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:6e7975f2f763d161138b7b55ea7b297d
-@@ Feedback D:path:6e7975f2f763d161138b7b55ea7b297d
-@@ Feedback D:strg:6e7975f2f763d161138b7b55ea7b297d
+@@ Feedback D:chan:0fb86d77f30ed141742060c1d8e2900c
+@@ Feedback D:path:0fb86d77f30ed141742060c1d8e2900c
+@@ Feedback D:strg:0fb86d77f30ed141742060c1d8e2900c
 @@ Feedback {{Running <md4 chan 1024>}}
 @@ StartBench {{md4 chan 1024} 1000}
-@@ Result {{md4 chan 1024} 17.073}
+@@ Result {{md4 chan 1024} 18.528}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:2048
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:3ad7c081c2284f59a53799721e4426bc
-@@ Feedback D:path:3ad7c081c2284f59a53799721e4426bc
-@@ Feedback D:strg:3ad7c081c2284f59a53799721e4426bc
+@@ Feedback D:chan:55743d758614ec7dc00fc508ce637f4a
+@@ Feedback D:path:55743d758614ec7dc00fc508ce637f4a
+@@ Feedback D:strg:55743d758614ec7dc00fc508ce637f4a
 @@ Feedback {{Running <md4 chan 2048>}}
 @@ StartBench {{md4 chan 2048} 1000}
-@@ Result {{md4 chan 2048} 24.006}
+@@ Result {{md4 chan 2048} 12.069}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:4096
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:be4e3faec8768d2c9a5312d247986d35
-@@ Feedback D:path:be4e3faec8768d2c9a5312d247986d35
-@@ Feedback D:strg:be4e3faec8768d2c9a5312d247986d35
+@@ Feedback D:chan:b24502561fe7ff41d36294f163764f19
+@@ Feedback D:path:b24502561fe7ff41d36294f163764f19
+@@ Feedback D:strg:b24502561fe7ff41d36294f163764f19
 @@ Feedback {{Running <md4 chan 4096>}}
 @@ StartBench {{md4 chan 4096} 1000}
-@@ Result {{md4 chan 4096} 38.103}
+@@ Result {{md4 chan 4096} 15.301}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:8192
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:45130a02204478ab760b8009de640350
-@@ Feedback D:path:45130a02204478ab760b8009de640350
-@@ Feedback D:strg:45130a02204478ab760b8009de640350
+@@ Feedback D:chan:66825fbdbc5c5168537a0df44e7d6f00
+@@ Feedback D:path:66825fbdbc5c5168537a0df44e7d6f00
+@@ Feedback D:strg:66825fbdbc5c5168537a0df44e7d6f00
 @@ Feedback {{Running <md4 chan 8192>}}
 @@ StartBench {{md4 chan 8192} 1000}
-@@ Result {{md4 chan 8192} 66.363}
+@@ Result {{md4 chan 8192} 28.782}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:16384
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:7cc1e323459b7df1de0314a902bc3eb8
-@@ Feedback D:path:7cc1e323459b7df1de0314a902bc3eb8
-@@ Feedback D:strg:7cc1e323459b7df1de0314a902bc3eb8
+@@ Feedback D:chan:eae04cb2a75045decd0c1f1f196fd1f5
+@@ Feedback D:path:eae04cb2a75045decd0c1f1f196fd1f5
+@@ Feedback D:strg:eae04cb2a75045decd0c1f1f196fd1f5
 @@ Feedback {{Running <md4 chan 16384>}}
 @@ StartBench {{md4 chan 16384} 1000}
-@@ Result {{md4 chan 16384} 123.111}
+@@ Result {{md4 chan 16384} 32.774}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:32768
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:1f11009eb42d5937a8f265dbcc632b7a
-@@ Feedback D:path:1f11009eb42d5937a8f265dbcc632b7a
-@@ Feedback D:strg:1f11009eb42d5937a8f265dbcc632b7a
+@@ Feedback D:chan:f2283c0b4e57779fffec89bb4a456a9d
+@@ Feedback D:path:f2283c0b4e57779fffec89bb4a456a9d
+@@ Feedback D:strg:f2283c0b4e57779fffec89bb4a456a9d
 @@ Feedback {{Running <md4 chan 32768>}}
 @@ StartBench {{md4 chan 32768} 1000}
-@@ Result {{md4 chan 32768} 235.723}
+@@ Result {{md4 chan 32768} 55.405}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:65536
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:9454578187f1168bc6b3eccbb8012532
-@@ Feedback D:path:9454578187f1168bc6b3eccbb8012532
-@@ Feedback D:strg:9454578187f1168bc6b3eccbb8012532
+@@ Feedback D:chan:f524dfb12cd0c5fe4d986842712b91ee
+@@ Feedback D:path:f524dfb12cd0c5fe4d986842712b91ee
+@@ Feedback D:strg:f524dfb12cd0c5fe4d986842712b91ee
 @@ Feedback {{Running <md4 chan 65536>}}
 @@ StartBench {{md4 chan 65536} 1000}
-@@ Result {{md4 chan 65536} 468.151}
+@@ Result {{md4 chan 65536} 107.925}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:131072
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:0e546839d84ef3f6d30956f75ce16542
-@@ Feedback D:path:0e546839d84ef3f6d30956f75ce16542
-@@ Feedback D:strg:0e546839d84ef3f6d30956f75ce16542
+@@ Feedback D:chan:6ae419ff7f39e84cd74a612703b1ed5e
+@@ Feedback D:path:6ae419ff7f39e84cd74a612703b1ed5e
+@@ Feedback D:strg:6ae419ff7f39e84cd74a612703b1ed5e
 @@ Feedback {{Running <md4 chan 131072>}}
 @@ StartBench {{md4 chan 131072} 1000}
-@@ Result {{md4 chan 131072} 927.128}
+@@ Result {{md4 chan 131072} 175.494}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:262144
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:cc6df0b43817412bd27ebc686d7710df
-@@ Feedback D:path:cc6df0b43817412bd27ebc686d7710df
-@@ Feedback D:strg:cc6df0b43817412bd27ebc686d7710df
+@@ Feedback D:chan:678e083f6c0a85e27917a83e9c6d2c29
+@@ Feedback D:path:678e083f6c0a85e27917a83e9c6d2c29
+@@ Feedback D:strg:678e083f6c0a85e27917a83e9c6d2c29
 @@ Feedback {{Running <md4 chan 262144>}}
 @@ StartBench {{md4 chan 262144} 1000}
-@@ Result {{md4 chan 262144} 1829.052}
+@@ Result {{md4 chan 262144} 344.621}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:524288
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:5a1cab1c17407cdc81ed85b5ebdf9dac
-@@ Feedback D:path:5a1cab1c17407cdc81ed85b5ebdf9dac
-@@ Feedback D:strg:5a1cab1c17407cdc81ed85b5ebdf9dac
+@@ Feedback D:chan:04419874e0db054fbd7b6c239f14abbb
+@@ Feedback D:path:04419874e0db054fbd7b6c239f14abbb
+@@ Feedback D:strg:04419874e0db054fbd7b6c239f14abbb
 @@ Feedback {{Running <md4 chan 524288>}}
 @@ StartBench {{md4 chan 524288} 1000}
-@@ Result {{md4 chan 524288} 3668.491}
+@@ Result {{md4 chan 524288} 686.469}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:1048576
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:0b09a5aeaa7ef6a3fe238d6a37b2ce5b
-@@ Feedback D:path:0b09a5aeaa7ef6a3fe238d6a37b2ce5b
-@@ Feedback D:strg:0b09a5aeaa7ef6a3fe238d6a37b2ce5b
+@@ Feedback D:chan:f98c2d0cb7ad4a46ca604d93047796d0
+@@ Feedback D:path:f98c2d0cb7ad4a46ca604d93047796d0
+@@ Feedback D:strg:f98c2d0cb7ad4a46ca604d93047796d0
 @@ Feedback {{Running <md4 chan 1048576>}}
 @@ StartBench {{md4 chan 1048576} 1000}
-@@ Result {{md4 chan 1048576} 7367.715}
+@@ Result {{md4 chan 1048576} 1405.976}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:2097152
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:5f3ac3f627d5221906f21d119ef07075
-@@ Feedback D:path:5f3ac3f627d5221906f21d119ef07075
-@@ Feedback D:strg:5f3ac3f627d5221906f21d119ef07075
+@@ Feedback D:chan:ae166ba3a65dfb5035674803bff8a9b3
+@@ Feedback D:path:ae166ba3a65dfb5035674803bff8a9b3
+@@ Feedback D:strg:ae166ba3a65dfb5035674803bff8a9b3
 @@ Feedback {{Running <md4 chan 2097152>}}
 @@ StartBench {{md4 chan 2097152} 1000}
-@@ Result {{md4 chan 2097152} 14804.126}
+@@ Result {{md4 chan 2097152} 2909.963}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:4194304
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:78b5bd8f505d6bf84984a1b2843dc6c1
-@@ Feedback D:path:78b5bd8f505d6bf84984a1b2843dc6c1
-@@ Feedback D:strg:78b5bd8f505d6bf84984a1b2843dc6c1
+@@ Feedback D:chan:a14d10aecf4119e602c697e32d37f5a2
+@@ Feedback D:path:a14d10aecf4119e602c697e32d37f5a2
+@@ Feedback D:strg:a14d10aecf4119e602c697e32d37f5a2
 @@ Feedback {{Running <md4 chan 4194304>}}
 @@ StartBench {{md4 chan 4194304} 1000}
-@@ Result {{md4 chan 4194304} 29740.082}
+@@ Result {{md4 chan 4194304} 5891.019}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:8388608
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:c4053fde8f580aa0ec949a7983ebc2fb
-@@ Feedback D:path:c4053fde8f580aa0ec949a7983ebc2fb
-@@ Feedback D:strg:c4053fde8f580aa0ec949a7983ebc2fb
+@@ Feedback D:chan:7bc668227de748411a864d8e3fc0cd19
+@@ Feedback D:path:7bc668227de748411a864d8e3fc0cd19
+@@ Feedback D:strg:7bc668227de748411a864d8e3fc0cd19
 @@ Feedback {{Running <md4 chan 8388608>}}
 @@ StartBench {{md4 chan 8388608} 1000}
-@@ Result {{md4 chan 8388608} 59540.55}
+@@ Result {{md4 chan 8388608} 11781.443}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:16777216
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:2fb2088268ec028e86898e7a909b5beb
-@@ Feedback D:path:2fb2088268ec028e86898e7a909b5beb
-@@ Feedback D:strg:2fb2088268ec028e86898e7a909b5beb
+@@ Feedback D:chan:defed6bdd097ce2f7fa18b21cc64519e
+@@ Feedback D:path:defed6bdd097ce2f7fa18b21cc64519e
+@@ Feedback D:strg:defed6bdd097ce2f7fa18b21cc64519e
 @@ Feedback {{Running <md4 chan 16777216>}}
 @@ StartBench {{md4 chan 16777216} 1000}
-@@ Result {{md4 chan 16777216} 118800.222}
+@@ Result {{md4 chan 16777216} 23802.757}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:33554432
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:2e8f1456651efbcb9e123857f317e1e0
-@@ Feedback D:path:2e8f1456651efbcb9e123857f317e1e0
-@@ Feedback D:strg:2e8f1456651efbcb9e123857f317e1e0
+@@ Feedback D:chan:1e0550970a104eed7789d8f643888c75
+@@ Feedback D:path:1e0550970a104eed7789d8f643888c75
+@@ Feedback D:strg:1e0550970a104eed7789d8f643888c75
 @@ Feedback {{Running <md4 chan 33554432>}}
 @@ StartBench {{md4 chan 33554432} 1000}
-@@ Result {{md4 chan 33554432} 237692.208}
+@@ Result {{md4 chan 33554432} 47064.573}
 @@ Feedback D:hash:md4
 @@ Feedback D:size:67108864
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:4dcf6cf9447641f8878de1f8247cfab9
-@@ Feedback D:path:4dcf6cf9447641f8878de1f8247cfab9
-@@ Feedback D:strg:4dcf6cf9447641f8878de1f8247cfab9
+@@ Feedback D:chan:f922fff54d26bd648d1cb1ad31a16991
+@@ Feedback D:path:f922fff54d26bd648d1cb1ad31a16991
+@@ Feedback D:strg:f922fff54d26bd648d1cb1ad31a16991
 @@ Feedback {{Running <md4 chan 67108864>}}
 @@ StartBench {{md4 chan 67108864} 1000}
-@@ Result {{md4 chan 67108864} 475474.367}
+@@ Result {{md4 chan 67108864} 94080.024}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:64
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:915356ca8d00b07e3b0aa08aee3acf1c
-@@ Feedback D:path:915356ca8d00b07e3b0aa08aee3acf1c
-@@ Feedback D:strg:915356ca8d00b07e3b0aa08aee3acf1c
+@@ Feedback D:chan:95a753748188f0da9010c6aa9a2af16c
+@@ Feedback D:path:95a753748188f0da9010c6aa9a2af16c
+@@ Feedback D:strg:95a753748188f0da9010c6aa9a2af16c
 @@ Feedback {{Running <md5 chan 64>}}
 @@ StartBench {{md5 chan 64} 1000}
-@@ Result {{md5 chan 64} 9.485}
+@@ Result {{md5 chan 64} 9.601}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:128
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:24df4bbbcdf88da53cef64241bca8a54
-@@ Feedback D:path:24df4bbbcdf88da53cef64241bca8a54
-@@ Feedback D:strg:24df4bbbcdf88da53cef64241bca8a54
+@@ Feedback D:chan:a8fa000d88518d6ec16d8588af4139a3
+@@ Feedback D:path:a8fa000d88518d6ec16d8588af4139a3
+@@ Feedback D:strg:a8fa000d88518d6ec16d8588af4139a3
 @@ Feedback {{Running <md5 chan 128>}}
 @@ StartBench {{md5 chan 128} 1000}
-@@ Result {{md5 chan 128} 9.549}
+@@ Result {{md5 chan 128} 8.728}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:256
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:6f55d3f46cc09eb96619979f41e00564
-@@ Feedback D:path:6f55d3f46cc09eb96619979f41e00564
-@@ Feedback D:strg:6f55d3f46cc09eb96619979f41e00564
+@@ Feedback D:chan:e6ee0c695ecce40273c0aa41b6e19ab7
+@@ Feedback D:path:e6ee0c695ecce40273c0aa41b6e19ab7
+@@ Feedback D:strg:e6ee0c695ecce40273c0aa41b6e19ab7
 @@ Feedback {{Running <md5 chan 256>}}
 @@ StartBench {{md5 chan 256} 1000}
-@@ Result {{md5 chan 256} 9.981}
+@@ Result {{md5 chan 256} 9.088}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:512
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:ff07a21edb546d66e84a8f6e2a75b8bf
-@@ Feedback D:path:ff07a21edb546d66e84a8f6e2a75b8bf
-@@ Feedback D:strg:ff07a21edb546d66e84a8f6e2a75b8bf
+@@ Feedback D:chan:6ad963307528df49f5230ec404236680
+@@ Feedback D:path:6ad963307528df49f5230ec404236680
+@@ Feedback D:strg:6ad963307528df49f5230ec404236680
 @@ Feedback {{Running <md5 chan 512>}}
 @@ StartBench {{md5 chan 512} 1000}
-@@ Result {{md5 chan 512} 17.121}
+@@ Result {{md5 chan 512} 11.172}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:1024
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:9b443a904c32acc55194c6ed315056f6
-@@ Feedback D:path:9b443a904c32acc55194c6ed315056f6
-@@ Feedback D:strg:9b443a904c32acc55194c6ed315056f6
+@@ Feedback D:chan:e8df24a5b717bae810b1d526a732c789
+@@ Feedback D:path:e8df24a5b717bae810b1d526a732c789
+@@ Feedback D:strg:e8df24a5b717bae810b1d526a732c789
 @@ Feedback {{Running <md5 chan 1024>}}
 @@ StartBench {{md5 chan 1024} 1000}
-@@ Result {{md5 chan 1024} 13.547}
+@@ Result {{md5 chan 1024} 12.123}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:2048
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:61615f4d075cb975d83ed3cb1faa0466
-@@ Feedback D:path:61615f4d075cb975d83ed3cb1faa0466
-@@ Feedback D:strg:61615f4d075cb975d83ed3cb1faa0466
+@@ Feedback D:chan:cd25550198de717ba9216e28849ccb41
+@@ Feedback D:path:cd25550198de717ba9216e28849ccb41
+@@ Feedback D:strg:cd25550198de717ba9216e28849ccb41
 @@ Feedback {{Running <md5 chan 2048>}}
 @@ StartBench {{md5 chan 2048} 1000}
-@@ Result {{md5 chan 2048} 18.151}
+@@ Result {{md5 chan 2048} 13.865}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:4096
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:30480491aa9b819d98da8c60e9ebd2ff
-@@ Feedback D:path:30480491aa9b819d98da8c60e9ebd2ff
-@@ Feedback D:strg:30480491aa9b819d98da8c60e9ebd2ff
+@@ Feedback D:chan:198de21825b6946acc01c54c0e48711e
+@@ Feedback D:path:198de21825b6946acc01c54c0e48711e
+@@ Feedback D:strg:198de21825b6946acc01c54c0e48711e
 @@ Feedback {{Running <md5 chan 4096>}}
 @@ StartBench {{md5 chan 4096} 1000}
-@@ Result {{md5 chan 4096} 27.516}
+@@ Result {{md5 chan 4096} 18.072}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:8192
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:062731e63a9d9c09982deca9154f5cbb
-@@ Feedback D:path:062731e63a9d9c09982deca9154f5cbb
-@@ Feedback D:strg:062731e63a9d9c09982deca9154f5cbb
+@@ Feedback D:chan:ab8edb12941bd7f49fcdda38324ffd0b
+@@ Feedback D:path:ab8edb12941bd7f49fcdda38324ffd0b
+@@ Feedback D:strg:ab8edb12941bd7f49fcdda38324ffd0b
 @@ Feedback {{Running <md5 chan 8192>}}
 @@ StartBench {{md5 chan 8192} 1000}
-@@ Result {{md5 chan 8192} 46.423}
+@@ Result {{md5 chan 8192} 26.617}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:16384
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:b2ccf767cdce31055d691e38b1feec6f
-@@ Feedback D:path:b2ccf767cdce31055d691e38b1feec6f
-@@ Feedback D:strg:b2ccf767cdce31055d691e38b1feec6f
+@@ Feedback D:chan:e25cbf2f6b9cd0f0169e34f1a731e395
+@@ Feedback D:path:e25cbf2f6b9cd0f0169e34f1a731e395
+@@ Feedback D:strg:e25cbf2f6b9cd0f0169e34f1a731e395
 @@ Feedback {{Running <md5 chan 16384>}}
 @@ StartBench {{md5 chan 16384} 1000}
-@@ Result {{md5 chan 16384} 85.64}
+@@ Result {{md5 chan 16384} 39.817}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:32768
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:f5f4e23b081245741ea9b0546260d5f9
-@@ Feedback D:path:f5f4e23b081245741ea9b0546260d5f9
-@@ Feedback D:strg:f5f4e23b081245741ea9b0546260d5f9
+@@ Feedback D:chan:d746e4a60c4cc7d4b2312f132fd48ff9
+@@ Feedback D:path:d746e4a60c4cc7d4b2312f132fd48ff9
+@@ Feedback D:strg:d746e4a60c4cc7d4b2312f132fd48ff9
 @@ Feedback {{Running <md5 chan 32768>}}
 @@ StartBench {{md5 chan 32768} 1000}
-@@ Result {{md5 chan 32768} 161.944}
+@@ Result {{md5 chan 32768} 74.79}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:65536
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:574018383de3e7de723d90b07e66649c
-@@ Feedback D:path:574018383de3e7de723d90b07e66649c
-@@ Feedback D:strg:574018383de3e7de723d90b07e66649c
+@@ Feedback D:chan:783418f6d5eebaa3eeb5464925afeac6
+@@ Feedback D:path:783418f6d5eebaa3eeb5464925afeac6
+@@ Feedback D:strg:783418f6d5eebaa3eeb5464925afeac6
 @@ Feedback {{Running <md5 chan 65536>}}
 @@ StartBench {{md5 chan 65536} 1000}
-@@ Result {{md5 chan 65536} 314.35}
+@@ Result {{md5 chan 65536} 152.29}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:131072
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:8e81c5697beac329a7d86b04c2b2335e
-@@ Feedback D:path:8e81c5697beac329a7d86b04c2b2335e
-@@ Feedback D:strg:8e81c5697beac329a7d86b04c2b2335e
+@@ Feedback D:chan:a76d8b231840f76d5c407a664d22d7de
+@@ Feedback D:path:a76d8b231840f76d5c407a664d22d7de
+@@ Feedback D:strg:a76d8b231840f76d5c407a664d22d7de
 @@ Feedback {{Running <md5 chan 131072>}}
 @@ StartBench {{md5 chan 131072} 1000}
-@@ Result {{md5 chan 131072} 622.748}
+@@ Result {{md5 chan 131072} 298.89}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:262144
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:550877ca8ec89ffb5f8fc5f452a07922
-@@ Feedback D:path:550877ca8ec89ffb5f8fc5f452a07922
-@@ Feedback D:strg:550877ca8ec89ffb5f8fc5f452a07922
+@@ Feedback D:chan:bd7cacddd67ff1ac7c37101fa8634e71
+@@ Feedback D:path:bd7cacddd67ff1ac7c37101fa8634e71
+@@ Feedback D:strg:bd7cacddd67ff1ac7c37101fa8634e71
 @@ Feedback {{Running <md5 chan 262144>}}
 @@ StartBench {{md5 chan 262144} 1000}
-@@ Result {{md5 chan 262144} 1224.644}
+@@ Result {{md5 chan 262144} 542.404}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:524288
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:00c5830341eeeaa58fc433e4666c590a
-@@ Feedback D:path:00c5830341eeeaa58fc433e4666c590a
-@@ Feedback D:strg:00c5830341eeeaa58fc433e4666c590a
+@@ Feedback D:chan:bf18a5f50da957e94e1fbfe2a1fc23b6
+@@ Feedback D:path:bf18a5f50da957e94e1fbfe2a1fc23b6
+@@ Feedback D:strg:bf18a5f50da957e94e1fbfe2a1fc23b6
 @@ Feedback {{Running <md5 chan 524288>}}
 @@ StartBench {{md5 chan 524288} 1000}
-@@ Result {{md5 chan 524288} 2454.053}
+@@ Result {{md5 chan 524288} 1135.043}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:1048576
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:d69a100712e82e59295e2c42b839471d
-@@ Feedback D:path:d69a100712e82e59295e2c42b839471d
-@@ Feedback D:strg:d69a100712e82e59295e2c42b839471d
+@@ Feedback D:chan:aee03b07660741ecd74e231a79dd0803
+@@ Feedback D:path:aee03b07660741ecd74e231a79dd0803
+@@ Feedback D:strg:aee03b07660741ecd74e231a79dd0803
 @@ Feedback {{Running <md5 chan 1048576>}}
 @@ StartBench {{md5 chan 1048576} 1000}
-@@ Result {{md5 chan 1048576} 4977.519}
+@@ Result {{md5 chan 1048576} 2146.825}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:2097152
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:af8acf151c80860134f4c6cb1409a387
-@@ Feedback D:path:af8acf151c80860134f4c6cb1409a387
-@@ Feedback D:strg:af8acf151c80860134f4c6cb1409a387
+@@ Feedback D:chan:52d9f6f915f09c9ee41fd1eb1da5fc72
+@@ Feedback D:path:52d9f6f915f09c9ee41fd1eb1da5fc72
+@@ Feedback D:strg:52d9f6f915f09c9ee41fd1eb1da5fc72
 @@ Feedback {{Running <md5 chan 2097152>}}
 @@ StartBench {{md5 chan 2097152} 1000}
-@@ Result {{md5 chan 2097152} 10026.04}
+@@ Result {{md5 chan 2097152} 4350.273}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:4194304
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:69e82d4d28c63e9f38cd649b5ce4cf22
-@@ Feedback D:path:69e82d4d28c63e9f38cd649b5ce4cf22
-@@ Feedback D:strg:69e82d4d28c63e9f38cd649b5ce4cf22
+@@ Feedback D:chan:dc1e8c5d850756e64bf746b82b49c024
+@@ Feedback D:path:dc1e8c5d850756e64bf746b82b49c024
+@@ Feedback D:strg:dc1e8c5d850756e64bf746b82b49c024
 @@ Feedback {{Running <md5 chan 4194304>}}
 @@ StartBench {{md5 chan 4194304} 1000}
-@@ Result {{md5 chan 4194304} 20127.393}
+@@ Result {{md5 chan 4194304} 8781.623}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:8388608
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:4baa6d4911c96658b4d8baef10730881
-@@ Feedback D:path:4baa6d4911c96658b4d8baef10730881
-@@ Feedback D:strg:4baa6d4911c96658b4d8baef10730881
+@@ Feedback D:chan:c0f60dff6dd3fea988b5c94d9f420f6a
+@@ Feedback D:path:c0f60dff6dd3fea988b5c94d9f420f6a
+@@ Feedback D:strg:c0f60dff6dd3fea988b5c94d9f420f6a
 @@ Feedback {{Running <md5 chan 8388608>}}
 @@ StartBench {{md5 chan 8388608} 1000}
-@@ Result {{md5 chan 8388608} 39925.346}
+@@ Result {{md5 chan 8388608} 17623.765}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:16777216
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:dd1c2b8b13ff3ca773464816ceb00957
-@@ Feedback D:path:dd1c2b8b13ff3ca773464816ceb00957
-@@ Feedback D:strg:dd1c2b8b13ff3ca773464816ceb00957
+@@ Feedback D:chan:386e9f85146fd97731e760b35aa82e53
+@@ Feedback D:path:386e9f85146fd97731e760b35aa82e53
+@@ Feedback D:strg:386e9f85146fd97731e760b35aa82e53
 @@ Feedback {{Running <md5 chan 16777216>}}
 @@ StartBench {{md5 chan 16777216} 1000}
-@@ Result {{md5 chan 16777216} 79872.679}
+@@ Result {{md5 chan 16777216} 35470.044}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:33554432
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:8577a4db36526bce7111f6283cf2d313
-@@ Feedback D:path:8577a4db36526bce7111f6283cf2d313
-@@ Feedback D:strg:8577a4db36526bce7111f6283cf2d313
+@@ Feedback D:chan:4c56ff6c47113db46ccc225ca6d20d03
+@@ Feedback D:path:4c56ff6c47113db46ccc225ca6d20d03
+@@ Feedback D:strg:4c56ff6c47113db46ccc225ca6d20d03
 @@ Feedback {{Running <md5 chan 33554432>}}
 @@ StartBench {{md5 chan 33554432} 1000}
-@@ Result {{md5 chan 33554432} 159981.849}
+@@ Result {{md5 chan 33554432} 70193.684}
 @@ Feedback D:hash:md5
 @@ Feedback D:size:67108864
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:fe78583b812cb7388a1e7dedbdd101ce
-@@ Feedback D:path:fe78583b812cb7388a1e7dedbdd101ce
-@@ Feedback D:strg:fe78583b812cb7388a1e7dedbdd101ce
+@@ Feedback D:chan:84161faa51a857f0a43cc1ce1874468a
+@@ Feedback D:path:84161faa51a857f0a43cc1ce1874468a
+@@ Feedback D:strg:84161faa51a857f0a43cc1ce1874468a
 @@ Feedback {{Running <md5 chan 67108864>}}
 @@ StartBench {{md5 chan 67108864} 1000}
-@@ Result {{md5 chan 67108864} 322049.049}
+@@ Result {{md5 chan 67108864} 140354.411}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:64
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:05e6e7faf1574216dea15129f1ab24e52864fe05
-@@ Feedback D:path:05e6e7faf1574216dea15129f1ab24e52864fe05
-@@ Feedback D:strg:05e6e7faf1574216dea15129f1ab24e52864fe05
+@@ Feedback D:chan:71f9d9a4b35c71ba3a736a3d440eefd231f841f9
+@@ Feedback D:path:71f9d9a4b35c71ba3a736a3d440eefd231f841f9
+@@ Feedback D:strg:71f9d9a4b35c71ba3a736a3d440eefd231f841f9
 @@ Feedback {{Running <sha1 chan 64>}}
 @@ StartBench {{sha1 chan 64} 1000}
-@@ Result {{sha1 chan 64} 9.915}
+@@ Result {{sha1 chan 64} 20.68}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:128
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:7e1ffeb263e416d3e7cd0f8e29d788addeb2e5ac
-@@ Feedback D:path:7e1ffeb263e416d3e7cd0f8e29d788addeb2e5ac
-@@ Feedback D:strg:7e1ffeb263e416d3e7cd0f8e29d788addeb2e5ac
+@@ Feedback D:chan:05821091e793052e25564e3c2bfa890544fddab7
+@@ Feedback D:path:05821091e793052e25564e3c2bfa890544fddab7
+@@ Feedback D:strg:05821091e793052e25564e3c2bfa890544fddab7
 @@ Feedback {{Running <sha1 chan 128>}}
 @@ StartBench {{sha1 chan 128} 1000}
-@@ Result {{sha1 chan 128} 14.893}
+@@ Result {{sha1 chan 128} 11.34}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:256
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:acf41afba9e3e5e3204f44264c45fc8fcf936eb0
-@@ Feedback D:path:acf41afba9e3e5e3204f44264c45fc8fcf936eb0
-@@ Feedback D:strg:acf41afba9e3e5e3204f44264c45fc8fcf936eb0
+@@ Feedback D:chan:06638485e42d933116797f5962f2bba924d8d34b
+@@ Feedback D:path:06638485e42d933116797f5962f2bba924d8d34b
+@@ Feedback D:strg:06638485e42d933116797f5962f2bba924d8d34b
 @@ Feedback {{Running <sha1 chan 256>}}
 @@ StartBench {{sha1 chan 256} 1000}
-@@ Result {{sha1 chan 256} 16.556}
+@@ Result {{sha1 chan 256} 16.288}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:512
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:c18026736f7a4ad18179d4237ad149aa14fa5213
-@@ Feedback D:path:c18026736f7a4ad18179d4237ad149aa14fa5213
-@@ Feedback D:strg:c18026736f7a4ad18179d4237ad149aa14fa5213
+@@ Feedback D:chan:519576b01c9a301e10924b46651107de5ab35630
+@@ Feedback D:path:519576b01c9a301e10924b46651107de5ab35630
+@@ Feedback D:strg:519576b01c9a301e10924b46651107de5ab35630
 @@ Feedback {{Running <sha1 chan 512>}}
 @@ StartBench {{sha1 chan 512} 1000}
-@@ Result {{sha1 chan 512} 12.827}
+@@ Result {{sha1 chan 512} 13.3}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:1024
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:b2ada46bcbedb4babe888e426057081002fa3327
-@@ Feedback D:path:b2ada46bcbedb4babe888e426057081002fa3327
-@@ Feedback D:strg:b2ada46bcbedb4babe888e426057081002fa3327
+@@ Feedback D:chan:ae8795b7df811936fb05b3f81e0aa6c204f7e959
+@@ Feedback D:path:ae8795b7df811936fb05b3f81e0aa6c204f7e959
+@@ Feedback D:strg:ae8795b7df811936fb05b3f81e0aa6c204f7e959
 @@ Feedback {{Running <sha1 chan 1024>}}
 @@ StartBench {{sha1 chan 1024} 1000}
-@@ Result {{sha1 chan 1024} 17.729}
+@@ Result {{sha1 chan 1024} 15.018}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:2048
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:4dc534a1dc66e59a305cd558c783f01ada7b0cb1
-@@ Feedback D:path:4dc534a1dc66e59a305cd558c783f01ada7b0cb1
-@@ Feedback D:strg:4dc534a1dc66e59a305cd558c783f01ada7b0cb1
+@@ Feedback D:chan:2ad8d510cdd28ff67b9b61da94ea456ab9dfdab4
+@@ Feedback D:path:2ad8d510cdd28ff67b9b61da94ea456ab9dfdab4
+@@ Feedback D:strg:2ad8d510cdd28ff67b9b61da94ea456ab9dfdab4
 @@ Feedback {{Running <sha1 chan 2048>}}
 @@ StartBench {{sha1 chan 2048} 1000}
-@@ Result {{sha1 chan 2048} 32.271}
+@@ Result {{sha1 chan 2048} 25.287}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:4096
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:540c9a2b62163a8a70162b6bf87da04a6cdd3a64
-@@ Feedback D:path:540c9a2b62163a8a70162b6bf87da04a6cdd3a64
-@@ Feedback D:strg:540c9a2b62163a8a70162b6bf87da04a6cdd3a64
+@@ Feedback D:chan:c5d3074d821514df1798f40aac1ea88765b521b3
+@@ Feedback D:path:c5d3074d821514df1798f40aac1ea88765b521b3
+@@ Feedback D:strg:c5d3074d821514df1798f40aac1ea88765b521b3
 @@ Feedback {{Running <sha1 chan 4096>}}
 @@ StartBench {{sha1 chan 4096} 1000}
-@@ Result {{sha1 chan 4096} 35.704}
+@@ Result {{sha1 chan 4096} 31.043}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:8192
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:c2218eb44791916ebb425ca698c96f0c03ed7859
-@@ Feedback D:path:c2218eb44791916ebb425ca698c96f0c03ed7859
-@@ Feedback D:strg:c2218eb44791916ebb425ca698c96f0c03ed7859
+@@ Feedback D:chan:2bce925f22fd1e06bad418015015179d6d506af9
+@@ Feedback D:path:2bce925f22fd1e06bad418015015179d6d506af9
+@@ Feedback D:strg:2bce925f22fd1e06bad418015015179d6d506af9
 @@ Feedback {{Running <sha1 chan 8192>}}
 @@ StartBench {{sha1 chan 8192} 1000}
-@@ Result {{sha1 chan 8192} 60.396}
+@@ Result {{sha1 chan 8192} 59.898}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:16384
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:9e602d6608ee7176f4d817892bf9da1cffdfafb2
-@@ Feedback D:path:9e602d6608ee7176f4d817892bf9da1cffdfafb2
-@@ Feedback D:strg:9e602d6608ee7176f4d817892bf9da1cffdfafb2
+@@ Feedback D:chan:ff54b6f48437959bf9cae42d4b1b328d89c98fb7
+@@ Feedback D:path:ff54b6f48437959bf9cae42d4b1b328d89c98fb7
+@@ Feedback D:strg:ff54b6f48437959bf9cae42d4b1b328d89c98fb7
 @@ Feedback {{Running <sha1 chan 16384>}}
 @@ StartBench {{sha1 chan 16384} 1000}
-@@ Result {{sha1 chan 16384} 96.929}
+@@ Result {{sha1 chan 16384} 96.685}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:32768
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:07666a550b72246a962674e5c6fe6728eefd18bb
-@@ Feedback D:path:07666a550b72246a962674e5c6fe6728eefd18bb
-@@ Feedback D:strg:07666a550b72246a962674e5c6fe6728eefd18bb
+@@ Feedback D:chan:3c7dd37380e246fbe22b541388679d5d89efb2e1
+@@ Feedback D:path:3c7dd37380e246fbe22b541388679d5d89efb2e1
+@@ Feedback D:strg:3c7dd37380e246fbe22b541388679d5d89efb2e1
 @@ Feedback {{Running <sha1 chan 32768>}}
 @@ StartBench {{sha1 chan 32768} 1000}
-@@ Result {{sha1 chan 32768} 194.278}
+@@ Result {{sha1 chan 32768} 184.272}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:65536
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:e71bf65446f20d7d253ef3fefc24cefaf5b8a3c3
-@@ Feedback D:path:e71bf65446f20d7d253ef3fefc24cefaf5b8a3c3
-@@ Feedback D:strg:e71bf65446f20d7d253ef3fefc24cefaf5b8a3c3
+@@ Feedback D:chan:fc0e1b96af93af636ed5c1115422f2b3dedc8b3a
+@@ Feedback D:path:fc0e1b96af93af636ed5c1115422f2b3dedc8b3a
+@@ Feedback D:strg:fc0e1b96af93af636ed5c1115422f2b3dedc8b3a
 @@ Feedback {{Running <sha1 chan 65536>}}
 @@ StartBench {{sha1 chan 65536} 1000}
-@@ Result {{sha1 chan 65536} 382.613}
+@@ Result {{sha1 chan 65536} 354.965}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:131072
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:6c8a33910a0c279408e4042aa7c91e58e5c1002d
-@@ Feedback D:path:6c8a33910a0c279408e4042aa7c91e58e5c1002d
-@@ Feedback D:strg:6c8a33910a0c279408e4042aa7c91e58e5c1002d
+@@ Feedback D:chan:eb3127cdfafdfd4c99bbe6da0c0601c06a11e2a0
+@@ Feedback D:path:eb3127cdfafdfd4c99bbe6da0c0601c06a11e2a0
+@@ Feedback D:strg:eb3127cdfafdfd4c99bbe6da0c0601c06a11e2a0
 @@ Feedback {{Running <sha1 chan 131072>}}
 @@ StartBench {{sha1 chan 131072} 1000}
-@@ Result {{sha1 chan 131072} 767.384}
+@@ Result {{sha1 chan 131072} 704.654}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:262144
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:ee9212e1c3918461f4fc4f6a0e7f57700b87eb3f
-@@ Feedback D:path:ee9212e1c3918461f4fc4f6a0e7f57700b87eb3f
-@@ Feedback D:strg:ee9212e1c3918461f4fc4f6a0e7f57700b87eb3f
+@@ Feedback D:chan:5bc3d896a929372552d6a2b04a90acbdc9bb485a
+@@ Feedback D:path:5bc3d896a929372552d6a2b04a90acbdc9bb485a
+@@ Feedback D:strg:5bc3d896a929372552d6a2b04a90acbdc9bb485a
 @@ Feedback {{Running <sha1 chan 262144>}}
 @@ StartBench {{sha1 chan 262144} 1000}
-@@ Result {{sha1 chan 262144} 1484.993}
+@@ Result {{sha1 chan 262144} 1402.214}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:524288
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:725551167fbb899974bab3ed2c30b1224ba6ff1c
-@@ Feedback D:path:725551167fbb899974bab3ed2c30b1224ba6ff1c
-@@ Feedback D:strg:725551167fbb899974bab3ed2c30b1224ba6ff1c
+@@ Feedback D:chan:ff5862f0871ac404e7ced25abee1719638ecc3bf
+@@ Feedback D:path:ff5862f0871ac404e7ced25abee1719638ecc3bf
+@@ Feedback D:strg:ff5862f0871ac404e7ced25abee1719638ecc3bf
 @@ Feedback {{Running <sha1 chan 524288>}}
 @@ StartBench {{sha1 chan 524288} 1000}
-@@ Result {{sha1 chan 524288} 2970.149}
+@@ Result {{sha1 chan 524288} 2854.789}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:1048576
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:95c0502818eaca5cd9f0523695f4f8e89c96396e
-@@ Feedback D:path:95c0502818eaca5cd9f0523695f4f8e89c96396e
-@@ Feedback D:strg:95c0502818eaca5cd9f0523695f4f8e89c96396e
+@@ Feedback D:chan:2b701ec1fc0e1c1d58143c19e9555c8bf5ad0f48
+@@ Feedback D:path:2b701ec1fc0e1c1d58143c19e9555c8bf5ad0f48
+@@ Feedback D:strg:2b701ec1fc0e1c1d58143c19e9555c8bf5ad0f48
 @@ Feedback {{Running <sha1 chan 1048576>}}
 @@ StartBench {{sha1 chan 1048576} 1000}
-@@ Result {{sha1 chan 1048576} 5955.784}
+@@ Result {{sha1 chan 1048576} 5696.03}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:2097152
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:d44ab95b88606361bf4b0e59413c9163571e205a
-@@ Feedback D:path:d44ab95b88606361bf4b0e59413c9163571e205a
-@@ Feedback D:strg:d44ab95b88606361bf4b0e59413c9163571e205a
+@@ Feedback D:chan:ae8971aa0e0e296ec8b2795bcc1cbebf871e1263
+@@ Feedback D:path:ae8971aa0e0e296ec8b2795bcc1cbebf871e1263
+@@ Feedback D:strg:ae8971aa0e0e296ec8b2795bcc1cbebf871e1263
 @@ Feedback {{Running <sha1 chan 2097152>}}
 @@ StartBench {{sha1 chan 2097152} 1000}
-@@ Result {{sha1 chan 2097152} 11865.748}
+@@ Result {{sha1 chan 2097152} 11221.625}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:4194304
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:7e52d0fc7607bbc16ea84fff61c79be15f475893
-@@ Feedback D:path:7e52d0fc7607bbc16ea84fff61c79be15f475893
-@@ Feedback D:strg:7e52d0fc7607bbc16ea84fff61c79be15f475893
+@@ Feedback D:chan:890184ca40b63870454d8a234f3017bbb91d0c4b
+@@ Feedback D:path:890184ca40b63870454d8a234f3017bbb91d0c4b
+@@ Feedback D:strg:890184ca40b63870454d8a234f3017bbb91d0c4b
 @@ Feedback {{Running <sha1 chan 4194304>}}
 @@ StartBench {{sha1 chan 4194304} 1000}
-@@ Result {{sha1 chan 4194304} 23768.768}
+@@ Result {{sha1 chan 4194304} 22715.178}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:8388608
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:a1b87f56a5e6343616e004e29a233667ef622797
-@@ Feedback D:path:a1b87f56a5e6343616e004e29a233667ef622797
-@@ Feedback D:strg:a1b87f56a5e6343616e004e29a233667ef622797
+@@ Feedback D:chan:72a3a81b26c934598c8727077d04f57e57ed023a
+@@ Feedback D:path:72a3a81b26c934598c8727077d04f57e57ed023a
+@@ Feedback D:strg:72a3a81b26c934598c8727077d04f57e57ed023a
 @@ Feedback {{Running <sha1 chan 8388608>}}
 @@ StartBench {{sha1 chan 8388608} 1000}
-@@ Result {{sha1 chan 8388608} 47396.637}
+@@ Result {{sha1 chan 8388608} 44914.525}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:16777216
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:3b8a28e48273adae0bb1c513583bc14249c86f24
-@@ Feedback D:path:3b8a28e48273adae0bb1c513583bc14249c86f24
-@@ Feedback D:strg:3b8a28e48273adae0bb1c513583bc14249c86f24
+@@ Feedback D:chan:1a4d4ef26052418ff5f4ad35ff4b87572f21514d
+@@ Feedback D:path:1a4d4ef26052418ff5f4ad35ff4b87572f21514d
+@@ Feedback D:strg:1a4d4ef26052418ff5f4ad35ff4b87572f21514d
 @@ Feedback {{Running <sha1 chan 16777216>}}
 @@ StartBench {{sha1 chan 16777216} 1000}
-@@ Result {{sha1 chan 16777216} 94744.118}
+@@ Result {{sha1 chan 16777216} 89271.219}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:33554432
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:dafcc6511edf57f0f797f97e40b0787c54cd3b42
-@@ Feedback D:path:dafcc6511edf57f0f797f97e40b0787c54cd3b42
-@@ Feedback D:strg:dafcc6511edf57f0f797f97e40b0787c54cd3b42
+@@ Feedback D:chan:2d73639c5dd0d08d1ab813b7cbdf0d0d4cb082ed
+@@ Feedback D:path:2d73639c5dd0d08d1ab813b7cbdf0d0d4cb082ed
+@@ Feedback D:strg:2d73639c5dd0d08d1ab813b7cbdf0d0d4cb082ed
 @@ Feedback {{Running <sha1 chan 33554432>}}
 @@ StartBench {{sha1 chan 33554432} 1000}
-@@ Result {{sha1 chan 33554432} 188385.998}
+@@ Result {{sha1 chan 33554432} 182713.76}
 @@ Feedback D:hash:sha1
 @@ Feedback D:size:67108864
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:bb5cecd3ba02d4fa442569720ade6864906b49c2
-@@ Feedback D:path:bb5cecd3ba02d4fa442569720ade6864906b49c2
-@@ Feedback D:strg:bb5cecd3ba02d4fa442569720ade6864906b49c2
+@@ Feedback D:chan:1b6ea90067a7e0b25d8a53bf04523683c09ab3b5
+@@ Feedback D:path:1b6ea90067a7e0b25d8a53bf04523683c09ab3b5
+@@ Feedback D:strg:1b6ea90067a7e0b25d8a53bf04523683c09ab3b5
 @@ Feedback {{Running <sha1 chan 67108864>}}
 @@ StartBench {{sha1 chan 67108864} 1000}
-@@ Result {{sha1 chan 67108864} 377562.292}
+@@ Result {{sha1 chan 67108864} 352426.623}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:64
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:04d9beb231634d2fa85344f512928c7b611c6f1f57179e3c8299461308d14f7e
-@@ Feedback D:path:04d9beb231634d2fa85344f512928c7b611c6f1f57179e3c8299461308d14f7e
-@@ Feedback D:strg:04d9beb231634d2fa85344f512928c7b611c6f1f57179e3c8299461308d14f7e
+@@ Feedback D:chan:9d64042643d9e9a647b6cd9449fdd1685add6939ea937f513522770ffc797513
+@@ Feedback D:path:9d64042643d9e9a647b6cd9449fdd1685add6939ea937f513522770ffc797513
+@@ Feedback D:strg:9d64042643d9e9a647b6cd9449fdd1685add6939ea937f513522770ffc797513
 @@ Feedback {{Running <sha2 chan 64>}}
 @@ StartBench {{sha2 chan 64} 1000}
-@@ Result {{sha2 chan 64} 9.942}
+@@ Result {{sha2 chan 64} 9.719}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:128
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:2a707eb56050a75227ba03052f66fcdc07e8e7fce4aca450ab59cdb85158cbb2
-@@ Feedback D:path:2a707eb56050a75227ba03052f66fcdc07e8e7fce4aca450ab59cdb85158cbb2
-@@ Feedback D:strg:2a707eb56050a75227ba03052f66fcdc07e8e7fce4aca450ab59cdb85158cbb2
+@@ Feedback D:chan:5369a62c61ca3293620f4b65dd3a0a4887cc84efde78c257f4f973988ae4b0c0
+@@ Feedback D:path:5369a62c61ca3293620f4b65dd3a0a4887cc84efde78c257f4f973988ae4b0c0
+@@ Feedback D:strg:5369a62c61ca3293620f4b65dd3a0a4887cc84efde78c257f4f973988ae4b0c0
 @@ Feedback {{Running <sha2 chan 128>}}
 @@ StartBench {{sha2 chan 128} 1000}
-@@ Result {{sha2 chan 128} 10.326}
+@@ Result {{sha2 chan 128} 9.468}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:256
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:254c728a3d1787a38f7d2db946be18dad42a03bb42bb6fad120f997b77f993db
-@@ Feedback D:path:254c728a3d1787a38f7d2db946be18dad42a03bb42bb6fad120f997b77f993db
-@@ Feedback D:strg:254c728a3d1787a38f7d2db946be18dad42a03bb42bb6fad120f997b77f993db
+@@ Feedback D:chan:39e240726dd6677ccaa335ff0c6dee58280f20d516850b4e0aeff0b20bc656b3
+@@ Feedback D:path:39e240726dd6677ccaa335ff0c6dee58280f20d516850b4e0aeff0b20bc656b3
+@@ Feedback D:strg:39e240726dd6677ccaa335ff0c6dee58280f20d516850b4e0aeff0b20bc656b3
 @@ Feedback {{Running <sha2 chan 256>}}
 @@ StartBench {{sha2 chan 256} 1000}
-@@ Result {{sha2 chan 256} 11.854}
+@@ Result {{sha2 chan 256} 17.882}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:512
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:fade9b9f61fdac99038d751dae98d3ef5faf35a85fcefaee4587b96704398367
-@@ Feedback D:path:fade9b9f61fdac99038d751dae98d3ef5faf35a85fcefaee4587b96704398367
-@@ Feedback D:strg:fade9b9f61fdac99038d751dae98d3ef5faf35a85fcefaee4587b96704398367
+@@ Feedback D:chan:5f386432f8ebe775e4387fd76e491591125266ec0b2ede2fa3f5e802c82a513b
+@@ Feedback D:path:5f386432f8ebe775e4387fd76e491591125266ec0b2ede2fa3f5e802c82a513b
+@@ Feedback D:strg:5f386432f8ebe775e4387fd76e491591125266ec0b2ede2fa3f5e802c82a513b
 @@ Feedback {{Running <sha2 chan 512>}}
 @@ StartBench {{sha2 chan 512} 1000}
-@@ Result {{sha2 chan 512} 13.911}
+@@ Result {{sha2 chan 512} 12.173}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:1024
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:cbb200398d9a9290fc54b165fb96b336a9e766b3d0852b64197be09c4d2db352
-@@ Feedback D:path:cbb200398d9a9290fc54b165fb96b336a9e766b3d0852b64197be09c4d2db352
-@@ Feedback D:strg:cbb200398d9a9290fc54b165fb96b336a9e766b3d0852b64197be09c4d2db352
+@@ Feedback D:chan:ca2a263148568a713ddebb079415ecc2351bdaf2b2ca6695ed8e10d61ab8ae4a
+@@ Feedback D:path:ca2a263148568a713ddebb079415ecc2351bdaf2b2ca6695ed8e10d61ab8ae4a
+@@ Feedback D:strg:ca2a263148568a713ddebb079415ecc2351bdaf2b2ca6695ed8e10d61ab8ae4a
 @@ Feedback {{Running <sha2 chan 1024>}}
 @@ StartBench {{sha2 chan 1024} 1000}
-@@ Result {{sha2 chan 1024} 19.004}
+@@ Result {{sha2 chan 1024} 15.486}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:2048
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:47673d72078f4501c20e731d273109bd38f50f7b9fb00f2960770a10554529f6
-@@ Feedback D:path:47673d72078f4501c20e731d273109bd38f50f7b9fb00f2960770a10554529f6
-@@ Feedback D:strg:47673d72078f4501c20e731d273109bd38f50f7b9fb00f2960770a10554529f6
+@@ Feedback D:chan:2887d9f5d3ca86978787ab4f1151143f893fbdfb9a99585629657e104bdbc88b
+@@ Feedback D:path:2887d9f5d3ca86978787ab4f1151143f893fbdfb9a99585629657e104bdbc88b
+@@ Feedback D:strg:2887d9f5d3ca86978787ab4f1151143f893fbdfb9a99585629657e104bdbc88b
 @@ Feedback {{Running <sha2 chan 2048>}}
 @@ StartBench {{sha2 chan 2048} 1000}
-@@ Result {{sha2 chan 2048} 28.592}
+@@ Result {{sha2 chan 2048} 20.171}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:4096
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:2b7cb6c3a01b90b8e4880264325bed0a169f86396399db000e4c517e04ba9bcd
-@@ Feedback D:path:2b7cb6c3a01b90b8e4880264325bed0a169f86396399db000e4c517e04ba9bcd
-@@ Feedback D:strg:2b7cb6c3a01b90b8e4880264325bed0a169f86396399db000e4c517e04ba9bcd
+@@ Feedback D:chan:2ed23cfa0c3dcb829dc0fd83da6994db015b26691197140e49787860c864bf7c
+@@ Feedback D:path:2ed23cfa0c3dcb829dc0fd83da6994db015b26691197140e49787860c864bf7c
+@@ Feedback D:strg:2ed23cfa0c3dcb829dc0fd83da6994db015b26691197140e49787860c864bf7c
 @@ Feedback {{Running <sha2 chan 4096>}}
 @@ StartBench {{sha2 chan 4096} 1000}
-@@ Result {{sha2 chan 4096} 47.729}
+@@ Result {{sha2 chan 4096} 35.987}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:8192
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:31056bc1f36fe50490e602f89a2473c6d544717b44630588bd34dea5b822d8ac
-@@ Feedback D:path:31056bc1f36fe50490e602f89a2473c6d544717b44630588bd34dea5b822d8ac
-@@ Feedback D:strg:31056bc1f36fe50490e602f89a2473c6d544717b44630588bd34dea5b822d8ac
+@@ Feedback D:chan:4f145ed73431fd633ca3bf662f0fc24bea86775cdab938725aa0f9926ee09e08
+@@ Feedback D:path:4f145ed73431fd633ca3bf662f0fc24bea86775cdab938725aa0f9926ee09e08
+@@ Feedback D:strg:4f145ed73431fd633ca3bf662f0fc24bea86775cdab938725aa0f9926ee09e08
 @@ Feedback {{Running <sha2 chan 8192>}}
 @@ StartBench {{sha2 chan 8192} 1000}
-@@ Result {{sha2 chan 8192} 85.75}
+@@ Result {{sha2 chan 8192} 59.592}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:16384
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:9ae3e4e5e7762628a5cc628bdc86c09e77de47ca6e0e69f4234c4a15d0f85fc5
-@@ Feedback D:path:9ae3e4e5e7762628a5cc628bdc86c09e77de47ca6e0e69f4234c4a15d0f85fc5
-@@ Feedback D:strg:9ae3e4e5e7762628a5cc628bdc86c09e77de47ca6e0e69f4234c4a15d0f85fc5
+@@ Feedback D:chan:7cf9389bda261ab1622330246f55021cea882cbca8144e62aa49a0402b0febfe
+@@ Feedback D:path:7cf9389bda261ab1622330246f55021cea882cbca8144e62aa49a0402b0febfe
+@@ Feedback D:strg:7cf9389bda261ab1622330246f55021cea882cbca8144e62aa49a0402b0febfe
 @@ Feedback {{Running <sha2 chan 16384>}}
 @@ StartBench {{sha2 chan 16384} 1000}
-@@ Result {{sha2 chan 16384} 168.125}
+@@ Result {{sha2 chan 16384} 102.738}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:32768
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:972b3c776af56cd5940e86d9f1360c57d38f1356031bb24a325313b2fa33a6d8
-@@ Feedback D:path:972b3c776af56cd5940e86d9f1360c57d38f1356031bb24a325313b2fa33a6d8
-@@ Feedback D:strg:972b3c776af56cd5940e86d9f1360c57d38f1356031bb24a325313b2fa33a6d8
+@@ Feedback D:chan:e26d1710c86bafbd5db6fac78dcb382a0728b9c3ffe0a469e6de002fa7efecff
+@@ Feedback D:path:e26d1710c86bafbd5db6fac78dcb382a0728b9c3ffe0a469e6de002fa7efecff
+@@ Feedback D:strg:e26d1710c86bafbd5db6fac78dcb382a0728b9c3ffe0a469e6de002fa7efecff
 @@ Feedback {{Running <sha2 chan 32768>}}
 @@ StartBench {{sha2 chan 32768} 1000}
-@@ Result {{sha2 chan 32768} 315.546}
+@@ Result {{sha2 chan 32768} 196.713}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:65536
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:f76925f93d4b09646710ad57c6b1fc123b53c4c573427af4095bfa08955b6b5e
-@@ Feedback D:path:f76925f93d4b09646710ad57c6b1fc123b53c4c573427af4095bfa08955b6b5e
-@@ Feedback D:strg:f76925f93d4b09646710ad57c6b1fc123b53c4c573427af4095bfa08955b6b5e
+@@ Feedback D:chan:fb42dfd8c74bc62cf384fd5daae1d95186d489a3271f0150b92a90970bb4542d
+@@ Feedback D:path:fb42dfd8c74bc62cf384fd5daae1d95186d489a3271f0150b92a90970bb4542d
+@@ Feedback D:strg:fb42dfd8c74bc62cf384fd5daae1d95186d489a3271f0150b92a90970bb4542d
 @@ Feedback {{Running <sha2 chan 65536>}}
 @@ StartBench {{sha2 chan 65536} 1000}
-@@ Result {{sha2 chan 65536} 627.901}
+@@ Result {{sha2 chan 65536} 412.071}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:131072
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:25bd55ca7bb1ff361e9a5fe244572ce231071c0fe5e20f7f398c12b2ea5aef4e
-@@ Feedback D:path:25bd55ca7bb1ff361e9a5fe244572ce231071c0fe5e20f7f398c12b2ea5aef4e
-@@ Feedback D:strg:25bd55ca7bb1ff361e9a5fe244572ce231071c0fe5e20f7f398c12b2ea5aef4e
+@@ Feedback D:chan:b71b5dfdcb261ed750a580f1025f4b124f3fd38e1d06b6875ba55b70f8c78e05
+@@ Feedback D:path:b71b5dfdcb261ed750a580f1025f4b124f3fd38e1d06b6875ba55b70f8c78e05
+@@ Feedback D:strg:b71b5dfdcb261ed750a580f1025f4b124f3fd38e1d06b6875ba55b70f8c78e05
 @@ Feedback {{Running <sha2 chan 131072>}}
 @@ StartBench {{sha2 chan 131072} 1000}
-@@ Result {{sha2 chan 131072} 1250.216}
+@@ Result {{sha2 chan 131072} 772.05}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:262144
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:a766d752ecdba1578abae97b76fc25a769a44cd5e5eee2ed4f26d3966c4dd024
-@@ Feedback D:path:a766d752ecdba1578abae97b76fc25a769a44cd5e5eee2ed4f26d3966c4dd024
-@@ Feedback D:strg:a766d752ecdba1578abae97b76fc25a769a44cd5e5eee2ed4f26d3966c4dd024
+@@ Feedback D:chan:3838ebe94869f07ed175be8a36e9840fe6077dee58a47d4746af9769a0de606a
+@@ Feedback D:path:3838ebe94869f07ed175be8a36e9840fe6077dee58a47d4746af9769a0de606a
+@@ Feedback D:strg:3838ebe94869f07ed175be8a36e9840fe6077dee58a47d4746af9769a0de606a
 @@ Feedback {{Running <sha2 chan 262144>}}
 @@ StartBench {{sha2 chan 262144} 1000}
-@@ Result {{sha2 chan 262144} 2452.493}
+@@ Result {{sha2 chan 262144} 1505.72}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:524288
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:c6b682a4e343fceb09f6e93292c13019d13ba5bb3d0783c8bb7543b143bde2bc
-@@ Feedback D:path:c6b682a4e343fceb09f6e93292c13019d13ba5bb3d0783c8bb7543b143bde2bc
-@@ Feedback D:strg:c6b682a4e343fceb09f6e93292c13019d13ba5bb3d0783c8bb7543b143bde2bc
+@@ Feedback D:chan:2d4465b937d8bf21b4c9819ea1fdd4ecc371f63ce7e1230324cc48b671059be6
+@@ Feedback D:path:2d4465b937d8bf21b4c9819ea1fdd4ecc371f63ce7e1230324cc48b671059be6
+@@ Feedback D:strg:2d4465b937d8bf21b4c9819ea1fdd4ecc371f63ce7e1230324cc48b671059be6
 @@ Feedback {{Running <sha2 chan 524288>}}
 @@ StartBench {{sha2 chan 524288} 1000}
-@@ Result {{sha2 chan 524288} 4913.414}
+@@ Result {{sha2 chan 524288} 3019.184}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:1048576
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:aee1f4a5d15a6ca62f28f2abb0834e2cfe126cc460ff4198ad2022a9544be9b6
-@@ Feedback D:path:aee1f4a5d15a6ca62f28f2abb0834e2cfe126cc460ff4198ad2022a9544be9b6
-@@ Feedback D:strg:aee1f4a5d15a6ca62f28f2abb0834e2cfe126cc460ff4198ad2022a9544be9b6
+@@ Feedback D:chan:2712514c8432bda31c8e36905025ce249492d7600fc1d0790046de70c08bdf91
+@@ Feedback D:path:2712514c8432bda31c8e36905025ce249492d7600fc1d0790046de70c08bdf91
+@@ Feedback D:strg:2712514c8432bda31c8e36905025ce249492d7600fc1d0790046de70c08bdf91
 @@ Feedback {{Running <sha2 chan 1048576>}}
 @@ StartBench {{sha2 chan 1048576} 1000}
-@@ Result {{sha2 chan 1048576} 9944.036}
+@@ Result {{sha2 chan 1048576} 6070.386}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:2097152
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:e2fb4046584f88728c40b90dde9a2c15d02868e2da35895ee5e8f2b4653e985c
-@@ Feedback D:path:e2fb4046584f88728c40b90dde9a2c15d02868e2da35895ee5e8f2b4653e985c
-@@ Feedback D:strg:e2fb4046584f88728c40b90dde9a2c15d02868e2da35895ee5e8f2b4653e985c
+@@ Feedback D:chan:b7d01bf0d4f49e45ab9ac4cb183a1d46997a70214fa944aba4bd13b0aad51e00
+@@ Feedback D:path:b7d01bf0d4f49e45ab9ac4cb183a1d46997a70214fa944aba4bd13b0aad51e00
+@@ Feedback D:strg:b7d01bf0d4f49e45ab9ac4cb183a1d46997a70214fa944aba4bd13b0aad51e00
 @@ Feedback {{Running <sha2 chan 2097152>}}
 @@ StartBench {{sha2 chan 2097152} 1000}
-@@ Result {{sha2 chan 2097152} 19890.669}
+@@ Result {{sha2 chan 2097152} 12275.985}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:4194304
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:92bbe575b3201d4339c20fbea5918ad6d96a50b89c74a8e854015f29384b0fcd
-@@ Feedback D:path:92bbe575b3201d4339c20fbea5918ad6d96a50b89c74a8e854015f29384b0fcd
-@@ Feedback D:strg:92bbe575b3201d4339c20fbea5918ad6d96a50b89c74a8e854015f29384b0fcd
+@@ Feedback D:chan:ade4aea97a17628aba22ce68330d642a6b14b6ba2186be7cf1ae4aa65d2904fa
+@@ Feedback D:path:ade4aea97a17628aba22ce68330d642a6b14b6ba2186be7cf1ae4aa65d2904fa
+@@ Feedback D:strg:ade4aea97a17628aba22ce68330d642a6b14b6ba2186be7cf1ae4aa65d2904fa
 @@ Feedback {{Running <sha2 chan 4194304>}}
 @@ StartBench {{sha2 chan 4194304} 1000}
-@@ Result {{sha2 chan 4194304} 39775.36}
+@@ Result {{sha2 chan 4194304} 24842.675}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:8388608
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:6d1d96d08cca35874d5d35b6c8a35ab4a4af99c043f189acff9da861ee55ec12
-@@ Feedback D:path:6d1d96d08cca35874d5d35b6c8a35ab4a4af99c043f189acff9da861ee55ec12
-@@ Feedback D:strg:6d1d96d08cca35874d5d35b6c8a35ab4a4af99c043f189acff9da861ee55ec12
+@@ Feedback D:chan:584c1162cbec61ca2c6f5de92fc8e81ce6dd76fda607a9dfe58eaf4ba7d635bf
+@@ Feedback D:path:584c1162cbec61ca2c6f5de92fc8e81ce6dd76fda607a9dfe58eaf4ba7d635bf
+@@ Feedback D:strg:584c1162cbec61ca2c6f5de92fc8e81ce6dd76fda607a9dfe58eaf4ba7d635bf
 @@ Feedback {{Running <sha2 chan 8388608>}}
 @@ StartBench {{sha2 chan 8388608} 1000}
-@@ Result {{sha2 chan 8388608} 79567.848}
+@@ Result {{sha2 chan 8388608} 49715.107}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:16777216
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:1a98707d9fb7383680cbe01bf37f973becacb9e321bdb9e9cf1182e60e3368d3
-@@ Feedback D:path:1a98707d9fb7383680cbe01bf37f973becacb9e321bdb9e9cf1182e60e3368d3
-@@ Feedback D:strg:1a98707d9fb7383680cbe01bf37f973becacb9e321bdb9e9cf1182e60e3368d3
+@@ Feedback D:chan:447b309f6bcfed53b3c7e655e49cbeb16dad17382028e0483232d16edc9124c0
+@@ Feedback D:path:447b309f6bcfed53b3c7e655e49cbeb16dad17382028e0483232d16edc9124c0
+@@ Feedback D:strg:447b309f6bcfed53b3c7e655e49cbeb16dad17382028e0483232d16edc9124c0
 @@ Feedback {{Running <sha2 chan 16777216>}}
 @@ StartBench {{sha2 chan 16777216} 1000}
-@@ Result {{sha2 chan 16777216} 159543.411}
+@@ Result {{sha2 chan 16777216} 98283.86}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:33554432
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:398826d4820f597cc3a5af3e19d32f7c9efab82f880340724689e9cd8b7ffd27
-@@ Feedback D:path:398826d4820f597cc3a5af3e19d32f7c9efab82f880340724689e9cd8b7ffd27
-@@ Feedback D:strg:398826d4820f597cc3a5af3e19d32f7c9efab82f880340724689e9cd8b7ffd27
+@@ Feedback D:chan:1c309c4588bd63a4c721e176297905dcfed63411aeef8d38443702b9f26c9c1c
+@@ Feedback D:path:1c309c4588bd63a4c721e176297905dcfed63411aeef8d38443702b9f26c9c1c
+@@ Feedback D:strg:1c309c4588bd63a4c721e176297905dcfed63411aeef8d38443702b9f26c9c1c
 @@ Feedback {{Running <sha2 chan 33554432>}}
 @@ StartBench {{sha2 chan 33554432} 1000}
-@@ Result {{sha2 chan 33554432} 319749.529}
+@@ Result {{sha2 chan 33554432} 196754.498}
 @@ Feedback D:hash:sha2
 @@ Feedback D:size:67108864
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:e169d1321b9ab3aa580ec7cc601064ad744e32e30b1b6a5caecf240eae0cb552
-@@ Feedback D:path:e169d1321b9ab3aa580ec7cc601064ad744e32e30b1b6a5caecf240eae0cb552
-@@ Feedback D:strg:e169d1321b9ab3aa580ec7cc601064ad744e32e30b1b6a5caecf240eae0cb552
+@@ Feedback D:chan:fea55fad995395c0e1342dc5d0c9e1207351ba64bf4ef9544dc2e478fca4e4f1
+@@ Feedback D:path:fea55fad995395c0e1342dc5d0c9e1207351ba64bf4ef9544dc2e478fca4e4f1
+@@ Feedback D:strg:fea55fad995395c0e1342dc5d0c9e1207351ba64bf4ef9544dc2e478fca4e4f1
 @@ Feedback {{Running <sha2 chan 67108864>}}
 @@ StartBench {{sha2 chan 67108864} 1000}
-@@ Result {{sha2 chan 67108864} 639550.816}
+@@ Result {{sha2 chan 67108864} 396164.726}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:64
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:0adc966b0e3f89f034b3c0fe1b9c9aa1312d3f7ed2f521afa72999ab449534b9
-@@ Feedback D:path:0adc966b0e3f89f034b3c0fe1b9c9aa1312d3f7ed2f521afa72999ab449534b9
-@@ Feedback D:strg:0adc966b0e3f89f034b3c0fe1b9c9aa1312d3f7ed2f521afa72999ab449534b9
+@@ Feedback D:chan:0b24b7377602225ee9da19f98c85e6ff03e5aaf1b334af5cad84c21d6ecae88b
+@@ Feedback D:path:0b24b7377602225ee9da19f98c85e6ff03e5aaf1b334af5cad84c21d6ecae88b
+@@ Feedback D:strg:0b24b7377602225ee9da19f98c85e6ff03e5aaf1b334af5cad84c21d6ecae88b
 @@ Feedback {{Running <sha3 chan 64>}}
 @@ StartBench {{sha3 chan 64} 1000}
-@@ Result {{sha3 chan 64} 19.328}
+@@ Result {{sha3 chan 64} 10.576}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:128
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:9bb5c087407a5ab4bba0ab4ef6232260e234132672ff3382ca2629965ed70999
-@@ Feedback D:path:9bb5c087407a5ab4bba0ab4ef6232260e234132672ff3382ca2629965ed70999
-@@ Feedback D:strg:9bb5c087407a5ab4bba0ab4ef6232260e234132672ff3382ca2629965ed70999
+@@ Feedback D:chan:3bc3714b73617b0c4d4c7d55609e918c80e04df2365c10633c058bc7e5da8dae
+@@ Feedback D:path:3bc3714b73617b0c4d4c7d55609e918c80e04df2365c10633c058bc7e5da8dae
+@@ Feedback D:strg:3bc3714b73617b0c4d4c7d55609e918c80e04df2365c10633c058bc7e5da8dae
 @@ Feedback {{Running <sha3 chan 128>}}
 @@ StartBench {{sha3 chan 128} 1000}
-@@ Result {{sha3 chan 128} 19.012}
+@@ Result {{sha3 chan 128} 10.651}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:256
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:eebf61a1f9921e40bebea45c24d86b280b81688e7d2c09322aedfd637d29c66c
-@@ Feedback D:path:eebf61a1f9921e40bebea45c24d86b280b81688e7d2c09322aedfd637d29c66c
-@@ Feedback D:strg:eebf61a1f9921e40bebea45c24d86b280b81688e7d2c09322aedfd637d29c66c
+@@ Feedback D:chan:e6d2965402d6bd43980a8a75f3ca49e820eaa90db48f0cf736b7dbc3ea77f2d0
+@@ Feedback D:path:e6d2965402d6bd43980a8a75f3ca49e820eaa90db48f0cf736b7dbc3ea77f2d0
+@@ Feedback D:strg:e6d2965402d6bd43980a8a75f3ca49e820eaa90db48f0cf736b7dbc3ea77f2d0
 @@ Feedback {{Running <sha3 chan 256>}}
 @@ StartBench {{sha3 chan 256} 1000}
-@@ Result {{sha3 chan 256} 28.16}
+@@ Result {{sha3 chan 256} 13.263}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:512
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:80ce716c568f3ab3875cc28aef0a174a72610ce74b19e1c2b6b1b4b5f91fbd71
-@@ Feedback D:path:80ce716c568f3ab3875cc28aef0a174a72610ce74b19e1c2b6b1b4b5f91fbd71
-@@ Feedback D:strg:80ce716c568f3ab3875cc28aef0a174a72610ce74b19e1c2b6b1b4b5f91fbd71
+@@ Feedback D:chan:8486e311170f05f3d025fb501d69ab8043c699b4ee9943dec8763c74416e8c59
+@@ Feedback D:path:8486e311170f05f3d025fb501d69ab8043c699b4ee9943dec8763c74416e8c59
+@@ Feedback D:strg:8486e311170f05f3d025fb501d69ab8043c699b4ee9943dec8763c74416e8c59
 @@ Feedback {{Running <sha3 chan 512>}}
 @@ StartBench {{sha3 chan 512} 1000}
-@@ Result {{sha3 chan 512} 51.179}
+@@ Result {{sha3 chan 512} 17.456}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:1024
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:7c26b75764b0c24dafa4da7be09f4b396ab042a5f098c561d5933d3fba5f2d72
-@@ Feedback D:path:7c26b75764b0c24dafa4da7be09f4b396ab042a5f098c561d5933d3fba5f2d72
-@@ Feedback D:strg:7c26b75764b0c24dafa4da7be09f4b396ab042a5f098c561d5933d3fba5f2d72
+@@ Feedback D:chan:417efe7bb3cf34adc4be6813fee6da970152fe303090c8e90740b3c2c1013538
+@@ Feedback D:path:417efe7bb3cf34adc4be6813fee6da970152fe303090c8e90740b3c2c1013538
+@@ Feedback D:strg:417efe7bb3cf34adc4be6813fee6da970152fe303090c8e90740b3c2c1013538
 @@ Feedback {{Running <sha3 chan 1024>}}
 @@ StartBench {{sha3 chan 1024} 1000}
-@@ Result {{sha3 chan 1024} 86.184}
+@@ Result {{sha3 chan 1024} 26.064}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:2048
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:ac437861e44d2bbeaeee208e10f04df10c32e49f7bd4808892417208999b6e1b
-@@ Feedback D:path:ac437861e44d2bbeaeee208e10f04df10c32e49f7bd4808892417208999b6e1b
-@@ Feedback D:strg:ac437861e44d2bbeaeee208e10f04df10c32e49f7bd4808892417208999b6e1b
+@@ Feedback D:chan:3fe4a46d8b66da6f7daa68e8d374b60843b55a00dd90490c5e851b4f85f0ee02
+@@ Feedback D:path:3fe4a46d8b66da6f7daa68e8d374b60843b55a00dd90490c5e851b4f85f0ee02
+@@ Feedback D:strg:3fe4a46d8b66da6f7daa68e8d374b60843b55a00dd90490c5e851b4f85f0ee02
 @@ Feedback {{Running <sha3 chan 2048>}}
 @@ StartBench {{sha3 chan 2048} 1000}
-@@ Result {{sha3 chan 2048} 150.177}
+@@ Result {{sha3 chan 2048} 43.013}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:4096
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:3727cafd76f010c3d5860550d47962cbeef4c5fe6dfcd7ea10703991935312c4
-@@ Feedback D:path:3727cafd76f010c3d5860550d47962cbeef4c5fe6dfcd7ea10703991935312c4
-@@ Feedback D:strg:3727cafd76f010c3d5860550d47962cbeef4c5fe6dfcd7ea10703991935312c4
+@@ Feedback D:chan:6cca7da551d8cc02b1c1a1179d5d6ce4faf122f662fee78c7a46634c469bb504
+@@ Feedback D:path:6cca7da551d8cc02b1c1a1179d5d6ce4faf122f662fee78c7a46634c469bb504
+@@ Feedback D:strg:6cca7da551d8cc02b1c1a1179d5d6ce4faf122f662fee78c7a46634c469bb504
 @@ Feedback {{Running <sha3 chan 4096>}}
 @@ StartBench {{sha3 chan 4096} 1000}
-@@ Result {{sha3 chan 4096} 281.92}
+@@ Result {{sha3 chan 4096} 75.557}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:8192
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:d907e79b4da776426389cb7fe33fa611cb788ddd2ddf0a14abe1ac1ebde48fcf
-@@ Feedback D:path:d907e79b4da776426389cb7fe33fa611cb788ddd2ddf0a14abe1ac1ebde48fcf
-@@ Feedback D:strg:d907e79b4da776426389cb7fe33fa611cb788ddd2ddf0a14abe1ac1ebde48fcf
+@@ Feedback D:chan:e2b97f912bb84d2b444f2c38cb7aa66a8c20ef127dc1e8263b96ad051e73a3f4
+@@ Feedback D:path:e2b97f912bb84d2b444f2c38cb7aa66a8c20ef127dc1e8263b96ad051e73a3f4
+@@ Feedback D:strg:e2b97f912bb84d2b444f2c38cb7aa66a8c20ef127dc1e8263b96ad051e73a3f4
 @@ Feedback {{Running <sha3 chan 8192>}}
 @@ StartBench {{sha3 chan 8192} 1000}
-@@ Result {{sha3 chan 8192} 557.006}
+@@ Result {{sha3 chan 8192} 138.517}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:16384
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:bedd5fd908a555f0759b1b56174a52abf2bd3196b56485a44ecf36d3cbf58875
-@@ Feedback D:path:bedd5fd908a555f0759b1b56174a52abf2bd3196b56485a44ecf36d3cbf58875
-@@ Feedback D:strg:bedd5fd908a555f0759b1b56174a52abf2bd3196b56485a44ecf36d3cbf58875
+@@ Feedback D:chan:aaaf1b51a8b350b94630fe86e1867b0f6b26cf154d9e0dea648de781277d90d8
+@@ Feedback D:path:aaaf1b51a8b350b94630fe86e1867b0f6b26cf154d9e0dea648de781277d90d8
+@@ Feedback D:strg:aaaf1b51a8b350b94630fe86e1867b0f6b26cf154d9e0dea648de781277d90d8
 @@ Feedback {{Running <sha3 chan 16384>}}
 @@ StartBench {{sha3 chan 16384} 1000}
-@@ Result {{sha3 chan 16384} 1100.605}
+@@ Result {{sha3 chan 16384} 260.532}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:32768
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:aecf2f628b88947119e1c0b02e431fa6c1c935ae610ec75dca5cf259b1b752a1
-@@ Feedback D:path:aecf2f628b88947119e1c0b02e431fa6c1c935ae610ec75dca5cf259b1b752a1
-@@ Feedback D:strg:aecf2f628b88947119e1c0b02e431fa6c1c935ae610ec75dca5cf259b1b752a1
+@@ Feedback D:chan:86aa1b797acbe42e8c135a5e18639eee5b932849568fafcf5a61757dfe9d8e0c
+@@ Feedback D:path:86aa1b797acbe42e8c135a5e18639eee5b932849568fafcf5a61757dfe9d8e0c
+@@ Feedback D:strg:86aa1b797acbe42e8c135a5e18639eee5b932849568fafcf5a61757dfe9d8e0c
 @@ Feedback {{Running <sha3 chan 32768>}}
 @@ StartBench {{sha3 chan 32768} 1000}
-@@ Result {{sha3 chan 32768} 2182.376}
+@@ Result {{sha3 chan 32768} 545.413}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:65536
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:0615fef6abad03066afbbbaa1a738603f3183ad9095e288185343948b6e11864
-@@ Feedback D:path:0615fef6abad03066afbbbaa1a738603f3183ad9095e288185343948b6e11864
-@@ Feedback D:strg:0615fef6abad03066afbbbaa1a738603f3183ad9095e288185343948b6e11864
+@@ Feedback D:chan:31d1e907ee758278b690268794898b3b1a42e54d73b751702767cb9023d3f1a9
+@@ Feedback D:path:31d1e907ee758278b690268794898b3b1a42e54d73b751702767cb9023d3f1a9
+@@ Feedback D:strg:31d1e907ee758278b690268794898b3b1a42e54d73b751702767cb9023d3f1a9
 @@ Feedback {{Running <sha3 chan 65536>}}
 @@ StartBench {{sha3 chan 65536} 1000}
-@@ Result {{sha3 chan 65536} 4382.761}
+@@ Result {{sha3 chan 65536} 1150.535}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:131072
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:3f07557f17860ba5460b75f53fe8a5a87514eda47f8be790a9a556c9c0373e33
-@@ Feedback D:path:3f07557f17860ba5460b75f53fe8a5a87514eda47f8be790a9a556c9c0373e33
-@@ Feedback D:strg:3f07557f17860ba5460b75f53fe8a5a87514eda47f8be790a9a556c9c0373e33
+@@ Feedback D:chan:5ccab338a2da1b8f6dc20466dc497fa8df944f94ca063c8bfeb75b508937a19b
+@@ Feedback D:path:5ccab338a2da1b8f6dc20466dc497fa8df944f94ca063c8bfeb75b508937a19b
+@@ Feedback D:strg:5ccab338a2da1b8f6dc20466dc497fa8df944f94ca063c8bfeb75b508937a19b
 @@ Feedback {{Running <sha3 chan 131072>}}
 @@ StartBench {{sha3 chan 131072} 1000}
-@@ Result {{sha3 chan 131072} 8692.815}
+@@ Result {{sha3 chan 131072} 2122.874}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:262144
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:cba1585e92c080420f72c4a635aac27924e0b013ce0f439100ff2f1652f0e9e1
-@@ Feedback D:path:cba1585e92c080420f72c4a635aac27924e0b013ce0f439100ff2f1652f0e9e1
-@@ Feedback D:strg:cba1585e92c080420f72c4a635aac27924e0b013ce0f439100ff2f1652f0e9e1
+@@ Feedback D:chan:efa1a9562aed8edbd7670abfb2f44d8b5e412b7df8f92d889b59a2e1351c8d36
+@@ Feedback D:path:efa1a9562aed8edbd7670abfb2f44d8b5e412b7df8f92d889b59a2e1351c8d36
+@@ Feedback D:strg:efa1a9562aed8edbd7670abfb2f44d8b5e412b7df8f92d889b59a2e1351c8d36
 @@ Feedback {{Running <sha3 chan 262144>}}
 @@ StartBench {{sha3 chan 262144} 1000}
-@@ Result {{sha3 chan 262144} 17323.348}
+@@ Result {{sha3 chan 262144} 4167.593}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:524288
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:3b45afb6679fcd396ce2a9db8243414d0687e46a30eef67134fda8de148b4ea8
-@@ Feedback D:path:3b45afb6679fcd396ce2a9db8243414d0687e46a30eef67134fda8de148b4ea8
-@@ Feedback D:strg:3b45afb6679fcd396ce2a9db8243414d0687e46a30eef67134fda8de148b4ea8
+@@ Feedback D:chan:9980f366d261326ae5556d18c3902f8c6e2b5460743d0affc7d0543fc426d70c
+@@ Feedback D:path:9980f366d261326ae5556d18c3902f8c6e2b5460743d0affc7d0543fc426d70c
+@@ Feedback D:strg:9980f366d261326ae5556d18c3902f8c6e2b5460743d0affc7d0543fc426d70c
 @@ Feedback {{Running <sha3 chan 524288>}}
 @@ StartBench {{sha3 chan 524288} 1000}
-@@ Result {{sha3 chan 524288} 34744.334}
+@@ Result {{sha3 chan 524288} 8455.063}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:1048576
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:1af7f12b10d682cd34e48def83275034e334712e52c888a7944bb5caef5b15ca
-@@ Feedback D:path:1af7f12b10d682cd34e48def83275034e334712e52c888a7944bb5caef5b15ca
-@@ Feedback D:strg:1af7f12b10d682cd34e48def83275034e334712e52c888a7944bb5caef5b15ca
+@@ Feedback D:chan:9bdca27e53ba3ce788ea1131c838cd501cd821ec97c764bbc1f9021f5c4d4e5d
+@@ Feedback D:path:9bdca27e53ba3ce788ea1131c838cd501cd821ec97c764bbc1f9021f5c4d4e5d
+@@ Feedback D:strg:9bdca27e53ba3ce788ea1131c838cd501cd821ec97c764bbc1f9021f5c4d4e5d
 @@ Feedback {{Running <sha3 chan 1048576>}}
 @@ StartBench {{sha3 chan 1048576} 1000}
-@@ Result {{sha3 chan 1048576} 70069.152}
+@@ Result {{sha3 chan 1048576} 16868.97}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:2097152
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:566980e7db87b1bae63f080ca8a706b56990aa60d4570006d73989b74544ba6e
-@@ Feedback D:path:566980e7db87b1bae63f080ca8a706b56990aa60d4570006d73989b74544ba6e
-@@ Feedback D:strg:566980e7db87b1bae63f080ca8a706b56990aa60d4570006d73989b74544ba6e
+@@ Feedback D:chan:1e46125869050dac1215ca21c136e74ba8ca8cbdc39a6aefc999dc99a3c2bf39
+@@ Feedback D:path:1e46125869050dac1215ca21c136e74ba8ca8cbdc39a6aefc999dc99a3c2bf39
+@@ Feedback D:strg:1e46125869050dac1215ca21c136e74ba8ca8cbdc39a6aefc999dc99a3c2bf39
 @@ Feedback {{Running <sha3 chan 2097152>}}
 @@ StartBench {{sha3 chan 2097152} 1000}
-@@ Result {{sha3 chan 2097152} 139850.359}
+@@ Result {{sha3 chan 2097152} 33538.819}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:4194304
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:c4f392cb1362134d20ca8e12b94b0fb4ed9a6ff48cfb7b4eacc63e0e33b8bcb8
-@@ Feedback D:path:c4f392cb1362134d20ca8e12b94b0fb4ed9a6ff48cfb7b4eacc63e0e33b8bcb8
-@@ Feedback D:strg:c4f392cb1362134d20ca8e12b94b0fb4ed9a6ff48cfb7b4eacc63e0e33b8bcb8
+@@ Feedback D:chan:cc63c1018bf9acbea7ad8e4afd82e7f5cb1efcf605037cab43c6ff59e85c90f9
+@@ Feedback D:path:cc63c1018bf9acbea7ad8e4afd82e7f5cb1efcf605037cab43c6ff59e85c90f9
+@@ Feedback D:strg:cc63c1018bf9acbea7ad8e4afd82e7f5cb1efcf605037cab43c6ff59e85c90f9
 @@ Feedback {{Running <sha3 chan 4194304>}}
 @@ StartBench {{sha3 chan 4194304} 1000}
-@@ Result {{sha3 chan 4194304} 278432.909}
+@@ Result {{sha3 chan 4194304} 67067.425}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:8388608
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:0017a3ba4ea6d59e942c223517a4f7a2049e34b5cbcbf0ed17611627b747eb48
-@@ Feedback D:path:0017a3ba4ea6d59e942c223517a4f7a2049e34b5cbcbf0ed17611627b747eb48
-@@ Feedback D:strg:0017a3ba4ea6d59e942c223517a4f7a2049e34b5cbcbf0ed17611627b747eb48
+@@ Feedback D:chan:f8966fe11fc6e85f7892d7573991a5fb01fb1c7ec96a921174cab8eead33c75c
+@@ Feedback D:path:f8966fe11fc6e85f7892d7573991a5fb01fb1c7ec96a921174cab8eead33c75c
+@@ Feedback D:strg:f8966fe11fc6e85f7892d7573991a5fb01fb1c7ec96a921174cab8eead33c75c
 @@ Feedback {{Running <sha3 chan 8388608>}}
 @@ StartBench {{sha3 chan 8388608} 1000}
-@@ Result {{sha3 chan 8388608} 560406.181}
+@@ Result {{sha3 chan 8388608} 143503.007}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:16777216
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:cadd8a552cca284d4e45ef2add8d430f32a1266b3ef026901f36b364361d0cdc
-@@ Feedback D:path:cadd8a552cca284d4e45ef2add8d430f32a1266b3ef026901f36b364361d0cdc
-@@ Feedback D:strg:cadd8a552cca284d4e45ef2add8d430f32a1266b3ef026901f36b364361d0cdc
+@@ Feedback D:chan:1d9524f51d7435ac42592f5648c30b7b20c86b7a6f0eaccbbd205184184c6735
+@@ Feedback D:path:1d9524f51d7435ac42592f5648c30b7b20c86b7a6f0eaccbbd205184184c6735
+@@ Feedback D:strg:1d9524f51d7435ac42592f5648c30b7b20c86b7a6f0eaccbbd205184184c6735
 @@ Feedback {{Running <sha3 chan 16777216>}}
 @@ StartBench {{sha3 chan 16777216} 1000}
-@@ Result {{sha3 chan 16777216} 1125739.926}
+@@ Result {{sha3 chan 16777216} 271909.971}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:33554432
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:e97474e86e8d6121dadbb0cfda6d3d6825d7a20b570b5fa380bd62b22cb1e16e
-@@ Feedback D:path:e97474e86e8d6121dadbb0cfda6d3d6825d7a20b570b5fa380bd62b22cb1e16e
-@@ Feedback D:strg:e97474e86e8d6121dadbb0cfda6d3d6825d7a20b570b5fa380bd62b22cb1e16e
+@@ Feedback D:chan:a1cc33364430c2ab771a193c39540ea6443cd0ff7909b9277d1fb57f8fb70a85
+@@ Feedback D:path:a1cc33364430c2ab771a193c39540ea6443cd0ff7909b9277d1fb57f8fb70a85
+@@ Feedback D:strg:a1cc33364430c2ab771a193c39540ea6443cd0ff7909b9277d1fb57f8fb70a85
 @@ Feedback {{Running <sha3 chan 33554432>}}
 @@ StartBench {{sha3 chan 33554432} 1000}
-@@ Result {{sha3 chan 33554432} 2263972.431}
+@@ Result {{sha3 chan 33554432} 537287.386}
 @@ Feedback D:hash:sha3
 @@ Feedback D:size:67108864
 @@ Feedback {{D:conf:-blocking 1 -buffering full -buffersize 4096 -encoding binary -eofchar {} -translation lf}}
-@@ Feedback D:chan:a6bc038cad3b2dfcff3d2fd1bb20a240cfa42d7f89ee78a6969c5bfc34530925
-@@ Feedback D:path:a6bc038cad3b2dfcff3d2fd1bb20a240cfa42d7f89ee78a6969c5bfc34530925
-@@ Feedback D:strg:a6bc038cad3b2dfcff3d2fd1bb20a240cfa42d7f89ee78a6969c5bfc34530925
+@@ Feedback D:chan:dd8a71c6d889471e268c15d1a075e3f35f5b373d4ab4fc339dcccffdafa64c62
+@@ Feedback D:path:dd8a71c6d889471e268c15d1a075e3f35f5b373d4ab4fc339dcccffdafa64c62
+@@ Feedback D:strg:dd8a71c6d889471e268c15d1a075e3f35f5b373d4ab4fc339dcccffdafa64c62
 @@ Feedback {{Running <sha3 chan 67108864>}}
 @@ StartBench {{sha3 chan 67108864} 1000}
-@@ Result {{sha3 chan 67108864} 4494763.097}
-@@ End 1613830936
+@@ Result {{sha3 chan 67108864} 1051598.331}
+@@ End 1613929419
 
