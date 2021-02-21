@@ -13,15 +13,41 @@ kt local testing ankh
 # # ## ### ##### ######## ############# #####################
 
 foreach {name pattern commands} {
-    ak             - hash
-    ak::hash       - {list md4 md5 sha1 sha2 sha3 version}
-    ak::hash::md4  - {channel path references size string}
-    ak::hash::md5  - {channel path references size string}
-    ak::hash::sha1 - {channel path references size string}
-    ak::hash::sha2 - {channel path references size string}
-    ak::hash::sha3 - {channel path references size string}
+    ak                 - hash
+    ak::hash           - {aich blake2b blake2s btih ed2k edonr/224 edonr/256 edonr/384 edonr/512 gost12/256 gost12/512 gost94 has160 list md4 md5 ripemd160 sha1 sha2/224 sha2/256 sha2/384 sha2/512 sha3/224 sha3/256 sha3/384 sha3/512 snefru/128 snefru/256 tiger tth version whirlpool}
+    ak::hash::aich       - -
+    ak::hash::blake2b    - -
+    ak::hash::blake2s    - -
+    ak::hash::btih       - -
+    ak::hash::ed2k       - -
+    ak::hash::edonr/224  - -
+    ak::hash::edonr/256  - -
+    ak::hash::edonr/384  - -
+    ak::hash::edonr/512  - -
+    ak::hash::gost12/256 - -
+    ak::hash::gost12/512 - -
+    ak::hash::gost94     - -
+    ak::hash::has160     - -
+    ak::hash::md4        - -
+    ak::hash::md5        - -
+    ak::hash::ripemd160  - -
+    ak::hash::sha1       - -
+    ak::hash::sha2/224   - -
+    ak::hash::sha2/256   - -
+    ak::hash::sha2/384   - -
+    ak::hash::sha2/512   - -
+    ak::hash::sha3/224   - -
+    ak::hash::sha3/256   - -
+    ak::hash::sha3/384   - -
+    ak::hash::sha3/512   - -
+    ak::hash::snefru/128 - -
+    ak::hash::snefru/256 - -
+    ak::hash::tiger      - -
+    ak::hash::tth        - -
+    ak::hash::whirlpool  - -
 } {
-    if {$pattern eq "-"} { set pattern {[a-z]*} }
+    if {$pattern  eq "-"} { set pattern  {[a-z]*} }
+    if {$commands eq "-"} { set commands {channel path references size string} }
     # - -- --- ----- -------- -------------
 
     if {[llength $commands] > 1} {

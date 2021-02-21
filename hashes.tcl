@@ -18,6 +18,10 @@ critcl::cflags -DTCL_BYTE_ORDER=$byteOrder
 
 critcl::cheaders c/rhash/librhash/byte_order.h
 critcl::csources c/rhash/librhash/byte_order.c
+critcl::csources c/rhash/librhash/hex.c
+critcl::csources c/rhash/librhash/tiger_sbox.c
+critcl::csources c/rhash/librhash/whirlpool_sbox.c
+critcl::csources c/rhash/librhash/sha1.c ;# Building block for some other hashes
 
 proc rhash/def {hash {spec {}}} {
     lappend map @@ $hash
@@ -46,6 +50,18 @@ proc rhash/def {hash {spec {}}} {
 proc hashes {} {
     set hashes {}
 
+    dict set hashes aich      [rhash/def aich   { hsize 20 }]
+    dict set hashes blake2b   [rhash/def blake2b]
+    dict set hashes blake2s   [rhash/def blake2s]
+    dict set hashes ed2k      [rhash/def ed2k   { hsize 16 }]
+    dict set hashes gost94    [rhash/def gost94 { hsize gost94_hash_length }]
+    dict set hashes has160    [rhash/def has160]
+    dict set hashes md4       [rhash/def md4    { refs { https://en.wikipedia.org/wiki/MD4 }}]
+    dict set hashes md5       [rhash/def md5    { refs { https://en.wikipedia.org/wiki/MD5 }}]
+    dict set hashes tiger     [rhash/def tiger  { hsize tiger_hash_length }]
+    dict set hashes tth       [rhash/def tth    { hsize 64 }]
+    dict set hashes whirlpool [rhash/def whirlpool { hsize whirlpool_block_size }]
+
     dict set hashes sha1 {
 	refs {
 	    https://en.wikipedia.org/wiki/SHA-1
@@ -61,14 +77,35 @@ proc hashes {} {
 	forder  HC
     }
 
-    dict set hashes md4  [rhash/def md4 { refs { https://en.wikipedia.org/wiki/MD4 }}]
-    dict set hashes md5  [rhash/def md5 { refs { https://en.wikipedia.org/wiki/MD5 }}]
-    dict set hashes sha2 [rhash/def sha256 {
+    dict set hashes sha2/256 [rhash/def sha256 {
 	refs {
 	    https://en.wikipedia.org/wiki/SHA-2
 	    http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf
 	}}]
-    dict set hashes sha3 [rhash/def sha3 {
+
+    dict set hashes sha2/224 [rhash/def sha256 {
+	header   {}
+	csources {}
+	refs {
+	    https://en.wikipedia.org/wiki/SHA-2
+	    http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf
+	}}]
+
+    dict set hashes sha2/512 [rhash/def sha512 {
+	refs {
+	    https://en.wikipedia.org/wiki/SHA-2
+	    http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf
+	}}]
+
+    dict set hashes sha2/384 [rhash/def sha512 {
+	header   {}
+	csources {}
+	refs {
+	    https://en.wikipedia.org/wiki/SHA-2
+	    http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf
+	}}]
+
+    dict set hashes sha3/256 [rhash/def sha3 {
 	hsize sha3_256_hash_size
 	init  rhash_sha3_256_init
 	refs {
@@ -76,6 +113,113 @@ proc hashes {} {
 	    http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf
 	    http://keccak.noekeon.org/
 	}}]
+
+    dict set hashes sha3/224 [rhash/def sha3 {
+	hsize sha3_224_hash_size
+	init  rhash_sha3_224_init
+	header   {}
+	csources {}
+	refs {
+	    https://en.wikipedia.org/wiki/SHA-3
+	    http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf
+	    http://keccak.noekeon.org/
+	}}]
+
+    dict set hashes sha3/384 [rhash/def sha3 {
+	hsize sha3_384_hash_size
+	init  rhash_sha3_384_init
+	header   {}
+	csources {}
+	refs {
+	    https://en.wikipedia.org/wiki/SHA-3
+	    http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf
+	    http://keccak.noekeon.org/
+	}}]
+
+    dict set hashes sha3/512 [rhash/def sha3 {
+	hsize sha3_512_hash_size
+	init  rhash_sha3_512_init
+	header   {}
+	csources {}
+	refs {
+	    https://en.wikipedia.org/wiki/SHA-3
+	    http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf
+	    http://keccak.noekeon.org/
+	}}]
+
+    dict set hashes edonr/224 [rhash/def edonr {
+	hsize  edonr224_hash_size
+	init   rhash_edonr224_init
+	update rhash_edonr256_update
+	final  rhash_edonr256_final
+    }]
+
+    dict set hashes edonr/256 [rhash/def edonr {
+	header   {}
+	csources {}
+	hsize  edonr256_hash_size
+	init   rhash_edonr256_init
+	update rhash_edonr256_update
+	final  rhash_edonr256_final
+    }]
+
+    dict set hashes edonr/384 [rhash/def edonr {
+	header   {}
+	csources {}
+	hsize  edonr384_hash_size
+	init   rhash_edonr384_init
+	update rhash_edonr512_update
+	final  rhash_edonr512_final
+    }]
+
+    dict set hashes edonr/512 [rhash/def edonr {
+	header   {}
+	csources {}
+	hsize  edonr512_hash_size
+	init   rhash_edonr512_init
+	update rhash_edonr512_update
+	final  rhash_edonr512_final
+    }]
+
+    dict set hashes gost12/256 [rhash/def gost12 {
+	hsize  gost12_256_hash_size
+	init   rhash_gost12_256_init
+    }]
+
+    dict set hashes gost12/512 [rhash/def gost12 {
+	header   {}
+	csources {}
+	hsize  gost12_512_hash_size
+	init   rhash_gost12_512_init
+    }]
+
+    dict set hashes ripemd160 [rhash/def ripemd-160 {
+	hsize   ripemd160_hash_size
+	context	ripemd160_ctx
+	init	rhash_ripemd160_init
+	update	rhash_ripemd160_update
+	final   rhash_ripemd160_final
+    }]
+
+    dict set hashes snefru/128 [rhash/def snefru {
+	hsize  snefru128_hash_length
+	init   rhash_snefru128_init
+    }]
+
+    dict set hashes snefru/256 [rhash/def snefru {
+	header   {}
+	csources {}
+	hsize  snefru256_hash_length
+	init   rhash_snefru256_init
+    }]
+
+    dict set hashes btih [rhash/def torrent {
+	hsize   btih_hash_size
+	context	torrent_ctx
+	init	bt_init
+	update	bt_update
+	final   bt_final
+    }]
 
     # https://sourceforge.net/p/rhash/wiki/HashFunctions/
 

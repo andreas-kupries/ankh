@@ -17,11 +17,15 @@ critcl::cconst ::ak::hash::list char* "\"[lsort -dict [dict keys [hashes]]]\""
 # (***) Get all the headers and sources first.
 dict for {hash spec} [hashes] {
     set h [dict get $spec header]
-    set c [dict get $spec csource]
-
-    critcl::csources $c
+    if {$h eq {}} continue
     critcl::cheaders $h
     critcl::include  [file tail $h]
+}
+
+dict for {hash spec} [hashes] {
+    set c [dict get $spec csource]
+    if {$c eq {}} continue
+    critcl::csources $c
 }
 
 dict for {hash spec} [hashes] {

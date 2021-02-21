@@ -14,11 +14,11 @@ kt local testing ankh
 # # ## ### ##### ######## ############# #####################
 
 foreach {hash size __bit_size__} {
-    md4  16  128
-    md5  16  -
-    sha1 20  160
-    sha2 32  256
-    sha3 32  -
+    md4      16  128
+    md5      16  -
+    sha1     20  160
+    sha2/256 32  256
+    sha3/256 32  -
 } {
     tcltest::test ankh-${hash}-size-1.0 "ak hash $hash size, wrong#args" -body {
 	ak hash $hash size X

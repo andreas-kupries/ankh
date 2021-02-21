@@ -19,7 +19,11 @@ kt source support/util.tcl
 ## md4  : RFC 1320 test vectors
 
 foreach hash {
-    md4 md5 sha1 sha2 sha3
+    md4
+    md5
+    sha1
+    sha2/256
+    sha3/256
 } {
     tcltest::test ankh-${hash}-string-1.0 "ak hash $hash string, wrong#args" -body {
 	ak hash $hash string STR X
