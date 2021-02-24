@@ -4,13 +4,20 @@
 ## Utility functions for the tests.
 
 proc vectors {} {
-    lappend v {}    12345678901234567890123456789012345678901234567890123456789012345678901234567890
-    lappend v {}    a
-    lappend v {}    abc
-    lappend v {}    abcdefghijklmnopqrstuvwxyz
-    lappend v {}    ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
-    lappend v empty {}
-    lappend v md    {message digest}
+    lappend v 128U      [string repeat U 128]
+    lappend v 8digits   [string repeat 1234567890 8]
+    lappend v a         a
+    lappend v abc       abc
+    lappend v alpha_low abcdefghijklmnopqrstuvwxyz
+    lappend v alpha_num ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+    lappend v empty     {}
+    lappend v m32       {This is message, length=32 bytes}
+    lappend v m50       {Suppose the original message has length = 50 bytes}
+    lappend v md        {message digest}
+    lappend v milla     [string repeat a 1000000]
+    lappend v qbfjld    {The quick brown fox jumps over the lazy dog}
+    lappend v qbfjld1   {The quick brown fox jumps over the lazy cog}
+    lappend v qbfjld2   {The quick brown fox jumps over the lazy eog}
     return $v
 }
 
