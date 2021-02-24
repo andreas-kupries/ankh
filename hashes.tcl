@@ -84,6 +84,8 @@ proc hashes {} {
 	}}]
 
     dict set hashes sha2/224 [rhash/def sha256 {
+	hsize sha224_hash_size
+	init  rhash_sha224_init
 	header   {}
 	csources {}
 	refs {
@@ -98,6 +100,8 @@ proc hashes {} {
 	}}]
 
     dict set hashes sha2/384 [rhash/def sha512 {
+	hsize sha384_hash_size
+	init  rhash_sha384_init
 	header   {}
 	csources {}
 	refs {

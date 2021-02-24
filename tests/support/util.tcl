@@ -3,6 +3,67 @@
 # # ## ### ##### ######## ############# #####################
 ## Utility functions for the tests.
 
+proc vectors {} {
+    lappend v {}    12345678901234567890123456789012345678901234567890123456789012345678901234567890
+    lappend v {}    a
+    lappend v {}    abc
+    lappend v {}    abcdefghijklmnopqrstuvwxyz
+    lappend v {}    ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+    lappend v empty {}
+    lappend v md    {message digest}
+    return $v
+}
+
+proc hashes {} {
+    lmap {hash _ _} [hash-sizes] { set hash }
+}
+
+proc hash-sizes {} {
+    return  {
+	md4      16  128
+	md5      16  128
+	sha1     20  160
+	sha2/224 28  224
+	sha2/256 32  256
+	sha2/384 48  384
+	sha2/512 64  512
+	sha3/224 28  224
+	sha3/256 32  256
+	sha3/384 48  384
+	sha3/512 64  512
+    }
+}
+
+# aich        20 160
+
+# blake2b     64 512
+# blake2s     32 256
+
+# btih        20 160
+# ed2k        16 128
+
+# edonr/224   28 224
+# edonr/256   32 256
+# edonr/384   48 384
+# edonr/512   64 512
+
+# gost12/256  32 256
+# gost12/512  64 512
+
+# gost94      32 256
+# has160      20 160
+# ripemd160   20 160
+
+# sha2/384    48 384
+# sha2/512    64 512
+
+# snefru/128  16 128
+# snefru/256  32 256
+
+# tiger       24 192
+# tth         64 512
+# whirlpool   64 512
+
 proc write {path content} {
     set c [open $path wb]
     puts -nonewline $c $content
