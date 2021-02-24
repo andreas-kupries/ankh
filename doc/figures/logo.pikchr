@@ -1,0 +1,19 @@
+
+# Ankh Symbol
+
+H: line   thick thick thick right
+V: line   thick thick thick down from H.center 
+R: spline thick thick thick from H.center then right 35.5% up 35.5% then up 32.5% then up 10% left  until even with H.center then left  1%
+L: spline thick thick thick from H.center then left  35.5% up 35.5% then up 32.5% then up 10% right until even with H.center then right 1%
+
+# Hash Sign
+
+@a = linewid * 10 /100
+@b = linewid * 20 /100
+@c = linewid * 30 /100
+@d = linewid * 40 /100
+
+line thick from @b below @a right of H.center to @b below @d right of H.center
+line thick from @c below @a right of H.center to @c below @d right of H.center
+line thick from @a below @b right of H.center to @d below @b right of H.center
+line thick from @a below @c right of H.center to @d below @c right of H.center

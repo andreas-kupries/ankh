@@ -1,0 +1,461 @@
+'\"
+'\" Generated from file 'ankh\&.man' by tcllib/doctools with format 'nroff'
+'\" Copyright (c) 2021 Andreas Kupries
+'\" Copyright (c) 2021 Documentation, Andreas Kupries
+'\"
+.TH "ankh" n 0\&.0 doc "Ankh"
+.\" The -*- nroff -*- definitions below are for supplemental macros used
+.\" in Tcl/Tk manual entries.
+.\"
+.\" .AP type name in/out ?indent?
+.\"	Start paragraph describing an argument to a library procedure.
+.\"	type is type of argument (int, etc.), in/out is either "in", "out",
+.\"	or "in/out" to describe whether procedure reads or modifies arg,
+.\"	and indent is equivalent to second arg of .IP (shouldn't ever be
+.\"	needed;  use .AS below instead)
+.\"
+.\" .AS ?type? ?name?
+.\"	Give maximum sizes of arguments for setting tab stops.  Type and
+.\"	name are examples of largest possible arguments that will be passed
+.\"	to .AP later.  If args are omitted, default tab stops are used.
+.\"
+.\" .BS
+.\"	Start box enclosure.  From here until next .BE, everything will be
+.\"	enclosed in one large box.
+.\"
+.\" .BE
+.\"	End of box enclosure.
+.\"
+.\" .CS
+.\"	Begin code excerpt.
+.\"
+.\" .CE
+.\"	End code excerpt.
+.\"
+.\" .VS ?version? ?br?
+.\"	Begin vertical sidebar, for use in marking newly-changed parts
+.\"	of man pages.  The first argument is ignored and used for recording
+.\"	the version when the .VS was added, so that the sidebars can be
+.\"	found and removed when they reach a certain age.  If another argument
+.\"	is present, then a line break is forced before starting the sidebar.
+.\"
+.\" .VE
+.\"	End of vertical sidebar.
+.\"
+.\" .DS
+.\"	Begin an indented unfilled display.
+.\"
+.\" .DE
+.\"	End of indented unfilled display.
+.\"
+.\" .SO ?manpage?
+.\"	Start of list of standard options for a Tk widget. The manpage
+.\"	argument defines where to look up the standard options; if
+.\"	omitted, defaults to "options". The options follow on successive
+.\"	lines, in three columns separated by tabs.
+.\"
+.\" .SE
+.\"	End of list of standard options for a Tk widget.
+.\"
+.\" .OP cmdName dbName dbClass
+.\"	Start of description of a specific option.  cmdName gives the
+.\"	option's name as specified in the class command, dbName gives
+.\"	the option's name in the option database, and dbClass gives
+.\"	the option's class in the option database.
+.\"
+.\" .UL arg1 arg2
+.\"	Print arg1 underlined, then print arg2 normally.
+.\"
+.\" .QW arg1 ?arg2?
+.\"	Print arg1 in quotes, then arg2 normally (for trailing punctuation).
+.\"
+.\" .PQ arg1 ?arg2?
+.\"	Print an open parenthesis, arg1 in quotes, then arg2 normally
+.\"	(for trailing punctuation) and then a closing parenthesis.
+.\"
+.\"	# Set up traps and other miscellaneous stuff for Tcl/Tk man pages.
+.if t .wh -1.3i ^B
+.nr ^l \n(.l
+.ad b
+.\"	# Start an argument description
+.de AP
+.ie !"\\$4"" .TP \\$4
+.el \{\
+.   ie !"\\$2"" .TP \\n()Cu
+.   el          .TP 15
+.\}
+.ta \\n()Au \\n()Bu
+.ie !"\\$3"" \{\
+\&\\$1 \\fI\\$2\\fP (\\$3)
+.\".b
+.\}
+.el \{\
+.br
+.ie !"\\$2"" \{\
+\&\\$1	\\fI\\$2\\fP
+.\}
+.el \{\
+\&\\fI\\$1\\fP
+.\}
+.\}
+..
+.\"	# define tabbing values for .AP
+.de AS
+.nr )A 10n
+.if !"\\$1"" .nr )A \\w'\\$1'u+3n
+.nr )B \\n()Au+15n
+.\"
+.if !"\\$2"" .nr )B \\w'\\$2'u+\\n()Au+3n
+.nr )C \\n()Bu+\\w'(in/out)'u+2n
+..
+.AS Tcl_Interp Tcl_CreateInterp in/out
+.\"	# BS - start boxed text
+.\"	# ^y = starting y location
+.\"	# ^b = 1
+.de BS
+.br
+.mk ^y
+.nr ^b 1u
+.if n .nf
+.if n .ti 0
+.if n \l'\\n(.lu\(ul'
+.if n .fi
+..
+.\"	# BE - end boxed text (draw box now)
+.de BE
+.nf
+.ti 0
+.mk ^t
+.ie n \l'\\n(^lu\(ul'
+.el \{\
+.\"	Draw four-sided box normally, but don't draw top of
+.\"	box if the box started on an earlier page.
+.ie !\\n(^b-1 \{\
+\h'-1.5n'\L'|\\n(^yu-1v'\l'\\n(^lu+3n\(ul'\L'\\n(^tu+1v-\\n(^yu'\l'|0u-1.5n\(ul'
+.\}
+.el \}\
+\h'-1.5n'\L'|\\n(^yu-1v'\h'\\n(^lu+3n'\L'\\n(^tu+1v-\\n(^yu'\l'|0u-1.5n\(ul'
+.\}
+.\}
+.fi
+.br
+.nr ^b 0
+..
+.\"	# VS - start vertical sidebar
+.\"	# ^Y = starting y location
+.\"	# ^v = 1 (for troff;  for nroff this doesn't matter)
+.de VS
+.if !"\\$2"" .br
+.mk ^Y
+.ie n 'mc \s12\(br\s0
+.el .nr ^v 1u
+..
+.\"	# VE - end of vertical sidebar
+.de VE
+.ie n 'mc
+.el \{\
+.ev 2
+.nf
+.ti 0
+.mk ^t
+\h'|\\n(^lu+3n'\L'|\\n(^Yu-1v\(bv'\v'\\n(^tu+1v-\\n(^Yu'\h'-|\\n(^lu+3n'
+.sp -1
+.fi
+.ev
+.\}
+.nr ^v 0
+..
+.\"	# Special macro to handle page bottom:  finish off current
+.\"	# box/sidebar if in box/sidebar mode, then invoked standard
+.\"	# page bottom macro.
+.de ^B
+.ev 2
+'ti 0
+'nf
+.mk ^t
+.if \\n(^b \{\
+.\"	Draw three-sided box if this is the box's first page,
+.\"	draw two sides but no top otherwise.
+.ie !\\n(^b-1 \h'-1.5n'\L'|\\n(^yu-1v'\l'\\n(^lu+3n\(ul'\L'\\n(^tu+1v-\\n(^yu'\h'|0u'\c
+.el \h'-1.5n'\L'|\\n(^yu-1v'\h'\\n(^lu+3n'\L'\\n(^tu+1v-\\n(^yu'\h'|0u'\c
+.\}
+.if \\n(^v \{\
+.nr ^x \\n(^tu+1v-\\n(^Yu
+\kx\h'-\\nxu'\h'|\\n(^lu+3n'\ky\L'-\\n(^xu'\v'\\n(^xu'\h'|0u'\c
+.\}
+.bp
+'fi
+.ev
+.if \\n(^b \{\
+.mk ^y
+.nr ^b 2
+.\}
+.if \\n(^v \{\
+.mk ^Y
+.\}
+..
+.\"	# DS - begin display
+.de DS
+.RS
+.nf
+.sp
+..
+.\"	# DE - end display
+.de DE
+.fi
+.RE
+.sp
+..
+.\"	# SO - start of list of standard options
+.de SO
+'ie '\\$1'' .ds So \\fBoptions\\fR
+'el .ds So \\fB\\$1\\fR
+.SH "STANDARD OPTIONS"
+.LP
+.nf
+.ta 5.5c 11c
+.ft B
+..
+.\"	# SE - end of list of standard options
+.de SE
+.fi
+.ft R
+.LP
+See the \\*(So manual entry for details on the standard options.
+..
+.\"	# OP - start of full description for a single option
+.de OP
+.LP
+.nf
+.ta 4c
+Command-Line Name:	\\fB\\$1\\fR
+Database Name:	\\fB\\$2\\fR
+Database Class:	\\fB\\$3\\fR
+.fi
+.IP
+..
+.\"	# CS - begin code excerpt
+.de CS
+.RS
+.nf
+.ta .25i .5i .75i 1i
+..
+.\"	# CE - end code excerpt
+.de CE
+.fi
+.RE
+..
+.\"	# UL - underline word
+.de UL
+\\$1\l'|0\(ul'\\$2
+..
+.\"	# QW - apply quotation marks to word
+.de QW
+.ie '\\*(lq'"' ``\\$1''\\$2
+.\"" fix emacs highlighting
+.el \\*(lq\\$1\\*(rq\\$2
+..
+.\"	# PQ - apply parens and quotation marks to word
+.de PQ
+.ie '\\*(lq'"' (``\\$1''\\$2)\\$3
+.\"" fix emacs highlighting
+.el (\\*(lq\\$1\\*(rq\\$2)\\$3
+..
+.\"	# QR - quoted range
+.de QR
+.ie '\\*(lq'"' ``\\$1''\\-``\\$2''\\$3
+.\"" fix emacs highlighting
+.el \\*(lq\\$1\\*(rq\\-\\*(lq\\$2\\*(rq\\$3
+..
+.\"	# MT - "empty" string
+.de MT
+.QW ""
+..
+.BS
+.SH NAME
+ankh \- Ankh - API
+.SH SYNOPSIS
+package require \fBTcl  8\&.5\fR
+.sp
+package require \fBankh  ?0\&.0?\fR
+.sp
+\fBak hash version\fR
+.sp
+\fBak hash list\fR
+.sp
+\fBak hash\fR \fBHASH\fR \fBchannel\fR \fIchannel\fR
+.sp
+\fBak hash\fR \fBHASH\fR \fBpath\fR \fIpath\fR
+.sp
+\fBak hash\fR \fBHASH\fR \fBstring\fR \fIstring\fR
+.sp
+\fBak hash\fR \fBHASH\fR \fBsize\fR
+.sp
+\fBak hash\fR \fBHASH\fR \fBreferences\fR
+.sp
+.BE
+.SH DESCRIPTION
+.PP
+IMAGE: logo Ankh Welcome to Ankh, Andreas Kupries' Hashes\&.
+.PP
+This document is the reference manpage for the publicly visible API,
+i\&.e\&. the API a user will see, and use\&.
+.SH "GLOBAL OPERATIONS"
+.TP
+\fBak hash version\fR
+This command returns a string containing the version number of the
+\fBAnkh\fR package\&.
+.TP
+\fBak hash list\fR
+This command returns a list containing the names of all the hashes
+supported by the \fBAnkh\fR package\&. The names are
+returned in dictionary order\&.
+.PP
+.SH "HASH COMMANDS"
+Each supported hash provides an ensemble command with three methods
+for hashing data from an in-memory string, an open channel, or a file
+specified by its path in the filesystem\&.
+.PP
+The set of supported hashes is described in the following section\&.
+.TP
+\fBak hash\fR \fBHASH\fR \fBchannel\fR \fIchannel\fR
+.TP
+\fBak hash\fR \fBHASH\fR \fBpath\fR \fIpath\fR
+.TP
+\fBak hash\fR \fBHASH\fR \fBstring\fR \fIstring\fR
+These three commands return the \fBHASH\fR-specific digest of the
+data specified by the command arguments\&.
+.sp
+\fIAttention\fR: Note that this result is binary data, i\&.e\&. a
+Tcl ByteArray value\&. It is the callers responsibility to encode this
+digest into any other required form, like hex-digits, or base64, etc\&.
+.sp
+The data to hash is provided either by a \fIchannel\fR opened
+for reading, the \fIpath\fR to a file in the filesystem, or an
+in-memory \fIstring\fR\&.
+.TP
+\fBak hash\fR \fBHASH\fR \fBsize\fR
+This command returns the size of digests generated by the
+\fBHASH\fR, in bytes\&.
+.TP
+\fBak hash\fR \fBHASH\fR \fBreferences\fR
+This command returns a list of informational data about the
+\fBHASH\fR\&.
+.PP
+.SH "SUPPORTED HASHES"
+The package currently supports 18 different hash functions, some
+configured for multiple digest sizes, for a total of 30 commands\&.
+.PP
+Note that many of the hash functions have descriptions at
+\fIRHash @ SourceForge\fR [http://rhash\&.sourceforge\&.net/hashes\&.php]\&.
+Because of that the descriptions here are even shorter summaries\&.
+.PP
+Further note that all phrases like
+\fBX supports digests of size A, B, \&.\&.\&.\fR
+should be read to mean that this are the digest sizes supported by the
+C code underlying Ankh\&.
+While this matches the allowed/specified digest sizes for many of the
+hashes here, it is not true for all\&.
+.TP
+\fBaich\fR
+The \fIAdvanced Intelligent Corruption Handler\fR comes from the
+\fIEDonkey\fR p2p-network\&. It uses SHA-1 internally\&. Digests are 160
+bits\&.
+.sp
+See also \fIed2k\fR below\&.
+.TP
+\fBblake\fR
+See \fIBlake 2 @ Wikipedia\fR [https://en\&.wikipedia\&.org/wiki/BLAKE_(hash_function)#BLAKE2] for details\&.
+Supports digests of 256 and 512 bits\&.
+.TP
+\fBbtih\fR
+The \fIBitTorrent InfoHash\fR originates, naturally, in the
+BitTorrent network\&. Digests are 160 bits\&.
+.TP
+\fBed2k\fR
+Like \fIaich\fR above \fIEDonkey 2000\fR comes from the
+\fIEDonkey\fR p2p-network\&. It uses MD-4 internally\&. Digests are 128
+bits\&.
+.TP
+\fBedonr\fR
+Defined in 2006 in the article
+\fID\&. Gligoroski, S\&. Markovski, L\&. Kocarev "Edon-R, An Infinite Family of Cryptographic Hash Functions"\fR\&.
+Supports digests of 224, 256, 384, and 512 bits\&.
+.TP
+\fBgost12\fR
+.TP
+\fBgost94\fR
+These hash functions are from the Russian national standard
+\fIGOST R 34\&.11-94\fR\&.
+\fIgost12\fR supports digests of 256 and 512 bits\&.
+\fIgost94\fR digests are 256 bits\&.
+.TP
+\fBhas160\fR
+Designed in and by Korea, for the
+\fIKorean Certificate-based Digital Signature Algorithm\fR (KCDSA)\&.
+Digests have 160 bits\&.
+.TP
+\fBmd4\fR
+\fIMessage digest 4\fR was developed by Ronald L\&. Rivest\&.
+See RFC 1320\&.
+Digests have 128 bits\&.
+.TP
+\fBmd5\fR
+\fIMessage digest 5\fR is an improved success of MD-4, also
+developed by Ronald L\&. Rivest\&.
+See RFC 1321\&.
+Digests have 128 bits\&.
+.TP
+\fBripemd160\fR
+The \fIRACE Integrity Primitives Evaluation Message Digest\fR\&.
+Digests have 160 bits\&.
+.TP
+\fBsha1\fR
+The \fISecure Hash Algorithm 1\fR was designed in 1993\&.
+See RFC 3174\&.
+Digests are 160 bits\&.
+.TP
+\fBsha2\fR
+\fISecure Hash Algorithm 2\fR is the successor of SHA-2\&.
+Supports digests of 224, 256, 384, and 512 bits\&.
+.TP
+\fBsha3\fR
+\fISecure Hash Algorithm 3\fR is the latest in the SHA series\&.
+Based on a completely new internal construction than the predecessors\&.
+See \fIKECCACK\fR\&.
+Supports digests of 224, 256, 384, and 512 bits\&.
+.TP
+\fBsnefru\fR
+Made by Ralph Merkle in 1990\&.  Considered broken\&. Also slow\&.
+Supports digests of 128 and 256 bits\&.
+.TP
+\fBtiger\fR
+Tiger was developed by Ross Anderson and Eli Biham, with speed on
+64bit processors in mind\&.
+Digests are 192 bits\&.
+.TP
+\fBtth\fR
+The \fITiger Tree Hash\fR is based on the \fITiger\fR hash above\&.
+It is used by the p2p networks \fIDirect Connect\fR and \fIGnutella\fR\&.
+Digests are 512 bits\&.
+.TP
+\fBwhirlpool\fR
+Comes from \fINESSIE\fR\&. Adopted by \fIISO/IEC 10118-3:2004\fR\&.
+Digests are 512 bits\&.
+.PP
+.SH "BUGS, IDEAS, FEEDBACK"
+This document, and the package it describes, will undoubtedly contain
+bugs and other problems\&.
+Please report such at the \fIAnkh Tracker\fR [https://core\&.tcl-lang\&.org/akupries/ankh]\&.
+Please also report any ideas for enhancements you may have for either
+package and/or documentation\&.
+.SH KEYWORDS
+aich, bittorrent info hash, blake, btih, cryptographically secure hashes, ed2k, edonr, gost12, gost94, has160, hash digests, md4, md5, ripemd160, secure hashes, sha1, sha2, sha3, snefru, tiger, tth, whirlpool
+.SH CATEGORY
+cryptographically secure hashes
+.SH COPYRIGHT
+.nf
+Copyright (c) 2021 Andreas Kupries
+Copyright (c) 2021 Documentation, Andreas Kupries
+
+.fi

@@ -1,0 +1,40 @@
+[comment {-*- tcl -*- doctools manpage}]
+[include include/version.inc]
+[manpage_begin [vset PROJECT_lc]_introduction n [vset VERSION]]
+[include include/module.inc]
+[titledesc "[vset PROJECT] - Introduction"]
+[description]
+[include include/welcome.inc]
+
+[comment {
+[para] What are your goals which brought you here ?
+
+[list_begin enumerated]
+[enum]
+[list_end]
+}]
+
+[section {Related Documents}]
+
+[list_begin enum]
+[enum] [term "[vset PROJECT] - License"].
+[enum] [term "[vset PROJECT] - How To Get The Sources"].
+[enum] [term "[vset PROJECT] - The Installer's Guide"].
+[enum] [term "[vset PROJECT] - The Developer's Guide"].
+[enum] [term "[vset PROJECT] - API"]
+[list_end]
+
+[section {System Architecture}]
+
+The system's structure is not very complicated.
+
+[para] At the bottom are C sources taking from [vset tcllib/core] and
+[vset rhash], implementing a variety of cryptographically secure
+hash functions.
+
+[para] [vset PROJECT] sits on top of that, providing Tcl commands
+giving access to these hash functions.
+
+[include include/feedback.inc]
+[manpage_end]
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html><html><head>
+<title>ankh_introduction - Ankh</title>
+<style type="text/css"><!--
+    HTML {
+	background: 	#FFFFFF;
+	color: 		black;
+    }
+    BODY {
+	background: 	#FFFFFF;
+	color:	 	black;
+    }
+    DIV.doctools {
+	margin-left:	10%;
+	margin-right:	10%;
+    }
+    DIV.doctools H1,DIV.doctools H2 {
+	margin-left:	-5%;
+    }
+    H1, H2, H3, H4 {
+	margin-top: 	1em;
+	font-family:	sans-serif;
+	font-size:	large;
+	color:		#005A9C;
+	background: 	transparent;
+	text-align:		left;
+    }
+    H1.doctools_title {
+	text-align: center;
+    }
+    UL,OL {
+	margin-right: 0em;
+	margin-top: 3pt;
+	margin-bottom: 3pt;
+    }
+    UL LI {
+	list-style: disc;
+    }
+    OL LI {
+	list-style: decimal;
+    }
+    DT {
+	padding-top: 	1ex;
+    }
+    UL.doctools_toc,UL.doctools_toc UL, UL.doctools_toc UL UL {
+	font:		normal 12pt/14pt sans-serif;
+	list-style:	none;
+    }
+    LI.doctools_section, LI.doctools_subsection {
+	list-style: 	none;
+	margin-left: 	0em;
+	text-indent:	0em;
+	padding: 	0em;
+    }
+    PRE {
+	display: 	block;
+	font-family:	monospace;
+	white-space:	pre;
+	margin:		0%;
+	padding-top:	0.5ex;
+	padding-bottom:	0.5ex;
+	padding-left:	1ex;
+	padding-right:	1ex;
+	width:		100%;
+    }
+    PRE.doctools_example {
+	color: 		black;
+	background: 	#f5dcb3;
+	border:		1px solid black;
+    }
+    UL.doctools_requirements LI, UL.doctools_syntax LI {
+	list-style: 	none;
+	margin-left: 	0em;
+	text-indent:	0em;
+	padding:	0em;
+    }
+    DIV.doctools_synopsis {
+	color: 		black;
+	background: 	#80ffff;
+	border:		1px solid black;
+	font-family:	serif;
+	margin-top: 	1em;
+	margin-bottom: 	1em;
+    }
+    UL.doctools_syntax {
+	margin-top: 	1em;
+	border-top:	1px solid black;
+    }
+    UL.doctools_requirements {
+	margin-bottom: 	1em;
+	border-bottom:	1px solid black;
+    }
+--></style>
+</head>
+<!-- Generated from file 'ankh_intro.man' by tcllib/doctools with format 'html'
+   -->
+<!-- Copyright &amp;copy; 2021 Andreas Kupries   -- Copyright &amp;copy; 2021 Documentation, Andreas Kupries
+   -->
+<!-- ankh_introduction.n
+   -->
+<body><hr> [
+   <a href="../../../../../../home">Home</a>
+&#124; <a href="../../toc.html">Main Table Of Contents</a>
+&#124; <a href="../toc.html">Table Of Contents</a>
+&#124; <a href="../../index.html">Keyword Index</a>
+ ] <hr>
+<div class="doctools">
+<h1 class="doctools_title">ankh_introduction(n) 0.0 doc &quot;Ankh&quot;</h1>
+<div id="name" class="doctools_section"><h2><a name="name">Name</a></h2>
+<p>ankh_introduction - Ankh - Introduction</p>
+</div>
+<div id="toc" class="doctools_section"><h2><a name="toc">Table Of Contents</a></h2>
+<ul class="doctools_toc">
+<li class="doctools_section"><a href="#toc">Table Of Contents</a></li>
+<li class="doctools_section"><a href="#synopsis">Synopsis</a></li>
+<li class="doctools_section"><a href="#section1">Description</a></li>
+<li class="doctools_section"><a href="#section2">Related Documents</a></li>
+<li class="doctools_section"><a href="#section3">System Architecture</a></li>
+<li class="doctools_section"><a href="#section4">Bugs, Ideas, Feedback</a></li>
+<li class="doctools_section"><a href="#keywords">Keywords</a></li>
+<li class="doctools_section"><a href="#category">Category</a></li>
+<li class="doctools_section"><a href="#copyright">Copyright</a></li>
+</ul>
+</div>
+<div id="synopsis" class="doctools_section"><h2><a name="synopsis">Synopsis</a></h2>
+<div class="doctools_synopsis">
+<ul class="doctools_requirements">
+<li>package require <b class="pkgname">Tcl 8.5</b></li>
+<li>package require <b class="pkgname">ankh <span class="opt">?0.0?</span></b></li>
+</ul>
+</div>
+</div>
+<div id="section1" class="doctools_section"><h2><a name="section1">Description</a></h2>
+<p><img alt="Ankh" src="../../image/logo.png"> Welcome to Ankh, Andreas Kupries' Hashes.</p>
+</div>
+<div id="section2" class="doctools_section"><h2><a name="section2">Related Documents</a></h2>
+<ol class="doctools_enumerated">
+<li><p><i class="term"><a href="ankh_license.html">Ankh - License</a></i>.</p></li>
+<li><p><i class="term"><a href="ankh_sources.html">Ankh - How To Get The Sources</a></i>.</p></li>
+<li><p><i class="term"><a href="ankh_installer.html">Ankh - The Installer's Guide</a></i>.</p></li>
+<li><p><i class="term"><a href="ankh_devguide.html">Ankh - The Developer's Guide</a></i>.</p></li>
+<li><p><i class="term"><a href="ankh.html">Ankh - API</a></i></p></li>
+</ol>
+</div>
+<div id="section3" class="doctools_section"><h2><a name="section3">System Architecture</a></h2>
+<p>The system's structure is not very complicated.</p>
+<p>At the bottom are C sources taking from <a href="https://core.tcl-lang.org/tcllib">Tcllib</a> and
+<a href="https://github.com/rhash/RHash">RHash</a>, implementing a variety of cryptographically secure
+hash functions.</p>
+<p>Ankh sits on top of that, providing Tcl commands
+giving access to these hash functions.</p>
+</div>
+<div id="section4" class="doctools_section"><h2><a name="section4">Bugs, Ideas, Feedback</a></h2>
+<p>This document, and the package it describes, will undoubtedly contain
+bugs and other problems.
+Please report such at the <a href="https://core.tcl-lang.org/akupries/ankh">Ankh Tracker</a>.
+Please also report any ideas for enhancements you may have for either
+package and/or documentation.</p>
+</div>
+<div id="keywords" class="doctools_section"><h2><a name="keywords">Keywords</a></h2>
+<p><a href="../../index.html#aich">aich</a>, <a href="../../index.html#bittorrent_info_hash">bittorrent info hash</a>, <a href="../../index.html#blake">blake</a>, <a href="../../index.html#btih">btih</a>, <a href="../../index.html#cryptographically_secure_hashes">cryptographically secure hashes</a>, <a href="../../index.html#ed2k">ed2k</a>, <a href="../../index.html#edonr">edonr</a>, <a href="../../index.html#gost12">gost12</a>, <a href="../../index.html#gost94">gost94</a>, <a href="../../index.html#has160">has160</a>, <a href="../../index.html#hash_digests">hash digests</a>, <a href="../../index.html#md4">md4</a>, <a href="../../index.html#md5">md5</a>, <a href="../../index.html#ripemd160">ripemd160</a>, <a href="../../index.html#secure_hashes">secure hashes</a>, <a href="../../index.html#sha1">sha1</a>, <a href="../../index.html#sha2">sha2</a>, <a href="../../index.html#sha3">sha3</a>, <a href="../../index.html#snefru">snefru</a>, <a href="../../index.html#tiger">tiger</a>, <a href="../../index.html#tth">tth</a>, <a href="../../index.html#whirlpool">whirlpool</a></p>
+</div>
+<div id="category" class="doctools_section"><h2><a name="category">Category</a></h2>
+<p>cryptographically secure hashes</p>
+</div>
+<div id="copyright" class="doctools_section"><h2><a name="copyright">Copyright</a></h2>
+<p>Copyright &copy; 2021 Andreas Kupries<br>
+Copyright &copy; 2021 Documentation, Andreas Kupries</p>
+</div>
+</div></body></html>

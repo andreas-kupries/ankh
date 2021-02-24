@@ -1,0 +1,288 @@
+<!DOCTYPE html><html><head>
+<title>ankh_install_guide - Ankh</title>
+<style type="text/css"><!--
+    HTML {
+	background: 	#FFFFFF;
+	color: 		black;
+    }
+    BODY {
+	background: 	#FFFFFF;
+	color:	 	black;
+    }
+    DIV.doctools {
+	margin-left:	10%;
+	margin-right:	10%;
+    }
+    DIV.doctools H1,DIV.doctools H2 {
+	margin-left:	-5%;
+    }
+    H1, H2, H3, H4 {
+	margin-top: 	1em;
+	font-family:	sans-serif;
+	font-size:	large;
+	color:		#005A9C;
+	background: 	transparent;
+	text-align:		left;
+    }
+    H1.doctools_title {
+	text-align: center;
+    }
+    UL,OL {
+	margin-right: 0em;
+	margin-top: 3pt;
+	margin-bottom: 3pt;
+    }
+    UL LI {
+	list-style: disc;
+    }
+    OL LI {
+	list-style: decimal;
+    }
+    DT {
+	padding-top: 	1ex;
+    }
+    UL.doctools_toc,UL.doctools_toc UL, UL.doctools_toc UL UL {
+	font:		normal 12pt/14pt sans-serif;
+	list-style:	none;
+    }
+    LI.doctools_section, LI.doctools_subsection {
+	list-style: 	none;
+	margin-left: 	0em;
+	text-indent:	0em;
+	padding: 	0em;
+    }
+    PRE {
+	display: 	block;
+	font-family:	monospace;
+	white-space:	pre;
+	margin:		0%;
+	padding-top:	0.5ex;
+	padding-bottom:	0.5ex;
+	padding-left:	1ex;
+	padding-right:	1ex;
+	width:		100%;
+    }
+    PRE.doctools_example {
+	color: 		black;
+	background: 	#f5dcb3;
+	border:		1px solid black;
+    }
+    UL.doctools_requirements LI, UL.doctools_syntax LI {
+	list-style: 	none;
+	margin-left: 	0em;
+	text-indent:	0em;
+	padding:	0em;
+    }
+    DIV.doctools_synopsis {
+	color: 		black;
+	background: 	#80ffff;
+	border:		1px solid black;
+	font-family:	serif;
+	margin-top: 	1em;
+	margin-bottom: 	1em;
+    }
+    UL.doctools_syntax {
+	margin-top: 	1em;
+	border-top:	1px solid black;
+    }
+    UL.doctools_requirements {
+	margin-bottom: 	1em;
+	border-bottom:	1px solid black;
+    }
+--></style>
+</head>
+<!-- Generated from file 'ankh_installer.man' by tcllib/doctools with format 'html'
+   -->
+<!-- Copyright &amp;copy; 2021 Andreas Kupries   -- Copyright &amp;copy; 2021 Documentation, Andreas Kupries
+   -->
+<!-- ankh_install_guide.n
+   -->
+<body><hr> [
+   <a href="../../../../../../home">Home</a>
+&#124; <a href="../../toc.html">Main Table Of Contents</a>
+&#124; <a href="../toc.html">Table Of Contents</a>
+&#124; <a href="../../index.html">Keyword Index</a>
+ ] <hr>
+<div class="doctools">
+<h1 class="doctools_title">ankh_install_guide(n) 0.0 doc &quot;Ankh&quot;</h1>
+<div id="name" class="doctools_section"><h2><a name="name">Name</a></h2>
+<p>ankh_install_guide - Ankh - The Installer's Guide</p>
+</div>
+<div id="toc" class="doctools_section"><h2><a name="toc">Table Of Contents</a></h2>
+<ul class="doctools_toc">
+<li class="doctools_section"><a href="#toc">Table Of Contents</a></li>
+<li class="doctools_section"><a href="#synopsis">Synopsis</a></li>
+<li class="doctools_section"><a href="#section1">Description</a></li>
+<li class="doctools_section"><a href="#section2">Requisites</a>
+<ul>
+<li class="doctools_subsection"><a href="#subsection1">Tcl</a></li>
+<li class="doctools_subsection"><a href="#subsection2">CriTcl</a></li>
+<li class="doctools_subsection"><a href="#subsection3">Kettle</a></li>
+</ul>
+</li>
+<li class="doctools_section"><a href="#section3">Build &amp; Installation</a></li>
+<li class="doctools_section"><a href="#section4">Bugs, Ideas, Feedback</a></li>
+<li class="doctools_section"><a href="#keywords">Keywords</a></li>
+<li class="doctools_section"><a href="#category">Category</a></li>
+<li class="doctools_section"><a href="#copyright">Copyright</a></li>
+</ul>
+</div>
+<div id="synopsis" class="doctools_section"><h2><a name="synopsis">Synopsis</a></h2>
+<div class="doctools_synopsis">
+<ul class="doctools_requirements">
+<li>package require <b class="pkgname">Tcl 8.5</b></li>
+<li>package require <b class="pkgname">ankh <span class="opt">?0.0?</span></b></li>
+</ul>
+</div>
+</div>
+<div id="section1" class="doctools_section"><h2><a name="section1">Description</a></h2>
+<p><img alt="Ankh" src="../../image/logo.png"> Welcome to Ankh, Andreas Kupries' Hashes.</p>
+<p>The audience of this document is anyone wishing to build the
+packages, for either themselves, or others.</p>
+<p>For a developer intending to extend or modify the packages we
+additionally provide</p>
+<ol class="doctools_enumerated">
+<li><p><i class="term"><a href="ankh_license.html">Ankh - License</a></i>.</p></li>
+<li><p><i class="term"><a href="ankh_devguide.html">Ankh - The Developer's Guide</a></i>.</p></li>
+</ol>
+<p>Please read <i class="term"><a href="ankh_sources.html">Ankh - How To Get The Sources</a></i> first, if
+that was not done already. Here we assume that the sources are already
+available in a directory of your choice.</p>
+</div>
+<div id="section2" class="doctools_section"><h2><a name="section2">Requisites</a></h2>
+<p>Before Ankh can be build and used a number of requisites
+must be installed. These are:</p>
+<ol class="doctools_enumerated">
+<li><p>The scripting language Tcl.
+       For details see <span class="sectref"><a href="#subsection1">Tcl</a></span>.</p></li>
+<li><p>The <b class="package">critcl</b> package (C embedding) for <b class="syscmd">Tcl</b>.
+       For details see <span class="sectref"><a href="#subsection2">CriTcl</a></span>.</p></li>
+<li><p>The <b class="package">kettle</b> package (build support) for <b class="syscmd">Tcl</b>.
+       For details see <span class="sectref"><a href="#subsection3">Kettle</a></span>.</p></li>
+</ol>
+<p>This list assumes that the machine where Ankh is to be
+installed is essentially clean.
+Of course, if parts of the dependencies listed below are already
+installed the associated steps can be skipped.
+It is still recommended to read their sections though, to validate
+that the dependencies they talk about are indeed installed.</p>
+<div id="subsection1" class="doctools_subsection"><h3><a name="subsection1">Tcl</a></h3>
+<p>As we are building a Tcl package that should be pretty much obvious
+that a working Tcl installation is needed, and I will not belabor the
+point.</p>
+<p>Out of the many use whatever you are comfortable with, as long
+as it provides Tcl 8.5, or higher.</p>
+<p>This may be a Tcl installation provided by your operating
+system distribution, from a distribution-independent vendor, or built
+by yurself.</p>
+<p>Myself, I used <a href="https://www.activestate.com">ActiveState</a>'s <a href="https://www.activestate.com/activetcl">ActiveTcl</a> 8.5
+distribution during development of the binding, as I am most familiar
+with it.</p>
+<p><em>(Disclosure: I, Andreas Kupries, worked for ActiveState
+until 2015, maintaining ActiveTcl and TclDevKit for them).</em></p>
+<p>This distribution can be found at <a href="https://www.activestate.com/activetcl">ActiveTcl</a>. Retrieve
+the archive of ActiveTcl 8.5 for your platform and install it as
+directed by ActiveState.</p>
+<p>Assuming that ActiveTcl got installed I usually run the command</p>
+<pre class="doctools_example">
+    teacup update
+</pre>
+<p>to install all packages ActiveState provides, and the kitchensink, as
+the distribution itself usually contains only the most important set
+of packages. This ensures that the dependencies for <span class="sectref"><a href="#subsection2">CriTcl</a></span>,
+and Ankh are all present, and more.</p>
+<p>If that is not to your liking you have to read the sections for
+<span class="sectref"><a href="#subsection2">CriTcl</a></span>, and Ankh to determine the exact set of packages
+required, and install only these using</p>
+<pre class="doctools_example">
+    teacup install $packagename
+</pre>
+<p>Both <b class="syscmd">teacup</b> commands above assume that ActiveState's
+TEApot repository at <a href="https://teapot.activestate.com">https://teapot.activestate.com</a> is in the list of repositories
+accessible to <b class="syscmd">teacup</b>. This is automatically ensured for the
+ActiveTcl distribution. Others may have to run</p>
+<pre class="doctools_example">
+    teacup archive add http://teapot.activestate.com
+</pre>
+<p>to make this happen.</p>
+<p>For those wishing to build Tcl on their own, its sources can be
+found at</p>
+<dl class="doctools_definitions">
+<dt>Tcl</dt>
+<dd><p><a href="https://core.tcl-lang.org/tcl">https://core.tcl-lang.org/tcl</a></p></dd>
+</dl>
+</div>
+<div id="subsection2" class="doctools_subsection"><h3><a name="subsection2">CriTcl</a></h3>
+<p>To build Ankh the tool <b class="syscmd">critcl</b> is required.</p>
+<p>Ankh's build systems accepts it either as an
+application found in the PATH, or as a Tcl package available to the
+<b class="syscmd">tclsh</b> used to run their build &amp; installation processes.</p>
+<p>Ankh <em>must</em> have at least version 3.1 of
+<b class="package">critcl</b> itself, and at least version 1.0.3 of
+<b class="package">critcl::class</b>.</p>
+<p>CriTcl's source repository can be found at <a href="https://github.com/andreas-kupries/critcl">Critcl</a>.</p>
+<p>The relevant repository branch is <em>master</em>.</p>
+<p>At the above url is also an explanation on how to build and
+install CriTcl, including a list of its dependencies.</p>
+<p>Its instructions will not be repeated here. If there are
+problems with their directions please file a bug against the critcl
+project, and not Ankh.</p>
+</div>
+<div id="subsection3" class="doctools_subsection"><h3><a name="subsection3">Kettle</a></h3>
+<p>To build Ankh the build support package <b class="package">kettle</b> is
+required, as is the accompanying application.</p>
+<p>This package must be available to the <b class="syscmd">tclsh</b> used to
+run Ankh's build &amp; installation process.</p>
+<p>Kettle's main source repository can be found at
+<a href="https://core.tcl-lang.org/akupries/kettle">https://core.tcl-lang.org/akupries/kettle</a>. Alternate locations are <a href="https://chiselapp.com/user/andreas_kupries/repository/Kettle">https://chiselapp.com/user/andreas_kupries/repository/Kettle</a> and
+<a href="https://github.com/andreas-kupries/kettle">https://github.com/andreas-kupries/kettle</a>.</p>
+<p>The relevant repository branch is <em>trunk</em>.</p>
+<p>Kettle has a build and installation guide much like this one
+for Ankh, which can be found at the above site and explains how to
+retrieve its sources and build the package, which dependencies are
+required, etc. The direct link to this guide is <a href="https://core.tcl-lang.org/akupries/kettle/doc/trunk/embedded/md/doc/files/kettle_installer.md">https://core.tcl-lang.org/akupries/kettle/doc/trunk/embedded/md/doc/files/kettle_installer.md</a>.</p>
+<p>Its instructions will not be repeated here. If there are
+problems with their directions please file a bug against the Kettle
+project, and not Ankh.</p>
+</div>
+</div>
+<div id="section3" class="doctools_section"><h2><a name="section3">Build &amp; Installation</a></h2>
+<p>To install Ankh simply run</p>
+<pre class="doctools_example">
+/path/to/tclsh8.5 /path/to/ankh/build.tcl install
+</pre>
+<p>where &quot;<b class="file">/path/to/tclsh8.5</b>&quot; is the tclsh of your Tcl installation,
+and &quot;<b class="file">/path/to/ankh</b>&quot; the location of the
+Ankh sources on your system.</p>
+<p>This builds all packages and then places them in a directory where the
+<b class="cmd">tclsh8.5</b> will find them.</p>
+<p>On Windows you can invoke the file &quot;<b class="file">build.tcl</b>&quot; with a
+double-click.  This will pop up a small graphical interface for
+entering the destination and performing the installation. This
+handling of a double-click is restricted to Windows only however.</p>
+<p>On unix the same GUI is acessible by invoking &quot;<b class="file">build.tcl</b>&quot; without
+any arguments.</p>
+<p>To get help about the methods of &quot;<b class="file">build.tcl</b>&quot;, and their complete
+syntax, invoke  &quot;<b class="file">build.tcl</b>&quot; with argument <b class="method">help</b>, i.e., like</p>
+<pre class="doctools_example">
+/path/to/tclsh8.5 /path/to/ankh/build.tcl help
+</pre>
+</div>
+<div id="section4" class="doctools_section"><h2><a name="section4">Bugs, Ideas, Feedback</a></h2>
+<p>This document, and the package it describes, will undoubtedly contain
+bugs and other problems.
+Please report such at the <a href="https://core.tcl-lang.org/akupries/ankh">Ankh Tracker</a>.
+Please also report any ideas for enhancements you may have for either
+package and/or documentation.</p>
+</div>
+<div id="keywords" class="doctools_section"><h2><a name="keywords">Keywords</a></h2>
+<p><a href="../../index.html#aich">aich</a>, <a href="../../index.html#bittorrent_info_hash">bittorrent info hash</a>, <a href="../../index.html#blake">blake</a>, <a href="../../index.html#btih">btih</a>, <a href="../../index.html#cryptographically_secure_hashes">cryptographically secure hashes</a>, <a href="../../index.html#ed2k">ed2k</a>, <a href="../../index.html#edonr">edonr</a>, <a href="../../index.html#gost12">gost12</a>, <a href="../../index.html#gost94">gost94</a>, <a href="../../index.html#has160">has160</a>, <a href="../../index.html#hash_digests">hash digests</a>, <a href="../../index.html#md4">md4</a>, <a href="../../index.html#md5">md5</a>, <a href="../../index.html#ripemd160">ripemd160</a>, <a href="../../index.html#secure_hashes">secure hashes</a>, <a href="../../index.html#sha1">sha1</a>, <a href="../../index.html#sha2">sha2</a>, <a href="../../index.html#sha3">sha3</a>, <a href="../../index.html#snefru">snefru</a>, <a href="../../index.html#tiger">tiger</a>, <a href="../../index.html#tth">tth</a>, <a href="../../index.html#whirlpool">whirlpool</a></p>
+</div>
+<div id="category" class="doctools_section"><h2><a name="category">Category</a></h2>
+<p>cryptographically secure hashes</p>
+</div>
+<div id="copyright" class="doctools_section"><h2><a name="copyright">Copyright</a></h2>
+<p>Copyright &copy; 2021 Andreas Kupries<br>
+Copyright &copy; 2021 Documentation, Andreas Kupries</p>
+</div>
+</div></body></html>

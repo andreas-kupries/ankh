@@ -1,0 +1,240 @@
+<!DOCTYPE html><html><head>
+<title>ankh_devguide - Ankh</title>
+<style type="text/css"><!--
+    HTML {
+	background: 	#FFFFFF;
+	color: 		black;
+    }
+    BODY {
+	background: 	#FFFFFF;
+	color:	 	black;
+    }
+    DIV.doctools {
+	margin-left:	10%;
+	margin-right:	10%;
+    }
+    DIV.doctools H1,DIV.doctools H2 {
+	margin-left:	-5%;
+    }
+    H1, H2, H3, H4 {
+	margin-top: 	1em;
+	font-family:	sans-serif;
+	font-size:	large;
+	color:		#005A9C;
+	background: 	transparent;
+	text-align:		left;
+    }
+    H1.doctools_title {
+	text-align: center;
+    }
+    UL,OL {
+	margin-right: 0em;
+	margin-top: 3pt;
+	margin-bottom: 3pt;
+    }
+    UL LI {
+	list-style: disc;
+    }
+    OL LI {
+	list-style: decimal;
+    }
+    DT {
+	padding-top: 	1ex;
+    }
+    UL.doctools_toc,UL.doctools_toc UL, UL.doctools_toc UL UL {
+	font:		normal 12pt/14pt sans-serif;
+	list-style:	none;
+    }
+    LI.doctools_section, LI.doctools_subsection {
+	list-style: 	none;
+	margin-left: 	0em;
+	text-indent:	0em;
+	padding: 	0em;
+    }
+    PRE {
+	display: 	block;
+	font-family:	monospace;
+	white-space:	pre;
+	margin:		0%;
+	padding-top:	0.5ex;
+	padding-bottom:	0.5ex;
+	padding-left:	1ex;
+	padding-right:	1ex;
+	width:		100%;
+    }
+    PRE.doctools_example {
+	color: 		black;
+	background: 	#f5dcb3;
+	border:		1px solid black;
+    }
+    UL.doctools_requirements LI, UL.doctools_syntax LI {
+	list-style: 	none;
+	margin-left: 	0em;
+	text-indent:	0em;
+	padding:	0em;
+    }
+    DIV.doctools_synopsis {
+	color: 		black;
+	background: 	#80ffff;
+	border:		1px solid black;
+	font-family:	serif;
+	margin-top: 	1em;
+	margin-bottom: 	1em;
+    }
+    UL.doctools_syntax {
+	margin-top: 	1em;
+	border-top:	1px solid black;
+    }
+    UL.doctools_requirements {
+	margin-bottom: 	1em;
+	border-bottom:	1px solid black;
+    }
+--></style>
+</head>
+<!-- Generated from file 'ankh_devguide.man' by tcllib/doctools with format 'html'
+   -->
+<!-- Copyright &amp;copy; 2021 Andreas Kupries   -- Copyright &amp;copy; 2021 Documentation, Andreas Kupries
+   -->
+<!-- ankh_devguide.n
+   -->
+<body><hr> [
+   <a href="../../../../../../home">Home</a>
+&#124; <a href="../../toc.html">Main Table Of Contents</a>
+&#124; <a href="../toc.html">Table Of Contents</a>
+&#124; <a href="../../index.html">Keyword Index</a>
+ ] <hr>
+<div class="doctools">
+<h1 class="doctools_title">ankh_devguide(n) 0.0 doc &quot;Ankh&quot;</h1>
+<div id="name" class="doctools_section"><h2><a name="name">Name</a></h2>
+<p>ankh_devguide - Ankh - The Developer's Guide</p>
+</div>
+<div id="toc" class="doctools_section"><h2><a name="toc">Table Of Contents</a></h2>
+<ul class="doctools_toc">
+<li class="doctools_section"><a href="#toc">Table Of Contents</a></li>
+<li class="doctools_section"><a href="#synopsis">Synopsis</a></li>
+<li class="doctools_section"><a href="#section1">Description</a></li>
+<li class="doctools_section"><a href="#section2">Developing for Ankh</a>
+<ul>
+<li class="doctools_subsection"><a href="#subsection1">Directory structure</a></li>
+</ul>
+</li>
+<li class="doctools_section"><a href="#section3">Bugs, Ideas, Feedback</a></li>
+<li class="doctools_section"><a href="#keywords">Keywords</a></li>
+<li class="doctools_section"><a href="#category">Category</a></li>
+<li class="doctools_section"><a href="#copyright">Copyright</a></li>
+</ul>
+</div>
+<div id="synopsis" class="doctools_section"><h2><a name="synopsis">Synopsis</a></h2>
+<div class="doctools_synopsis">
+<ul class="doctools_requirements">
+<li>package require <b class="pkgname">Tcl 8.5</b></li>
+<li>package require <b class="pkgname">ankh <span class="opt">?0.0?</span></b></li>
+</ul>
+</div>
+</div>
+<div id="section1" class="doctools_section"><h2><a name="section1">Description</a></h2>
+<p><img alt="Ankh" src="../../image/logo.png"> Welcome to Ankh, Andreas Kupries' Hashes.</p>
+<p>This document is a guide for developers working on
+Ankh, i.e. maintainers fixing bugs, extending the package's
+functionality, etc.</p>
+<p>Please read</p>
+<ol class="doctools_enumerated">
+<li><p><i class="term"><a href="ankh_license.html">Ankh - License</a></i>,</p></li>
+<li><p><i class="term"><a href="ankh_sources.html">Ankh - How To Get The Sources</a></i>, and</p></li>
+<li><p><i class="term"><a href="ankh_installer.html">Ankh - The Installer's Guide</a></i></p></li>
+</ol>
+<p>first, if that was not done already.
+Here we assume that the sources are already available in a directory
+of your choice, and that you not only know how to build and install
+them, but also have all the necessary requisites to actually do
+so. The guide to the sources in particular also explains which source
+code management system is used, where to find it, how to set it up,
+etc.</p>
+</div>
+<div id="section2" class="doctools_section"><h2><a name="section2">Developing for Ankh</a></h2>
+<div id="subsection1" class="doctools_subsection"><h3><a name="subsection1">Directory structure</a></h3>
+<dl class="doctools_definitions">
+<dt>Helpers</dt>
+<dd></dd>
+<dt>Documentation</dt>
+<dd><dl class="doctools_definitions">
+<dt>&quot;<b class="file">doc/</b>&quot;</dt>
+<dd><p>This directory contains the documentation sources. The texts are written
+in <i class="term">doctools</i> format.</p></dd>
+<dt>&quot;<b class="file">embedded/</b>&quot;</dt>
+<dd><p>This directory contains the documentation converted to regular manpages
+(nroff) and HTML.
+It is called embedded because these files, while derived, are part of the
+fossil repository, i.e. embedded into it. This enables fossil to access
+and display these files when serving the repositories' web interface.
+The &quot;Command Reference&quot; link at <a href="https://core.tcl-lang.org/akupries/ankh">https://core.tcl-lang.org/akupries/ankh</a> is, for example,
+accessing the generated HTML.</p></dd>
+</dl></dd>
+<dt>Package Code, General structure</dt>
+<dd><dl class="doctools_definitions">
+<dt>&quot;<b class="file">ankh.tcl</b>&quot;</dt>
+<dd><p>This is the master file of the package. Based on <b class="cmd">critcl</b> (v3.1) it
+contain alls the necessary declarations to build the package.</p></dd>
+<dt>&quot;<b class="file">policy.tcl</b>&quot;</dt>
+<dd><p>This is the companions to the &quot;<b class="file">ankh.tcl</b>&quot; file which implements
+the higher-level interfaces on top of the C-based primitive
+operations, and determines policies.</p>
+<p>The documentation (see &quot;<b class="file">doc/</b>&quot;) mainly describes the higher-level API,
+plus the few primitives which are passed through unchanged, i.e. without
+getting wrapped into Tcl procedures.</p></dd>
+<dt>&quot;<b class="file">glue.tcl</b>&quot;</dt>
+<dd><p>Hash command implementations.
+Consumes the &quot;<b class="file">hashes.tcl</b>&quot; utility file.</p></dd>
+<dt>&quot;<b class="file">hashes.tcl</b>&quot;</dt>
+<dd><p>Utility file containing hash declarations.
+These are consumed by &quot;<b class="file">glue.tcl</b>&quot; to control and guide the
+implementations.</p></dd>
+<dt>&quot;<b class="file">c/sha1/</b>&quot;</dt>
+<dd><p>A copy of the SHA-1 C implementation used by <a href="https://core.tcl-lang.org/tcllib">Tcllib</a>.
+Built as part of Ankh.</p></dd>
+<dt>&quot;<b class="file">c/rhash/</b>&quot;</dt>
+<dd><p>A copy of the <a href="https://github.com/rhash/RHash">RHash</a> sources, as of commit <b class="const">314423fb7a</b>
+(Feb 13, 2021). These sources are maintained by Aleksey Kravchenko,
+and distributed under a zero-clause BSD license.
+Built as part of Ankh.</p></dd>
+</dl></dd>
+<dt>Package Code, Per Package</dt>
+<dd><dl class="doctools_definitions">
+<dt><b class="package"><a href="ankh.html">Ankh</a></b></dt>
+<dd><dl class="doctools_definitions">
+<dt>&quot;<b class="file">ankh.tcl</b>&quot;</dt>
+<dd></dd>
+<dt>&quot;<b class="file">glue.tcl</b>&quot;</dt>
+<dd></dd>
+<dt>&quot;<b class="file">hashes.tcl</b>&quot;</dt>
+<dd></dd>
+<dt>&quot;<b class="file">policy.tcl</b>&quot;</dt>
+<dd></dd>
+</dl></dd>
+<dt><b class="package">C support</b></dt>
+<dd><dl class="doctools_definitions">
+<dt>&quot;<b class="file">c/</b>&quot;</dt>
+<dd></dd>
+</dl></dd>
+</dl></dd>
+</dl>
+</div>
+</div>
+<div id="section3" class="doctools_section"><h2><a name="section3">Bugs, Ideas, Feedback</a></h2>
+<p>This document, and the package it describes, will undoubtedly contain
+bugs and other problems.
+Please report such at the <a href="https://core.tcl-lang.org/akupries/ankh">Ankh Tracker</a>.
+Please also report any ideas for enhancements you may have for either
+package and/or documentation.</p>
+</div>
+<div id="keywords" class="doctools_section"><h2><a name="keywords">Keywords</a></h2>
+<p><a href="../../index.html#aich">aich</a>, <a href="../../index.html#bittorrent_info_hash">bittorrent info hash</a>, <a href="../../index.html#blake">blake</a>, <a href="../../index.html#btih">btih</a>, <a href="../../index.html#cryptographically_secure_hashes">cryptographically secure hashes</a>, <a href="../../index.html#ed2k">ed2k</a>, <a href="../../index.html#edonr">edonr</a>, <a href="../../index.html#gost12">gost12</a>, <a href="../../index.html#gost94">gost94</a>, <a href="../../index.html#has160">has160</a>, <a href="../../index.html#hash_digests">hash digests</a>, <a href="../../index.html#md4">md4</a>, <a href="../../index.html#md5">md5</a>, <a href="../../index.html#ripemd160">ripemd160</a>, <a href="../../index.html#secure_hashes">secure hashes</a>, <a href="../../index.html#sha1">sha1</a>, <a href="../../index.html#sha2">sha2</a>, <a href="../../index.html#sha3">sha3</a>, <a href="../../index.html#snefru">snefru</a>, <a href="../../index.html#tiger">tiger</a>, <a href="../../index.html#tth">tth</a>, <a href="../../index.html#whirlpool">whirlpool</a></p>
+</div>
+<div id="category" class="doctools_section"><h2><a name="category">Category</a></h2>
+<p>cryptographically secure hashes</p>
+</div>
+<div id="copyright" class="doctools_section"><h2><a name="copyright">Copyright</a></h2>
+<p>Copyright &copy; 2021 Andreas Kupries<br>
+Copyright &copy; 2021 Documentation, Andreas Kupries</p>
+</div>
+</div></body></html>

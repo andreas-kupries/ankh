@@ -1,0 +1,285 @@
+<!DOCTYPE html><html><head>
+<title>ankh - Ankh</title>
+<style type="text/css"><!--
+    HTML {
+	background: 	#FFFFFF;
+	color: 		black;
+    }
+    BODY {
+	background: 	#FFFFFF;
+	color:	 	black;
+    }
+    DIV.doctools {
+	margin-left:	10%;
+	margin-right:	10%;
+    }
+    DIV.doctools H1,DIV.doctools H2 {
+	margin-left:	-5%;
+    }
+    H1, H2, H3, H4 {
+	margin-top: 	1em;
+	font-family:	sans-serif;
+	font-size:	large;
+	color:		#005A9C;
+	background: 	transparent;
+	text-align:		left;
+    }
+    H1.doctools_title {
+	text-align: center;
+    }
+    UL,OL {
+	margin-right: 0em;
+	margin-top: 3pt;
+	margin-bottom: 3pt;
+    }
+    UL LI {
+	list-style: disc;
+    }
+    OL LI {
+	list-style: decimal;
+    }
+    DT {
+	padding-top: 	1ex;
+    }
+    UL.doctools_toc,UL.doctools_toc UL, UL.doctools_toc UL UL {
+	font:		normal 12pt/14pt sans-serif;
+	list-style:	none;
+    }
+    LI.doctools_section, LI.doctools_subsection {
+	list-style: 	none;
+	margin-left: 	0em;
+	text-indent:	0em;
+	padding: 	0em;
+    }
+    PRE {
+	display: 	block;
+	font-family:	monospace;
+	white-space:	pre;
+	margin:		0%;
+	padding-top:	0.5ex;
+	padding-bottom:	0.5ex;
+	padding-left:	1ex;
+	padding-right:	1ex;
+	width:		100%;
+    }
+    PRE.doctools_example {
+	color: 		black;
+	background: 	#f5dcb3;
+	border:		1px solid black;
+    }
+    UL.doctools_requirements LI, UL.doctools_syntax LI {
+	list-style: 	none;
+	margin-left: 	0em;
+	text-indent:	0em;
+	padding:	0em;
+    }
+    DIV.doctools_synopsis {
+	color: 		black;
+	background: 	#80ffff;
+	border:		1px solid black;
+	font-family:	serif;
+	margin-top: 	1em;
+	margin-bottom: 	1em;
+    }
+    UL.doctools_syntax {
+	margin-top: 	1em;
+	border-top:	1px solid black;
+    }
+    UL.doctools_requirements {
+	margin-bottom: 	1em;
+	border-bottom:	1px solid black;
+    }
+--></style>
+</head>
+<!-- Generated from file 'ankh.man' by tcllib/doctools with format 'html'
+   -->
+<!-- Copyright &amp;copy; 2021 Andreas Kupries   -- Copyright &amp;copy; 2021 Documentation, Andreas Kupries
+   -->
+<!-- ankh.n
+   -->
+<body><hr> [
+   <a href="../../../../../../home">Home</a>
+&#124; <a href="../../toc.html">Main Table Of Contents</a>
+&#124; <a href="../toc.html">Table Of Contents</a>
+&#124; <a href="../../index.html">Keyword Index</a>
+ ] <hr>
+<div class="doctools">
+<h1 class="doctools_title">ankh(n) 0.0 doc &quot;Ankh&quot;</h1>
+<div id="name" class="doctools_section"><h2><a name="name">Name</a></h2>
+<p>ankh - Ankh - API</p>
+</div>
+<div id="toc" class="doctools_section"><h2><a name="toc">Table Of Contents</a></h2>
+<ul class="doctools_toc">
+<li class="doctools_section"><a href="#toc">Table Of Contents</a></li>
+<li class="doctools_section"><a href="#synopsis">Synopsis</a></li>
+<li class="doctools_section"><a href="#section1">Description</a></li>
+<li class="doctools_section"><a href="#section2">Global operations</a></li>
+<li class="doctools_section"><a href="#section3">Hash commands</a></li>
+<li class="doctools_section"><a href="#section4">Supported Hashes</a></li>
+<li class="doctools_section"><a href="#section5">Bugs, Ideas, Feedback</a></li>
+<li class="doctools_section"><a href="#keywords">Keywords</a></li>
+<li class="doctools_section"><a href="#category">Category</a></li>
+<li class="doctools_section"><a href="#copyright">Copyright</a></li>
+</ul>
+</div>
+<div id="synopsis" class="doctools_section"><h2><a name="synopsis">Synopsis</a></h2>
+<div class="doctools_synopsis">
+<ul class="doctools_requirements">
+<li>package require <b class="pkgname">Tcl 8.5</b></li>
+<li>package require <b class="pkgname">ankh <span class="opt">?0.0?</span></b></li>
+</ul>
+<ul class="doctools_syntax">
+<li><a href="#1"><b class="cmd">ak hash version</b></a></li>
+<li><a href="#2"><b class="cmd">ak hash list</b></a></li>
+<li><a href="#3"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">channel</b> <i class="arg">channel</i></a></li>
+<li><a href="#4"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">path</b> <i class="arg">path</i></a></li>
+<li><a href="#5"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">string</b> <i class="arg">string</i></a></li>
+<li><a href="#6"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">size</b></a></li>
+<li><a href="#7"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">references</b></a></li>
+</ul>
+</div>
+</div>
+<div id="section1" class="doctools_section"><h2><a name="section1">Description</a></h2>
+<p><img alt="Ankh" src="../../image/logo.png"> Welcome to Ankh, Andreas Kupries' Hashes.</p>
+<p>This document is the reference manpage for the publicly visible API,
+i.e. the API a user will see, and use.</p>
+</div>
+<div id="section2" class="doctools_section"><h2><a name="section2">Global operations</a></h2>
+<dl class="doctools_definitions">
+<dt><a name="1"><b class="cmd">ak hash version</b></a></dt>
+<dd><p>This command returns a string containing the version number of the
+<b class="package">Ankh</b> package.</p></dd>
+<dt><a name="2"><b class="cmd">ak hash list</b></a></dt>
+<dd><p>This command returns a list containing the names of all the hashes
+supported by the <b class="package">Ankh</b> package. The names are
+returned in dictionary order.</p></dd>
+</dl>
+</div>
+<div id="section3" class="doctools_section"><h2><a name="section3">Hash commands</a></h2>
+<p>Each supported hash provides an ensemble command with three methods
+for hashing data from an in-memory string, an open channel, or a file
+specified by its path in the filesystem.</p>
+<p>The set of supported hashes is described in the following section.</p>
+<dl class="doctools_definitions">
+<dt><a name="3"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">channel</b> <i class="arg">channel</i></a></dt>
+<dd></dd>
+<dt><a name="4"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">path</b> <i class="arg">path</i></a></dt>
+<dd></dd>
+<dt><a name="5"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">string</b> <i class="arg">string</i></a></dt>
+<dd><p>These three commands return the <b class="method">HASH</b>-specific digest of the
+data specified by the command arguments.</p>
+<p><em>Attention</em>: Note that this result is binary data, i.e. a
+Tcl ByteArray value. It is the callers responsibility to encode this
+digest into any other required form, like hex-digits, or base64, etc.</p>
+<p>The data to hash is provided either by a <i class="arg">channel</i> opened
+for reading, the <i class="arg">path</i> to a file in the filesystem, or an
+in-memory <i class="arg">string</i>.</p></dd>
+<dt><a name="6"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">size</b></a></dt>
+<dd><p>This command returns the size of digests generated by the
+<b class="method">HASH</b>, in bytes.</p></dd>
+<dt><a name="7"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">references</b></a></dt>
+<dd><p>This command returns a list of informational data about the
+<b class="method">HASH</b>.</p></dd>
+</dl>
+</div>
+<div id="section4" class="doctools_section"><h2><a name="section4">Supported Hashes</a></h2>
+<p>The package currently supports 18 different hash functions, some
+configured for multiple digest sizes, for a total of 30 commands.</p>
+<p>Note that many of the hash functions have descriptions at
+<a href="http://rhash.sourceforge.net/hashes.php">RHash @ SourceForge</a>.
+Because of that the descriptions here are even shorter summaries.</p>
+<p>Further note that all phrases like
+<b class="const">X supports digests of size A, B, ...</b>
+should be read to mean that this are the digest sizes supported by the
+C code underlying Ankh.
+While this matches the allowed/specified digest sizes for many of the
+hashes here, it is not true for all.</p>
+<dl class="doctools_definitions">
+<dt><b class="const">aich</b></dt>
+<dd><p>The <i class="term">Advanced Intelligent Corruption Handler</i> comes from the
+<i class="term">EDonkey</i> p2p-network. It uses SHA-1 internally. Digests are 160
+bits.</p>
+<p>See also <i class="term"><a href="../../index.html#ed2k">ed2k</a></i> below.</p></dd>
+<dt><b class="const">blake</b></dt>
+<dd><p>See <a href="https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE2">Blake 2 @ Wikipedia</a> for details.
+Supports digests of 256 and 512 bits.</p></dd>
+<dt><b class="const">btih</b></dt>
+<dd><p>The <i class="term">BitTorrent InfoHash</i> originates, naturally, in the
+BitTorrent network. Digests are 160 bits.</p></dd>
+<dt><b class="const">ed2k</b></dt>
+<dd><p>Like <i class="term"><a href="../../index.html#aich">aich</a></i> above <i class="term">EDonkey 2000</i> comes from the
+<i class="term">EDonkey</i> p2p-network. It uses MD-4 internally. Digests are 128
+bits.</p></dd>
+<dt><b class="const">edonr</b></dt>
+<dd><p>Defined in 2006 in the article
+<i class="term">D. Gligoroski, S. Markovski, L. Kocarev &quot;Edon-R, An Infinite Family of Cryptographic Hash Functions&quot;</i>.
+Supports digests of 224, 256, 384, and 512 bits.</p></dd>
+<dt><b class="const">gost12</b></dt>
+<dd></dd>
+<dt><b class="const">gost94</b></dt>
+<dd><p>These hash functions are from the Russian national standard
+<i class="term">GOST R 34.11-94</i>.
+<i class="term"><a href="../../index.html#gost12">gost12</a></i> supports digests of 256 and 512 bits.
+<i class="term"><a href="../../index.html#gost94">gost94</a></i> digests are 256 bits.</p></dd>
+<dt><b class="const">has160</b></dt>
+<dd><p>Designed in and by Korea, for the
+<i class="term">Korean Certificate-based Digital Signature Algorithm</i> (KCDSA).
+Digests have 160 bits.</p></dd>
+<dt><b class="const">md4</b></dt>
+<dd><p><i class="term">Message digest 4</i> was developed by Ronald L. Rivest.
+See RFC 1320.
+Digests have 128 bits.</p></dd>
+<dt><b class="const">md5</b></dt>
+<dd><p><i class="term">Message digest 5</i> is an improved success of MD-4, also
+developed by Ronald L. Rivest.
+See RFC 1321.
+Digests have 128 bits.</p></dd>
+<dt><b class="const">ripemd160</b></dt>
+<dd><p>The <i class="term">RACE Integrity Primitives Evaluation Message Digest</i>.
+Digests have 160 bits.</p></dd>
+<dt><b class="const">sha1</b></dt>
+<dd><p>The <i class="term">Secure Hash Algorithm 1</i> was designed in 1993.
+See RFC 3174.
+Digests are 160 bits.</p></dd>
+<dt><b class="const">sha2</b></dt>
+<dd><p><i class="term">Secure Hash Algorithm 2</i> is the successor of SHA-2.
+Supports digests of 224, 256, 384, and 512 bits.</p></dd>
+<dt><b class="const">sha3</b></dt>
+<dd><p><i class="term">Secure Hash Algorithm 3</i> is the latest in the SHA series.
+Based on a completely new internal construction than the predecessors.
+See <i class="term">KECCACK</i>.
+Supports digests of 224, 256, 384, and 512 bits.</p></dd>
+<dt><b class="const">snefru</b></dt>
+<dd><p>Made by Ralph Merkle in 1990.  Considered broken. Also slow.
+Supports digests of 128 and 256 bits.</p></dd>
+<dt><b class="const">tiger</b></dt>
+<dd><p>Tiger was developed by Ross Anderson and Eli Biham, with speed on
+64bit processors in mind.
+Digests are 192 bits.</p></dd>
+<dt><b class="const">tth</b></dt>
+<dd><p>The <i class="term">Tiger Tree Hash</i> is based on the <i class="term"><a href="../../index.html#tiger">Tiger</a></i> hash above.
+It is used by the p2p networks <i class="term">Direct Connect</i> and <i class="term">Gnutella</i>.
+Digests are 512 bits.</p></dd>
+<dt><b class="const">whirlpool</b></dt>
+<dd><p>Comes from <i class="term">NESSIE</i>. Adopted by <i class="term">ISO/IEC 10118-3:2004</i>.
+Digests are 512 bits.</p></dd>
+</dl>
+</div>
+<div id="section5" class="doctools_section"><h2><a name="section5">Bugs, Ideas, Feedback</a></h2>
+<p>This document, and the package it describes, will undoubtedly contain
+bugs and other problems.
+Please report such at the <a href="https://core.tcl-lang.org/akupries/ankh">Ankh Tracker</a>.
+Please also report any ideas for enhancements you may have for either
+package and/or documentation.</p>
+</div>
+<div id="keywords" class="doctools_section"><h2><a name="keywords">Keywords</a></h2>
+<p><a href="../../index.html#aich">aich</a>, <a href="../../index.html#bittorrent_info_hash">bittorrent info hash</a>, <a href="../../index.html#blake">blake</a>, <a href="../../index.html#btih">btih</a>, <a href="../../index.html#cryptographically_secure_hashes">cryptographically secure hashes</a>, <a href="../../index.html#ed2k">ed2k</a>, <a href="../../index.html#edonr">edonr</a>, <a href="../../index.html#gost12">gost12</a>, <a href="../../index.html#gost94">gost94</a>, <a href="../../index.html#has160">has160</a>, <a href="../../index.html#hash_digests">hash digests</a>, <a href="../../index.html#md4">md4</a>, <a href="../../index.html#md5">md5</a>, <a href="../../index.html#ripemd160">ripemd160</a>, <a href="../../index.html#secure_hashes">secure hashes</a>, <a href="../../index.html#sha1">sha1</a>, <a href="../../index.html#sha2">sha2</a>, <a href="../../index.html#sha3">sha3</a>, <a href="../../index.html#snefru">snefru</a>, <a href="../../index.html#tiger">tiger</a>, <a href="../../index.html#tth">tth</a>, <a href="../../index.html#whirlpool">whirlpool</a></p>
+</div>
+<div id="category" class="doctools_section"><h2><a name="category">Category</a></h2>
+<p>cryptographically secure hashes</p>
+</div>
+<div id="copyright" class="doctools_section"><h2><a name="copyright">Copyright</a></h2>
+<p>Copyright &copy; 2021 Andreas Kupries<br>
+Copyright &copy; 2021 Documentation, Andreas Kupries</p>
+</div>
+</div></body></html>
