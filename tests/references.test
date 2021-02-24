@@ -15,13 +15,7 @@ kt source support/util.tcl
 
 # # ## ### ##### ######## ############# #####################
 
-foreach hash {
-    md4
-    md5
-    sha1
-    sha2/256
-    sha3/256
-} {
+foreach hash [hashes] {
     # - -- --- ----- -------- ------------- ---------------------
 
     tcltest::test ankh-${hash}-references-1.0 "ak hash $hash references, wrong#args" -body {
