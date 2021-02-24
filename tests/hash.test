@@ -14,6 +14,15 @@ kt local testing ankh
 kt source support/util.tcl
 
 # # ## ### ##### ######## ############# #####################
+## Pull in the aggregated results: tsv file, 3 columns, hash'label'digest
+
+set r {}
+foreach entry [split [string trim [cat [td]/hash.tsv]] \n] {
+    lassign [split [string trim $entry] \t] hash label digest
+    dict set r $hash $label r:$entry
+}
+
+# # ## ### ##### ######## ############# #####################
 ##
 
 foreach hash [hashes] {
@@ -32,70 +41,40 @@ foreach hash [hashes] {
     } -returnCodes error -result "wrong # args: should be \"ak hash $hash path path\""
 
     # - -- --- ----- -------- ------------- ---------------------
-
     # Fixed set of test vectors collected from the various digests.
+
     foreach {label vector} [vectors] {
 	incr k
-	if {$label eq {}} { set label $vector }
-	try {
-	    set digest [cat [td]/results/$hash/$label]
-	} on error {e o} {
+	if {[dict exists  $r $hash $label]} {
+	    set digest [dict get $r $hash $label]
+	} else {
 	    set digest {}
 	}
 	set tmp [td]/in.[string map {/ _} $hash].$label
 	write $tmp $vector
 
+	# ~ ~~ ~~~ ~~~~~ ~~~~~~~~ ~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+
 	tcltest::test ankh-${hash}-string-2.${k}-$label "ak hash $hash string, $label" -body {
-	    binary encode hex [ak hash $hash string $vector]
+	    R $hash $label [ak hash $hash string $vector]
 	} -result $digest
 
 	tcltest::test ankh-${hash}-channel-2.${k}-$label "ak hash $hash channel, $label" -setup {
 	    set chan [open $tmp rb]
 	} -body {
-	    binary encode hex [ak hash $hash channel $chan]
+	    R $hash $label [ak hash $hash channel $chan]
 	} -cleanup {
 	    close $chan
 	    unset chan
 	} -result $digest
 
 	tcltest::test ankh-${hash}-path-2.${k}-$label "ak hash $hash path, $label" -body {
-	    binary encode hex [ak hash $hash path $tmp]
+	    R $hash $label [ak hash $hash path $tmp]
 	} -result $digest
+
+	# ~ ~~ ~~~ ~~~~~ ~~~~~~~~ ~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
 
 	file delete $tmp
-    }
-    unset k
-
-    # - -- --- ----- -------- ------------- ---------------------
-
-    # Block vectors 'a'*k, k in {0, ...e, 149}
-    set k -1
-    foreach digest [split [cat [td]/results/$hash/blocks] \n] {
-	if {$digest eq {}} continue
-	incr k
-	set vector [string repeat a $k]
-	set tmp    [td]/in.[string map {/ _} $hash].a$k
-	write $tmp $vector
-
-	tcltest::test ankh-${hash}-string-3.${k} "ak hash $hash string, a*$k" -body {
-	    binary encode hex [ak hash $hash string $vector]
-	} -result $digest
-
-	tcltest::test ankh-${hash}-channel-3.${k} "ak hash $hash channel, a*$k" -setup {
-	    set chan [open $tmp rb]
-	} -body {
-	    binary encode hex [ak hash $hash channel $chan]
-	} -cleanup {
-	    close $chan
-	    unset chan
-	} -result $digest
-
-	tcltest::test ankh-${hash}-path-3.${k} "ak hash $hash path, a*$k" -body {
-	    binary encode hex [ak hash $hash path $tmp]
-	} -result $digest
-
-	file delete $tmp
-	unset vector tmp
     }
 
     # - -- --- ----- -------- ------------- ---------------------

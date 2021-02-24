@@ -23,9 +23,7 @@ tcltest::test ankh-list-1.0 {ak hash list, wrong#args} -body {
 
 tcltest::test ankh-list-2.0 {ak hash list} -body {
     ak hash list
-} -result {aich blake2b blake2s btih ed2k edonr/224 edonr/256 edonr/384 edonr/512 gost12/256 gost12/512 gost94 has160 md4 md5 ripemd160 sha1 sha2/224 sha2/256 sha2/384 sha2/512 sha3/224 sha3/256 sha3/384 sha3/512 snefru/128 snefru/256 tiger tth whirlpool}
-
-# [hashes]
+} -result [hashes]
 
 # # ## ### ##### ######## ############# #####################
 cleanupTests

@@ -14,8 +14,23 @@ kt local testing ankh
 kt source support/util.tcl
 
 # # ## ### ##### ######## ############# #####################
+## Pull in the aggregated results: tsv file, 2 columns, hash'references
+
+set r {}
+foreach entry [split [string trim [cat [td]/references.tsv]] \n] {
+    lassign [split [string trim $entry] \t] hash references
+    dict set r $hash r:$entry
+}
+
+# # ## ### ##### ######## ############# #####################
 
 foreach hash [hashes] {
+    if {[dict exists $r $hash]} {
+	set references [dict get $r $hash]
+    } else {
+	set references {}
+    }
+
     # - -- --- ----- -------- ------------- ---------------------
 
     tcltest::test ankh-${hash}-references-1.0 "ak hash $hash references, wrong#args" -body {
@@ -25,8 +40,10 @@ foreach hash [hashes] {
     # - -- --- ----- -------- ------------- ---------------------
 
     tcltest::test ankh-${hash}-references-2.0 "ak hash $hash references" -body {
-	join [ak hash $hash references] \n
-    } -result [v $hash/references]
+	set _ r:${hash}\t[ak hash $hash references]
+    } -cleanup {
+	unset _
+    } -result $references
 
     # - -- --- ----- -------- ------------- ---------------------
 }

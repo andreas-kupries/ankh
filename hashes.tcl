@@ -50,17 +50,44 @@ proc rhash/def {hash {spec {}}} {
 proc hashes {} {
     set hashes {}
 
-    dict set hashes aich      [rhash/def aich   { hsize 20 }]
+    dict set hashes aich      [rhash/def aich   { hsize 20
+	refs {
+	    https://en.wikipedia.org/wiki/EMule#Basic_concepts
+	}}]
     dict set hashes blake2b   [rhash/def blake2b]
     dict set hashes blake2s   [rhash/def blake2s]
-    dict set hashes ed2k      [rhash/def ed2k   { hsize 16 }]
-    dict set hashes gost94    [rhash/def gost94 { hsize gost94_hash_length }]
-    dict set hashes has160    [rhash/def has160]
+    dict set hashes ed2k      [rhash/def ed2k   { hsize 16
+	refs {
+	    https://en.wikipedia.org/wiki/EDonkey2000
+	    https://en.wikipedia.org/wiki/EDonkey_network#Hash_identification
+	    https://en.wikipedia.org/wiki/Ed2k_URI_scheme#eD2k_hash_algorithm
+    }}]
+    dict set hashes gost94    [rhash/def gost94 { hsize gost94_hash_length
+	refs {
+	    https://en.wikipedia.org/wiki/GOST_(hash_function)
+	    https://tools.ietf.org/html/rfc5831
+	    https://tools.ietf.org/html/rfc4357
+    }}]
+    dict set hashes has160    [rhash/def has160 { refs {
+	https://en.wikipedia.org/wiki/HAS-160
+	http://www.randombit.net/has160.html
+	https://en.wikipedia.org/wiki/KCDSA
+    }}]
     dict set hashes md4       [rhash/def md4    { refs { https://en.wikipedia.org/wiki/MD4 }}]
     dict set hashes md5       [rhash/def md5    { refs { https://en.wikipedia.org/wiki/MD5 }}]
-    dict set hashes tiger     [rhash/def tiger  { hsize tiger_hash_length }]
-    dict set hashes tth       [rhash/def tth    { hsize 64 }]
-    dict set hashes whirlpool [rhash/def whirlpool { hsize whirlpool_block_size }]
+    dict set hashes tiger     [rhash/def tiger  { hsize tiger_hash_length
+	refs {
+	    https://en.wikipedia.org/wiki/Tiger_(hash_function)
+	}}]
+    dict set hashes tth       [rhash/def tth    {
+	hsize tiger_hash_length
+	refs {
+	    https://en.wikipedia.org/wiki/Merkle_tree#Tiger_tree_hash
+	}}]
+    dict set hashes whirlpool [rhash/def whirlpool { hsize whirlpool_block_size
+	refs {
+	    https://en.wikipedia.org/wiki/Whirlpool_(hash_function)
+	}}]
 
     dict set hashes sha1 {
 	refs {
@@ -188,6 +215,11 @@ proc hashes {} {
     dict set hashes gost12/256 [rhash/def gost12 {
 	hsize  gost12_256_hash_size
 	init   rhash_gost12_256_init
+	refs {
+	    https://en.wikipedia.org/wiki/GOST_(hash_function)
+	    https://tools.ietf.org/html/rfc5831
+	    https://tools.ietf.org/html/rfc4357
+	}
     }]
 
     dict set hashes gost12/512 [rhash/def gost12 {
@@ -195,6 +227,11 @@ proc hashes {} {
 	csources {}
 	hsize  gost12_512_hash_size
 	init   rhash_gost12_512_init
+	refs {
+	    https://en.wikipedia.org/wiki/GOST_(hash_function)
+	    https://tools.ietf.org/html/rfc5831
+	    https://tools.ietf.org/html/rfc4357
+	}
     }]
 
     dict set hashes ripemd160 [rhash/def ripemd-160 {
@@ -203,11 +240,16 @@ proc hashes {} {
 	init	rhash_ripemd160_init
 	update	rhash_ripemd160_update
 	final   rhash_ripemd160_final
+	refs    https://en.wikipedia.org/wiki/RIPEMD
     }]
 
     dict set hashes snefru/128 [rhash/def snefru {
 	hsize  snefru128_hash_length
 	init   rhash_snefru128_init
+	refs {
+	    https://en.wikipedia.org/wiki/Snefru
+	    http://ftp.vim.org/security/coast/crypto/snefru/snefru.c
+	}
     }]
 
     dict set hashes snefru/256 [rhash/def snefru {
@@ -215,6 +257,10 @@ proc hashes {} {
 	csources {}
 	hsize  snefru256_hash_length
 	init   rhash_snefru256_init
+	refs {
+	    https://en.wikipedia.org/wiki/Snefru
+	    http://ftp.vim.org/security/coast/crypto/snefru/snefru.c
+	}
     }]
 
     dict set hashes btih [rhash/def torrent {
@@ -223,6 +269,9 @@ proc hashes {} {
 	init	bt_init
 	update	bt_update
 	final   bt_final
+	refs {
+	    https://en.wikipedia.org/wiki/Magnet_URI_scheme#BitTorrent_info_hash_(BTIH)
+	}
     }]
 
     # https://sourceforge.net/p/rhash/wiki/HashFunctions/
