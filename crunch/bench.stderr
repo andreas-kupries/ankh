@@ -5,13 +5,13 @@ debug-package-ankh: [0m
 Config:   linux-x86_64-gcc
 Build:    linux-x86_64-gcc
 Target:   linux-x86_64
-Source:   ankh.tcl  (provide ankh 0.0) (ankh.tcl: require critcl::cutil) (include <critcl_assert.h>) (include <critcl_alloc.h>) (include <critcl_trace.h>) (include <critcl_alloc.h>) (importing hashes.tcl) (importing glue.tcl) (include <sha1_.h>) (include <md4.h>) (include <md5.h>) (include <sha256.h>) (include <sha3.h>)
+Source:   ankh.tcl  (provide ankh 0.0) (ankh.tcl: require critcl::cutil) (include <critcl_assert.h>) (include <critcl_alloc.h>) (include <critcl_trace.h>) (include <critcl_alloc.h>) (importing hashes.tcl) (importing glue.tcl) (include <aich.h>) (include <blake2b.h>) (include <blake2s.h>) (include <torrent.h>) (include <ed2k.h>) (include <edonr.h>) (include <gost12.h>) (include <gost94.h>) (include <has160.h>) (include <md4.h>) (include <md5.h>) (include <ripemd-160.h>) (include <snefru.h>) (include <sha1_.h>) (include <sha256.h>) (include <sha512.h>) (include <sha3.h>) (include <tiger.h>) (include <tth.h>) (include <whirlpool.h>)
 Library:  ankh.so
  (tclStubsPtr     =>  TclStubs *tclStubsPtr;)
  (tclPlatStubsPtr =>  TclPlatStubs *tclPlatStubsPtr;)
 Package:  TMP-ankh0.0/lib/ankh
 Installing package ankh 0.0
-    Into .kettle_bench_install_1137349_1613925268_1613925268756_hephaistos_aku/lib/ankh0.0
+    Into .kettle_bench_install_1384606_1614201867_1614201867477_hephaistos_aku/lib/ankh0.0
 	Installing file "/home/aku/Development/Tcl/Meine/Ankh/w-main/TMP-ankh0.0/lib/ankh/pkgIndex.tcl": [32mOK
 [0m	Installing file "/home/aku/Development/Tcl/Meine/Ankh/w-main/TMP-ankh0.0/lib/ankh/critcl-rt.tcl": [32mOK
 [0m	Installing file "/home/aku/Development/Tcl/Meine/Ankh/w-main/TMP-ankh0.0/lib/ankh/license.terms": [32mOK
@@ -23,123 +23,648 @@ Installing package ankh 0.0
 
 [0m[36mExit  "." (debug): ok
 
-[0m[8.6.10] [K[8.6.10] hash.bench [K[8.6.10] hash.bench [    ] md4 chan 64[K[8.6.10] hash.bench [----] md4 chan 64[K[8.6.10] hash.bench [    ] md4 chan 128[K[8.6.10] hash.bench [----] md4 chan 128[K[8.6.10] hash.bench [    ] md4 chan 256[K[8.6.10] hash.bench [----] md4 chan 256[K[8.6.10] hash.bench [    ] md4 chan 512[K[8.6.10] hash.bench [----] md4 chan 512[K[8.6.10] hash.bench [    ] md4 chan 1024[K[8.6.10] hash.bench [----] md4 chan 1024[K[8.6.10] hash.bench [    ] md4 chan 2048[K[8.6.10] hash.bench [----] md4 chan 2048[K[8.6.10] hash.bench [    ] md4 chan 4096[K[8.6.10] hash.bench [----] md4 chan 4096[K[8.6.10] hash.bench [    ] md4 chan 8192[K[8.6.10] hash.bench [----] md4 chan 8192[K[8.6.10] hash.bench [    ] md4 chan 16384[K[8.6.10] hash.bench [----] md4 chan 16384[K[8.6.10] hash.bench [    ] md4 chan 32768[K[8.6.10] hash.bench [----] md4 chan 32768[K[8.6.10] hash.bench [    ] md4 chan 65536[K[8.6.10] hash.bench [----] md4 chan 65536[K[8.6.10] hash.bench [    ] md4 chan 131072[K[8.6.10] hash.bench [----] md4 chan 131072[K[8.6.10] hash.bench [    ] md4 chan 262144[K[8.6.10] hash.bench [----] md4 chan 262144[K[8.6.10] hash.bench [    ] md4 chan 524288[K[8.6.10] hash.bench [----] md4 chan 524288[K[8.6.10] hash.bench [    ] md4 chan 1048576[K[8.6.10] hash.bench [----] md4 chan 1048576[K[8.6.10] hash.bench [    ] md4 chan 2097152[K[8.6.10] hash.bench [----] md4 chan 2097152[K[8.6.10] hash.bench [    ] md4 chan 4194304[K[8.6.10] hash.bench [----] md4 chan 4194304[K[8.6.10] hash.bench [    ] md4 chan 8388608[K[8.6.10] hash.bench [----] md4 chan 8388608[K[8.6.10] hash.bench [    ] md4 chan 16777216[K[8.6.10] hash.bench [----] md4 chan 16777216[K[8.6.10] hash.bench [    ] md4 chan 33554432[K[8.6.10] hash.bench [----] md4 chan 33554432[K[8.6.10] hash.bench [    ] md4 chan 67108864[K[8.6.10] hash.bench [----] md4 chan 67108864[K[8.6.10] hash.bench [    ] md5 chan 64[K[8.6.10] hash.bench [----] md5 chan 64[K[8.6.10] hash.bench [    ] md5 chan 128[K[8.6.10] hash.bench [----] md5 chan 128[K[8.6.10] hash.bench [    ] md5 chan 256[K[8.6.10] hash.bench [----] md5 chan 256[K[8.6.10] hash.bench [    ] md5 chan 512[K[8.6.10] hash.bench [----] md5 chan 512[K[8.6.10] hash.bench [    ] md5 chan 1024[K[8.6.10] hash.bench [----] md5 chan 1024[K[8.6.10] hash.bench [    ] md5 chan 2048[K[8.6.10] hash.bench [----] md5 chan 2048[K[8.6.10] hash.bench [    ] md5 chan 4096[K[8.6.10] hash.bench [----] md5 chan 4096[K[8.6.10] hash.bench [    ] md5 chan 8192[K[8.6.10] hash.bench [----] md5 chan 8192[K[8.6.10] hash.bench [    ] md5 chan 16384[K[8.6.10] hash.bench [----] md5 chan 16384[K[8.6.10] hash.bench [    ] md5 chan 32768[K[8.6.10] hash.bench [----] md5 chan 32768[K[8.6.10] hash.bench [    ] md5 chan 65536[K[8.6.10] hash.bench [----] md5 chan 65536[K[8.6.10] hash.bench [    ] md5 chan 131072[K[8.6.10] hash.bench [----] md5 chan 131072[K[8.6.10] hash.bench [    ] md5 chan 262144[K[8.6.10] hash.bench [----] md5 chan 262144[K[8.6.10] hash.bench [    ] md5 chan 524288[K[8.6.10] hash.bench [----] md5 chan 524288[K[8.6.10] hash.bench [    ] md5 chan 1048576[K[8.6.10] hash.bench [----] md5 chan 1048576[K[8.6.10] hash.bench [    ] md5 chan 2097152[K[8.6.10] hash.bench [----] md5 chan 2097152[K[8.6.10] hash.bench [    ] md5 chan 4194304[K[8.6.10] hash.bench [----] md5 chan 4194304[K[8.6.10] hash.bench [    ] md5 chan 8388608[K[8.6.10] hash.bench [----] md5 chan 8388608[K[8.6.10] hash.bench [    ] md5 chan 16777216[K[8.6.10] hash.bench [----] md5 chan 16777216[K[8.6.10] hash.bench [    ] md5 chan 33554432[K[8.6.10] hash.bench [----] md5 chan 33554432[K[8.6.10] hash.bench [    ] md5 chan 67108864[K[8.6.10] hash.bench [----] md5 chan 67108864[K[8.6.10] hash.bench [    ] sha1 chan 64[K[8.6.10] hash.bench [----] sha1 chan 64[K[8.6.10] hash.bench [    ] sha1 chan 128[K[8.6.10] hash.bench [----] sha1 chan 128[K[8.6.10] hash.bench [    ] sha1 chan 256[K[8.6.10] hash.bench [----] sha1 chan 256[K[8.6.10] hash.bench [    ] sha1 chan 512[K[8.6.10] hash.bench [----] sha1 chan 512[K[8.6.10] hash.bench [    ] sha1 chan 1024[K[8.6.10] hash.bench [----] sha1 chan 1024[K[8.6.10] hash.bench [    ] sha1 chan 2048[K[8.6.10] hash.bench [----] sha1 chan 2048[K[8.6.10] hash.bench [    ] sha1 chan 4096[K[8.6.10] hash.bench [----] sha1 chan 4096[K[8.6.10] hash.bench [    ] sha1 chan 8192[K[8.6.10] hash.bench [----] sha1 chan 8192[K[8.6.10] hash.bench [    ] sha1 chan 16384[K[8.6.10] hash.bench [----] sha1 chan 16384[K[8.6.10] hash.bench [    ] sha1 chan 32768[K[8.6.10] hash.bench [----] sha1 chan 32768[K[8.6.10] hash.bench [    ] sha1 chan 65536[K[8.6.10] hash.bench [----] sha1 chan 65536[K[8.6.10] hash.bench [    ] sha1 chan 131072[K[8.6.10] hash.bench [----] sha1 chan 131072[K[8.6.10] hash.bench [    ] sha1 chan 262144[K[8.6.10] hash.bench [----] sha1 chan 262144[K[8.6.10] hash.bench [    ] sha1 chan 524288[K[8.6.10] hash.bench [----] sha1 chan 524288[K[8.6.10] hash.bench [    ] sha1 chan 1048576[K[8.6.10] hash.bench [----] sha1 chan 1048576[K[8.6.10] hash.bench [    ] sha1 chan 2097152[K[8.6.10] hash.bench [----] sha1 chan 2097152[K[8.6.10] hash.bench [    ] sha1 chan 4194304[K[8.6.10] hash.bench [----] sha1 chan 4194304[K[8.6.10] hash.bench [    ] sha1 chan 8388608[K[8.6.10] hash.bench [----] sha1 chan 8388608[K[8.6.10] hash.bench [    ] sha1 chan 16777216[K[8.6.10] hash.bench [----] sha1 chan 16777216[K[8.6.10] hash.bench [    ] sha1 chan 33554432[K[8.6.10] hash.bench [----] sha1 chan 33554432[K[8.6.10] hash.bench [    ] sha1 chan 67108864[K[8.6.10] hash.bench [----] sha1 chan 67108864[K[8.6.10] hash.bench [    ] sha2 chan 64[K[8.6.10] hash.bench [----] sha2 chan 64[K[8.6.10] hash.bench [    ] sha2 chan 128[K[8.6.10] hash.bench [----] sha2 chan 128[K[8.6.10] hash.bench [    ] sha2 chan 256[K[8.6.10] hash.bench [----] sha2 chan 256[K[8.6.10] hash.bench [    ] sha2 chan 512[K[8.6.10] hash.bench [----] sha2 chan 512[K[8.6.10] hash.bench [    ] sha2 chan 1024[K[8.6.10] hash.bench [----] sha2 chan 1024[K[8.6.10] hash.bench [    ] sha2 chan 2048[K[8.6.10] hash.bench [----] sha2 chan 2048[K[8.6.10] hash.bench [    ] sha2 chan 4096[K[8.6.10] hash.bench [----] sha2 chan 4096[K[8.6.10] hash.bench [    ] sha2 chan 8192[K[8.6.10] hash.bench [----] sha2 chan 8192[K[8.6.10] hash.bench [    ] sha2 chan 16384[K[8.6.10] hash.bench [----] sha2 chan 16384[K[8.6.10] hash.bench [    ] sha2 chan 32768[K[8.6.10] hash.bench [----] sha2 chan 32768[K[8.6.10] hash.bench [    ] sha2 chan 65536[K[8.6.10] hash.bench [----] sha2 chan 65536[K[8.6.10] hash.bench [    ] sha2 chan 131072[K[8.6.10] hash.bench [----] sha2 chan 131072[K[8.6.10] hash.bench [    ] sha2 chan 262144[K[8.6.10] hash.bench [----] sha2 chan 262144[K[8.6.10] hash.bench [    ] sha2 chan 524288[K[8.6.10] hash.bench [----] sha2 chan 524288[K[8.6.10] hash.bench [    ] sha2 chan 1048576[K[8.6.10] hash.bench [----] sha2 chan 1048576[K[8.6.10] hash.bench [    ] sha2 chan 2097152[K[8.6.10] hash.bench [----] sha2 chan 2097152[K[8.6.10] hash.bench [    ] sha2 chan 4194304[K[8.6.10] hash.bench [----] sha2 chan 4194304[K[8.6.10] hash.bench [    ] sha2 chan 8388608[K[8.6.10] hash.bench [----] sha2 chan 8388608[K[8.6.10] hash.bench [    ] sha2 chan 16777216[K[8.6.10] hash.bench [----] sha2 chan 16777216[K[8.6.10] hash.bench [    ] sha2 chan 33554432[K[8.6.10] hash.bench [----] sha2 chan 33554432[K[8.6.10] hash.bench [    ] sha2 chan 67108864[K[8.6.10] hash.bench [----] sha2 chan 67108864[K[8.6.10] hash.bench [    ] sha3 chan 64[K[8.6.10] hash.bench [----] sha3 chan 64[K[8.6.10] hash.bench [    ] sha3 chan 128[K[8.6.10] hash.bench [----] sha3 chan 128[K[8.6.10] hash.bench [    ] sha3 chan 256[K[8.6.10] hash.bench [----] sha3 chan 256[K[8.6.10] hash.bench [    ] sha3 chan 512[K[8.6.10] hash.bench [----] sha3 chan 512[K[8.6.10] hash.bench [    ] sha3 chan 1024[K[8.6.10] hash.bench [----] sha3 chan 1024[K[8.6.10] hash.bench [    ] sha3 chan 2048[K[8.6.10] hash.bench [----] sha3 chan 2048[K[8.6.10] hash.bench [    ] sha3 chan 4096[K[8.6.10] hash.bench [----] sha3 chan 4096[K[8.6.10] hash.bench [    ] sha3 chan 8192[K[8.6.10] hash.bench [----] sha3 chan 8192[K[8.6.10] hash.bench [    ] sha3 chan 16384[K[8.6.10] hash.bench [----] sha3 chan 16384[K[8.6.10] hash.bench [    ] sha3 chan 32768[K[8.6.10] hash.bench [----] sha3 chan 32768[K[8.6.10] hash.bench [    ] sha3 chan 65536[K[8.6.10] hash.bench [----] sha3 chan 65536[K[8.6.10] hash.bench [    ] sha3 chan 131072[K[8.6.10] hash.bench [----] sha3 chan 131072[K[8.6.10] hash.bench [    ] sha3 chan 262144[K[8.6.10] hash.bench [----] sha3 chan 262144[K[8.6.10] hash.bench [    ] sha3 chan 524288[K[8.6.10] hash.bench [----] sha3 chan 524288[K[8.6.10] hash.bench [    ] sha3 chan 1048576[K[8.6.10] hash.bench [----] sha3 chan 1048576[K[8.6.10] hash.bench [    ] sha3 chan 2097152[K[8.6.10] hash.bench [----] sha3 chan 2097152[K[8.6.10] hash.bench [    ] sha3 chan 4194304[K[8.6.10] hash.bench [----] sha3 chan 4194304[K[8.6.10] hash.bench [    ] sha3 chan 8388608[K[8.6.10] hash.bench [----] sha3 chan 8388608[K[8.6.10] hash.bench [    ] sha3 chan 16777216[K[8.6.10] hash.bench [----] sha3 chan 16777216[K[8.6.10] hash.bench [    ] sha3 chan 33554432[K[8.6.10] hash.bench [----] sha3 chan 33554432[K[8.6.10] hash.bench [    ] sha3 chan 67108864[K[8.6.10] hash.bench [----] sha3 chan 67108864[K[8.6.10] hash.bench ~~    105 SKIP 0[K[K[8.6.10] hash.bench ~~ OK  105 SKIP 0
+[0m[8.6.10] [K[8.6.10] hash.bench [K[8.6.10] hash.bench [    ] aich chan 64[K[8.6.10] hash.bench [----] aich chan 64[K[8.6.10] hash.bench [    ] aich chan 128[K[8.6.10] hash.bench [----] aich chan 128[K[8.6.10] hash.bench [    ] aich chan 256[K[8.6.10] hash.bench [----] aich chan 256[K[8.6.10] hash.bench [    ] aich chan 512[K[8.6.10] hash.bench [----] aich chan 512[K[8.6.10] hash.bench [    ] aich chan 1024[K[8.6.10] hash.bench [----] aich chan 1024[K[8.6.10] hash.bench [    ] aich chan 2048[K[8.6.10] hash.bench [----] aich chan 2048[K[8.6.10] hash.bench [    ] aich chan 4096[K[8.6.10] hash.bench [----] aich chan 4096[K[8.6.10] hash.bench [    ] aich chan 8192[K[8.6.10] hash.bench [----] aich chan 8192[K[8.6.10] hash.bench [    ] aich chan 16384[K[8.6.10] hash.bench [----] aich chan 16384[K[8.6.10] hash.bench [    ] aich chan 32768[K[8.6.10] hash.bench [----] aich chan 32768[K[8.6.10] hash.bench [    ] aich chan 65536[K[8.6.10] hash.bench [----] aich chan 65536[K[8.6.10] hash.bench [    ] aich chan 131072[K[8.6.10] hash.bench [----] aich chan 131072[K[8.6.10] hash.bench [    ] aich chan 262144[K[8.6.10] hash.bench [----] aich chan 262144[K[8.6.10] hash.bench [    ] aich chan 524288[K[8.6.10] hash.bench [----] aich chan 524288[K[8.6.10] hash.bench [    ] aich chan 1048576[K[8.6.10] hash.bench [----] aich chan 1048576[K[8.6.10] hash.bench [    ] aich chan 2097152[K[8.6.10] hash.bench [----] aich chan 2097152[K[8.6.10] hash.bench [    ] aich chan 4194304[K[8.6.10] hash.bench [----] aich chan 4194304[K[8.6.10] hash.bench [    ] aich chan 8388608[K[8.6.10] hash.bench [----] aich chan 8388608[K[8.6.10] hash.bench [    ] aich chan 16777216[K[8.6.10] hash.bench [----] aich chan 16777216[K[8.6.10] hash.bench [    ] aich chan 33554432[K[8.6.10] hash.bench [----] aich chan 33554432[K[8.6.10] hash.bench [    ] aich chan 67108864[K[8.6.10] hash.bench [----] aich chan 67108864[K[8.6.10] hash.bench [    ] blake2b chan 64[K[8.6.10] hash.bench [----] blake2b chan 64[K[8.6.10] hash.bench [    ] blake2b chan 128[K[8.6.10] hash.bench [----] blake2b chan 128[K[8.6.10] hash.bench [    ] blake2b chan 256[K[8.6.10] hash.bench [----] blake2b chan 256[K[8.6.10] hash.bench [    ] blake2b chan 512[K[8.6.10] hash.bench [----] blake2b chan 512[K[8.6.10] hash.bench [    ] blake2b chan 1024[K[8.6.10] hash.bench [----] blake2b chan 1024[K[8.6.10] hash.bench [    ] blake2b chan 2048[K[8.6.10] hash.bench [----] blake2b chan 2048[K[8.6.10] hash.bench [    ] blake2b chan 4096[K[8.6.10] hash.bench [----] blake2b chan 4096[K[8.6.10] hash.bench [    ] blake2b chan 8192[K[8.6.10] hash.bench [----] blake2b chan 8192[K[8.6.10] hash.bench [    ] blake2b chan 16384[K[8.6.10] hash.bench [----] blake2b chan 16384[K[8.6.10] hash.bench [    ] blake2b chan 32768[K[8.6.10] hash.bench [----] blake2b chan 32768[K[8.6.10] hash.bench [    ] blake2b chan 65536[K[8.6.10] hash.bench [----] blake2b chan 65536[K[8.6.10] hash.bench [    ] blake2b chan 131072[K[8.6.10] hash.bench [----] blake2b chan 131072[K[8.6.10] hash.bench [    ] blake2b chan 262144[K[8.6.10] hash.bench [----] blake2b chan 262144[K[8.6.10] hash.bench [    ] blake2b chan 524288[K[8.6.10] hash.bench [----] blake2b chan 524288[K[8.6.10] hash.bench [    ] blake2b chan 1048576[K[8.6.10] hash.bench [----] blake2b chan 1048576[K[8.6.10] hash.bench [    ] blake2b chan 2097152[K[8.6.10] hash.bench [----] blake2b chan 2097152[K[8.6.10] hash.bench [    ] blake2b chan 4194304[K[8.6.10] hash.bench [----] blake2b chan 4194304[K[8.6.10] hash.bench [    ] blake2b chan 8388608[K[8.6.10] hash.bench [----] blake2b chan 8388608[K[8.6.10] hash.bench [    ] blake2b chan 16777216[K[8.6.10] hash.bench [----] blake2b chan 16777216[K[8.6.10] hash.bench [    ] blake2b chan 33554432[K[8.6.10] hash.bench [----] blake2b chan 33554432[K[8.6.10] hash.bench [    ] blake2b chan 67108864[K[8.6.10] hash.bench [----] blake2b chan 67108864[K[8.6.10] hash.bench [    ] blake2s chan 64[K[8.6.10] hash.bench [----] blake2s chan 64[K[8.6.10] hash.bench [    ] blake2s chan 128[K[8.6.10] hash.bench [----] blake2s chan 128[K[8.6.10] hash.bench [    ] blake2s chan 256[K[8.6.10] hash.bench [----] blake2s chan 256[K[8.6.10] hash.bench [    ] blake2s chan 512[K[8.6.10] hash.bench [----] blake2s chan 512[K[8.6.10] hash.bench [    ] blake2s chan 1024[K[8.6.10] hash.bench [----] blake2s chan 1024[K[8.6.10] hash.bench [    ] blake2s chan 2048[K[8.6.10] hash.bench [----] blake2s chan 2048[K[8.6.10] hash.bench [    ] blake2s chan 4096[K[8.6.10] hash.bench [----] blake2s chan 4096[K[8.6.10] hash.bench [    ] blake2s chan 8192[K[8.6.10] hash.bench [----] blake2s chan 8192[K[8.6.10] hash.bench [    ] blake2s chan 16384[K[8.6.10] hash.bench [----] blake2s chan 16384[K[8.6.10] hash.bench [    ] blake2s chan 32768[K[8.6.10] hash.bench [----] blake2s chan 32768[K[8.6.10] hash.bench [    ] blake2s chan 65536[K[8.6.10] hash.bench [----] blake2s chan 65536[K[8.6.10] hash.bench [    ] blake2s chan 131072[K[8.6.10] hash.bench [----] blake2s chan 131072[K[8.6.10] hash.bench [    ] blake2s chan 262144[K[8.6.10] hash.bench [----] blake2s chan 262144[K[8.6.10] hash.bench [    ] blake2s chan 524288[K[8.6.10] hash.bench [----] blake2s chan 524288[K[8.6.10] hash.bench [    ] blake2s chan 1048576[K[8.6.10] hash.bench [----] blake2s chan 1048576[K[8.6.10] hash.bench [    ] blake2s chan 2097152[K[8.6.10] hash.bench [----] blake2s chan 2097152[K[8.6.10] hash.bench [    ] blake2s chan 4194304[K[8.6.10] hash.bench [----] blake2s chan 4194304[K[8.6.10] hash.bench [    ] blake2s chan 8388608[K[8.6.10] hash.bench [----] blake2s chan 8388608[K[8.6.10] hash.bench [    ] blake2s chan 16777216[K[8.6.10] hash.bench [----] blake2s chan 16777216[K[8.6.10] hash.bench [    ] blake2s chan 33554432[K[8.6.10] hash.bench [----] blake2s chan 33554432[K[8.6.10] hash.bench [    ] blake2s chan 67108864[K[8.6.10] hash.bench [----] blake2s chan 67108864[K[8.6.10] hash.bench [    ] btih chan 64[K[8.6.10] hash.bench [----] btih chan 64[K[8.6.10] hash.bench [    ] btih chan 128[K[8.6.10] hash.bench [----] btih chan 128[K[8.6.10] hash.bench [    ] btih chan 256[K[8.6.10] hash.bench [----] btih chan 256[K[8.6.10] hash.bench [    ] btih chan 512[K[8.6.10] hash.bench [----] btih chan 512[K[8.6.10] hash.bench [    ] btih chan 1024[K[8.6.10] hash.bench [----] btih chan 1024[K[8.6.10] hash.bench [    ] btih chan 2048[K[8.6.10] hash.bench [----] btih chan 2048[K[8.6.10] hash.bench [    ] btih chan 4096[K[8.6.10] hash.bench [----] btih chan 4096[K[8.6.10] hash.bench [    ] btih chan 8192[K[8.6.10] hash.bench [----] btih chan 8192[K[8.6.10] hash.bench [    ] btih chan 16384[K[8.6.10] hash.bench [----] btih chan 16384[K[8.6.10] hash.bench [    ] btih chan 32768[K[8.6.10] hash.bench [----] btih chan 32768[K[8.6.10] hash.bench [    ] btih chan 65536[K[8.6.10] hash.bench [----] btih chan 65536[K[8.6.10] hash.bench [    ] btih chan 131072[K[8.6.10] hash.bench [----] btih chan 131072[K[8.6.10] hash.bench [    ] btih chan 262144[K[8.6.10] hash.bench [----] btih chan 262144[K[8.6.10] hash.bench [    ] btih chan 524288[K[8.6.10] hash.bench [----] btih chan 524288[K[8.6.10] hash.bench [    ] btih chan 1048576[K[8.6.10] hash.bench [----] btih chan 1048576[K[8.6.10] hash.bench [    ] btih chan 2097152[K[8.6.10] hash.bench [----] btih chan 2097152[K[8.6.10] hash.bench [    ] btih chan 4194304[K[8.6.10] hash.bench [----] btih chan 4194304[K[8.6.10] hash.bench [    ] btih chan 8388608[K[8.6.10] hash.bench [----] btih chan 8388608[K[8.6.10] hash.bench [    ] btih chan 16777216[K[8.6.10] hash.bench [----] btih chan 16777216[K[8.6.10] hash.bench [    ] btih chan 33554432[K[8.6.10] hash.bench [----] btih chan 33554432[K[8.6.10] hash.bench [    ] btih chan 67108864[K[8.6.10] hash.bench [----] btih chan 67108864[K[8.6.10] hash.bench [    ] ed2k chan 64[K[8.6.10] hash.bench [----] ed2k chan 64[K[8.6.10] hash.bench [    ] ed2k chan 128[K[8.6.10] hash.bench [----] ed2k chan 128[K[8.6.10] hash.bench [    ] ed2k chan 256[K[8.6.10] hash.bench [----] ed2k chan 256[K[8.6.10] hash.bench [    ] ed2k chan 512[K[8.6.10] hash.bench [----] ed2k chan 512[K[8.6.10] hash.bench [    ] ed2k chan 1024[K[8.6.10] hash.bench [----] ed2k chan 1024[K[8.6.10] hash.bench [    ] ed2k chan 2048[K[8.6.10] hash.bench [----] ed2k chan 2048[K[8.6.10] hash.bench [    ] ed2k chan 4096[K[8.6.10] hash.bench [----] ed2k chan 4096[K[8.6.10] hash.bench [    ] ed2k chan 8192[K[8.6.10] hash.bench [----] ed2k chan 8192[K[8.6.10] hash.bench [    ] ed2k chan 16384[K[8.6.10] hash.bench [----] ed2k chan 16384[K[8.6.10] hash.bench [    ] ed2k chan 32768[K[8.6.10] hash.bench [----] ed2k chan 32768[K[8.6.10] hash.bench [    ] ed2k chan 65536[K[8.6.10] hash.bench [----] ed2k chan 65536[K[8.6.10] hash.bench [    ] ed2k chan 131072[K[8.6.10] hash.bench [----] ed2k chan 131072[K[8.6.10] hash.bench [    ] ed2k chan 262144[K[8.6.10] hash.bench [----] ed2k chan 262144[K[8.6.10] hash.bench [    ] ed2k chan 524288[K[8.6.10] hash.bench [----] ed2k chan 524288[K[8.6.10] hash.bench [    ] ed2k chan 1048576[K[8.6.10] hash.bench [----] ed2k chan 1048576[K[8.6.10] hash.bench [    ] ed2k chan 2097152[K[8.6.10] hash.bench [----] ed2k chan 2097152[K[8.6.10] hash.bench [    ] ed2k chan 4194304[K[8.6.10] hash.bench [----] ed2k chan 4194304[K[8.6.10] hash.bench [    ] ed2k chan 8388608[K[8.6.10] hash.bench [----] ed2k chan 8388608[K[8.6.10] hash.bench [    ] ed2k chan 16777216[K[8.6.10] hash.bench [----] ed2k chan 16777216[K[8.6.10] hash.bench [    ] ed2k chan 33554432[K[8.6.10] hash.bench [----] ed2k chan 33554432[K[8.6.10] hash.bench [    ] ed2k chan 67108864[K[8.6.10] hash.bench [----] ed2k chan 67108864[K[8.6.10] hash.bench [    ] edonr/224 chan 64[K[8.6.10] hash.bench [----] edonr/224 chan 64[K[8.6.10] hash.bench [    ] edonr/224 chan 128[K[8.6.10] hash.bench [----] edonr/224 chan 128[K[8.6.10] hash.bench [    ] edonr/224 chan 256[K[8.6.10] hash.bench [----] edonr/224 chan 256[K[8.6.10] hash.bench [    ] edonr/224 chan 512[K[8.6.10] hash.bench [----] edonr/224 chan 512[K[8.6.10] hash.bench [    ] edonr/224 chan 1024[K[8.6.10] hash.bench [----] edonr/224 chan 1024[K[8.6.10] hash.bench [    ] edonr/224 chan 2048[K[8.6.10] hash.bench [----] edonr/224 chan 2048[K[8.6.10] hash.bench [    ] edonr/224 chan 4096[K[8.6.10] hash.bench [----] edonr/224 chan 4096[K[8.6.10] hash.bench [    ] edonr/224 chan 8192[K[8.6.10] hash.bench [----] edonr/224 chan 8192[K[8.6.10] hash.bench [    ] edonr/224 chan 16384[K[8.6.10] hash.bench [----] edonr/224 chan 16384[K[8.6.10] hash.bench [    ] edonr/224 chan 32768[K[8.6.10] hash.bench [----] edonr/224 chan 32768[K[8.6.10] hash.bench [    ] edonr/224 chan 65536[K[8.6.10] hash.bench [----] edonr/224 chan 65536[K[8.6.10] hash.bench [    ] edonr/224 chan 131072[K[8.6.10] hash.bench [----] edonr/224 chan 131072[K[8.6.10] hash.bench [    ] edonr/224 chan 262144[K[8.6.10] hash.bench [----] edonr/224 chan 262144[K[8.6.10] hash.bench [    ] edonr/224 chan 524288[K[8.6.10] hash.bench [----] edonr/224 chan 524288[K[8.6.10] hash.bench [    ] edonr/224 chan 1048576[K[8.6.10] hash.bench [----] edonr/224 chan 1048576[K[8.6.10] hash.bench [    ] edonr/224 chan 2097152[K[8.6.10] hash.bench [----] edonr/224 chan 2097152[K[8.6.10] hash.bench [    ] edonr/224 chan 4194304[K[8.6.10] hash.bench [----] edonr/224 chan 4194304[K[8.6.10] hash.bench [    ] edonr/224 chan 8388608[K[8.6.10] hash.bench [----] edonr/224 chan 8388608[K[8.6.10] hash.bench [    ] edonr/224 chan 16777216[K[8.6.10] hash.bench [----] edonr/224 chan 16777216[K[8.6.10] hash.bench [    ] edonr/224 chan 33554432[K[8.6.10] hash.bench [----] edonr/224 chan 33554432[K[8.6.10] hash.bench [    ] edonr/224 chan 67108864[K[8.6.10] hash.bench [----] edonr/224 chan 67108864[K[8.6.10] hash.bench [    ] edonr/256 chan 64[K[8.6.10] hash.bench [----] edonr/256 chan 64[K[8.6.10] hash.bench [    ] edonr/256 chan 128[K[8.6.10] hash.bench [----] edonr/256 chan 128[K[8.6.10] hash.bench [    ] edonr/256 chan 256[K[8.6.10] hash.bench [----] edonr/256 chan 256[K[8.6.10] hash.bench [    ] edonr/256 chan 512[K[8.6.10] hash.bench [----] edonr/256 chan 512[K[8.6.10] hash.bench [    ] edonr/256 chan 1024[K[8.6.10] hash.bench [----] edonr/256 chan 1024[K[8.6.10] hash.bench [    ] edonr/256 chan 2048[K[8.6.10] hash.bench [----] edonr/256 chan 2048[K[8.6.10] hash.bench [    ] edonr/256 chan 4096[K[8.6.10] hash.bench [----] edonr/256 chan 4096[K[8.6.10] hash.bench [    ] edonr/256 chan 8192[K[8.6.10] hash.bench [----] edonr/256 chan 8192[K[8.6.10] hash.bench [    ] edonr/256 chan 16384[K[8.6.10] hash.bench [----] edonr/256 chan 16384[K[8.6.10] hash.bench [    ] edonr/256 chan 32768[K[8.6.10] hash.bench [----] edonr/256 chan 32768[K[8.6.10] hash.bench [    ] edonr/256 chan 65536[K[8.6.10] hash.bench [----] edonr/256 chan 65536[K[8.6.10] hash.bench [    ] edonr/256 chan 131072[K[8.6.10] hash.bench [----] edonr/256 chan 131072[K[8.6.10] hash.bench [    ] edonr/256 chan 262144[K[8.6.10] hash.bench [----] edonr/256 chan 262144[K[8.6.10] hash.bench [    ] edonr/256 chan 524288[K[8.6.10] hash.bench [----] edonr/256 chan 524288[K[8.6.10] hash.bench [    ] edonr/256 chan 1048576[K[8.6.10] hash.bench [----] edonr/256 chan 1048576[K[8.6.10] hash.bench [    ] edonr/256 chan 2097152[K[8.6.10] hash.bench [----] edonr/256 chan 2097152[K[8.6.10] hash.bench [    ] edonr/256 chan 4194304[K[8.6.10] hash.bench [----] edonr/256 chan 4194304[K[8.6.10] hash.bench [    ] edonr/256 chan 8388608[K[8.6.10] hash.bench [----] edonr/256 chan 8388608[K[8.6.10] hash.bench [    ] edonr/256 chan 16777216[K[8.6.10] hash.bench [----] edonr/256 chan 16777216[K[8.6.10] hash.bench [    ] edonr/256 chan 33554432[K[8.6.10] hash.bench [----] edonr/256 chan 33554432[K[8.6.10] hash.bench [    ] edonr/256 chan 67108864[K[8.6.10] hash.bench [----] edonr/256 chan 67108864[K[8.6.10] hash.bench [    ] edonr/384 chan 64[K[8.6.10] hash.bench [----] edonr/384 chan 64[K[8.6.10] hash.bench [    ] edonr/384 chan 128[K[8.6.10] hash.bench [----] edonr/384 chan 128[K[8.6.10] hash.bench [    ] edonr/384 chan 256[K[8.6.10] hash.bench [----] edonr/384 chan 256[K[8.6.10] hash.bench [    ] edonr/384 chan 512[K[8.6.10] hash.bench [----] edonr/384 chan 512[K[8.6.10] hash.bench [    ] edonr/384 chan 1024[K[8.6.10] hash.bench [----] edonr/384 chan 1024[K[8.6.10] hash.bench [    ] edonr/384 chan 2048[K[8.6.10] hash.bench [----] edonr/384 chan 2048[K[8.6.10] hash.bench [    ] edonr/384 chan 4096[K[8.6.10] hash.bench [----] edonr/384 chan 4096[K[8.6.10] hash.bench [    ] edonr/384 chan 8192[K[8.6.10] hash.bench [----] edonr/384 chan 8192[K[8.6.10] hash.bench [    ] edonr/384 chan 16384[K[8.6.10] hash.bench [----] edonr/384 chan 16384[K[8.6.10] hash.bench [    ] edonr/384 chan 32768[K[8.6.10] hash.bench [----] edonr/384 chan 32768[K[8.6.10] hash.bench [    ] edonr/384 chan 65536[K[8.6.10] hash.bench [----] edonr/384 chan 65536[K[8.6.10] hash.bench [    ] edonr/384 chan 131072[K[8.6.10] hash.bench [----] edonr/384 chan 131072[K[8.6.10] hash.bench [    ] edonr/384 chan 262144[K[8.6.10] hash.bench [----] edonr/384 chan 262144[K[8.6.10] hash.bench [    ] edonr/384 chan 524288[K[8.6.10] hash.bench [----] edonr/384 chan 524288[K[8.6.10] hash.bench [    ] edonr/384 chan 1048576[K[8.6.10] hash.bench [----] edonr/384 chan 1048576[K[8.6.10] hash.bench [    ] edonr/384 chan 2097152[K[8.6.10] hash.bench [----] edonr/384 chan 2097152[K[8.6.10] hash.bench [    ] edonr/384 chan 4194304[K[8.6.10] hash.bench [----] edonr/384 chan 4194304[K[8.6.10] hash.bench [    ] edonr/384 chan 8388608[K[8.6.10] hash.bench [----] edonr/384 chan 8388608[K[8.6.10] hash.bench [    ] edonr/384 chan 16777216[K[8.6.10] hash.bench [----] edonr/384 chan 16777216[K[8.6.10] hash.bench [    ] edonr/384 chan 33554432[K[8.6.10] hash.bench [----] edonr/384 chan 33554432[K[8.6.10] hash.bench [    ] edonr/384 chan 67108864[K[8.6.10] hash.bench [----] edonr/384 chan 67108864[K[8.6.10] hash.bench [    ] edonr/512 chan 64[K[8.6.10] hash.bench [----] edonr/512 chan 64[K[8.6.10] hash.bench [    ] edonr/512 chan 128[K[8.6.10] hash.bench [----] edonr/512 chan 128[K[8.6.10] hash.bench [    ] edonr/512 chan 256[K[8.6.10] hash.bench [----] edonr/512 chan 256[K[8.6.10] hash.bench [    ] edonr/512 chan 512[K[8.6.10] hash.bench [----] edonr/512 chan 512[K[8.6.10] hash.bench [    ] edonr/512 chan 1024[K[8.6.10] hash.bench [----] edonr/512 chan 1024[K[8.6.10] hash.bench [    ] edonr/512 chan 2048[K[8.6.10] hash.bench [----] edonr/512 chan 2048[K[8.6.10] hash.bench [    ] edonr/512 chan 4096[K[8.6.10] hash.bench [----] edonr/512 chan 4096[K[8.6.10] hash.bench [    ] edonr/512 chan 8192[K[8.6.10] hash.bench [----] edonr/512 chan 8192[K[8.6.10] hash.bench [    ] edonr/512 chan 16384[K[8.6.10] hash.bench [----] edonr/512 chan 16384[K[8.6.10] hash.bench [    ] edonr/512 chan 32768[K[8.6.10] hash.bench [----] edonr/512 chan 32768[K[8.6.10] hash.bench [    ] edonr/512 chan 65536[K[8.6.10] hash.bench [----] edonr/512 chan 65536[K[8.6.10] hash.bench [    ] edonr/512 chan 131072[K[8.6.10] hash.bench [----] edonr/512 chan 131072[K[8.6.10] hash.bench [    ] edonr/512 chan 262144[K[8.6.10] hash.bench [----] edonr/512 chan 262144[K[8.6.10] hash.bench [    ] edonr/512 chan 524288[K[8.6.10] hash.bench [----] edonr/512 chan 524288[K[8.6.10] hash.bench [    ] edonr/512 chan 1048576[K[8.6.10] hash.bench [----] edonr/512 chan 1048576[K[8.6.10] hash.bench [    ] edonr/512 chan 2097152[K[8.6.10] hash.bench [----] edonr/512 chan 2097152[K[8.6.10] hash.bench [    ] edonr/512 chan 4194304[K[8.6.10] hash.bench [----] edonr/512 chan 4194304[K[8.6.10] hash.bench [    ] edonr/512 chan 8388608[K[8.6.10] hash.bench [----] edonr/512 chan 8388608[K[8.6.10] hash.bench [    ] edonr/512 chan 16777216[K[8.6.10] hash.bench [----] edonr/512 chan 16777216[K[8.6.10] hash.bench [    ] edonr/512 chan 33554432[K[8.6.10] hash.bench [----] edonr/512 chan 33554432[K[8.6.10] hash.bench [    ] edonr/512 chan 67108864[K[8.6.10] hash.bench [----] edonr/512 chan 67108864[K[8.6.10] hash.bench [    ] gost12/256 chan 64[K[8.6.10] hash.bench [----] gost12/256 chan 64[K[8.6.10] hash.bench [    ] gost12/256 chan 128[K[8.6.10] hash.bench [----] gost12/256 chan 128[K[8.6.10] hash.bench [    ] gost12/256 chan 256[K[8.6.10] hash.bench [----] gost12/256 chan 256[K[8.6.10] hash.bench [    ] gost12/256 chan 512[K[8.6.10] hash.bench [----] gost12/256 chan 512[K[8.6.10] hash.bench [    ] gost12/256 chan 1024[K[8.6.10] hash.bench [----] gost12/256 chan 1024[K[8.6.10] hash.bench [    ] gost12/256 chan 2048[K[8.6.10] hash.bench [----] gost12/256 chan 2048[K[8.6.10] hash.bench [    ] gost12/256 chan 4096[K[8.6.10] hash.bench [----] gost12/256 chan 4096[K[8.6.10] hash.bench [    ] gost12/256 chan 8192[K[8.6.10] hash.bench [----] gost12/256 chan 8192[K[8.6.10] hash.bench [    ] gost12/256 chan 16384[K[8.6.10] hash.bench [----] gost12/256 chan 16384[K[8.6.10] hash.bench [    ] gost12/256 chan 32768[K[8.6.10] hash.bench [----] gost12/256 chan 32768[K[8.6.10] hash.bench [    ] gost12/256 chan 65536[K[8.6.10] hash.bench [----] gost12/256 chan 65536[K[8.6.10] hash.bench [    ] gost12/256 chan 131072[K[8.6.10] hash.bench [----] gost12/256 chan 131072[K[8.6.10] hash.bench [    ] gost12/256 chan 262144[K[8.6.10] hash.bench [----] gost12/256 chan 262144[K[8.6.10] hash.bench [    ] gost12/256 chan 524288[K[8.6.10] hash.bench [----] gost12/256 chan 524288[K[8.6.10] hash.bench [    ] gost12/256 chan 1048576[K[8.6.10] hash.bench [----] gost12/256 chan 1048576[K[8.6.10] hash.bench [    ] gost12/256 chan 2097152[K[8.6.10] hash.bench [----] gost12/256 chan 2097152[K[8.6.10] hash.bench [    ] gost12/256 chan 4194304[K[8.6.10] hash.bench [----] gost12/256 chan 4194304[K[8.6.10] hash.bench [    ] gost12/256 chan 8388608[K[8.6.10] hash.bench [----] gost12/256 chan 8388608[K[8.6.10] hash.bench [    ] gost12/256 chan 16777216[K[8.6.10] hash.bench [----] gost12/256 chan 16777216[K[8.6.10] hash.bench [    ] gost12/256 chan 33554432[K[8.6.10] hash.bench [----] gost12/256 chan 33554432[K[8.6.10] hash.bench [    ] gost12/256 chan 67108864[K[8.6.10] hash.bench [----] gost12/256 chan 67108864[K[8.6.10] hash.bench [    ] gost12/512 chan 64[K[8.6.10] hash.bench [----] gost12/512 chan 64[K[8.6.10] hash.bench [    ] gost12/512 chan 128[K[8.6.10] hash.bench [----] gost12/512 chan 128[K[8.6.10] hash.bench [    ] gost12/512 chan 256[K[8.6.10] hash.bench [----] gost12/512 chan 256[K[8.6.10] hash.bench [    ] gost12/512 chan 512[K[8.6.10] hash.bench [----] gost12/512 chan 512[K[8.6.10] hash.bench [    ] gost12/512 chan 1024[K[8.6.10] hash.bench [----] gost12/512 chan 1024[K[8.6.10] hash.bench [    ] gost12/512 chan 2048[K[8.6.10] hash.bench [----] gost12/512 chan 2048[K[8.6.10] hash.bench [    ] gost12/512 chan 4096[K[8.6.10] hash.bench [----] gost12/512 chan 4096[K[8.6.10] hash.bench [    ] gost12/512 chan 8192[K[8.6.10] hash.bench [----] gost12/512 chan 8192[K[8.6.10] hash.bench [    ] gost12/512 chan 16384[K[8.6.10] hash.bench [----] gost12/512 chan 16384[K[8.6.10] hash.bench [    ] gost12/512 chan 32768[K[8.6.10] hash.bench [----] gost12/512 chan 32768[K[8.6.10] hash.bench [    ] gost12/512 chan 65536[K[8.6.10] hash.bench [----] gost12/512 chan 65536[K[8.6.10] hash.bench [    ] gost12/512 chan 131072[K[8.6.10] hash.bench [----] gost12/512 chan 131072[K[8.6.10] hash.bench [    ] gost12/512 chan 262144[K[8.6.10] hash.bench [----] gost12/512 chan 262144[K[8.6.10] hash.bench [    ] gost12/512 chan 524288[K[8.6.10] hash.bench [----] gost12/512 chan 524288[K[8.6.10] hash.bench [    ] gost12/512 chan 1048576[K[8.6.10] hash.bench [----] gost12/512 chan 1048576[K[8.6.10] hash.bench [    ] gost12/512 chan 2097152[K[8.6.10] hash.bench [----] gost12/512 chan 2097152[K[8.6.10] hash.bench [    ] gost12/512 chan 4194304[K[8.6.10] hash.bench [----] gost12/512 chan 4194304[K[8.6.10] hash.bench [    ] gost12/512 chan 8388608[K[8.6.10] hash.bench [----] gost12/512 chan 8388608[K[8.6.10] hash.bench [    ] gost12/512 chan 16777216[K[8.6.10] hash.bench [----] gost12/512 chan 16777216[K[8.6.10] hash.bench [    ] gost12/512 chan 33554432[K[8.6.10] hash.bench [----] gost12/512 chan 33554432[K[8.6.10] hash.bench [    ] gost12/512 chan 67108864[K[8.6.10] hash.bench [----] gost12/512 chan 67108864[K[8.6.10] hash.bench [    ] gost94 chan 64[K[8.6.10] hash.bench [----] gost94 chan 64[K[8.6.10] hash.bench [    ] gost94 chan 128[K[8.6.10] hash.bench [----] gost94 chan 128[K[8.6.10] hash.bench [    ] gost94 chan 256[K[8.6.10] hash.bench [----] gost94 chan 256[K[8.6.10] hash.bench [    ] gost94 chan 512[K[8.6.10] hash.bench [----] gost94 chan 512[K[8.6.10] hash.bench [    ] gost94 chan 1024[K[8.6.10] hash.bench [----] gost94 chan 1024[K[8.6.10] hash.bench [    ] gost94 chan 2048[K[8.6.10] hash.bench [----] gost94 chan 2048[K[8.6.10] hash.bench [    ] gost94 chan 4096[K[8.6.10] hash.bench [----] gost94 chan 4096[K[8.6.10] hash.bench [    ] gost94 chan 8192[K[8.6.10] hash.bench [----] gost94 chan 8192[K[8.6.10] hash.bench [    ] gost94 chan 16384[K[8.6.10] hash.bench [----] gost94 chan 16384[K[8.6.10] hash.bench [    ] gost94 chan 32768[K[8.6.10] hash.bench [----] gost94 chan 32768[K[8.6.10] hash.bench [    ] gost94 chan 65536[K[8.6.10] hash.bench [----] gost94 chan 65536[K[8.6.10] hash.bench [    ] gost94 chan 131072[K[8.6.10] hash.bench [----] gost94 chan 131072[K[8.6.10] hash.bench [    ] gost94 chan 262144[K[8.6.10] hash.bench [----] gost94 chan 262144[K[8.6.10] hash.bench [    ] gost94 chan 524288[K[8.6.10] hash.bench [----] gost94 chan 524288[K[8.6.10] hash.bench [    ] gost94 chan 1048576[K[8.6.10] hash.bench [----] gost94 chan 1048576[K[8.6.10] hash.bench [    ] gost94 chan 2097152[K[8.6.10] hash.bench [----] gost94 chan 2097152[K[8.6.10] hash.bench [    ] gost94 chan 4194304[K[8.6.10] hash.bench [----] gost94 chan 4194304[K[8.6.10] hash.bench [    ] gost94 chan 8388608[K[8.6.10] hash.bench [----] gost94 chan 8388608[K[8.6.10] hash.bench [    ] gost94 chan 16777216[K[8.6.10] hash.bench [----] gost94 chan 16777216[K[8.6.10] hash.bench [    ] gost94 chan 33554432[K[8.6.10] hash.bench [----] gost94 chan 33554432[K[8.6.10] hash.bench [    ] gost94 chan 67108864[K[8.6.10] hash.bench [----] gost94 chan 67108864[K[8.6.10] hash.bench [    ] has160 chan 64[K[8.6.10] hash.bench [----] has160 chan 64[K[8.6.10] hash.bench [    ] has160 chan 128[K[8.6.10] hash.bench [----] has160 chan 128[K[8.6.10] hash.bench [    ] has160 chan 256[K[8.6.10] hash.bench [----] has160 chan 256[K[8.6.10] hash.bench [    ] has160 chan 512[K[8.6.10] hash.bench [----] has160 chan 512[K[8.6.10] hash.bench [    ] has160 chan 1024[K[8.6.10] hash.bench [----] has160 chan 1024[K[8.6.10] hash.bench [    ] has160 chan 2048[K[8.6.10] hash.bench [----] has160 chan 2048[K[8.6.10] hash.bench [    ] has160 chan 4096[K[8.6.10] hash.bench [----] has160 chan 4096[K[8.6.10] hash.bench [    ] has160 chan 8192[K[8.6.10] hash.bench [----] has160 chan 8192[K[8.6.10] hash.bench [    ] has160 chan 16384[K[8.6.10] hash.bench [----] has160 chan 16384[K[8.6.10] hash.bench [    ] has160 chan 32768[K[8.6.10] hash.bench [----] has160 chan 32768[K[8.6.10] hash.bench [    ] has160 chan 65536[K[8.6.10] hash.bench [----] has160 chan 65536[K[8.6.10] hash.bench [    ] has160 chan 131072[K[8.6.10] hash.bench [----] has160 chan 131072[K[8.6.10] hash.bench [    ] has160 chan 262144[K[8.6.10] hash.bench [----] has160 chan 262144[K[8.6.10] hash.bench [    ] has160 chan 524288[K[8.6.10] hash.bench [----] has160 chan 524288[K[8.6.10] hash.bench [    ] has160 chan 1048576[K[8.6.10] hash.bench [----] has160 chan 1048576[K[8.6.10] hash.bench [    ] has160 chan 2097152[K[8.6.10] hash.bench [----] has160 chan 2097152[K[8.6.10] hash.bench [    ] has160 chan 4194304[K[8.6.10] hash.bench [----] has160 chan 4194304[K[8.6.10] hash.bench [    ] has160 chan 8388608[K[8.6.10] hash.bench [----] has160 chan 8388608[K[8.6.10] hash.bench [    ] has160 chan 16777216[K[8.6.10] hash.bench [----] has160 chan 16777216[K[8.6.10] hash.bench [    ] has160 chan 33554432[K[8.6.10] hash.bench [----] has160 chan 33554432[K[8.6.10] hash.bench [    ] has160 chan 67108864[K[8.6.10] hash.bench [----] has160 chan 67108864[K[8.6.10] hash.bench [    ] md4 chan 64[K[8.6.10] hash.bench [----] md4 chan 64[K[8.6.10] hash.bench [    ] md4 chan 128[K[8.6.10] hash.bench [----] md4 chan 128[K[8.6.10] hash.bench [    ] md4 chan 256[K[8.6.10] hash.bench [----] md4 chan 256[K[8.6.10] hash.bench [    ] md4 chan 512[K[8.6.10] hash.bench [----] md4 chan 512[K[8.6.10] hash.bench [    ] md4 chan 1024[K[8.6.10] hash.bench [----] md4 chan 1024[K[8.6.10] hash.bench [    ] md4 chan 2048[K[8.6.10] hash.bench [----] md4 chan 2048[K[8.6.10] hash.bench [    ] md4 chan 4096[K[8.6.10] hash.bench [----] md4 chan 4096[K[8.6.10] hash.bench [    ] md4 chan 8192[K[8.6.10] hash.bench [----] md4 chan 8192[K[8.6.10] hash.bench [    ] md4 chan 16384[K[8.6.10] hash.bench [----] md4 chan 16384[K[8.6.10] hash.bench [    ] md4 chan 32768[K[8.6.10] hash.bench [----] md4 chan 32768[K[8.6.10] hash.bench [    ] md4 chan 65536[K[8.6.10] hash.bench [----] md4 chan 65536[K[8.6.10] hash.bench [    ] md4 chan 131072[K[8.6.10] hash.bench [----] md4 chan 131072[K[8.6.10] hash.bench [    ] md4 chan 262144[K[8.6.10] hash.bench [----] md4 chan 262144[K[8.6.10] hash.bench [    ] md4 chan 524288[K[8.6.10] hash.bench [----] md4 chan 524288[K[8.6.10] hash.bench [    ] md4 chan 1048576[K[8.6.10] hash.bench [----] md4 chan 1048576[K[8.6.10] hash.bench [    ] md4 chan 2097152[K[8.6.10] hash.bench [----] md4 chan 2097152[K[8.6.10] hash.bench [    ] md4 chan 4194304[K[8.6.10] hash.bench [----] md4 chan 4194304[K[8.6.10] hash.bench [    ] md4 chan 8388608[K[8.6.10] hash.bench [----] md4 chan 8388608[K[8.6.10] hash.bench [    ] md4 chan 16777216[K[8.6.10] hash.bench [----] md4 chan 16777216[K[8.6.10] hash.bench [    ] md4 chan 33554432[K[8.6.10] hash.bench [----] md4 chan 33554432[K[8.6.10] hash.bench [    ] md4 chan 67108864[K[8.6.10] hash.bench [----] md4 chan 67108864[K[8.6.10] hash.bench [    ] md5 chan 64[K[8.6.10] hash.bench [----] md5 chan 64[K[8.6.10] hash.bench [    ] md5 chan 128[K[8.6.10] hash.bench [----] md5 chan 128[K[8.6.10] hash.bench [    ] md5 chan 256[K[8.6.10] hash.bench [----] md5 chan 256[K[8.6.10] hash.bench [    ] md5 chan 512[K[8.6.10] hash.bench [----] md5 chan 512[K[8.6.10] hash.bench [    ] md5 chan 1024[K[8.6.10] hash.bench [----] md5 chan 1024[K[8.6.10] hash.bench [    ] md5 chan 2048[K[8.6.10] hash.bench [----] md5 chan 2048[K[8.6.10] hash.bench [    ] md5 chan 4096[K[8.6.10] hash.bench [----] md5 chan 4096[K[8.6.10] hash.bench [    ] md5 chan 8192[K[8.6.10] hash.bench [----] md5 chan 8192[K[8.6.10] hash.bench [    ] md5 chan 16384[K[8.6.10] hash.bench [----] md5 chan 16384[K[8.6.10] hash.bench [    ] md5 chan 32768[K[8.6.10] hash.bench [----] md5 chan 32768[K[8.6.10] hash.bench [    ] md5 chan 65536[K[8.6.10] hash.bench [----] md5 chan 65536[K[8.6.10] hash.bench [    ] md5 chan 131072[K[8.6.10] hash.bench [----] md5 chan 131072[K[8.6.10] hash.bench [    ] md5 chan 262144[K[8.6.10] hash.bench [----] md5 chan 262144[K[8.6.10] hash.bench [    ] md5 chan 524288[K[8.6.10] hash.bench [----] md5 chan 524288[K[8.6.10] hash.bench [    ] md5 chan 1048576[K[8.6.10] hash.bench [----] md5 chan 1048576[K[8.6.10] hash.bench [    ] md5 chan 2097152[K[8.6.10] hash.bench [----] md5 chan 2097152[K[8.6.10] hash.bench [    ] md5 chan 4194304[K[8.6.10] hash.bench [----] md5 chan 4194304[K[8.6.10] hash.bench [    ] md5 chan 8388608[K[8.6.10] hash.bench [----] md5 chan 8388608[K[8.6.10] hash.bench [    ] md5 chan 16777216[K[8.6.10] hash.bench [----] md5 chan 16777216[K[8.6.10] hash.bench [    ] md5 chan 33554432[K[8.6.10] hash.bench [----] md5 chan 33554432[K[8.6.10] hash.bench [    ] md5 chan 67108864[K[8.6.10] hash.bench [----] md5 chan 67108864[K[8.6.10] hash.bench [    ] ripemd160 chan 64[K[8.6.10] hash.bench [----] ripemd160 chan 64[K[8.6.10] hash.bench [    ] ripemd160 chan 128[K[8.6.10] hash.bench [----] ripemd160 chan 128[K[8.6.10] hash.bench [    ] ripemd160 chan 256[K[8.6.10] hash.bench [----] ripemd160 chan 256[K[8.6.10] hash.bench [    ] ripemd160 chan 512[K[8.6.10] hash.bench [----] ripemd160 chan 512[K[8.6.10] hash.bench [    ] ripemd160 chan 1024[K[8.6.10] hash.bench [----] ripemd160 chan 1024[K[8.6.10] hash.bench [    ] ripemd160 chan 2048[K[8.6.10] hash.bench [----] ripemd160 chan 2048[K[8.6.10] hash.bench [    ] ripemd160 chan 4096[K[8.6.10] hash.bench [----] ripemd160 chan 4096[K[8.6.10] hash.bench [    ] ripemd160 chan 8192[K[8.6.10] hash.bench [----] ripemd160 chan 8192[K[8.6.10] hash.bench [    ] ripemd160 chan 16384[K[8.6.10] hash.bench [----] ripemd160 chan 16384[K[8.6.10] hash.bench [    ] ripemd160 chan 32768[K[8.6.10] hash.bench [----] ripemd160 chan 32768[K[8.6.10] hash.bench [    ] ripemd160 chan 65536[K[8.6.10] hash.bench [----] ripemd160 chan 65536[K[8.6.10] hash.bench [    ] ripemd160 chan 131072[K[8.6.10] hash.bench [----] ripemd160 chan 131072[K[8.6.10] hash.bench [    ] ripemd160 chan 262144[K[8.6.10] hash.bench [----] ripemd160 chan 262144[K[8.6.10] hash.bench [    ] ripemd160 chan 524288[K[8.6.10] hash.bench [----] ripemd160 chan 524288[K[8.6.10] hash.bench [    ] ripemd160 chan 1048576[K[8.6.10] hash.bench [----] ripemd160 chan 1048576[K[8.6.10] hash.bench [    ] ripemd160 chan 2097152[K[8.6.10] hash.bench [----] ripemd160 chan 2097152[K[8.6.10] hash.bench [    ] ripemd160 chan 4194304[K[8.6.10] hash.bench [----] ripemd160 chan 4194304[K[8.6.10] hash.bench [    ] ripemd160 chan 8388608[K[8.6.10] hash.bench [----] ripemd160 chan 8388608[K[8.6.10] hash.bench [    ] ripemd160 chan 16777216[K[8.6.10] hash.bench [----] ripemd160 chan 16777216[K[8.6.10] hash.bench [    ] ripemd160 chan 33554432[K[8.6.10] hash.bench [----] ripemd160 chan 33554432[K[8.6.10] hash.bench [    ] ripemd160 chan 67108864[K[8.6.10] hash.bench [----] ripemd160 chan 67108864[K[8.6.10] hash.bench [    ] sha1 chan 64[K[8.6.10] hash.bench [----] sha1 chan 64[K[8.6.10] hash.bench [    ] sha1 chan 128[K[8.6.10] hash.bench [----] sha1 chan 128[K[8.6.10] hash.bench [    ] sha1 chan 256[K[8.6.10] hash.bench [----] sha1 chan 256[K[8.6.10] hash.bench [    ] sha1 chan 512[K[8.6.10] hash.bench [----] sha1 chan 512[K[8.6.10] hash.bench [    ] sha1 chan 1024[K[8.6.10] hash.bench [----] sha1 chan 1024[K[8.6.10] hash.bench [    ] sha1 chan 2048[K[8.6.10] hash.bench [----] sha1 chan 2048[K[8.6.10] hash.bench [    ] sha1 chan 4096[K[8.6.10] hash.bench [----] sha1 chan 4096[K[8.6.10] hash.bench [    ] sha1 chan 8192[K[8.6.10] hash.bench [----] sha1 chan 8192[K[8.6.10] hash.bench [    ] sha1 chan 16384[K[8.6.10] hash.bench [----] sha1 chan 16384[K[8.6.10] hash.bench [    ] sha1 chan 32768[K[8.6.10] hash.bench [----] sha1 chan 32768[K[8.6.10] hash.bench [    ] sha1 chan 65536[K[8.6.10] hash.bench [----] sha1 chan 65536[K[8.6.10] hash.bench [    ] sha1 chan 131072[K[8.6.10] hash.bench [----] sha1 chan 131072[K[8.6.10] hash.bench [    ] sha1 chan 262144[K[8.6.10] hash.bench [----] sha1 chan 262144[K[8.6.10] hash.bench [    ] sha1 chan 524288[K[8.6.10] hash.bench [----] sha1 chan 524288[K[8.6.10] hash.bench [    ] sha1 chan 1048576[K[8.6.10] hash.bench [----] sha1 chan 1048576[K[8.6.10] hash.bench [    ] sha1 chan 2097152[K[8.6.10] hash.bench [----] sha1 chan 2097152[K[8.6.10] hash.bench [    ] sha1 chan 4194304[K[8.6.10] hash.bench [----] sha1 chan 4194304[K[8.6.10] hash.bench [    ] sha1 chan 8388608[K[8.6.10] hash.bench [----] sha1 chan 8388608[K[8.6.10] hash.bench [    ] sha1 chan 16777216[K[8.6.10] hash.bench [----] sha1 chan 16777216[K[8.6.10] hash.bench [    ] sha1 chan 33554432[K[8.6.10] hash.bench [----] sha1 chan 33554432[K[8.6.10] hash.bench [    ] sha1 chan 67108864[K[8.6.10] hash.bench [----] sha1 chan 67108864[K[8.6.10] hash.bench [    ] sha2/224 chan 64[K[8.6.10] hash.bench [----] sha2/224 chan 64[K[8.6.10] hash.bench [    ] sha2/224 chan 128[K[8.6.10] hash.bench [----] sha2/224 chan 128[K[8.6.10] hash.bench [    ] sha2/224 chan 256[K[8.6.10] hash.bench [----] sha2/224 chan 256[K[8.6.10] hash.bench [    ] sha2/224 chan 512[K[8.6.10] hash.bench [----] sha2/224 chan 512[K[8.6.10] hash.bench [    ] sha2/224 chan 1024[K[8.6.10] hash.bench [----] sha2/224 chan 1024[K[8.6.10] hash.bench [    ] sha2/224 chan 2048[K[8.6.10] hash.bench [----] sha2/224 chan 2048[K[8.6.10] hash.bench [    ] sha2/224 chan 4096[K[8.6.10] hash.bench [----] sha2/224 chan 4096[K[8.6.10] hash.bench [    ] sha2/224 chan 8192[K[8.6.10] hash.bench [----] sha2/224 chan 8192[K[8.6.10] hash.bench [    ] sha2/224 chan 16384[K[8.6.10] hash.bench [----] sha2/224 chan 16384[K[8.6.10] hash.bench [    ] sha2/224 chan 32768[K[8.6.10] hash.bench [----] sha2/224 chan 32768[K[8.6.10] hash.bench [    ] sha2/224 chan 65536[K[8.6.10] hash.bench [----] sha2/224 chan 65536[K[8.6.10] hash.bench [    ] sha2/224 chan 131072[K[8.6.10] hash.bench [----] sha2/224 chan 131072[K[8.6.10] hash.bench [    ] sha2/224 chan 262144[K[8.6.10] hash.bench [----] sha2/224 chan 262144[K[8.6.10] hash.bench [    ] sha2/224 chan 524288[K[8.6.10] hash.bench [----] sha2/224 chan 524288[K[8.6.10] hash.bench [    ] sha2/224 chan 1048576[K[8.6.10] hash.bench [----] sha2/224 chan 1048576[K[8.6.10] hash.bench [    ] sha2/224 chan 2097152[K[8.6.10] hash.bench [----] sha2/224 chan 2097152[K[8.6.10] hash.bench [    ] sha2/224 chan 4194304[K[8.6.10] hash.bench [----] sha2/224 chan 4194304[K[8.6.10] hash.bench [    ] sha2/224 chan 8388608[K[8.6.10] hash.bench [----] sha2/224 chan 8388608[K[8.6.10] hash.bench [    ] sha2/224 chan 16777216[K[8.6.10] hash.bench [----] sha2/224 chan 16777216[K[8.6.10] hash.bench [    ] sha2/224 chan 33554432[K[8.6.10] hash.bench [----] sha2/224 chan 33554432[K[8.6.10] hash.bench [    ] sha2/224 chan 67108864[K[8.6.10] hash.bench [----] sha2/224 chan 67108864[K[8.6.10] hash.bench [    ] sha2/256 chan 64[K[8.6.10] hash.bench [----] sha2/256 chan 64[K[8.6.10] hash.bench [    ] sha2/256 chan 128[K[8.6.10] hash.bench [----] sha2/256 chan 128[K[8.6.10] hash.bench [    ] sha2/256 chan 256[K[8.6.10] hash.bench [----] sha2/256 chan 256[K[8.6.10] hash.bench [    ] sha2/256 chan 512[K[8.6.10] hash.bench [----] sha2/256 chan 512[K[8.6.10] hash.bench [    ] sha2/256 chan 1024[K[8.6.10] hash.bench [----] sha2/256 chan 1024[K[8.6.10] hash.bench [    ] sha2/256 chan 2048[K[8.6.10] hash.bench [----] sha2/256 chan 2048[K[8.6.10] hash.bench [    ] sha2/256 chan 4096[K[8.6.10] hash.bench [----] sha2/256 chan 4096[K[8.6.10] hash.bench [    ] sha2/256 chan 8192[K[8.6.10] hash.bench [----] sha2/256 chan 8192[K[8.6.10] hash.bench [    ] sha2/256 chan 16384[K[8.6.10] hash.bench [----] sha2/256 chan 16384[K[8.6.10] hash.bench [    ] sha2/256 chan 32768[K[8.6.10] hash.bench [----] sha2/256 chan 32768[K[8.6.10] hash.bench [    ] sha2/256 chan 65536[K[8.6.10] hash.bench [----] sha2/256 chan 65536[K[8.6.10] hash.bench [    ] sha2/256 chan 131072[K[8.6.10] hash.bench [----] sha2/256 chan 131072[K[8.6.10] hash.bench [    ] sha2/256 chan 262144[K[8.6.10] hash.bench [----] sha2/256 chan 262144[K[8.6.10] hash.bench [    ] sha2/256 chan 524288[K[8.6.10] hash.bench [----] sha2/256 chan 524288[K[8.6.10] hash.bench [    ] sha2/256 chan 1048576[K[8.6.10] hash.bench [----] sha2/256 chan 1048576[K[8.6.10] hash.bench [    ] sha2/256 chan 2097152[K[8.6.10] hash.bench [----] sha2/256 chan 2097152[K[8.6.10] hash.bench [    ] sha2/256 chan 4194304[K[8.6.10] hash.bench [----] sha2/256 chan 4194304[K[8.6.10] hash.bench [    ] sha2/256 chan 8388608[K[8.6.10] hash.bench [----] sha2/256 chan 8388608[K[8.6.10] hash.bench [    ] sha2/256 chan 16777216[K[8.6.10] hash.bench [----] sha2/256 chan 16777216[K[8.6.10] hash.bench [    ] sha2/256 chan 33554432[K[8.6.10] hash.bench [----] sha2/256 chan 33554432[K[8.6.10] hash.bench [    ] sha2/256 chan 67108864[K[8.6.10] hash.bench [----] sha2/256 chan 67108864[K[8.6.10] hash.bench [    ] sha2/384 chan 64[K[8.6.10] hash.bench [----] sha2/384 chan 64[K[8.6.10] hash.bench [    ] sha2/384 chan 128[K[8.6.10] hash.bench [----] sha2/384 chan 128[K[8.6.10] hash.bench [    ] sha2/384 chan 256[K[8.6.10] hash.bench [----] sha2/384 chan 256[K[8.6.10] hash.bench [    ] sha2/384 chan 512[K[8.6.10] hash.bench [----] sha2/384 chan 512[K[8.6.10] hash.bench [    ] sha2/384 chan 1024[K[8.6.10] hash.bench [----] sha2/384 chan 1024[K[8.6.10] hash.bench [    ] sha2/384 chan 2048[K[8.6.10] hash.bench [----] sha2/384 chan 2048[K[8.6.10] hash.bench [    ] sha2/384 chan 4096[K[8.6.10] hash.bench [----] sha2/384 chan 4096[K[8.6.10] hash.bench [    ] sha2/384 chan 8192[K[8.6.10] hash.bench [----] sha2/384 chan 8192[K[8.6.10] hash.bench [    ] sha2/384 chan 16384[K[8.6.10] hash.bench [----] sha2/384 chan 16384[K[8.6.10] hash.bench [    ] sha2/384 chan 32768[K[8.6.10] hash.bench [----] sha2/384 chan 32768[K[8.6.10] hash.bench [    ] sha2/384 chan 65536[K[8.6.10] hash.bench [----] sha2/384 chan 65536[K[8.6.10] hash.bench [    ] sha2/384 chan 131072[K[8.6.10] hash.bench [----] sha2/384 chan 131072[K[8.6.10] hash.bench [    ] sha2/384 chan 262144[K[8.6.10] hash.bench [----] sha2/384 chan 262144[K[8.6.10] hash.bench [    ] sha2/384 chan 524288[K[8.6.10] hash.bench [----] sha2/384 chan 524288[K[8.6.10] hash.bench [    ] sha2/384 chan 1048576[K[8.6.10] hash.bench [----] sha2/384 chan 1048576[K[8.6.10] hash.bench [    ] sha2/384 chan 2097152[K[8.6.10] hash.bench [----] sha2/384 chan 2097152[K[8.6.10] hash.bench [    ] sha2/384 chan 4194304[K[8.6.10] hash.bench [----] sha2/384 chan 4194304[K[8.6.10] hash.bench [    ] sha2/384 chan 8388608[K[8.6.10] hash.bench [----] sha2/384 chan 8388608[K[8.6.10] hash.bench [    ] sha2/384 chan 16777216[K[8.6.10] hash.bench [----] sha2/384 chan 16777216[K[8.6.10] hash.bench [    ] sha2/384 chan 33554432[K[8.6.10] hash.bench [----] sha2/384 chan 33554432[K[8.6.10] hash.bench [    ] sha2/384 chan 67108864[K[8.6.10] hash.bench [----] sha2/384 chan 67108864[K[8.6.10] hash.bench [    ] sha2/512 chan 64[K[8.6.10] hash.bench [----] sha2/512 chan 64[K[8.6.10] hash.bench [    ] sha2/512 chan 128[K[8.6.10] hash.bench [----] sha2/512 chan 128[K[8.6.10] hash.bench [    ] sha2/512 chan 256[K[8.6.10] hash.bench [----] sha2/512 chan 256[K[8.6.10] hash.bench [    ] sha2/512 chan 512[K[8.6.10] hash.bench [----] sha2/512 chan 512[K[8.6.10] hash.bench [    ] sha2/512 chan 1024[K[8.6.10] hash.bench [----] sha2/512 chan 1024[K[8.6.10] hash.bench [    ] sha2/512 chan 2048[K[8.6.10] hash.bench [----] sha2/512 chan 2048[K[8.6.10] hash.bench [    ] sha2/512 chan 4096[K[8.6.10] hash.bench [----] sha2/512 chan 4096[K[8.6.10] hash.bench [    ] sha2/512 chan 8192[K[8.6.10] hash.bench [----] sha2/512 chan 8192[K[8.6.10] hash.bench [    ] sha2/512 chan 16384[K[8.6.10] hash.bench [----] sha2/512 chan 16384[K[8.6.10] hash.bench [    ] sha2/512 chan 32768[K[8.6.10] hash.bench [----] sha2/512 chan 32768[K[8.6.10] hash.bench [    ] sha2/512 chan 65536[K[8.6.10] hash.bench [----] sha2/512 chan 65536[K[8.6.10] hash.bench [    ] sha2/512 chan 131072[K[8.6.10] hash.bench [----] sha2/512 chan 131072[K[8.6.10] hash.bench [    ] sha2/512 chan 262144[K[8.6.10] hash.bench [----] sha2/512 chan 262144[K[8.6.10] hash.bench [    ] sha2/512 chan 524288[K[8.6.10] hash.bench [----] sha2/512 chan 524288[K[8.6.10] hash.bench [    ] sha2/512 chan 1048576[K[8.6.10] hash.bench [----] sha2/512 chan 1048576[K[8.6.10] hash.bench [    ] sha2/512 chan 2097152[K[8.6.10] hash.bench [----] sha2/512 chan 2097152[K[8.6.10] hash.bench [    ] sha2/512 chan 4194304[K[8.6.10] hash.bench [----] sha2/512 chan 4194304[K[8.6.10] hash.bench [    ] sha2/512 chan 8388608[K[8.6.10] hash.bench [----] sha2/512 chan 8388608[K[8.6.10] hash.bench [    ] sha2/512 chan 16777216[K[8.6.10] hash.bench [----] sha2/512 chan 16777216[K[8.6.10] hash.bench [    ] sha2/512 chan 33554432[K[8.6.10] hash.bench [----] sha2/512 chan 33554432[K[8.6.10] hash.bench [    ] sha2/512 chan 67108864[K[8.6.10] hash.bench [----] sha2/512 chan 67108864[K[8.6.10] hash.bench [    ] sha3/224 chan 64[K[8.6.10] hash.bench [----] sha3/224 chan 64[K[8.6.10] hash.bench [    ] sha3/224 chan 128[K[8.6.10] hash.bench [----] sha3/224 chan 128[K[8.6.10] hash.bench [    ] sha3/224 chan 256[K[8.6.10] hash.bench [----] sha3/224 chan 256[K[8.6.10] hash.bench [    ] sha3/224 chan 512[K[8.6.10] hash.bench [----] sha3/224 chan 512[K[8.6.10] hash.bench [    ] sha3/224 chan 1024[K[8.6.10] hash.bench [----] sha3/224 chan 1024[K[8.6.10] hash.bench [    ] sha3/224 chan 2048[K[8.6.10] hash.bench [----] sha3/224 chan 2048[K[8.6.10] hash.bench [    ] sha3/224 chan 4096[K[8.6.10] hash.bench [----] sha3/224 chan 4096[K[8.6.10] hash.bench [    ] sha3/224 chan 8192[K[8.6.10] hash.bench [----] sha3/224 chan 8192[K[8.6.10] hash.bench [    ] sha3/224 chan 16384[K[8.6.10] hash.bench [----] sha3/224 chan 16384[K[8.6.10] hash.bench [    ] sha3/224 chan 32768[K[8.6.10] hash.bench [----] sha3/224 chan 32768[K[8.6.10] hash.bench [    ] sha3/224 chan 65536[K[8.6.10] hash.bench [----] sha3/224 chan 65536[K[8.6.10] hash.bench [    ] sha3/224 chan 131072[K[8.6.10] hash.bench [----] sha3/224 chan 131072[K[8.6.10] hash.bench [    ] sha3/224 chan 262144[K[8.6.10] hash.bench [----] sha3/224 chan 262144[K[8.6.10] hash.bench [    ] sha3/224 chan 524288[K[8.6.10] hash.bench [----] sha3/224 chan 524288[K[8.6.10] hash.bench [    ] sha3/224 chan 1048576[K[8.6.10] hash.bench [----] sha3/224 chan 1048576[K[8.6.10] hash.bench [    ] sha3/224 chan 2097152[K[8.6.10] hash.bench [----] sha3/224 chan 2097152[K[8.6.10] hash.bench [    ] sha3/224 chan 4194304[K[8.6.10] hash.bench [----] sha3/224 chan 4194304[K[8.6.10] hash.bench [    ] sha3/224 chan 8388608[K[8.6.10] hash.bench [----] sha3/224 chan 8388608[K[8.6.10] hash.bench [    ] sha3/224 chan 16777216[K[8.6.10] hash.bench [----] sha3/224 chan 16777216[K[8.6.10] hash.bench [    ] sha3/224 chan 33554432[K[8.6.10] hash.bench [----] sha3/224 chan 33554432[K[8.6.10] hash.bench [    ] sha3/224 chan 67108864[K[8.6.10] hash.bench [----] sha3/224 chan 67108864[K[8.6.10] hash.bench [    ] sha3/256 chan 64[K[8.6.10] hash.bench [----] sha3/256 chan 64[K[8.6.10] hash.bench [    ] sha3/256 chan 128[K[8.6.10] hash.bench [----] sha3/256 chan 128[K[8.6.10] hash.bench [    ] sha3/256 chan 256[K[8.6.10] hash.bench [----] sha3/256 chan 256[K[8.6.10] hash.bench [    ] sha3/256 chan 512[K[8.6.10] hash.bench [----] sha3/256 chan 512[K[8.6.10] hash.bench [    ] sha3/256 chan 1024[K[8.6.10] hash.bench [----] sha3/256 chan 1024[K[8.6.10] hash.bench [    ] sha3/256 chan 2048[K[8.6.10] hash.bench [----] sha3/256 chan 2048[K[8.6.10] hash.bench [    ] sha3/256 chan 4096[K[8.6.10] hash.bench [----] sha3/256 chan 4096[K[8.6.10] hash.bench [    ] sha3/256 chan 8192[K[8.6.10] hash.bench [----] sha3/256 chan 8192[K[8.6.10] hash.bench [    ] sha3/256 chan 16384[K[8.6.10] hash.bench [----] sha3/256 chan 16384[K[8.6.10] hash.bench [    ] sha3/256 chan 32768[K[8.6.10] hash.bench [----] sha3/256 chan 32768[K[8.6.10] hash.bench [    ] sha3/256 chan 65536[K[8.6.10] hash.bench [----] sha3/256 chan 65536[K[8.6.10] hash.bench [    ] sha3/256 chan 131072[K[8.6.10] hash.bench [----] sha3/256 chan 131072[K[8.6.10] hash.bench [    ] sha3/256 chan 262144[K[8.6.10] hash.bench [----] sha3/256 chan 262144[K[8.6.10] hash.bench [    ] sha3/256 chan 524288[K[8.6.10] hash.bench [----] sha3/256 chan 524288[K[8.6.10] hash.bench [    ] sha3/256 chan 1048576[K[8.6.10] hash.bench [----] sha3/256 chan 1048576[K[8.6.10] hash.bench [    ] sha3/256 chan 2097152[K[8.6.10] hash.bench [----] sha3/256 chan 2097152[K[8.6.10] hash.bench [    ] sha3/256 chan 4194304[K[8.6.10] hash.bench [----] sha3/256 chan 4194304[K[8.6.10] hash.bench [    ] sha3/256 chan 8388608[K[8.6.10] hash.bench [----] sha3/256 chan 8388608[K[8.6.10] hash.bench [    ] sha3/256 chan 16777216[K[8.6.10] hash.bench [----] sha3/256 chan 16777216[K[8.6.10] hash.bench [    ] sha3/256 chan 33554432[K[8.6.10] hash.bench [----] sha3/256 chan 33554432[K[8.6.10] hash.bench [    ] sha3/256 chan 67108864[K[8.6.10] hash.bench [----] sha3/256 chan 67108864[K[8.6.10] hash.bench [    ] sha3/384 chan 64[K[8.6.10] hash.bench [----] sha3/384 chan 64[K[8.6.10] hash.bench [    ] sha3/384 chan 128[K[8.6.10] hash.bench [----] sha3/384 chan 128[K[8.6.10] hash.bench [    ] sha3/384 chan 256[K[8.6.10] hash.bench [----] sha3/384 chan 256[K[8.6.10] hash.bench [    ] sha3/384 chan 512[K[8.6.10] hash.bench [----] sha3/384 chan 512[K[8.6.10] hash.bench [    ] sha3/384 chan 1024[K[8.6.10] hash.bench [----] sha3/384 chan 1024[K[8.6.10] hash.bench [    ] sha3/384 chan 2048[K[8.6.10] hash.bench [----] sha3/384 chan 2048[K[8.6.10] hash.bench [    ] sha3/384 chan 4096[K[8.6.10] hash.bench [----] sha3/384 chan 4096[K[8.6.10] hash.bench [    ] sha3/384 chan 8192[K[8.6.10] hash.bench [----] sha3/384 chan 8192[K[8.6.10] hash.bench [    ] sha3/384 chan 16384[K[8.6.10] hash.bench [----] sha3/384 chan 16384[K[8.6.10] hash.bench [    ] sha3/384 chan 32768[K[8.6.10] hash.bench [----] sha3/384 chan 32768[K[8.6.10] hash.bench [    ] sha3/384 chan 65536[K[8.6.10] hash.bench [----] sha3/384 chan 65536[K[8.6.10] hash.bench [    ] sha3/384 chan 131072[K[8.6.10] hash.bench [----] sha3/384 chan 131072[K[8.6.10] hash.bench [    ] sha3/384 chan 262144[K[8.6.10] hash.bench [----] sha3/384 chan 262144[K[8.6.10] hash.bench [    ] sha3/384 chan 524288[K[8.6.10] hash.bench [----] sha3/384 chan 524288[K[8.6.10] hash.bench [    ] sha3/384 chan 1048576[K[8.6.10] hash.bench [----] sha3/384 chan 1048576[K[8.6.10] hash.bench [    ] sha3/384 chan 2097152[K[8.6.10] hash.bench [----] sha3/384 chan 2097152[K[8.6.10] hash.bench [    ] sha3/384 chan 4194304[K[8.6.10] hash.bench [----] sha3/384 chan 4194304[K[8.6.10] hash.bench [    ] sha3/384 chan 8388608[K[8.6.10] hash.bench [----] sha3/384 chan 8388608[K[8.6.10] hash.bench [    ] sha3/384 chan 16777216[K[8.6.10] hash.bench [----] sha3/384 chan 16777216[K[8.6.10] hash.bench [    ] sha3/384 chan 33554432[K[8.6.10] hash.bench [----] sha3/384 chan 33554432[K[8.6.10] hash.bench [    ] sha3/384 chan 67108864[K[8.6.10] hash.bench [----] sha3/384 chan 67108864[K[8.6.10] hash.bench [    ] sha3/512 chan 64[K[8.6.10] hash.bench [----] sha3/512 chan 64[K[8.6.10] hash.bench [    ] sha3/512 chan 128[K[8.6.10] hash.bench [----] sha3/512 chan 128[K[8.6.10] hash.bench [    ] sha3/512 chan 256[K[8.6.10] hash.bench [----] sha3/512 chan 256[K[8.6.10] hash.bench [    ] sha3/512 chan 512[K[8.6.10] hash.bench [----] sha3/512 chan 512[K[8.6.10] hash.bench [    ] sha3/512 chan 1024[K[8.6.10] hash.bench [----] sha3/512 chan 1024[K[8.6.10] hash.bench [    ] sha3/512 chan 2048[K[8.6.10] hash.bench [----] sha3/512 chan 2048[K[8.6.10] hash.bench [    ] sha3/512 chan 4096[K[8.6.10] hash.bench [----] sha3/512 chan 4096[K[8.6.10] hash.bench [    ] sha3/512 chan 8192[K[8.6.10] hash.bench [----] sha3/512 chan 8192[K[8.6.10] hash.bench [    ] sha3/512 chan 16384[K[8.6.10] hash.bench [----] sha3/512 chan 16384[K[8.6.10] hash.bench [    ] sha3/512 chan 32768[K[8.6.10] hash.bench [----] sha3/512 chan 32768[K[8.6.10] hash.bench [    ] sha3/512 chan 65536[K[8.6.10] hash.bench [----] sha3/512 chan 65536[K[8.6.10] hash.bench [    ] sha3/512 chan 131072[K[8.6.10] hash.bench [----] sha3/512 chan 131072[K[8.6.10] hash.bench [    ] sha3/512 chan 262144[K[8.6.10] hash.bench [----] sha3/512 chan 262144[K[8.6.10] hash.bench [    ] sha3/512 chan 524288[K[8.6.10] hash.bench [----] sha3/512 chan 524288[K[8.6.10] hash.bench [    ] sha3/512 chan 1048576[K[8.6.10] hash.bench [----] sha3/512 chan 1048576[K[8.6.10] hash.bench [    ] sha3/512 chan 2097152[K[8.6.10] hash.bench [----] sha3/512 chan 2097152[K[8.6.10] hash.bench [    ] sha3/512 chan 4194304[K[8.6.10] hash.bench [----] sha3/512 chan 4194304[K[8.6.10] hash.bench [    ] sha3/512 chan 8388608[K[8.6.10] hash.bench [----] sha3/512 chan 8388608[K[8.6.10] hash.bench [    ] sha3/512 chan 16777216[K[8.6.10] hash.bench [----] sha3/512 chan 16777216[K[8.6.10] hash.bench [    ] sha3/512 chan 33554432[K[8.6.10] hash.bench [----] sha3/512 chan 33554432[K[8.6.10] hash.bench [    ] sha3/512 chan 67108864[K[8.6.10] hash.bench [----] sha3/512 chan 67108864[K[8.6.10] hash.bench [    ] snefru/128 chan 64[K[8.6.10] hash.bench [----] snefru/128 chan 64[K[8.6.10] hash.bench [    ] snefru/128 chan 128[K[8.6.10] hash.bench [----] snefru/128 chan 128[K[8.6.10] hash.bench [    ] snefru/128 chan 256[K[8.6.10] hash.bench [----] snefru/128 chan 256[K[8.6.10] hash.bench [    ] snefru/128 chan 512[K[8.6.10] hash.bench [----] snefru/128 chan 512[K[8.6.10] hash.bench [    ] snefru/128 chan 1024[K[8.6.10] hash.bench [----] snefru/128 chan 1024[K[8.6.10] hash.bench [    ] snefru/128 chan 2048[K[8.6.10] hash.bench [----] snefru/128 chan 2048[K[8.6.10] hash.bench [    ] snefru/128 chan 4096[K[8.6.10] hash.bench [----] snefru/128 chan 4096[K[8.6.10] hash.bench [    ] snefru/128 chan 8192[K[8.6.10] hash.bench [----] snefru/128 chan 8192[K[8.6.10] hash.bench [    ] snefru/128 chan 16384[K[8.6.10] hash.bench [----] snefru/128 chan 16384[K[8.6.10] hash.bench [    ] snefru/128 chan 32768[K[8.6.10] hash.bench [----] snefru/128 chan 32768[K[8.6.10] hash.bench [    ] snefru/128 chan 65536[K[8.6.10] hash.bench [----] snefru/128 chan 65536[K[8.6.10] hash.bench [    ] snefru/128 chan 131072[K[8.6.10] hash.bench [----] snefru/128 chan 131072[K[8.6.10] hash.bench [    ] snefru/128 chan 262144[K[8.6.10] hash.bench [----] snefru/128 chan 262144[K[8.6.10] hash.bench [    ] snefru/128 chan 524288[K[8.6.10] hash.bench [----] snefru/128 chan 524288[K[8.6.10] hash.bench [    ] snefru/128 chan 1048576[K[8.6.10] hash.bench [----] snefru/128 chan 1048576[K[8.6.10] hash.bench [    ] snefru/128 chan 2097152[K[8.6.10] hash.bench [----] snefru/128 chan 2097152[K[8.6.10] hash.bench [    ] snefru/128 chan 4194304[K[8.6.10] hash.bench [----] snefru/128 chan 4194304[K[8.6.10] hash.bench [    ] snefru/128 chan 8388608[K[8.6.10] hash.bench [----] snefru/128 chan 8388608[K[8.6.10] hash.bench [    ] snefru/128 chan 16777216[K[8.6.10] hash.bench [----] snefru/128 chan 16777216[K[8.6.10] hash.bench [    ] snefru/128 chan 33554432[K[8.6.10] hash.bench [----] snefru/128 chan 33554432[K[8.6.10] hash.bench [    ] snefru/128 chan 67108864[K[8.6.10] hash.bench [----] snefru/128 chan 67108864[K[8.6.10] hash.bench [    ] snefru/256 chan 64[K[8.6.10] hash.bench [----] snefru/256 chan 64[K[8.6.10] hash.bench [    ] snefru/256 chan 128[K[8.6.10] hash.bench [----] snefru/256 chan 128[K[8.6.10] hash.bench [    ] snefru/256 chan 256[K[8.6.10] hash.bench [----] snefru/256 chan 256[K[8.6.10] hash.bench [    ] snefru/256 chan 512[K[8.6.10] hash.bench [----] snefru/256 chan 512[K[8.6.10] hash.bench [    ] snefru/256 chan 1024[K[8.6.10] hash.bench [----] snefru/256 chan 1024[K[8.6.10] hash.bench [    ] snefru/256 chan 2048[K[8.6.10] hash.bench [----] snefru/256 chan 2048[K[8.6.10] hash.bench [    ] snefru/256 chan 4096[K[8.6.10] hash.bench [----] snefru/256 chan 4096[K[8.6.10] hash.bench [    ] snefru/256 chan 8192[K[8.6.10] hash.bench [----] snefru/256 chan 8192[K[8.6.10] hash.bench [    ] snefru/256 chan 16384[K[8.6.10] hash.bench [----] snefru/256 chan 16384[K[8.6.10] hash.bench [    ] snefru/256 chan 32768[K[8.6.10] hash.bench [----] snefru/256 chan 32768[K[8.6.10] hash.bench [    ] snefru/256 chan 65536[K[8.6.10] hash.bench [----] snefru/256 chan 65536[K[8.6.10] hash.bench [    ] snefru/256 chan 131072[K[8.6.10] hash.bench [----] snefru/256 chan 131072[K[8.6.10] hash.bench [    ] snefru/256 chan 262144[K[8.6.10] hash.bench [----] snefru/256 chan 262144[K[8.6.10] hash.bench [    ] snefru/256 chan 524288[K[8.6.10] hash.bench [----] snefru/256 chan 524288[K[8.6.10] hash.bench [    ] snefru/256 chan 1048576[K[8.6.10] hash.bench [----] snefru/256 chan 1048576[K[8.6.10] hash.bench [    ] snefru/256 chan 2097152[K[8.6.10] hash.bench [----] snefru/256 chan 2097152[K[8.6.10] hash.bench [    ] snefru/256 chan 4194304[K[8.6.10] hash.bench [----] snefru/256 chan 4194304[K[8.6.10] hash.bench [    ] snefru/256 chan 8388608[K[8.6.10] hash.bench [----] snefru/256 chan 8388608[K[8.6.10] hash.bench [    ] snefru/256 chan 16777216[K[8.6.10] hash.bench [----] snefru/256 chan 16777216[K[8.6.10] hash.bench [    ] snefru/256 chan 33554432[K[8.6.10] hash.bench [----] snefru/256 chan 33554432[K[8.6.10] hash.bench [    ] snefru/256 chan 67108864[K[8.6.10] hash.bench [----] snefru/256 chan 67108864[K[8.6.10] hash.bench [    ] tiger chan 64[K[8.6.10] hash.bench [----] tiger chan 64[K[8.6.10] hash.bench [    ] tiger chan 128[K[8.6.10] hash.bench [----] tiger chan 128[K[8.6.10] hash.bench [    ] tiger chan 256[K[8.6.10] hash.bench [----] tiger chan 256[K[8.6.10] hash.bench [    ] tiger chan 512[K[8.6.10] hash.bench [----] tiger chan 512[K[8.6.10] hash.bench [    ] tiger chan 1024[K[8.6.10] hash.bench [----] tiger chan 1024[K[8.6.10] hash.bench [    ] tiger chan 2048[K[8.6.10] hash.bench [----] tiger chan 2048[K[8.6.10] hash.bench [    ] tiger chan 4096[K[8.6.10] hash.bench [----] tiger chan 4096[K[8.6.10] hash.bench [    ] tiger chan 8192[K[8.6.10] hash.bench [----] tiger chan 8192[K[8.6.10] hash.bench [    ] tiger chan 16384[K[8.6.10] hash.bench [----] tiger chan 16384[K[8.6.10] hash.bench [    ] tiger chan 32768[K[8.6.10] hash.bench [----] tiger chan 32768[K[8.6.10] hash.bench [    ] tiger chan 65536[K[8.6.10] hash.bench [----] tiger chan 65536[K[8.6.10] hash.bench [    ] tiger chan 131072[K[8.6.10] hash.bench [----] tiger chan 131072[K[8.6.10] hash.bench [    ] tiger chan 262144[K[8.6.10] hash.bench [----] tiger chan 262144[K[8.6.10] hash.bench [    ] tiger chan 524288[K[8.6.10] hash.bench [----] tiger chan 524288[K[8.6.10] hash.bench [    ] tiger chan 1048576[K[8.6.10] hash.bench [----] tiger chan 1048576[K[8.6.10] hash.bench [    ] tiger chan 2097152[K[8.6.10] hash.bench [----] tiger chan 2097152[K[8.6.10] hash.bench [    ] tiger chan 4194304[K[8.6.10] hash.bench [----] tiger chan 4194304[K[8.6.10] hash.bench [    ] tiger chan 8388608[K[8.6.10] hash.bench [----] tiger chan 8388608[K[8.6.10] hash.bench [    ] tiger chan 16777216[K[8.6.10] hash.bench [----] tiger chan 16777216[K[8.6.10] hash.bench [    ] tiger chan 33554432[K[8.6.10] hash.bench [----] tiger chan 33554432[K[8.6.10] hash.bench [    ] tiger chan 67108864[K[8.6.10] hash.bench [----] tiger chan 67108864[K[8.6.10] hash.bench [    ] tth chan 64[K[8.6.10] hash.bench [----] tth chan 64[K[8.6.10] hash.bench [    ] tth chan 128[K[8.6.10] hash.bench [----] tth chan 128[K[8.6.10] hash.bench [    ] tth chan 256[K[8.6.10] hash.bench [----] tth chan 256[K[8.6.10] hash.bench [    ] tth chan 512[K[8.6.10] hash.bench [----] tth chan 512[K[8.6.10] hash.bench [    ] tth chan 1024[K[8.6.10] hash.bench [----] tth chan 1024[K[8.6.10] hash.bench [    ] tth chan 2048[K[8.6.10] hash.bench [----] tth chan 2048[K[8.6.10] hash.bench [    ] tth chan 4096[K[8.6.10] hash.bench [----] tth chan 4096[K[8.6.10] hash.bench [    ] tth chan 8192[K[8.6.10] hash.bench [----] tth chan 8192[K[8.6.10] hash.bench [    ] tth chan 16384[K[8.6.10] hash.bench [----] tth chan 16384[K[8.6.10] hash.bench [    ] tth chan 32768[K[8.6.10] hash.bench [----] tth chan 32768[K[8.6.10] hash.bench [    ] tth chan 65536[K[8.6.10] hash.bench [----] tth chan 65536[K[8.6.10] hash.bench [    ] tth chan 131072[K[8.6.10] hash.bench [----] tth chan 131072[K[8.6.10] hash.bench [    ] tth chan 262144[K[8.6.10] hash.bench [----] tth chan 262144[K[8.6.10] hash.bench [    ] tth chan 524288[K[8.6.10] hash.bench [----] tth chan 524288[K[8.6.10] hash.bench [    ] tth chan 1048576[K[8.6.10] hash.bench [----] tth chan 1048576[K[8.6.10] hash.bench [    ] tth chan 2097152[K[8.6.10] hash.bench [----] tth chan 2097152[K[8.6.10] hash.bench [    ] tth chan 4194304[K[8.6.10] hash.bench [----] tth chan 4194304[K[8.6.10] hash.bench [    ] tth chan 8388608[K[8.6.10] hash.bench [----] tth chan 8388608[K[8.6.10] hash.bench [    ] tth chan 16777216[K[8.6.10] hash.bench [----] tth chan 16777216[K[8.6.10] hash.bench [    ] tth chan 33554432[K[8.6.10] hash.bench [----] tth chan 33554432[K[8.6.10] hash.bench [    ] tth chan 67108864[K[8.6.10] hash.bench [----] tth chan 67108864[K[8.6.10] hash.bench [    ] whirlpool chan 64[K[8.6.10] hash.bench [----] whirlpool chan 64[K[8.6.10] hash.bench [    ] whirlpool chan 128[K[8.6.10] hash.bench [----] whirlpool chan 128[K[8.6.10] hash.bench [    ] whirlpool chan 256[K[8.6.10] hash.bench [----] whirlpool chan 256[K[8.6.10] hash.bench [    ] whirlpool chan 512[K[8.6.10] hash.bench [----] whirlpool chan 512[K[8.6.10] hash.bench [    ] whirlpool chan 1024[K[8.6.10] hash.bench [----] whirlpool chan 1024[K[8.6.10] hash.bench [    ] whirlpool chan 2048[K[8.6.10] hash.bench [----] whirlpool chan 2048[K[8.6.10] hash.bench [    ] whirlpool chan 4096[K[8.6.10] hash.bench [----] whirlpool chan 4096[K[8.6.10] hash.bench [    ] whirlpool chan 8192[K[8.6.10] hash.bench [----] whirlpool chan 8192[K[8.6.10] hash.bench [    ] whirlpool chan 16384[K[8.6.10] hash.bench [----] whirlpool chan 16384[K[8.6.10] hash.bench [    ] whirlpool chan 32768[K[8.6.10] hash.bench [----] whirlpool chan 32768[K[8.6.10] hash.bench [    ] whirlpool chan 65536[K[8.6.10] hash.bench [----] whirlpool chan 65536[K[8.6.10] hash.bench [    ] whirlpool chan 131072[K[8.6.10] hash.bench [----] whirlpool chan 131072[K[8.6.10] hash.bench [    ] whirlpool chan 262144[K[8.6.10] hash.bench [----] whirlpool chan 262144[K[8.6.10] hash.bench [    ] whirlpool chan 524288[K[8.6.10] hash.bench [----] whirlpool chan 524288[K[8.6.10] hash.bench [    ] whirlpool chan 1048576[K[8.6.10] hash.bench [----] whirlpool chan 1048576[K[8.6.10] hash.bench [    ] whirlpool chan 2097152[K[8.6.10] hash.bench [----] whirlpool chan 2097152[K[8.6.10] hash.bench [    ] whirlpool chan 4194304[K[8.6.10] hash.bench [----] whirlpool chan 4194304[K[8.6.10] hash.bench [    ] whirlpool chan 8388608[K[8.6.10] hash.bench [----] whirlpool chan 8388608[K[8.6.10] hash.bench [    ] whirlpool chan 16777216[K[8.6.10] hash.bench [----] whirlpool chan 16777216[K[8.6.10] hash.bench [    ] whirlpool chan 33554432[K[8.6.10] hash.bench [----] whirlpool chan 33554432[K[8.6.10] hash.bench [    ] whirlpool chan 67108864[K[8.6.10] hash.bench [----] whirlpool chan 67108864[K[8.6.10] hash.bench ~~    630 SKIP 0[K[K[8.6.10] hash.bench ~~ OK  630 SKIP 0
 	
 Results...
-	Description        Time       
-	===========        ====       
-	md4 chan 64        11.498     
-	md4 chan 128       9.278      
-	md4 chan 256       12.441     
-	md4 chan 512       9.869      
-	md4 chan 1024      18.528     
-	md4 chan 2048      12.069     
-	md4 chan 4096      15.301     
-	md4 chan 8192      28.782     
-	md4 chan 16384     32.774     
-	md4 chan 32768     55.405     
-	md4 chan 65536     107.925    
-	md4 chan 131072    175.494    
-	md4 chan 262144    344.621    
-	md4 chan 524288    686.469    
-	md4 chan 1048576   1405.976   
-	md4 chan 2097152   2909.963   
-	md4 chan 4194304   5891.019   
-	md4 chan 8388608   11781.443  
-	md4 chan 16777216  23802.757  
-	md4 chan 33554432  47064.573  
-	md4 chan 67108864  94080.024  
-	md5 chan 64        9.601      
-	md5 chan 128       8.728      
-	md5 chan 256       9.088      
-	md5 chan 512       11.172     
-	md5 chan 1024      12.123     
-	md5 chan 2048      13.865     
-	md5 chan 4096      18.072     
-	md5 chan 8192      26.617     
-	md5 chan 16384     39.817     
-	md5 chan 32768     74.79      
-	md5 chan 65536     152.29     
-	md5 chan 131072    298.89     
-	md5 chan 262144    542.404    
-	md5 chan 524288    1135.043   
-	md5 chan 1048576   2146.825   
-	md5 chan 2097152   4350.273   
-	md5 chan 4194304   8781.623   
-	md5 chan 8388608   17623.765  
-	md5 chan 16777216  35470.044  
-	md5 chan 33554432  70193.684  
-	md5 chan 67108864  140354.411 
-	sha1 chan 64       20.68      
-	sha1 chan 128      11.34      
-	sha1 chan 256      16.288     
-	sha1 chan 512      13.3       
-	sha1 chan 1024     15.018     
-	sha1 chan 2048     25.287     
-	sha1 chan 4096     31.043     
-	sha1 chan 8192     59.898     
-	sha1 chan 16384    96.685     
-	sha1 chan 32768    184.272    
-	sha1 chan 65536    354.965    
-	sha1 chan 131072   704.654    
-	sha1 chan 262144   1402.214   
-	sha1 chan 524288   2854.789   
-	sha1 chan 1048576  5696.03    
-	sha1 chan 2097152  11221.625  
-	sha1 chan 4194304  22715.178  
-	sha1 chan 8388608  44914.525  
-	sha1 chan 16777216 89271.219  
-	sha1 chan 33554432 182713.76  
-	sha1 chan 67108864 352426.623 
-	sha2 chan 64       9.719      
-	sha2 chan 128      9.468      
-	sha2 chan 256      17.882     
-	sha2 chan 512      12.173     
-	sha2 chan 1024     15.486     
-	sha2 chan 2048     20.171     
-	sha2 chan 4096     35.987     
-	sha2 chan 8192     59.592     
-	sha2 chan 16384    102.738    
-	sha2 chan 32768    196.713    
-	sha2 chan 65536    412.071    
-	sha2 chan 131072   772.05     
-	sha2 chan 262144   1505.72    
-	sha2 chan 524288   3019.184   
-	sha2 chan 1048576  6070.386   
-	sha2 chan 2097152  12275.985  
-	sha2 chan 4194304  24842.675  
-	sha2 chan 8388608  49715.107  
-	sha2 chan 16777216 98283.86   
-	sha2 chan 33554432 196754.498 
-	sha2 chan 67108864 396164.726 
-	sha3 chan 64       10.576     
-	sha3 chan 128      10.651     
-	sha3 chan 256      13.263     
-	sha3 chan 512      17.456     
-	sha3 chan 1024     26.064     
-	sha3 chan 2048     43.013     
-	sha3 chan 4096     75.557     
-	sha3 chan 8192     138.517    
-	sha3 chan 16384    260.532    
-	sha3 chan 32768    545.413    
-	sha3 chan 65536    1150.535   
-	sha3 chan 131072   2122.874   
-	sha3 chan 262144   4167.593   
-	sha3 chan 524288   8455.063   
-	sha3 chan 1048576  16868.97   
-	sha3 chan 2097152  33538.819  
-	sha3 chan 4194304  67067.425  
-	sha3 chan 8388608  143503.007 
-	sha3 chan 16777216 271909.971 
-	sha3 chan 33554432 537287.386 
-	sha3 chan 67108864 1051598.331
-	===========        ====       
-	Description        Time       
+	Description              Time       
+	===========              ====       
+	aich chan 64             11.906     
+	aich chan 128            12.347     
+	aich chan 256            12.667     
+	aich chan 512            14.315     
+	aich chan 1024           19.535     
+	aich chan 2048           29.252     
+	aich chan 4096           48.006     
+	aich chan 8192           84.461     
+	aich chan 16384          162.3      
+	aich chan 32768          306.433    
+	aich chan 65536          604.001    
+	aich chan 131072         1213.782   
+	aich chan 262144         2432.391   
+	aich chan 524288         4826.421   
+	aich chan 1048576        9644.905   
+	aich chan 2097152        19650.421  
+	aich chan 4194304        38575.072  
+	aich chan 8388608        77672.706  
+	aich chan 16777216       156593.065 
+	aich chan 33554432       313336.428 
+	aich chan 67108864       623582.355 
+	blake2b chan 64          9.209      
+	blake2b chan 128         9.206      
+	blake2b chan 256         9.927      
+	blake2b chan 512         11.156     
+	blake2b chan 1024        14.458     
+	blake2b chan 2048        20.198     
+	blake2b chan 4096        30.37      
+	blake2b chan 8192        49.463     
+	blake2b chan 16384       87.29      
+	blake2b chan 32768       183.641    
+	blake2b chan 65536       334.922    
+	blake2b chan 131072      680.821    
+	blake2b chan 262144      1416.068   
+	blake2b chan 524288      2701.982   
+	blake2b chan 1048576     5434.075   
+	blake2b chan 2097152     10966.669  
+	blake2b chan 4194304     21905.242  
+	blake2b chan 8388608     43350.121  
+	blake2b chan 16777216    86293.727  
+	blake2b chan 33554432    173321.85  
+	blake2b chan 67108864    346961.33  
+	blake2s chan 64          9.833      
+	blake2s chan 128         9.972      
+	blake2s chan 256         18.683     
+	blake2s chan 512         22.049     
+	blake2s chan 1024        17.508     
+	blake2s chan 2048        31.094     
+	blake2s chan 4096        43.705     
+	blake2s chan 8192        76.585     
+	blake2s chan 16384       164.249    
+	blake2s chan 32768       301.932    
+	blake2s chan 65536       583.58     
+	blake2s chan 131072      1124.359   
+	blake2s chan 262144      2268.808   
+	blake2s chan 524288      4448.75    
+	blake2s chan 1048576     8919.0     
+	blake2s chan 2097152     18008.326  
+	blake2s chan 4194304     35556.941  
+	blake2s chan 8388608     71704.628  
+	blake2s chan 16777216    143243.243 
+	blake2s chan 33554432    287455.977 
+	blake2s chan 67108864    575869.219 
+	btih chan 64             14.638     
+	btih chan 128            14.73      
+	btih chan 256            16.276     
+	btih chan 512            18.938     
+	btih chan 1024           24.625     
+	btih chan 2048           33.039     
+	btih chan 4096           53.654     
+	btih chan 8192           89.494     
+	btih chan 16384          173.14     
+	btih chan 32768          326.098    
+	btih chan 65536          638.239    
+	btih chan 131072         1249.859   
+	btih chan 262144         2440.792   
+	btih chan 524288         4913.445   
+	btih chan 1048576        9841.577   
+	btih chan 2097152        19616.875  
+	btih chan 4194304        39155.111  
+	btih chan 8388608        78274.227  
+	btih chan 16777216       156645.066 
+	btih chan 33554432       312953.949 
+	btih chan 67108864       626088.832 
+	ed2k chan 64             17.338     
+	ed2k chan 128            16.118     
+	ed2k chan 256            14.571     
+	ed2k chan 512            21.221     
+	ed2k chan 1024           19.493     
+	ed2k chan 2048           18.286     
+	ed2k chan 4096           22.51      
+	ed2k chan 8192           23.598     
+	ed2k chan 16384          35.881     
+	ed2k chan 32768          57.651     
+	ed2k chan 65536          96.775     
+	ed2k chan 131072         171.705    
+	ed2k chan 262144         327.609    
+	ed2k chan 524288         637.955    
+	ed2k chan 1048576        1316.587   
+	ed2k chan 2097152        2635.25    
+	ed2k chan 4194304        5394.292   
+	ed2k chan 8388608        11014.635  
+	ed2k chan 16777216       21831.982  
+	ed2k chan 33554432       43712.224  
+	ed2k chan 67108864       86514.064  
+	edonr/224 chan 64        14.283     
+	edonr/224 chan 128       15.765     
+	edonr/224 chan 256       21.517     
+	edonr/224 chan 512       18.055     
+	edonr/224 chan 1024      23.609     
+	edonr/224 chan 2048      27.928     
+	edonr/224 chan 4096      31.991     
+	edonr/224 chan 8192      48.448     
+	edonr/224 chan 16384     77.518     
+	edonr/224 chan 32768     143.786    
+	edonr/224 chan 65536     268.68     
+	edonr/224 chan 131072    522.893    
+	edonr/224 chan 262144    1004.838   
+	edonr/224 chan 524288    2018.487   
+	edonr/224 chan 1048576   4062.178   
+	edonr/224 chan 2097152   8119.17    
+	edonr/224 chan 4194304   16164.631  
+	edonr/224 chan 8388608   32605.032  
+	edonr/224 chan 16777216  64982.862  
+	edonr/224 chan 33554432  129964.202 
+	edonr/224 chan 67108864  259699.686 
+	edonr/256 chan 64        15.961     
+	edonr/256 chan 128       18.53      
+	edonr/256 chan 256       20.033     
+	edonr/256 chan 512       18.205     
+	edonr/256 chan 1024      20.196     
+	edonr/256 chan 2048      24.542     
+	edonr/256 chan 4096      33.882     
+	edonr/256 chan 8192      45.222     
+	edonr/256 chan 16384     77.772     
+	edonr/256 chan 32768     138.538    
+	edonr/256 chan 65536     280.28     
+	edonr/256 chan 131072    514.646    
+	edonr/256 chan 262144    1002.701   
+	edonr/256 chan 524288    1993.972   
+	edonr/256 chan 1048576   4039.043   
+	edonr/256 chan 2097152   8211.769   
+	edonr/256 chan 4194304   16260.477  
+	edonr/256 chan 8388608   32703.003  
+	edonr/256 chan 16777216  65593.798  
+	edonr/256 chan 33554432  130137.076 
+	edonr/256 chan 67108864  260440.579 
+	edonr/384 chan 64        18.547     
+	edonr/384 chan 128       16.913     
+	edonr/384 chan 256       19.722     
+	edonr/384 chan 512       21.133     
+	edonr/384 chan 1024      18.363     
+	edonr/384 chan 2048      20.99      
+	edonr/384 chan 4096      28.235     
+	edonr/384 chan 8192      33.992     
+	edonr/384 chan 16384     41.529     
+	edonr/384 chan 32768     80.158     
+	edonr/384 chan 65536     140.836    
+	edonr/384 chan 131072    270.383    
+	edonr/384 chan 262144    517.499    
+	edonr/384 chan 524288    1028.083   
+	edonr/384 chan 1048576   2049.788   
+	edonr/384 chan 2097152   4150.356   
+	edonr/384 chan 4194304   8524.111   
+	edonr/384 chan 8388608   16986.384  
+	edonr/384 chan 16777216  34037.816  
+	edonr/384 chan 33554432  67897.827  
+	edonr/384 chan 67108864  136062.442 
+	edonr/512 chan 64        16.566     
+	edonr/512 chan 128       16.619     
+	edonr/512 chan 256       17.742     
+	edonr/512 chan 512       16.893     
+	edonr/512 chan 1024      19.142     
+	edonr/512 chan 2048      21.139     
+	edonr/512 chan 4096      20.495     
+	edonr/512 chan 8192      31.963     
+	edonr/512 chan 16384     47.111     
+	edonr/512 chan 32768     80.246     
+	edonr/512 chan 65536     140.197    
+	edonr/512 chan 131072    263.821    
+	edonr/512 chan 262144    514.887    
+	edonr/512 chan 524288    1038.619   
+	edonr/512 chan 1048576   2036.234   
+	edonr/512 chan 2097152   4240.398   
+	edonr/512 chan 4194304   8472.98    
+	edonr/512 chan 8388608   16913.92   
+	edonr/512 chan 16777216  34514.076  
+	edonr/512 chan 33554432  74571.002  
+	edonr/512 chan 67108864  137653.122 
+	gost12/256 chan 64       29.899     
+	gost12/256 chan 128      33.288     
+	gost12/256 chan 256      39.434     
+	gost12/256 chan 512      52.348     
+	gost12/256 chan 1024     75.455     
+	gost12/256 chan 2048     123.582    
+	gost12/256 chan 4096     220.461    
+	gost12/256 chan 8192     417.172    
+	gost12/256 chan 16384    898.623    
+	gost12/256 chan 32768    1637.12    
+	gost12/256 chan 65536    3251.657   
+	gost12/256 chan 131072   6711.174   
+	gost12/256 chan 262144   12974.82   
+	gost12/256 chan 524288   25208.836  
+	gost12/256 chan 1048576  53030.733  
+	gost12/256 chan 2097152  108511.59  
+	gost12/256 chan 4194304  206888.523 
+	gost12/256 chan 8388608  427049.185 
+	gost12/256 chan 16777216 825859.09  
+	gost12/256 chan 33554432 1715600.077
+	gost12/256 chan 67108864 3529702.0  
+	gost12/512 chan 64       36.165     
+	gost12/512 chan 128      33.754     
+	gost12/512 chan 256      40.367     
+	gost12/512 chan 512      55.306     
+	gost12/512 chan 1024     93.325     
+	gost12/512 chan 2048     136.701    
+	gost12/512 chan 4096     233.826    
+	gost12/512 chan 8192     464.654    
+	gost12/512 chan 16384    969.634    
+	gost12/512 chan 32768    1860.721   
+	gost12/512 chan 65536    3372.702   
+	gost12/512 chan 131072   7100.117   
+	gost12/512 chan 262144   14111.046  
+	gost12/512 chan 524288   27790.036  
+	gost12/512 chan 1048576  55519.987  
+	gost12/512 chan 2097152  110738.918 
+	gost12/512 chan 4194304  220734.259 
+	gost12/512 chan 8388608  442657.966 
+	gost12/512 chan 16777216 884506.5   
+	gost12/512 chan 33554432 1769409.921
+	gost12/512 chan 67108864 3553689.618
+	gost94 chan 64           21.303     
+	gost94 chan 128          23.733     
+	gost94 chan 256          26.339     
+	gost94 chan 512          35.053     
+	gost94 chan 1024         54.986     
+	gost94 chan 2048         92.461     
+	gost94 chan 4096         151.837    
+	gost94 chan 8192         299.464    
+	gost94 chan 16384        573.524    
+	gost94 chan 32768        1138.347   
+	gost94 chan 65536        2273.976   
+	gost94 chan 131072       4467.554   
+	gost94 chan 262144       8999.957   
+	gost94 chan 524288       17985.395  
+	gost94 chan 1048576      35911.551  
+	gost94 chan 2097152      71910.944  
+	gost94 chan 4194304      143674.465 
+	gost94 chan 8388608      286789.919 
+	gost94 chan 16777216     573847.969 
+	gost94 chan 33554432     1148216.26 
+	gost94 chan 67108864     2296338.596
+	has160 chan 64           16.675     
+	has160 chan 128          16.857     
+	has160 chan 256          18.988     
+	has160 chan 512          19.123     
+	has160 chan 1024         22.591     
+	has160 chan 2048         29.513     
+	has160 chan 4096         33.834     
+	has160 chan 8192         51.142     
+	has160 chan 16384        116.66     
+	has160 chan 32768        186.704    
+	has160 chan 65536        325.338    
+	has160 chan 131072       633.996    
+	has160 chan 262144       1276.85    
+	has160 chan 524288       2390.026   
+	has160 chan 1048576      4876.832   
+	has160 chan 2097152      9719.561   
+	has160 chan 4194304      19502.831  
+	has160 chan 8388608      39134.818  
+	has160 chan 16777216     77797.763  
+	has160 chan 33554432     155832.927 
+	has160 chan 67108864     310157.879 
+	md4 chan 64              12.258     
+	md4 chan 128             17.009     
+	md4 chan 256             14.185     
+	md4 chan 512             18.605     
+	md4 chan 1024            17.401     
+	md4 chan 2048            16.931     
+	md4 chan 4096            24.481     
+	md4 chan 8192            24.493     
+	md4 chan 16384           34.077     
+	md4 chan 32768           66.21      
+	md4 chan 65536           103.924    
+	md4 chan 131072          174.313    
+	md4 chan 262144          337.41     
+	md4 chan 524288          656.84     
+	md4 chan 1048576         1349.555   
+	md4 chan 2097152         2770.914   
+	md4 chan 4194304         5637.288   
+	md4 chan 8388608         11280.695  
+	md4 chan 16777216        22629.943  
+	md4 chan 33554432        44797.053  
+	md4 chan 67108864        88961.174  
+	md5 chan 64              16.076     
+	md5 chan 128             15.33      
+	md5 chan 256             17.239     
+	md5 chan 512             21.055     
+	md5 chan 1024            18.631     
+	md5 chan 2048            13.874     
+	md5 chan 4096            28.593     
+	md5 chan 8192            35.3       
+	md5 chan 16384           46.576     
+	md5 chan 32768           86.293     
+	md5 chan 65536           144.759    
+	md5 chan 131072          272.271    
+	md5 chan 262144          530.338    
+	md5 chan 524288          1071.616   
+	md5 chan 1048576         2054.295   
+	md5 chan 2097152         4274.54    
+	md5 chan 4194304         8508.042   
+	md5 chan 8388608         16948.485  
+	md5 chan 16777216        33713.238  
+	md5 chan 33554432        67295.567  
+	md5 chan 67108864        134536.159 
+	ripemd160 chan 64        16.177     
+	ripemd160 chan 128       18.224     
+	ripemd160 chan 256       16.1       
+	ripemd160 chan 512       19.776     
+	ripemd160 chan 1024      17.6       
+	ripemd160 chan 2048      23.202     
+	ripemd160 chan 4096      36.197     
+	ripemd160 chan 8192      55.618     
+	ripemd160 chan 16384     89.298     
+	ripemd160 chan 32768     163.452    
+	ripemd160 chan 65536     316.615    
+	ripemd160 chan 131072    595.411    
+	ripemd160 chan 262144    1236.5     
+	ripemd160 chan 524288    2453.094   
+	ripemd160 chan 1048576   4821.859   
+	ripemd160 chan 2097152   9624.901   
+	ripemd160 chan 4194304   19332.896  
+	ripemd160 chan 8388608   38462.963  
+	ripemd160 chan 16777216  77305.571  
+	ripemd160 chan 33554432  154134.436 
+	ripemd160 chan 67108864  308017.342 
+	sha1 chan 64             11.699     
+	sha1 chan 128            16.971     
+	sha1 chan 256            21.489     
+	sha1 chan 512            19.503     
+	sha1 chan 1024           21.848     
+	sha1 chan 2048           29.474     
+	sha1 chan 4096           38.88      
+	sha1 chan 8192           52.311     
+	sha1 chan 16384          104.422    
+	sha1 chan 32768          186.265    
+	sha1 chan 65536          356.51     
+	sha1 chan 131072         732.481    
+	sha1 chan 262144         1390.674   
+	sha1 chan 524288         2794.589   
+	sha1 chan 1048576        5666.662   
+	sha1 chan 2097152        11274.083  
+	sha1 chan 4194304        22384.413  
+	sha1 chan 8388608        44893.851  
+	sha1 chan 16777216       89583.948  
+	sha1 chan 33554432       179476.627 
+	sha1 chan 67108864       358060.844 
+	sha2/224 chan 64         16.803     
+	sha2/224 chan 128        25.975     
+	sha2/224 chan 256        17.427     
+	sha2/224 chan 512        19.999     
+	sha2/224 chan 1024       23.714     
+	sha2/224 chan 2048       28.356     
+	sha2/224 chan 4096       39.125     
+	sha2/224 chan 8192       67.373     
+	sha2/224 chan 16384      114.944    
+	sha2/224 chan 32768      208.624    
+	sha2/224 chan 65536      402.074    
+	sha2/224 chan 131072     790.984    
+	sha2/224 chan 262144     1617.618   
+	sha2/224 chan 524288     3335.559   
+	sha2/224 chan 1048576    6383.376   
+	sha2/224 chan 2097152    13038.321  
+	sha2/224 chan 4194304    25534.61   
+	sha2/224 chan 8388608    51363.694  
+	sha2/224 chan 16777216   102184.617 
+	sha2/224 chan 33554432   204770.91  
+	sha2/224 chan 67108864   408986.113 
+	sha2/256 chan 64         13.277     
+	sha2/256 chan 128        19.124     
+	sha2/256 chan 256        19.781     
+	sha2/256 chan 512        18.566     
+	sha2/256 chan 1024       25.777     
+	sha2/256 chan 2048       29.566     
+	sha2/256 chan 4096       40.995     
+	sha2/256 chan 8192       65.436     
+	sha2/256 chan 16384      119.248    
+	sha2/256 chan 32768      210.021    
+	sha2/256 chan 65536      398.845    
+	sha2/256 chan 131072     814.252    
+	sha2/256 chan 262144     1594.737   
+	sha2/256 chan 524288     3284.236   
+	sha2/256 chan 1048576    6360.665   
+	sha2/256 chan 2097152    12879.805  
+	sha2/256 chan 4194304    25554.023  
+	sha2/256 chan 8388608    51217.124  
+	sha2/256 chan 16777216   102793.353 
+	sha2/256 chan 33554432   205362.422 
+	sha2/256 chan 67108864   410713.621 
+	sha2/384 chan 64         16.093     
+	sha2/384 chan 128        19.283     
+	sha2/384 chan 256        19.173     
+	sha2/384 chan 512        15.438     
+	sha2/384 chan 1024       19.257     
+	sha2/384 chan 2048       24.78      
+	sha2/384 chan 4096       34.955     
+	sha2/384 chan 8192       51.124     
+	sha2/384 chan 16384      80.303     
+	sha2/384 chan 32768      132.846    
+	sha2/384 chan 65536      265.755    
+	sha2/384 chan 131072     560.938    
+	sha2/384 chan 262144     988.111    
+	sha2/384 chan 524288     2097.101   
+	sha2/384 chan 1048576    4052.254   
+	sha2/384 chan 2097152    8430.166   
+	sha2/384 chan 4194304    16524.694  
+	sha2/384 chan 8388608    32690.644  
+	sha2/384 chan 16777216   65928.61   
+	sha2/384 chan 33554432   131147.144 
+	sha2/384 chan 67108864   261909.752 
+	sha2/512 chan 64         14.696     
+	sha2/512 chan 128        14.747     
+	sha2/512 chan 256        18.955     
+	sha2/512 chan 512        17.453     
+	sha2/512 chan 1024       19.623     
+	sha2/512 chan 2048       28.576     
+	sha2/512 chan 4096       32.684     
+	sha2/512 chan 8192       45.296     
+	sha2/512 chan 16384      96.165     
+	sha2/512 chan 32768      141.902    
+	sha2/512 chan 65536      266.761    
+	sha2/512 chan 131072     525.861    
+	sha2/512 chan 262144     1026.426   
+	sha2/512 chan 524288     1982.423   
+	sha2/512 chan 1048576    4079.091   
+	sha2/512 chan 2097152    8173.593   
+	sha2/512 chan 4194304    16560.791  
+	sha2/512 chan 8388608    32790.89   
+	sha2/512 chan 16777216   66363.193  
+	sha2/512 chan 33554432   131126.695 
+	sha2/512 chan 67108864   261618.834 
+	sha3/224 chan 64         21.485     
+	sha3/224 chan 128        20.995     
+	sha3/224 chan 256        28.379     
+	sha3/224 chan 512        26.385     
+	sha3/224 chan 1024       37.213     
+	sha3/224 chan 2048       44.702     
+	sha3/224 chan 4096       82.917     
+	sha3/224 chan 8192       135.066    
+	sha3/224 chan 16384      273.627    
+	sha3/224 chan 32768      565.408    
+	sha3/224 chan 65536      1082.407   
+	sha3/224 chan 131072     2085.83    
+	sha3/224 chan 262144     4198.79    
+	sha3/224 chan 524288     8651.36    
+	sha3/224 chan 1048576    16462.508  
+	sha3/224 chan 2097152    32781.36   
+	sha3/224 chan 4194304    65327.248  
+	sha3/224 chan 8388608    130599.556 
+	sha3/224 chan 16777216   261305.77  
+	sha3/224 chan 33554432   523304.54  
+	sha3/224 chan 67108864   1049258.054
+	sha3/256 chan 64         20.645     
+	sha3/256 chan 128        17.673     
+	sha3/256 chan 256        20.841     
+	sha3/256 chan 512        22.468     
+	sha3/256 chan 1024       29.703     
+	sha3/256 chan 2048       49.498     
+	sha3/256 chan 4096       84.469     
+	sha3/256 chan 8192       148.267    
+	sha3/256 chan 16384      275.673    
+	sha3/256 chan 32768      573.787    
+	sha3/256 chan 65536      1099.406   
+	sha3/256 chan 131072     2242.905   
+	sha3/256 chan 262144     4353.141   
+	sha3/256 chan 524288     8496.808   
+	sha3/256 chan 1048576    17313.245  
+	sha3/256 chan 2097152    34698.785  
+	sha3/256 chan 4194304    69195.045  
+	sha3/256 chan 8388608    138699.791 
+	sha3/256 chan 16777216   277520.653 
+	sha3/256 chan 33554432   553986.943 
+	sha3/256 chan 67108864   1112034.339
+	sha3/384 chan 64         16.909     
+	sha3/384 chan 128        17.836     
+	sha3/384 chan 256        25.27      
+	sha3/384 chan 512        28.528     
+	sha3/384 chan 1024       33.976     
+	sha3/384 chan 2048       62.251     
+	sha3/384 chan 4096       116.844    
+	sha3/384 chan 8192       198.163    
+	sha3/384 chan 16384      368.863    
+	sha3/384 chan 32768      696.431    
+	sha3/384 chan 65536      1411.572   
+	sha3/384 chan 131072     2780.53    
+	sha3/384 chan 262144     5696.507   
+	sha3/384 chan 524288     11729.965  
+	sha3/384 chan 1048576    22631.943  
+	sha3/384 chan 2097152    45229.615  
+	sha3/384 chan 4194304    90474.236  
+	sha3/384 chan 8388608    180798.208 
+	sha3/384 chan 16777216   357082.526 
+	sha3/384 chan 33554432   705869.673 
+	sha3/384 chan 67108864   1429203.781
+	sha3/512 chan 64         20.287     
+	sha3/512 chan 128        20.529     
+	sha3/512 chan 256        21.476     
+	sha3/512 chan 512        34.955     
+	sha3/512 chan 1024       44.561     
+	sha3/512 chan 2048       74.665     
+	sha3/512 chan 4096       136.535    
+	sha3/512 chan 8192       257.469    
+	sha3/512 chan 16384      488.473    
+	sha3/512 chan 32768      981.445    
+	sha3/512 chan 65536      1925.38    
+	sha3/512 chan 131072     3794.489   
+	sha3/512 chan 262144     7743.284   
+	sha3/512 chan 524288     15583.064  
+	sha3/512 chan 1048576    32408.317  
+	sha3/512 chan 2097152    62371.096  
+	sha3/512 chan 4194304    123085.922 
+	sha3/512 chan 8388608    238776.948 
+	sha3/512 chan 16777216   477548.684 
+	sha3/512 chan 33554432   954836.041 
+	sha3/512 chan 67108864   1908770.161
+	snefru/128 chan 64       27.046     
+	snefru/128 chan 128      26.813     
+	snefru/128 chan 256      37.293     
+	snefru/128 chan 512      55.779     
+	snefru/128 chan 1024     89.14      
+	snefru/128 chan 2048     153.216    
+	snefru/128 chan 4096     285.589    
+	snefru/128 chan 8192     548.091    
+	snefru/128 chan 16384    1075.845   
+	snefru/128 chan 32768    2129.051   
+	snefru/128 chan 65536    4246.079   
+	snefru/128 chan 131072   8470.825   
+	snefru/128 chan 262144   16922.039  
+	snefru/128 chan 524288   33827.213  
+	snefru/128 chan 1048576  67691.815  
+	snefru/128 chan 2097152  135411.754 
+	snefru/128 chan 4194304  270947.261 
+	snefru/128 chan 8388608  541801.902 
+	snefru/128 chan 16777216 1084717.885
+	snefru/128 chan 33554432 2167447.082
+	snefru/128 chan 67108864 4334993.436
+	snefru/256 chan 64       27.178     
+	snefru/256 chan 128      29.867     
+	snefru/256 chan 256      44.452     
+	snefru/256 chan 512      68.47      
+	snefru/256 chan 1024     121.359    
+	snefru/256 chan 2048     214.002    
+	snefru/256 chan 4096     411.515    
+	snefru/256 chan 8192     806.572    
+	snefru/256 chan 16384    1601.828   
+	snefru/256 chan 32768    3186.231   
+	snefru/256 chan 65536    6356.773   
+	snefru/256 chan 131072   12696.632  
+	snefru/256 chan 262144   25384.426  
+	snefru/256 chan 524288   50732.168  
+	snefru/256 chan 1048576  101535.758 
+	snefru/256 chan 2097152  203023.774 
+	snefru/256 chan 4194304  406137.759 
+	snefru/256 chan 8388608  812467.135 
+	snefru/256 chan 16777216 1625438.647
+	snefru/256 chan 33554432 3250354.911
+	snefru/256 chan 67108864 6500059.358
+	tiger chan 64            18.861     
+	tiger chan 128           17.914     
+	tiger chan 256           19.037     
+	tiger chan 512           20.563     
+	tiger chan 1024          18.651     
+	tiger chan 2048          24.828     
+	tiger chan 4096          33.537     
+	tiger chan 8192          43.274     
+	tiger chan 16384         69.409     
+	tiger chan 32768         121.78     
+	tiger chan 65536         225.924    
+	tiger chan 131072        431.732    
+	tiger chan 262144        845.789    
+	tiger chan 524288        1657.41    
+	tiger chan 1048576       3298.446   
+	tiger chan 2097152       6627.898   
+	tiger chan 4194304       13468.445  
+	tiger chan 8388608       27318.034  
+	tiger chan 16777216      54970.079  
+	tiger chan 33554432      108408.966 
+	tiger chan 67108864      216527.668 
+	tth chan 64              17.959     
+	tth chan 128             18.873     
+	tth chan 256             13.198     
+	tth chan 512             18.732     
+	tth chan 1024            18.624     
+	tth chan 2048            24.363     
+	tth chan 4096            31.928     
+	tth chan 8192            48.598     
+	tth chan 16384           78.62      
+	tth chan 32768           139.139    
+	tth chan 65536           260.106    
+	tth chan 131072          502.426    
+	tth chan 262144          987.77     
+	tth chan 524288          1957.121   
+	tth chan 1048576         3915.307   
+	tth chan 2097152         8182.746   
+	tth chan 4194304         15928.837  
+	tth chan 8388608         32084.946  
+	tth chan 16777216        64203.885  
+	tth chan 33554432        128168.039 
+	tth chan 67108864        256415.618 
+	whirlpool chan 64        18.69      
+	whirlpool chan 128       21.911     
+	whirlpool chan 256       24.202     
+	whirlpool chan 512       28.374     
+	whirlpool chan 1024      38.547     
+	whirlpool chan 2048      56.015     
+	whirlpool chan 4096      93.676     
+	whirlpool chan 8192      161.359    
+	whirlpool chan 16384     309.736    
+	whirlpool chan 32768     595.158    
+	whirlpool chan 65536     1177.542   
+	whirlpool chan 131072    2345.091   
+	whirlpool chan 262144    4674.933   
+	whirlpool chan 524288    9347.355   
+	whirlpool chan 1048576   18695.158  
+	whirlpool chan 2097152   37565.798  
+	whirlpool chan 4194304   74943.342  
+	whirlpool chan 8388608   150668.143 
+	whirlpool chan 16777216  300210.327 
+	whirlpool chan 33554432  600638.937 
+	whirlpool chan 67108864  1201339.426
+	===========              ====       
+	Description              Time       
 
 
-real	69m10.619s
-user	66m50.549s
-sys	2m10.131s
+real	1103m43.144s
+user	1089m48.315s
+sys	12m7.154s
 
 /home/aku/Development/Tcl/Meine/Ankh/Logs/bench.csv
 /home/aku/Development/Tcl/Meine/Ankh/Logs/bench.html
@@ -152,5 +677,5 @@ sys	2m10.131s
 /home/aku/Development/Tcl/Meine/Ankh/Logs/bench.summary
 /home/aku/Development/Tcl/Meine/Ankh/Logs/bench.timings
 
-Sun 21 Feb 2021 06:43:39 PM CET
+Thu 25 Feb 2021 04:48:10 PM CET
 
