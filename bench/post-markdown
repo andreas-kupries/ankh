@@ -13,7 +13,7 @@ puts "  1. \[All Hashes](#all)"
 puts "  1. \[Speed Maxima, Sorted From Fastest Down](#maxima)"
 puts ""
 
-puts "# <a name='all'/> All Hashes"
+puts "# <a name='all'></a> All Hashes"
 puts ""
 puts |Digest|Method|Bytes|Microseconds|MB/Second|MiB/Second|Microseconds/Byte|
 puts |---|---|---:|---:|---:|---:|---:|
@@ -66,7 +66,7 @@ foreach def $defs {
 }
 
 puts ""
-puts "# <a name='maxima'/> Speed Maxima, Sorted From Fastest Down"
+puts "# <a name='maxima'></a> Speed Maxima, Sorted From Fastest Down"
 puts ""
 puts |Digest|Method|Bytes|Micros|MB/Second|MiB/Second|Micros/Byte|Gain|R/Gain|
 puts |---|---|---:|---:|---:|---:|---:|---:|---:|
