@@ -27,10 +27,10 @@ to the primary site.
 
 # Guides and other Documentation
 
-   * [Command Reference](embedded/md/doc/files/ankh.md)
-   * [License](embedded/md/doc/files/ankh_license.md)
-   * [Changes By Version](embedded/md/doc/files/ankh_changes.md)
-   * [How To Get The Sources](embedded/md/doc/files/ankh_sources.md)
-   * [How To Build And Install Ankh](embedded/md/doc/files/ankh_installer.md)
-   * [The Developer's Guide](embedded/md/doc/files/ankh_devguide.md)
-   * [Benchmark Results](crunch/bench.md)
+   * [Command Reference](../embedded/md/doc/files/ankh.md)
+   * [License](../embedded/md/doc/files/ankh_license.md)
+   * [Changes By Version](../embedded/md/doc/files/ankh_changes.md)
+   * [How To Get The Sources](../embedded/md/doc/files/ankh_sources.md)
+   * [How To Build And Install Ankh](../embedded/md/doc/files/ankh_installer.md)
+   * [The Developer's Guide](../embedded/md/doc/files/ankh_devguide.md)
+   * [Benchmark Results](../crunch/bench.md)
