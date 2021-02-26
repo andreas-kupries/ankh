@@ -1,4 +1,4 @@
-<img src='doc/figures/logo.svg' align='left' width='18%' height='18%'>
+<img src='figures/logo.svg' align='left' width='18%' height='18%'>
 
 # Welcome
 
