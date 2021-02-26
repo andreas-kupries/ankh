@@ -3,6 +3,11 @@
 .\"
 .TH "" "" "" "" ""
 .hy
+.IP "1." 3
+All Hashes
+.IP "2." 3
+Speed Maxima, Sorted From Fastest Down
+.SH  All Hashes
 .PP
 .TS
 tab(@);
@@ -9706,7 +9711,7 @@ T}@T{
 0.0179
 T}
 .TE
-.SH Maxima
+.SH  Speed Maxima, Sorted From Fastest Down
 .PP
 .TS
 tab(@);

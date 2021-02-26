@@ -8,6 +8,13 @@ set chan [open $data r]
 close stdout
 open $logdir/bench.md w
 
+puts ""
+puts "  1. \[All Hashes](#all)"
+puts "  1. \[Speed Maxima, Sorted From Fastest Down](#maxima)"
+puts ""
+
+puts "# <a name='all'/> All Hashes"
+puts ""
 puts |Digest|Method|Bytes|Microseconds|MB/Second|MiB/Second|Microseconds/Byte|
 puts |---|---|---:|---:|---:|---:|---:|
 
@@ -58,8 +65,9 @@ foreach def $defs {
     set prev $bm
 }
 
-puts "# Maxima"
-
+puts ""
+puts "# <a name='maxima'/> Speed Maxima, Sorted From Fastest Down"
+puts ""
 puts |Digest|Method|Bytes|Micros|MB/Second|MiB/Second|Micros/Byte|Gain|R/Gain|
 puts |---|---|---:|---:|---:|---:|---:|---:|---:|
 

@@ -1,3 +1,9 @@
+
+  1. [All Hashes](#all)
+  1. [Speed Maxima, Sorted From Fastest Down](#maxima)
+
+# <a name='all'/> All Hashes
+
 |Digest|Method|Bytes|Microseconds|MB/Second|MiB/Second|Microseconds/Byte|
 |---|---|---:|---:|---:|---:|---:|
 |aich|chan|64|11.906|5.38|5.13|0.1860|
@@ -659,7 +665,9 @@
 |whirlpool|chan|16777216|300210.327|55.88|53.29|0.0179|
 |whirlpool|chan|33554432|600638.937|55.86|53.27|0.0179|
 |whirlpool|chan|67108864|1201339.426|55.86|53.27|0.0179|
-# Maxima
+
+# <a name='maxima'/> Speed Maxima, Sorted From Fastest Down
+
 |Digest|Method|Bytes|Micros|MB/Second|MiB/Second|Micros/Byte|Gain|R/Gain|
 |---|---|---:|---:|---:|---:|---:|---:|---:|
 |ed2k|chan|524288|637.955|821.83|783.76|0.0012|79.558|1.030|
