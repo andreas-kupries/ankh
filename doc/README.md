@@ -7,22 +7,23 @@ Welcome to __ANKH__, Andreas Kupries' Hashes.
 This package provides commands for a variety of cryptographically
 secure hashes of varying new-ness and strength.
 
-# Attention Please
+# Ticket tracking
 
-You are reading this document on the github mirror of the
-[official sources](http://core.tcl-lang.org/akupries/ankh).
-
-Please be aware that tickets added here are ignored, or, at best,
-simply closed with link to the
-[official ticket tracker](https://core.tcl-lang.org/akupries/ankh/reportlist).
-
-# Sources
-
-See
+Your are reading this document from either of the two fossil
+repositories for the project, i.e.
 
   - [Primary repository](http://core.tcl-lang.org/akupries/ankh)
   - [ChiselApp Mirror](https://chiselapp.com/user/andreas_kupries/repository/ankh/index)
-  - Here.
+
+A git mirror of the same is available at
+[github](https://github.com/andreas-kupries/ankh).
+
+__Please__ use only the
+[official ticket tracker](https://core.tcl-lang.org/akupries/ankh/reportlist)
+for tickets.
+
+Tickets at github will be ignored, or simply closed with a reference
+to the primary site.
 
 # Guides and other Documentation
 
