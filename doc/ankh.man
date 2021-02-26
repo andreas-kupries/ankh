@@ -97,6 +97,11 @@ bits.
 See [uri https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE2 {Blake 2 @ Wikipedia}] for details.
 Supports digests of 256 and 512 bits.
 
+[list_begin definitions]
+[def [const blake2b]]
+[def [const blake2s]]
+[list_end]
+
 [def [const btih]]
 
 The [term {BitTorrent InfoHash}] originates, naturally, in the
@@ -114,6 +119,13 @@ Defined in 2006 in the article
 [term {D. Gligoroski, S. Markovski, L. Kocarev "Edon-R, An Infinite Family of Cryptographic Hash Functions"}].
 Supports digests of 224, 256, 384, and 512 bits.
 
+[list_begin definitions]
+[def [const edonr/224]]
+[def [const edonr/256]]
+[def [const edonr/384]]
+[def [const edonr/512]]
+[list_end]
+
 [def [const gost12]]
 [def [const gost94]]
 
@@ -121,6 +133,12 @@ These hash functions are from the Russian national standard
 [term {GOST R 34.11-94}].
 [term gost12] supports digests of 256 and 512 bits.
 [term gost94] digests are 256 bits.
+
+[list_begin definitions]
+[def [const gost12/256]]
+[def [const gost12/512]]
+[def [const gost94]]
+[list_end]
 
 [def [const has160]]
 
@@ -157,6 +175,13 @@ Digests are 160 bits.
 [term {Secure Hash Algorithm 2}] is the successor of SHA-2.
 Supports digests of 224, 256, 384, and 512 bits.
 
+[list_begin definitions]
+[def [const sha2/224]]
+[def [const sha2/256]]
+[def [const sha2/384]]
+[def [const sha2/512]]
+[list_end]
+
 [def [const sha3]]
 
 [term {Secure Hash Algorithm 3}] is the latest in the SHA series.
@@ -164,10 +189,22 @@ Based on a completely new internal construction than the predecessors.
 See [term KECCACK].
 Supports digests of 224, 256, 384, and 512 bits.
 
+[list_begin definitions]
+[def [const sha3/224]]
+[def [const sha3/256]]
+[def [const sha3/384]]
+[def [const sha3/512]]
+[list_end]
+
 [def [const snefru]]
 
 Made by Ralph Merkle in 1990.  Considered broken. Also slow.
 Supports digests of 128 and 256 bits.
+
+[list_begin definitions]
+[def [const snefru/128]]
+[def [const snefru/256]]
+[list_end]
 
 [def [const tiger]]
 

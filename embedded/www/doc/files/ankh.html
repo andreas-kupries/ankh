@@ -202,7 +202,13 @@ bits.</p>
 <p>See also <i class="term"><a href="../../index.html#ed2k">ed2k</a></i> below.</p></dd>
 <dt><b class="const">blake</b></dt>
 <dd><p>See <a href="https://en.wikipedia.org/wiki/BLAKE_(hash_function)#BLAKE2">Blake 2 @ Wikipedia</a> for details.
-Supports digests of 256 and 512 bits.</p></dd>
+Supports digests of 256 and 512 bits.</p>
+<dl class="doctools_definitions">
+<dt><b class="const">blake2b</b></dt>
+<dd></dd>
+<dt><b class="const">blake2s</b></dt>
+<dd></dd>
+</dl></dd>
 <dt><b class="const">btih</b></dt>
 <dd><p>The <i class="term">BitTorrent InfoHash</i> originates, naturally, in the
 BitTorrent network. Digests are 160 bits.</p></dd>
@@ -213,14 +219,32 @@ bits.</p></dd>
 <dt><b class="const">edonr</b></dt>
 <dd><p>Defined in 2006 in the article
 <i class="term">D. Gligoroski, S. Markovski, L. Kocarev &quot;Edon-R, An Infinite Family of Cryptographic Hash Functions&quot;</i>.
-Supports digests of 224, 256, 384, and 512 bits.</p></dd>
+Supports digests of 224, 256, 384, and 512 bits.</p>
+<dl class="doctools_definitions">
+<dt><b class="const">edonr/224</b></dt>
+<dd></dd>
+<dt><b class="const">edonr/256</b></dt>
+<dd></dd>
+<dt><b class="const">edonr/384</b></dt>
+<dd></dd>
+<dt><b class="const">edonr/512</b></dt>
+<dd></dd>
+</dl></dd>
 <dt><b class="const">gost12</b></dt>
 <dd></dd>
 <dt><b class="const">gost94</b></dt>
 <dd><p>These hash functions are from the Russian national standard
 <i class="term">GOST R 34.11-94</i>.
 <i class="term"><a href="../../index.html#gost12">gost12</a></i> supports digests of 256 and 512 bits.
-<i class="term"><a href="../../index.html#gost94">gost94</a></i> digests are 256 bits.</p></dd>
+<i class="term"><a href="../../index.html#gost94">gost94</a></i> digests are 256 bits.</p>
+<dl class="doctools_definitions">
+<dt><b class="const">gost12/256</b></dt>
+<dd></dd>
+<dt><b class="const">gost12/512</b></dt>
+<dd></dd>
+<dt><b class="const">gost94</b></dt>
+<dd></dd>
+</dl></dd>
 <dt><b class="const">has160</b></dt>
 <dd><p>Designed in and by Korea, for the
 <i class="term">Korean Certificate-based Digital Signature Algorithm</i> (KCDSA).
@@ -243,15 +267,41 @@ See RFC 3174.
 Digests are 160 bits.</p></dd>
 <dt><b class="const">sha2</b></dt>
 <dd><p><i class="term">Secure Hash Algorithm 2</i> is the successor of SHA-2.
-Supports digests of 224, 256, 384, and 512 bits.</p></dd>
+Supports digests of 224, 256, 384, and 512 bits.</p>
+<dl class="doctools_definitions">
+<dt><b class="const">sha2/224</b></dt>
+<dd></dd>
+<dt><b class="const">sha2/256</b></dt>
+<dd></dd>
+<dt><b class="const">sha2/384</b></dt>
+<dd></dd>
+<dt><b class="const">sha2/512</b></dt>
+<dd></dd>
+</dl></dd>
 <dt><b class="const">sha3</b></dt>
 <dd><p><i class="term">Secure Hash Algorithm 3</i> is the latest in the SHA series.
 Based on a completely new internal construction than the predecessors.
 See <i class="term">KECCACK</i>.
-Supports digests of 224, 256, 384, and 512 bits.</p></dd>
+Supports digests of 224, 256, 384, and 512 bits.</p>
+<dl class="doctools_definitions">
+<dt><b class="const">sha3/224</b></dt>
+<dd></dd>
+<dt><b class="const">sha3/256</b></dt>
+<dd></dd>
+<dt><b class="const">sha3/384</b></dt>
+<dd></dd>
+<dt><b class="const">sha3/512</b></dt>
+<dd></dd>
+</dl></dd>
 <dt><b class="const">snefru</b></dt>
 <dd><p>Made by Ralph Merkle in 1990.  Considered broken. Also slow.
-Supports digests of 128 and 256 bits.</p></dd>
+Supports digests of 128 and 256 bits.</p>
+<dl class="doctools_definitions">
+<dt><b class="const">snefru/128</b></dt>
+<dd></dd>
+<dt><b class="const">snefru/256</b></dt>
+<dd></dd>
+</dl></dd>
 <dt><b class="const">tiger</b></dt>
 <dd><p>Tiger was developed by Ross Anderson and Eli Biham, with speed on
 64bit processors in mind.

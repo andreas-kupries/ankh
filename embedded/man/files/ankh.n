@@ -367,6 +367,12 @@ See also \fIed2k\fR below\&.
 \fBblake\fR
 See \fIBlake 2 @ Wikipedia\fR [https://en\&.wikipedia\&.org/wiki/BLAKE_(hash_function)#BLAKE2] for details\&.
 Supports digests of 256 and 512 bits\&.
+.RS
+.TP
+\fBblake2b\fR
+.TP
+\fBblake2s\fR
+.RE
 .TP
 \fBbtih\fR
 The \fIBitTorrent InfoHash\fR originates, naturally, in the
@@ -381,6 +387,16 @@ bits\&.
 Defined in 2006 in the article
 \fID\&. Gligoroski, S\&. Markovski, L\&. Kocarev "Edon-R, An Infinite Family of Cryptographic Hash Functions"\fR\&.
 Supports digests of 224, 256, 384, and 512 bits\&.
+.RS
+.TP
+\fBedonr/224\fR
+.TP
+\fBedonr/256\fR
+.TP
+\fBedonr/384\fR
+.TP
+\fBedonr/512\fR
+.RE
 .TP
 \fBgost12\fR
 .TP
@@ -389,6 +405,14 @@ These hash functions are from the Russian national standard
 \fIGOST R 34\&.11-94\fR\&.
 \fIgost12\fR supports digests of 256 and 512 bits\&.
 \fIgost94\fR digests are 256 bits\&.
+.RS
+.TP
+\fBgost12/256\fR
+.TP
+\fBgost12/512\fR
+.TP
+\fBgost94\fR
+.RE
 .TP
 \fBhas160\fR
 Designed in and by Korea, for the
@@ -418,16 +442,42 @@ Digests are 160 bits\&.
 \fBsha2\fR
 \fISecure Hash Algorithm 2\fR is the successor of SHA-2\&.
 Supports digests of 224, 256, 384, and 512 bits\&.
+.RS
+.TP
+\fBsha2/224\fR
+.TP
+\fBsha2/256\fR
+.TP
+\fBsha2/384\fR
+.TP
+\fBsha2/512\fR
+.RE
 .TP
 \fBsha3\fR
 \fISecure Hash Algorithm 3\fR is the latest in the SHA series\&.
 Based on a completely new internal construction than the predecessors\&.
 See \fIKECCACK\fR\&.
 Supports digests of 224, 256, 384, and 512 bits\&.
+.RS
+.TP
+\fBsha3/224\fR
+.TP
+\fBsha3/256\fR
+.TP
+\fBsha3/384\fR
+.TP
+\fBsha3/512\fR
+.RE
 .TP
 \fBsnefru\fR
 Made by Ralph Merkle in 1990\&.  Considered broken\&. Also slow\&.
 Supports digests of 128 and 256 bits\&.
+.RS
+.TP
+\fBsnefru/128\fR
+.TP
+\fBsnefru/256\fR
+.RE
 .TP
 \fBtiger\fR
 Tiger was developed by Ross Anderson and Eli Biham, with speed on

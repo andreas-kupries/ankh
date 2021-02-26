@@ -128,6 +128,10 @@ of the hashes here, it is not true for all\.
     Wikipedia](https://en\.wikipedia\.org/wiki/BLAKE\_\(hash\_function\)\#BLAKE2)
     for details\. Supports digests of 256 and 512 bits\.
 
+      * __blake2b__
+
+      * __blake2s__
+
   - __btih__
 
     The *BitTorrent InfoHash* originates, naturally, in the BitTorrent
@@ -144,6 +148,14 @@ of the hashes here, it is not true for all\.
     "Edon\-R, An Infinite Family of Cryptographic Hash Functions"*\. Supports
     digests of 224, 256, 384, and 512 bits\.
 
+      * __edonr/224__
+
+      * __edonr/256__
+
+      * __edonr/384__
+
+      * __edonr/512__
+
   - __gost12__
 
   - __gost94__
@@ -151,6 +163,12 @@ of the hashes here, it is not true for all\.
     These hash functions are from the Russian national standard *GOST R
     34\.11\-94*\. *[gost12](\.\./\.\./index\.md\#gost12)* supports digests of 256
     and 512 bits\. *[gost94](\.\./\.\./index\.md\#gost94)* digests are 256 bits\.
+
+      * __gost12/256__
+
+      * __gost12/512__
+
+      * __gost94__
 
   - __has160__
 
@@ -182,16 +200,36 @@ of the hashes here, it is not true for all\.
     *Secure Hash Algorithm 2* is the successor of SHA\-2\. Supports digests of
     224, 256, 384, and 512 bits\.
 
+      * __sha2/224__
+
+      * __sha2/256__
+
+      * __sha2/384__
+
+      * __sha2/512__
+
   - __sha3__
 
     *Secure Hash Algorithm 3* is the latest in the SHA series\. Based on a
     completely new internal construction than the predecessors\. See *KECCACK*\.
     Supports digests of 224, 256, 384, and 512 bits\.
 
+      * __sha3/224__
+
+      * __sha3/256__
+
+      * __sha3/384__
+
+      * __sha3/512__
+
   - __snefru__
 
     Made by Ralph Merkle in 1990\. Considered broken\. Also slow\. Supports digests
     of 128 and 256 bits\.
+
+      * __snefru/128__
+
+      * __snefru/256__
 
   - __tiger__
 
