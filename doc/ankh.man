@@ -51,7 +51,7 @@ digest into any other required form, like hex-digits, or base64, etc.
 
 [para] The data to hash is provided either by a [arg channel] opened
 for reading, the [arg path] to a file in the filesystem, or an
-in-memory [arg string].
+in-memory [arg string] (Again a Tcl ByteArray value).
 
 [call [cmd {ak hash}] [method HASH] [cmd size]]
 

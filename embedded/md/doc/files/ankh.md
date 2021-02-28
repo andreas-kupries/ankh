@@ -90,7 +90,8 @@ The set of supported hashes is described in the following section\.
     required form, like hex\-digits, or base64, etc\.
 
     The data to hash is provided either by a *channel* opened for reading, the
-    *path* to a file in the filesystem, or an in\-memory *string*\.
+    *path* to a file in the filesystem, or an in\-memory *string* \(Again a
+    Tcl ByteArray value\)\.
 
   - <a name='6'></a>__ak hash__ __HASH__ __size__
 
