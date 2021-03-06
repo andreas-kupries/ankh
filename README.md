@@ -33,3 +33,13 @@ See
    * [How To Build And Install Ankh](embedded/md/doc/files/ankh_installer.md)
    * [The Developer's Guide](embedded/md/doc/files/ankh_devguide.md)
    * [Benchmark Results](crunch/bench.md)
+
+# Related
+
+The majority of the hash implementations are provided by the
+[RHash](https://github.com/rhash/RHash) project at github, with
+thanks.
+
+SHA-1 is the exception, its sources come from
+[Tcllib](https://core.tcl-lang.org/tcllib) and it took the
+implementation from NetBSD, IIRC.

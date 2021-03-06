@@ -359,7 +359,7 @@ RIPEMD-160 (RACE Integrity Primitives Evaluation Message Digest) is a
 hexadecimal string of length 40.
 
 EDON-R is a family of hash functions with variable output
-length. RHash suppots 256-bit and 512-bit variants. 512-bit EDON-R is
+length. RHash supports 256-bit and 512-bit variants. 512-bit EDON-R is
 one of fastest hash algorithms on 64-bit processors. The function is
 defined in the article: D. Gligoroski, S. Markovski, L. Kocarev
 Edon-R, An Infinite Family of Cryptographic Hash Functions
