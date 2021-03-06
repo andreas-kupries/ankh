@@ -104,7 +104,7 @@
 &#124; <a href="../../index.html">Keyword Index</a>
  ] <hr>
 <div class="doctools">
-<h1 class="doctools_title">ankh(n) 0.0 doc &quot;Ankh&quot;</h1>
+<h1 class="doctools_title">ankh(n) 1.0 doc &quot;Ankh&quot;</h1>
 <div id="name" class="doctools_section"><h2><a name="name">Name</a></h2>
 <p>ankh - Ankh - API</p>
 </div>
@@ -115,8 +115,9 @@
 <li class="doctools_section"><a href="#section1">Description</a></li>
 <li class="doctools_section"><a href="#section2">Global operations</a></li>
 <li class="doctools_section"><a href="#section3">Hash commands</a></li>
-<li class="doctools_section"><a href="#section4">Supported Hashes</a></li>
-<li class="doctools_section"><a href="#section5">Bugs, Ideas, Feedback</a></li>
+<li class="doctools_section"><a href="#section4">Slice Options</a></li>
+<li class="doctools_section"><a href="#section5">Supported Hashes</a></li>
+<li class="doctools_section"><a href="#section6">Bugs, Ideas, Feedback</a></li>
 <li class="doctools_section"><a href="#keywords">Keywords</a></li>
 <li class="doctools_section"><a href="#category">Category</a></li>
 <li class="doctools_section"><a href="#copyright">Copyright</a></li>
@@ -126,14 +127,14 @@
 <div class="doctools_synopsis">
 <ul class="doctools_requirements">
 <li>package require <b class="pkgname">Tcl 8.5</b></li>
-<li>package require <b class="pkgname">ankh <span class="opt">?0.0?</span></b></li>
+<li>package require <b class="pkgname">ankh <span class="opt">?1.0?</span></b></li>
 </ul>
 <ul class="doctools_syntax">
 <li><a href="#1"><b class="cmd">ak hash version</b></a></li>
 <li><a href="#2"><b class="cmd">ak hash list</b></a></li>
-<li><a href="#3"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">channel</b> <i class="arg">channel</i></a></li>
-<li><a href="#4"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">path</b> <i class="arg">path</i></a></li>
-<li><a href="#5"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">string</b> <i class="arg">string</i></a></li>
+<li><a href="#3"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">channel</b> <i class="arg">channel</i> <span class="opt">?<i class="arg">options</i>?</span></a></li>
+<li><a href="#4"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">path</b> <i class="arg">path</i> <span class="opt">?<i class="arg">options</i>?</span></a></li>
+<li><a href="#5"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">string</b> <i class="arg">string</i> <span class="opt">?<i class="arg">options</i>?</span></a></li>
 <li><a href="#6"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">size</b></a></li>
 <li><a href="#7"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">references</b></a></li>
 </ul>
@@ -161,30 +162,68 @@ for hashing data from an in-memory string, an open channel, or a file
 specified by its path in the filesystem.</p>
 <p>The set of supported hashes is described in the following section.</p>
 <dl class="doctools_definitions">
-<dt><a name="3"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">channel</b> <i class="arg">channel</i></a></dt>
+<dt><a name="3"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">channel</b> <i class="arg">channel</i> <span class="opt">?<i class="arg">options</i>?</span></a></dt>
 <dd></dd>
-<dt><a name="4"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">path</b> <i class="arg">path</i></a></dt>
+<dt><a name="4"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">path</b> <i class="arg">path</i> <span class="opt">?<i class="arg">options</i>?</span></a></dt>
 <dd></dd>
-<dt><a name="5"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">string</b> <i class="arg">string</i></a></dt>
+<dt><a name="5"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">string</b> <i class="arg">string</i> <span class="opt">?<i class="arg">options</i>?</span></a></dt>
 <dd><p>These three commands return the <b class="method">HASH</b>-specific digest of the
 data specified by the command arguments.</p>
 <p><em>Attention</em>: Note that this result is binary data, i.e. a
 Tcl ByteArray value. It is the callers responsibility to encode this
 digest into any other required form, like hex-digits, or base64, etc.</p>
-<p>The data to hash is provided either by a <i class="arg">channel</i> opened
-for reading, the <i class="arg">path</i> to a file in the filesystem, or an
-in-memory <i class="arg">string</i> (Again a Tcl ByteArray value).</p></dd>
+<p>The data to hash (the <i class="term">input</i>) is provided either by a
+<i class="arg">channel</i> opened for reading, the <i class="arg">path</i> to a file in the
+filesystem, or an in-memory <i class="arg">string</i> (Again a Tcl ByteArray
+value).</p>
+<p>The <i class="arg">options</i> allow for finer control of the slice of the
+input to be hashed.
+For more details see section <span class="sectref"><a href="#section4">Slice Options</a></span>.</p>
+<p>Notes about <i class="arg">channel</i> handling:</p>
+<ul class="doctools_itemized">
+<li><p>The input starts at the current location of the channel.</p></li>
+<li><p>The channel location is moved forward as part of skipping the
+       offset, and during hashing itself.</p></li>
+<li><p>The channel location is left where it is when hashing
+       ends. This may be after the end of the channel.</p></li>
+<li><p>The channel is <em>not</em> closed by the command.</p></li>
+</ul></dd>
 <dt><a name="6"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">size</b></a></dt>
 <dd><p>This command returns the size of digests generated by the
 <b class="method">HASH</b>, in bytes.</p></dd>
 <dt><a name="7"><b class="cmd">ak hash</b> <b class="method">HASH</b> <b class="cmd">references</b></a></dt>
-<dd><p>This command returns a list of informational data about the
+<dd><p>This command returns a list of informational strings about the
 <b class="method">HASH</b>.</p></dd>
 </dl>
 </div>
-<div id="section4" class="doctools_section"><h2><a name="section4">Supported Hashes</a></h2>
+<div id="section4" class="doctools_section"><h2><a name="section4">Slice Options</a></h2>
+<p>The slice options allow for finer control of the part of the input to
+be hashed.</p>
+<dl class="doctools_options">
+<dt><b class="option">-offset</b> wideint &gt; 0</dt>
+<dd><p>Offset in bytes after the start of the input to start hashing from.
+If the offset indicates a location after the end of the input then the
+<b class="option">-length</b> setting is ignored, and the hash returned is for the
+empty string.</p></dd>
+<dt><b class="option">-length</b> wideint &gt; 0</dt>
+<dd><p>Length in bytes of the part of the input to hash. If offset and length
+indicate a location after the end of the input the hashing terminates
+at the end of the input.</p></dd>
+</dl>
+<p>For string hashing these options are technically superfluous as
+their effect can be had by applying a <b class="cmd">string range</b> to the input
+before handing it to the hash command.</p>
+<p>Similarly for hashing a channel, seeking to the desired
+position makes option <b class="option">-start</b> superfluous.</p>
+<p>Only for hashing a file both are required if we do not wish to
+go through a channel or string at Tcl level.</p>
+<p>They are implemented for all modes for the sake of consistency.</p>
+</div>
+<div id="section5" class="doctools_section"><h2><a name="section5">Supported Hashes</a></h2>
 <p>The package currently supports 18 different hash functions, some
-configured for multiple digest sizes, for a total of 30 commands.</p>
+configured for multiple digest sizes, for 30 base commands. Times the
+3 modes per such and the package publishes a total of 90 hash
+commands.</p>
 <p>Note that many of the hash functions have descriptions at
 <a href="http://rhash.sourceforge.net/hashes.php">RHash @ SourceForge</a>.
 Because of that the descriptions here are even shorter summaries.</p>
@@ -315,7 +354,7 @@ Digests are 512 bits.</p></dd>
 Digests are 512 bits.</p></dd>
 </dl>
 </div>
-<div id="section5" class="doctools_section"><h2><a name="section5">Bugs, Ideas, Feedback</a></h2>
+<div id="section6" class="doctools_section"><h2><a name="section6">Bugs, Ideas, Feedback</a></h2>
 <p>This document, and the package it describes, will undoubtedly contain
 bugs and other problems.
 Please report such at the <a href="https://core.tcl-lang.org/akupries/ankh">Ankh Tracker</a>.

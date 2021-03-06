@@ -3,7 +3,7 @@
 [//000000002]: # (Generated from file 'ankh\.man' by tcllib/doctools with format 'markdown')
 [//000000003]: # (Copyright &copy; 2021 Andreas Kupries)
 [//000000004]: # (Copyright &copy; 2021 Documentation, Andreas Kupries)
-[//000000005]: # (ankh\(n\) 0\.0 doc "Ankh")
+[//000000005]: # (ankh\(n\) 1\.0 doc "Ankh")
 
 <hr> [ <a href="../../../../../../home">Home</a> &#124; <a
 href="../../toc.md">Main Table Of Contents</a> &#124; <a
@@ -26,9 +26,11 @@ ankh \- Ankh \- API
 
   - [Hash commands](#section3)
 
-  - [Supported Hashes](#section4)
+  - [Slice Options](#section4)
 
-  - [Bugs, Ideas, Feedback](#section5)
+  - [Supported Hashes](#section5)
+
+  - [Bugs, Ideas, Feedback](#section6)
 
   - [Keywords](#keywords)
 
@@ -39,13 +41,13 @@ ankh \- Ankh \- API
 # <a name='synopsis'></a>SYNOPSIS
 
 package require Tcl 8\.5  
-package require ankh ?0\.0?  
+package require ankh ?1\.0?  
 
 [__ak hash version__](#1)  
 [__ak hash list__](#2)  
-[__ak hash__ __HASH__ __channel__ *channel*](#3)  
-[__ak hash__ __HASH__ __path__ *path*](#4)  
-[__ak hash__ __HASH__ __string__ *string*](#5)  
+[__ak hash__ __HASH__ __channel__ *channel* ?*options*?](#3)  
+[__ak hash__ __HASH__ __path__ *path* ?*options*?](#4)  
+[__ak hash__ __HASH__ __string__ *string* ?*options*?](#5)  
 [__ak hash__ __HASH__ __size__](#6)  
 [__ak hash__ __HASH__ __references__](#7)  
 
@@ -76,11 +78,11 @@ in the filesystem\.
 
 The set of supported hashes is described in the following section\.
 
-  - <a name='3'></a>__ak hash__ __HASH__ __channel__ *channel*
+  - <a name='3'></a>__ak hash__ __HASH__ __channel__ *channel* ?*options*?
 
-  - <a name='4'></a>__ak hash__ __HASH__ __path__ *path*
+  - <a name='4'></a>__ak hash__ __HASH__ __path__ *path* ?*options*?
 
-  - <a name='5'></a>__ak hash__ __HASH__ __string__ *string*
+  - <a name='5'></a>__ak hash__ __HASH__ __string__ *string* ?*options*?
 
     These three commands return the __HASH__\-specific digest of the data
     specified by the command arguments\.
@@ -89,9 +91,24 @@ The set of supported hashes is described in the following section\.
     value\. It is the callers responsibility to encode this digest into any other
     required form, like hex\-digits, or base64, etc\.
 
-    The data to hash is provided either by a *channel* opened for reading, the
-    *path* to a file in the filesystem, or an in\-memory *string* \(Again a
-    Tcl ByteArray value\)\.
+    The data to hash \(the *input*\) is provided either by a *channel* opened
+    for reading, the *path* to a file in the filesystem, or an in\-memory
+    *string* \(Again a Tcl ByteArray value\)\.
+
+    The *options* allow for finer control of the slice of the input to be
+    hashed\. For more details see section [Slice Options](#section4)\.
+
+    Notes about *channel* handling:
+
+      * The input starts at the current location of the channel\.
+
+      * The channel location is moved forward as part of skipping the offset,
+        and during hashing itself\.
+
+      * The channel location is left where it is when hashing ends\. This may be
+        after the end of the channel\.
+
+      * The channel is *not* closed by the command\.
 
   - <a name='6'></a>__ak hash__ __HASH__ __size__
 
@@ -100,12 +117,42 @@ The set of supported hashes is described in the following section\.
 
   - <a name='7'></a>__ak hash__ __HASH__ __references__
 
-    This command returns a list of informational data about the __HASH__\.
+    This command returns a list of informational strings about the __HASH__\.
 
-# <a name='section4'></a>Supported Hashes
+# <a name='section4'></a>Slice Options
+
+The slice options allow for finer control of the part of the input to be hashed\.
+
+  - __\-offset__ wideint > 0
+
+    Offset in bytes after the start of the input to start hashing from\. If the
+    offset indicates a location after the end of the input then the
+    __\-length__ setting is ignored, and the hash returned is for the empty
+    string\.
+
+  - __\-length__ wideint > 0
+
+    Length in bytes of the part of the input to hash\. If offset and length
+    indicate a location after the end of the input the hashing terminates at the
+    end of the input\.
+
+For string hashing these options are technically superfluous as their effect can
+be had by applying a __string range__ to the input before handing it to the
+hash command\.
+
+Similarly for hashing a channel, seeking to the desired position makes option
+__\-start__ superfluous\.
+
+Only for hashing a file both are required if we do not wish to go through a
+channel or string at Tcl level\.
+
+They are implemented for all modes for the sake of consistency\.
+
+# <a name='section5'></a>Supported Hashes
 
 The package currently supports 18 different hash functions, some configured for
-multiple digest sizes, for a total of 30 commands\.
+multiple digest sizes, for 30 base commands\. Times the 3 modes per such and the
+package publishes a total of 90 hash commands\.
 
 Note that many of the hash functions have descriptions at [RHash @
 SourceForge](http://rhash\.sourceforge\.net/hashes\.php)\. Because of that the
@@ -248,7 +295,7 @@ of the hashes here, it is not true for all\.
     Comes from *NESSIE*\. Adopted by *ISO/IEC 10118\-3:2004*\. Digests are 512
     bits\.
 
-# <a name='section5'></a>Bugs, Ideas, Feedback
+# <a name='section6'></a>Bugs, Ideas, Feedback
 
 This document, and the package it describes, will undoubtedly contain bugs and
 other problems\. Please report such at the [Ankh

@@ -3,7 +3,7 @@
 '\" Copyright (c) 2021 Andreas Kupries
 '\" Copyright (c) 2021 Documentation, Andreas Kupries
 '\"
-.TH "ankh_changes" n 0\&.0 doc "Ankh"
+.TH "ankh_changes" n 1\&.0 doc "Ankh"
 .\" The -*- nroff -*- definitions below are for supplemental macros used
 .\" in Tcl/Tk manual entries.
 .\"
@@ -277,7 +277,7 @@ ankh_changes \- Ankh - License
 .SH SYNOPSIS
 package require \fBTcl  8\&.5\fR
 .sp
-package require \fBankh  ?0\&.0?\fR
+package require \fBankh  ?1\&.0?\fR
 .sp
 .BE
 .SH DESCRIPTION
@@ -286,6 +286,17 @@ IMAGE: logo Ankh Welcome to Ankh, Andreas Kupries' Hashes\&.
 This document provides an overview of the changes \fBAnkh\fR
 underwent from version to version\&.
 .SH CHANGES
+.SS "CHANGES FOR VERSION 1\&.0"
+.PP
+In detail:
+.IP [1]
+This is the first release of \fBAnkh\fR considered to be
+feature complete\&.
+.IP [2]
+All hash commands now accept two options, \fB-offset\fR and
+\fB-length\fR\&. With these the user can control the slice of
+the input to hash\&.
+.PP
 .SS "CHANGES FOR VERSION 0\&.0"
 .PP
 In detail:

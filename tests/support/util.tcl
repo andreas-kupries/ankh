@@ -24,6 +24,14 @@ proc vectors {} {
 	lappend v a*$k [string repeat a $k]
     }
 
+    # slice vectors direct, for comparison to sliced input
+
+    lappend v thefox { the fox}
+    lappend v comes  {here comes the fox}
+    lappend v here   {here comes}
+    lappend v fox    {he fox}
+    lappend v the    { the }
+
     return $v
 }
 

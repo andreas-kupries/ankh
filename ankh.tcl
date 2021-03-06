@@ -69,6 +69,7 @@ critcl::source hashes.tcl
 # # ## ### ##### ######## #############
 ## C/Tcl glue - Command implementations
 
+critcl::source options.tcl
 critcl::source glue.tcl
 
 # # ## ### ##### ######## #############

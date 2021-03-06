@@ -22,6 +22,40 @@ foreach entry [split [string trim [cat [td]/hash.tsv]] \n] {
     dict set r $hash $label r:$entry
 }
 
+proc go {id hash label vector digest {opts {}}} {
+    # ~ ~~ ~~~ ~~~~~ ~~~~~~~~ ~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+    # Arguments: k, hash, label, vector, digest
+
+    set tmp [td]/in.[string map {/ _} $hash].$label
+    write $tmp $vector
+
+    set xlabel $label
+    if {[llength $opts]} { append xlabel "/" [join $opts /] }
+
+    tcltest::test ankh-${hash}-string-${id}-$xlabel "ak hash $hash string, $xlabel" -body {
+	R $hash $label [ak hash $hash string $vector {*}$opts]
+    } -result $digest
+
+    tcltest::test ankh-${hash}-channel-${id}-$xlabel "ak hash $hash channel, $xlabel" -setup {
+	set chan [open $tmp rb]
+    } -body {
+	R $hash $label [ak hash $hash channel $chan {*}$opts]
+    } -cleanup {
+	close $chan
+	unset chan
+    } -result $digest
+
+    tcltest::test ankh-${hash}-path-${id}-$xlabel "ak hash $hash path, $xlabel" -body {
+	R $hash $label [ak hash $hash path $tmp {*}$opts]
+    } -result $digest
+
+    # ~ ~~ ~~~ ~~~~~ ~~~~~~~~ ~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
+
+    file delete $tmp
+    return
+}
+
+
 # # ## ### ##### ######## ############# #####################
 ##
 
@@ -29,16 +63,16 @@ foreach hash [hashes] {
     # - -- --- ----- -------- ------------- ---------------------
 
     tcltest::test ankh-${hash}-string-1.0 "ak hash $hash string, wrong#args" -body {
-	ak hash $hash string STR X
-    } -returnCodes error -result "wrong # args: should be \"ak hash $hash string str\""
+	ak hash $hash string
+    } -returnCodes error -result "wrong # args: should be \"ak hash $hash string str ?args...?\""
 
     tcltest::test ankh-${hash}-channel-1.0 "ak hash $hash channel, wrong#args" -body {
-	ak hash $hash channel CHAN X
-    } -returnCodes error -result "wrong # args: should be \"ak hash $hash channel chan\""
+	ak hash $hash channel
+    } -returnCodes error -result "wrong # args: should be \"ak hash $hash channel chan ?args...?\""
 
     tcltest::test ankh-${hash}-path-1.0 "ak hash $hash path, wrong#args" -body {
-	ak hash $hash path PATH X
-    } -returnCodes error -result "wrong # args: should be \"ak hash $hash path path\""
+	ak hash $hash path
+    } -returnCodes error -result "wrong # args: should be \"ak hash $hash path path ?args...?\""
 
     # - -- --- ----- -------- ------------- ---------------------
     # Fixed set of test vectors collected from the various digests.
@@ -50,37 +84,93 @@ foreach hash [hashes] {
 	} else {
 	    set digest {}
 	}
-	set tmp [td]/in.[string map {/ _} $hash].$label
-	write $tmp $vector
 
-	# ~ ~~ ~~~ ~~~~~ ~~~~~~~~ ~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
-
-	tcltest::test ankh-${hash}-string-2.${k}-$label "ak hash $hash string, $label" -body {
-	    R $hash $label [ak hash $hash string $vector]
-	} -result $digest
-
-	tcltest::test ankh-${hash}-channel-2.${k}-$label "ak hash $hash channel, $label" -setup {
-	    set chan [open $tmp rb]
-	} -body {
-	    R $hash $label [ak hash $hash channel $chan]
-	} -cleanup {
-	    close $chan
-	    unset chan
-	} -result $digest
-
-	tcltest::test ankh-${hash}-path-2.${k}-$label "ak hash $hash path, $label" -body {
-	    R $hash $label [ak hash $hash path $tmp]
-	} -result $digest
-
-	# ~ ~~ ~~~ ~~~~~ ~~~~~~~~ ~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~
-
-	file delete $tmp
+	go 2.$k $hash $label $vector $digest
     }
 
     # - -- --- ----- -------- ------------- ---------------------
+    ## Test handling of -offset, -length options
+    ## Cases:
+    ##  - no options specified => see above
+    ##  - Errors
+    ##      - unknown option
+    ##      - offset < 0, not integer
+    ##      - length < 0, not integer
+    ##      - missing value to last option
+    ##  - Slices
+    ##      - offset alone, beyond end of value
+    ##      - offset alone, mid value
+    ##      - length alone, beyond end of value
+    ##      - length alone, mid value
+    ##      - offset + length, offset beyond end
+    ##      - offset + length, offset mid value, length goes beyond
+    ##      - offset + length, offset mid value, length still mid-value
+
     unset k
+    foreach {options errmsg} {
+	{-bogus X}   {invalid option -bogus, expected -length, or -offset}
+	{-offset -2} {invalid offset value. Expected wideInt >= 0, got -2}
+	{-offset N}  {invalid offset value. Expected wideInt >= 0, got N}
+	{-length -2} {invalid length value. Expected wideInt >= 0, got -2}
+	{-length N}  {invalid length value. Expected wideInt >= 0, got N}
+	{-offset}    {wrong # args: last option without value}
+    } {
+	incr k
+	tcltest::test ankh-${hash}-string-3.${k} "ak hash $hash string, bad $options" -body {
+	    ak hash $hash string XXX {*}$options
+	} -returnCodes error -result $errmsg
+
+	tcltest::test ankh-${hash}-channel-3.${k} "ak hash $hash channel, bad $options" -body {
+	    ak hash $hash channel stdin {*}$options
+	} -returnCodes error -result $errmsg
+
+	tcltest::test ankh-${hash}-path-3.${k} "ak hash $hash path, bad $options" -body {
+	    ak hash $hash path XXX {*}$options
+	} -returnCodes error -result $errmsg
+    }
+
+    unset k
+    set vector     {here comes the fox} ;# label
+    #               0123456789012345678
+    # -o 22       |                    ``  empty
+    # -o 10       |          ` the fox`    thefox
+    # -l 22       |`here comes the fox`    comes
+    # -l 10       |`here comes`            here
+    # -o 22 -l 10 |                    ``  empty
+    # -o 12 -l 10 |            `he fox`    fox
+    # -o 10 -l  5 |          ` the `       the
+
+    # The table above shows what sub-string we expect to be hashed for
+    # the given combination of options. For each substring we have a
+    # label which defines the digest, verified by the `-2.*` checks.
+    # When the option handling is wrong the hash core will see an
+    # unexpected sub-string, generating a different hash not matching
+    # the expected.
+
+    foreach {opts label} {
+	{-offset 22}            empty
+	{-offset 10}            thefox
+	{-length 22}            comes
+	{-length 10}            here
+	{-offset 22 -length 10} empty
+	{-offset 12 -length 10} fox
+	{-offset 10 -length  5} the
+    } {
+	incr k
+	if {[dict exists  $r $hash $label]} {
+	    set digest [dict get $r $hash $label]
+	} else {
+	    set digest {}
+	}
+
+	go 4.$k $hash $label $vector $digest $opts
+    }
+
+    # - -- --- ----- -------- ------------- ---------------------
 }
 
 # # ## ### ##### ######## ############# #####################
+rename go {}
+unset k r hash options label vector digest
 cleanupTests
 return

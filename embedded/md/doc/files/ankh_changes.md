@@ -3,7 +3,7 @@
 [//000000002]: # (Generated from file 'ankh\_changes\.man' by tcllib/doctools with format 'markdown')
 [//000000003]: # (Copyright &copy; 2021 Andreas Kupries)
 [//000000004]: # (Copyright &copy; 2021 Documentation, Andreas Kupries)
-[//000000005]: # (ankh\_changes\(n\) 0\.0 doc "Ankh")
+[//000000005]: # (ankh\_changes\(n\) 1\.0 doc "Ankh")
 
 <hr> [ <a href="../../../../../../home">Home</a> &#124; <a
 href="../../toc.md">Main Table Of Contents</a> &#124; <a
@@ -24,7 +24,9 @@ ankh\_changes \- Ankh \- License
 
   - [Changes](#section2)
 
-      - [Changes for version 0\.0](#subsection1)
+      - [Changes for version 1\.0](#subsection1)
+
+      - [Changes for version 0\.0](#subsection2)
 
   - [Bugs, Ideas, Feedback](#section3)
 
@@ -37,7 +39,7 @@ ankh\_changes \- Ankh \- License
 # <a name='synopsis'></a>SYNOPSIS
 
 package require Tcl 8\.5  
-package require ankh ?0\.0?  
+package require ankh ?1\.0?  
 
 # <a name='description'></a>DESCRIPTION
 
@@ -47,7 +49,18 @@ underwent from version to version\.
 
 # <a name='section2'></a>Changes
 
-## <a name='subsection1'></a>Changes for version 0\.0
+## <a name='subsection1'></a>Changes for version 1\.0
+
+In detail:
+
+  1. This is the first release of __Ankh__ considered to be feature
+     complete\.
+
+  1. All hash commands now accept two options, __\-offset__ and
+     __\-length__\. With these the user can control the slice of the input to
+     hash\.
+
+## <a name='subsection2'></a>Changes for version 0\.0
 
 In detail:
 

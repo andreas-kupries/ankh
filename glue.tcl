@@ -40,6 +40,7 @@ dict for {hash spec} [hashes] {
     # - final   Name of C function to fialize the hash state ito a digest
     # - forder  Code for argument order of final.
 
+    lappend map @@        [string map {/ _} $hash]
     lappend map @init@    $init
     lappend map @update@  $update
     lappend map @final@   $final
@@ -54,62 +55,116 @@ dict for {hash spec} [hashes] {
     critcl::cconst ::ak::hash::${hash}::size       int   $hsize
     critcl::cconst ::ak::hash::${hash}::references char* "\"[lrange $refs 0 end]\""
 
+    # Common channel code for the hash.
+    critcl::ccode [string map $map {
+	static Tcl_Obj* do_chan_@@ (Tcl_Interp* ip, Tcl_Channel chan, _options* opts) {
+	    unsigned char hash [@hsize@];
+	    @context@ context;
+
+	    if (opts->offset > 0) {
+		/* Skip forward in the channel. By comparing the positions before and after
+		 * we determine of we skipped over the end of the channel, or not
+		 */
+		Tcl_WideInt before = Tcl_Tell (chan);
+		Tcl_Seek (chan, opts->offset, SEEK_CUR);
+		Tcl_WideInt after  = Tcl_Tell (chan);
+
+		if (after < (before + opts->offset)) {
+		    /* Beyond eof, treat as empty input */
+		    @init@ (&context);
+		    goto done;
+		}
+	    }
+
+	    @init@ (&context);
+	    if (opts->length == 0) goto done;
+
+	    unsigned char* receiver = Tcl_Alloc (CHUNK_SIZE);
+	    Tcl_SetChannelBufferSize(chan, BUF_SIZE);
+
+	    if (opts->length > 0) {
+		/* Loop limited by end of channel and user-specified maximum */
+		while (!Tcl_Eof (chan) && (opts->length > 0)) {
+		    int toget    = (opts->length < CHUNK_SIZE ? opts->length : CHUNK_SIZE);
+		    int received = Tcl_Read (chan, receiver, toget);
+		    if (!received) continue;
+		    @update@ (&context, receiver, received);
+		    opts->length -= received;
+		}
+	    } else {
+		/* Loop limited only by end of channel */
+		while (!Tcl_Eof (chan)) {
+		    int received = Tcl_Read (chan, receiver, CHUNK_SIZE);
+		    if (!received) continue;
+		    @update@ (&context, receiver, received);
+		}
+	    }
+
+	    Tcl_Free (receiver);
+	    done:
+	    @final@ (@fargs@);
+	    return Tcl_NewByteArrayObj (hash, @hsize@);
+	}
+    }]
+
     # Hash the data in a file.
     critcl::cproc ::ak::hash::${hash}::path {
-	Tcl_Interp* interp
+	Tcl_Interp* ip
 	char*       path
+	object      args
     } object0 [string map $map {
-	unsigned char hash [@hsize@];
-	@context@ context;
+	_options opts;
+	if (TCL_OK != handle_options (&opts, ip, (Tcl_Obj**) args.v, args.c)) { return 0; }
 
-	Tcl_Channel chan = Tcl_OpenFileChannel (interp, path, "rb", 0);
+	Tcl_Channel chan = Tcl_OpenFileChannel (ip, path, "rb", 0);
 	if (chan == NULL) {
 	    return NULL;
 	}
 
-	Tcl_SetChannelBufferSize(chan, BUF_SIZE);
+	Tcl_Obj* r = do_chan_@@ (ip, chan, &opts);
+	Tcl_Close (ip, chan);
 
-	unsigned char* receiver = Tcl_Alloc (CHUNK_SIZE);
-
-	@init@ (&context);
-	while (!Tcl_Eof (chan)) {
-	    int received = Tcl_Read (chan, receiver, CHUNK_SIZE);
-	    if (!received) continue;
-	    @update@ (&context, receiver, received);
-	}
-
-	Tcl_Free (receiver);
-	Tcl_Close (interp, chan);
-
-	@final@ (@fargs@);
-	return Tcl_NewByteArrayObj (hash, @hsize@);
+	return r;
     }]
 
     # Hash the data in a channel, from current position to end of channel
     critcl::cproc ::ak::hash::${hash}::channel {
-	channel chan
+	Tcl_Interp* ip
+	channel     chan
+	object      args
     } object0 [string map $map {
-	unsigned char hash [@hsize@];
-	@context@ context;
-	unsigned char* receiver = Tcl_Alloc (CHUNK_SIZE);
+	_options opts;
+	if (TCL_OK != handle_options (&opts, ip, (Tcl_Obj**) args.v, args.c)) { return 0; }
 
-	Tcl_SetChannelBufferSize(chan, BUF_SIZE);
-
-	@init@ (&context);
-	while (!Tcl_Eof (chan)) {
-	    int received = Tcl_Read (chan, receiver, CHUNK_SIZE);
-	    if (!received) continue;
-	    @update@ (&context, receiver, received);
-	}
-	Tcl_Free (receiver);
-	@final@ (@fargs@);
-	return Tcl_NewByteArrayObj (hash, @hsize@);
+	return do_chan_@@ (ip, chan, &opts);
     }]
 
     # Hash the data in a Tcl ByteArray
     critcl::cproc ::ak::hash::${hash}::string {
-	bytes str
+	Tcl_Interp* ip
+	bytes       str
+	object      args
     } object0 [string map $map {
+	_options opts;
+	if (TCL_OK != handle_options (&opts, ip, (Tcl_Obj**) args.v, args.c)) { return 0; }
+
+	if (opts.offset > 0) {
+	    if (opts.offset > str.len) {
+		/* Hashing behind the end of the string ~~ Hashing of empty string */
+		str.len = 0;
+	    } else {
+		/* Skip forward over the unwanted prefix */
+		str.s   += opts.offset;
+		str.len -= opts.offset;
+	    }
+	}
+	if (opts.length >= 0) {
+	    if (opts.length < str.len) {
+		/* Truncate the unwanted suffix */
+		str.len = opts.length;
+	    }
+	}
+
 	unsigned char hash [@hsize@];
 	@context@ context;
 
