@@ -1,10 +1,16 @@
 
 [comment { - - -- --- ----- -------- ------------- --------------------- }]
 
+[vset logo       [image logo [vset PROJECT]]]
 [vset PROJECT    Ankh]
 [vset PROJECT_lc ankh]
+
 [vset VERSION    1.0]
-[vset logo       [image logo [vset PROJECT]]]
+[comment {
+    See also
+    - tests/version.test
+    - ankh.tcl
+}]
 
 [comment { - - -- --- ----- -------- ------------- --------------------- }]
 

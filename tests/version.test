@@ -5,6 +5,10 @@
 ## - API testing
 #
 ## ak hash version
+#
+# See also
+# - ankh.tcl
+# - doc/include/version.inc
 
 kt check Tcl     8.5
 kt check tcltest 2
@@ -21,7 +25,7 @@ tcltest::test ankh-version-1.0 {ak hash version, wrong#args} -body {
 
 tcltest::test ankh-version-2.0 {ak hash version} -body {
     ak hash version
-} -result {0.0}
+} -result {1.0}
 
 # # ## ### ##### ######## ############# #####################
 cleanupTests

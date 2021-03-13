@@ -9,8 +9,6 @@
 
 package require critcl 3.1 ;# 3.1   : critcl::source
 #                          ;# 3.0.8 : critcl::at::*
-#package require critcl::literals
-#package require critcl::emap
 
 # # ## ### ##### ######## #############
 ## Bail early if the environment is not suitable.
@@ -22,8 +20,11 @@ if {![critcl::compiling]} {
 # # ## ### ##### ######## #############
 ## Introspection, Version
 
-package provide  ankh 0.0
-critcl::cconst ::ak::hash::version char* {"0.0"}
+package provide  ankh 1.0
+critcl::cconst ::ak::hash::version char* {"1.0"}
+# See also
+# - tests/version.test
+# - doc/include/version.inc
 
 # # ## ### ##### ######## #############
 ## Administrivia
@@ -48,13 +49,13 @@ critcl::subject md4 md5 sha1 sha2 sha3 haval ripemd
 
 critcl::tcl 8.5
 
-::critcl::debug symbols memory
+#::critcl::debug symbols memory
 #::critcl::config trace on
 #::critcl::config lines off
 
 package require critcl::cutil
-critcl::cutil::assertions on
-critcl::cutil::tracer     on
+critcl::cutil::assertions off
+critcl::cutil::tracer     off
 critcl::cutil::alloc
 
 critcl::ccode {
