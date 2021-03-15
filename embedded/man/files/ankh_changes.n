@@ -273,7 +273,7 @@ Database Class:	\\fB\\$3\\fR
 ..
 .BS
 .SH NAME
-ankh_changes \- Ankh - License
+ankh_changes \- Ankh - Changes
 .SH SYNOPSIS
 package require \fBTcl  8\&.5\fR
 .sp

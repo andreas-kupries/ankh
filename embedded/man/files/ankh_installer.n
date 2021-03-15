@@ -431,9 +431,9 @@ To install Ankh simply run
 /path/to/tclsh8\&.5 /path/to/ankh/build\&.tcl install
 
 .CE
-where "\fI/path/to/tclsh8\&.5\fR" is the tclsh of your Tcl installation,
-and "\fI/path/to/ankh\fR" the location of the
-Ankh sources on your system\&.
+where "\fI/path/to/tclsh8\&.5\fR" is the tclsh of your Tcl
+installation, and "\fI/path/to/ankh\fR" the location of
+the Ankh sources on your system\&.
 .PP
 This builds all packages and then places them in a directory where the
 \fBtclsh8\&.5\fR will find them\&.

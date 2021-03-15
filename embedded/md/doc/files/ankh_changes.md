@@ -12,7 +12,7 @@ href="../../index.md">Keyword Index</a> ] <hr>
 
 # NAME
 
-ankh\_changes \- Ankh \- License
+ankh\_changes \- Ankh \- Changes
 
 # <a name='toc'></a>Table Of Contents
 

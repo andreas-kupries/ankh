@@ -57,17 +57,17 @@ that the dependencies they talk about are indeed installed.
 To install [vset PROJECT] simply run
 
 [example_begin]
-/path/to/tclsh8.5 /path/to/[vset PROJECT_lc]/build.tcl install
+/path/to/tclsh[vset TCL_version] /path/to/[vset PROJECT_lc]/build.tcl install
 [example_end]
 
-where [file /path/to/tclsh8.5] is the tclsh of your Tcl installation,
-and [file /path/to/[vset PROJECT_lc]] the location of the
-[vset PROJECT] sources on your system.
+where [file /path/to/tclsh[vset TCL_version]] is the tclsh of your Tcl
+installation, and [file /path/to/[vset PROJECT_lc]] the location of
+the [vset PROJECT] sources on your system.
 
 [para]
 
 This builds all packages and then places them in a directory where the
-[cmd tclsh8.5] will find them.
+[cmd tclsh[vset TCL_version]] will find them.
 
 [para]
 
@@ -87,7 +87,7 @@ To get help about the methods of [file build.tcl], and their complete
 syntax, invoke  [file build.tcl] with argument [method help], i.e., like
 
 [example_begin]
-/path/to/tclsh8.5 /path/to/[vset PROJECT_lc]/build.tcl help
+/path/to/tclsh[vset TCL_version] /path/to/[vset PROJECT_lc]/build.tcl help
 [example_end]
 
 [include include/feedback.inc]

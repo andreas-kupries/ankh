@@ -277,7 +277,7 @@ doc
 \fIfiles/ankh\&.n\fR: Ankh - API
 .TP
 \fBankh_changes\fR
-\fIfiles/ankh_changes\&.n\fR: Ankh - License
+\fIfiles/ankh_changes\&.n\fR: Ankh - Changes
 .TP
 \fBankh_devguide\fR
 \fIfiles/ankh_devguide\&.n\fR: Ankh - The Developer's Guide

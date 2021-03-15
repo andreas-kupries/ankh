@@ -1,6 +1,7 @@
 
 [comment { - - -- --- ----- -------- ------------- --------------------- }]
 
+[vset TCL_version 8.5]
 [vset PROJECT    Ankh]
 [vset PROJECT_lc ankh]
 

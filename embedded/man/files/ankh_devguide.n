@@ -317,12 +317,12 @@ in \fIdoctools\fR format\&.
 .TP
 "\fIembedded/\fR"
 This directory contains the documentation converted to regular manpages
-(nroff) and HTML\&.
+(nroff), Markdown, and HTML\&.
 It is called embedded because these files, while derived, are part of the
 fossil repository, i\&.e\&. embedded into it\&. This enables fossil to access
 and display these files when serving the repositories' web interface\&.
 The "Command Reference" link at \fIhttps://core\&.tcl-lang\&.org/akupries/ankh\fR is, for example,
-accessing the generated HTML\&.
+accessing the generated Markdown\&.
 .RE
 .TP
 Package Code, General structure

@@ -95,19 +95,19 @@ commit having the tag, or the last commit on the named branch\.
 As an example, use the links below to retrieve the last commit for tag
 __v1\.0__:
 
-  1. [Core
+  1. [Core v1\.0
      Tarball](https://core\.tcl\-lang\.org/akupries/ankh/tarball/v1\.0/Ankh\.tar\.gz)
 
-  1. [Core Zip
+  1. [Core v1\.0 Zip
      Archive](https://core\.tcl\-lang\.org/akupries/ankh/zip/v1\.0/Ankh\.zip)
 
-  1. [ChiselApp
+  1. [ChiselApp v1\.0
      Tarball](https://chiselapp\.com/user/andreas\_kupries/repository/ankh/tarball/v1\.0/Ankh\.tar\.gz)
 
-  1. [ChiselApp Zip
+  1. [ChiselApp v1\.0 Zip
      Archive](https://chiselapp\.com/user/andreas\_kupries/repository/ankh/zip/v1\.0/Ankh\.zip)
 
-  1. [Github Zip
+  1. [Github v1\.0 Zip
      Archive](https://github\.com/andreas\-kupries/ankh/archive/v1\.0\.zip)
 
 *Beware however* that fossil's __trunk__ branch is called __master__

@@ -325,15 +325,15 @@ the named branch\&.
 As an example, use the links below to retrieve the last commit
 for tag \fBv1\&.0\fR:
 .IP [1]
-\fICore Tarball\fR [https://core\&.tcl-lang\&.org/akupries/ankh/tarball/v1\&.0/Ankh\&.tar\&.gz]
+\fICore v1\&.0 Tarball\fR [https://core\&.tcl-lang\&.org/akupries/ankh/tarball/v1\&.0/Ankh\&.tar\&.gz]
 .IP [2]
-\fICore Zip Archive\fR [https://core\&.tcl-lang\&.org/akupries/ankh/zip/v1\&.0/Ankh\&.zip]
+\fICore v1\&.0 Zip Archive\fR [https://core\&.tcl-lang\&.org/akupries/ankh/zip/v1\&.0/Ankh\&.zip]
 .IP [3]
-\fIChiselApp Tarball\fR [https://chiselapp\&.com/user/andreas_kupries/repository/ankh/tarball/v1\&.0/Ankh\&.tar\&.gz]
+\fIChiselApp v1\&.0 Tarball\fR [https://chiselapp\&.com/user/andreas_kupries/repository/ankh/tarball/v1\&.0/Ankh\&.tar\&.gz]
 .IP [4]
-\fIChiselApp Zip Archive\fR [https://chiselapp\&.com/user/andreas_kupries/repository/ankh/zip/v1\&.0/Ankh\&.zip]
+\fIChiselApp v1\&.0 Zip Archive\fR [https://chiselapp\&.com/user/andreas_kupries/repository/ankh/zip/v1\&.0/Ankh\&.zip]
 .IP [5]
-\fIGithub Zip Archive\fR [https://github\&.com/andreas-kupries/ankh/archive/v1\&.0\&.zip]
+\fIGithub v1\&.0 Zip Archive\fR [https://github\&.com/andreas-kupries/ankh/archive/v1\&.0\&.zip]
 .PP
 .PP
 \fIBeware however\fR that fossil's \fBtrunk\fR branch is

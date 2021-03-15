@@ -76,12 +76,12 @@ management system is used, where to find it, how to set it up, etc\.
       * "embedded/"
 
         This directory contains the documentation converted to regular manpages
-        \(nroff\) and HTML\. It is called embedded because these files, while
-        derived, are part of the fossil repository, i\.e\. embedded into it\. This
-        enables fossil to access and display these files when serving the
+        \(nroff\), Markdown, and HTML\. It is called embedded because these files,
+        while derived, are part of the fossil repository, i\.e\. embedded into it\.
+        This enables fossil to access and display these files when serving the
         repositories' web interface\. The "Command Reference" link at
         [https://core\.tcl\-lang\.org/akupries/ankh](https://core\.tcl\-lang\.org/akupries/ankh)
-        is, for example, accessing the generated HTML\.
+        is, for example, accessing the generated Markdown\.
 
   - Package Code, General structure
 

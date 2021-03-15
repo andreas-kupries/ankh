@@ -5,7 +5,7 @@
 
   - [ankh](doc/files/ankh\.md) Ankh \- API
 
-  - [ankh\_changes](doc/files/ankh\_changes\.md) Ankh \- License
+  - [ankh\_changes](doc/files/ankh\_changes\.md) Ankh \- Changes
 
   - [ankh\_devguide](doc/files/ankh\_devguide\.md) Ankh \- The Developer's Guide
 
