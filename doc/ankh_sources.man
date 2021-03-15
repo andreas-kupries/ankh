@@ -33,11 +33,11 @@ specific revision, the easiest way of retrieving it is to use on of
 the following links:
 
 [list_begin enum]
-[enum]	[uri https://core.tcl-lang.org/akupries/ankh/tarball/trunk/[vset PROJECT].tar.gz {Core Tarball}]
-[enum]	[uri https://core.tcl-lang.org/akupries/ankh/zip/trunk/[vset PROJECT].zip {Core Zip Archive}]
-[enum]	[uri https://chiselapp.com/user/andreas_kupries/repository/ankh/tarball/trunk/[vset PROJECT].tar.gz {ChiselApp Tarball}]
-[enum]	[uri https://chiselapp.com/user/andreas_kupries/repository/ankh/zip/trunk/[vset PROJECT].zip {ChiselApp Zip Archive}]
-[enum]	[uri https://github.com/andreas-kupries/ankh/archive/master.zip {Github Zip Archive}]
+[enum]	[uri [vset project/core/url  ]/tarball/trunk/[vset PROJECT].tar.gz {Core Tarball}]
+[enum]	[uri [vset project/core/url  ]/zip/trunk/[vset PROJECT].zip {Core Zip Archive}]
+[enum]	[uri [vset project/chisel/url]/tarball/trunk/[vset PROJECT].tar.gz {ChiselApp Tarball}]
+[enum]	[uri [vset project/chisel/url]/zip/trunk/[vset PROJECT].zip {ChiselApp Zip Archive}]
+[enum]	[uri [vset project/github/url]/archive/master.zip {Github Zip Archive}]
 [list_end]
 
 [para] To generalize the above, replace [const trunk] in the links
@@ -49,11 +49,11 @@ the named branch.
 for tag [const v1.0]:
 
 [list_begin enum]
-[enum]	[uri https://core.tcl-lang.org/akupries/ankh/tarball/v1.0/[vset PROJECT].tar.gz {Core Tarball}]
-[enum]	[uri https://core.tcl-lang.org/akupries/ankh/zip/v1.0/[vset PROJECT].zip {Core Zip Archive}]
-[enum]	[uri https://chiselapp.com/user/andreas_kupries/repository/ankh/tarball/v1.0/[vset PROJECT].tar.gz {ChiselApp Tarball}]
-[enum]	[uri https://chiselapp.com/user/andreas_kupries/repository/ankh/zip/v1.0/[vset PROJECT].zip {ChiselApp Zip Archive}]
-[enum]	[uri https://github.com/andreas-kupries/ankh/archive/v1.0.zip {Github Zip Archive}]
+[enum]	[uri [vset project/core/url  ]/tarball/v1.0/[vset PROJECT].tar.gz {Core Tarball}]
+[enum]	[uri [vset project/core/url  ]/zip/v1.0/[vset PROJECT].zip {Core Zip Archive}]
+[enum]	[uri [vset project/chisel/url]/tarball/v1.0/[vset PROJECT].tar.gz {ChiselApp Tarball}]
+[enum]	[uri [vset project/chisel/url]/zip/v1.0/[vset PROJECT].zip {ChiselApp Zip Archive}]
+[enum]	[uri [vset project/github/url]/archive/v1.0.zip {Github Zip Archive}]
 [list_end]
 
 [para] [strong {Beware however}] that fossil's [const trunk] branch is

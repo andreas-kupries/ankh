@@ -15,6 +15,10 @@
 
 [comment { - - -- --- ----- -------- ------------- --------------------- }]
 
+[vset project/chisel/url   https://chiselapp.com/user/andreas_kupries/repository/ankh]
+[vset project/core/url     https://core.tcl-lang.org/akupries/ankh]
+[vset project/github/url   https://github.com/andreas-kupries/ankh]
+
 [vset activestate      [uri https://www.activestate.com ActiveState]]
 [vset activetcl        [uri https://www.activestate.com/activetcl ActiveTcl]]
 [vset core/tcl         [uri https://core.tcl-lang.org/tcl]]
@@ -25,9 +29,11 @@
 [vset kettle/core      [uri https://core.tcl-lang.org/akupries/kettle]]
 [vset kettle/github    [uri https://github.com/andreas-kupries/kettle]]
 [vset kettle/iguide    [uri https://core.tcl-lang.org/akupries/kettle/doc/trunk/embedded/md/doc/files/kettle_installer.md]]
-[vset project/chisel   [uri https://chiselapp.com/user/andreas_kupries/repository/ankh]]
-[vset project/core     [uri https://core.tcl-lang.org/akupries/ankh]]
-[vset project/github   [uri https://github.com/andreas-kupries/ankh]]
+
+[vset project/chisel   [uri [vset project/chisel/url]]]
+[vset project/core     [uri [vset project/core/url]]]
+[vset project/github   [uri [vset project/github/url]]]
+
 [vset project/track    [uri https://core.tcl-lang.org/akupries/ankh {Ankh Tracker}]]
 [vset rhash            [uri https://github.com/rhash/RHash RHash]]
 [vset tcllib/core      [uri https://core.tcl-lang.org/tcllib Tcllib]]
