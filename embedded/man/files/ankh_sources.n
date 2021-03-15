@@ -303,19 +303,43 @@ The official repository for Ankh can be found at
 \fIhttps://github\&.com/andreas-kupries/ankh\fR, in case of trouble with the main location\&.
 .SH RETRIEVAL
 Assuming that you simply wish to look at the sources, or build a
-specific revision, the easiest way of retrieving it is to:
+specific revision, the easiest way of retrieving it is to use on of
+the following links:
 .IP [1]
-Log into this site, as "anonymous", using the semi-random password in the captcha\&.
+\fICore Tarball\fR [https://core\&.tcl-lang\&.org/akupries/ankh/tarball/trunk/Ankh\&.tar\&.gz]
 .IP [2]
-Go to the "Timeline"\&.
+\fICore Zip Archive\fR [https://core\&.tcl-lang\&.org/akupries/ankh/zip/trunk/Ankh\&.zip]
 .IP [3]
-Choose the revision you wish to have and
+\fIChiselApp Tarball\fR [https://chiselapp\&.com/user/andreas_kupries/repository/ankh/tarball/trunk/Ankh\&.tar\&.gz]
 .IP [4]
-follow its link to its detailed information page\&.
+\fIChiselApp Zip Archive\fR [https://chiselapp\&.com/user/andreas_kupries/repository/ankh/zip/trunk/Ankh\&.zip]
 .IP [5]
-On that page, choose either the "ZIP" or "Tarball" link to get
-a copy of this revision in the format of your choice\&.
+\fIGithub Zip Archive\fR [https://github\&.com/andreas-kupries/ankh/archive/master\&.zip]
 .PP
+.PP
+To generalize the above, replace \fBtrunk\fR in the links
+above with any commit id, tag or branch name to retrieve an archive
+for that commit, the last commit having the tag, or the last commit on
+the named branch\&.
+.PP
+As an example, use the links below to retrieve the last commit
+for tag \fBv1\&.0\fR:
+.IP [1]
+\fICore Tarball\fR [https://core\&.tcl-lang\&.org/akupries/ankh/tarball/v1\&.0/Ankh\&.tar\&.gz]
+.IP [2]
+\fICore Zip Archive\fR [https://core\&.tcl-lang\&.org/akupries/ankh/zip/v1\&.0/Ankh\&.zip]
+.IP [3]
+\fIChiselApp Tarball\fR [https://chiselapp\&.com/user/andreas_kupries/repository/ankh/tarball/v1\&.0/Ankh\&.tar\&.gz]
+.IP [4]
+\fIChiselApp Zip Archive\fR [https://chiselapp\&.com/user/andreas_kupries/repository/ankh/zip/v1\&.0/Ankh\&.zip]
+.IP [5]
+\fIGithub Zip Archive\fR [https://github\&.com/andreas-kupries/ankh/archive/v1\&.0\&.zip]
+.PP
+.PP
+\fIBeware however\fR that fossil's \fBtrunk\fR branch is
+called \fBmaster\fR in github, and that github commit ids do not
+match fossil commit ids, at all\&. Only tags and the other branch names
+match\&.
 .SH "SOURCE CODE MANAGEMENT"
 For the curious (or a developer-to-be), the sources are managed by the
 \fIFossil SCM\fR [https://www\&.fossil-scm\&.org]\&. Binaries for popular platforms can be found directly at

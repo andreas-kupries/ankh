@@ -29,16 +29,37 @@ The official repository for [vset PROJECT] can be found at
 [section Retrieval]
 
 Assuming that you simply wish to look at the sources, or build a
-specific revision, the easiest way of retrieving it is to:
+specific revision, the easiest way of retrieving it is to use on of
+the following links:
 
 [list_begin enum]
-[enum] Log into this site, as "anonymous", using the semi-random password in the captcha.
-[enum] Go to the "Timeline".
-[enum] Choose the revision you wish to have and
-[enum] follow its link to its detailed information page.
-[enum] On that page, choose either the "ZIP" or "Tarball" link to get
-a copy of this revision in the format of your choice.
+[enum]	[uri https://core.tcl-lang.org/akupries/ankh/tarball/trunk/[vset PROJECT].tar.gz {Core Tarball}]
+[enum]	[uri https://core.tcl-lang.org/akupries/ankh/zip/trunk/[vset PROJECT].zip {Core Zip Archive}]
+[enum]	[uri https://chiselapp.com/user/andreas_kupries/repository/ankh/tarball/trunk/[vset PROJECT].tar.gz {ChiselApp Tarball}]
+[enum]	[uri https://chiselapp.com/user/andreas_kupries/repository/ankh/zip/trunk/[vset PROJECT].zip {ChiselApp Zip Archive}]
+[enum]	[uri https://github.com/andreas-kupries/ankh/archive/master.zip {Github Zip Archive}]
 [list_end]
+
+[para] To generalize the above, replace [const trunk] in the links
+above with any commit id, tag or branch name to retrieve an archive
+for that commit, the last commit having the tag, or the last commit on
+the named branch.
+
+[para] As an example, use the links below to retrieve the last commit
+for tag [const v1.0]:
+
+[list_begin enum]
+[enum]	[uri https://core.tcl-lang.org/akupries/ankh/tarball/v1.0/[vset PROJECT].tar.gz {Core Tarball}]
+[enum]	[uri https://core.tcl-lang.org/akupries/ankh/zip/v1.0/[vset PROJECT].zip {Core Zip Archive}]
+[enum]	[uri https://chiselapp.com/user/andreas_kupries/repository/ankh/tarball/v1.0/[vset PROJECT].tar.gz {ChiselApp Tarball}]
+[enum]	[uri https://chiselapp.com/user/andreas_kupries/repository/ankh/zip/v1.0/[vset PROJECT].zip {ChiselApp Zip Archive}]
+[enum]	[uri https://github.com/andreas-kupries/ankh/archive/v1.0.zip {Github Zip Archive}]
+[list_end]
+
+[para] [strong {Beware however}] that fossil's [const trunk] branch is
+called [const master] in github, and that github commit ids do not
+match fossil commit ids, at all. Only tags and the other branch names
+match.
 
 [section {Source Code Management}]
 

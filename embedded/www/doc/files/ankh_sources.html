@@ -150,15 +150,32 @@ to extend and modify them.</p>
 </div>
 <div id="section3" class="doctools_section"><h2><a name="section3">Retrieval</a></h2>
 <p>Assuming that you simply wish to look at the sources, or build a
-specific revision, the easiest way of retrieving it is to:</p>
+specific revision, the easiest way of retrieving it is to use on of
+the following links:</p>
 <ol class="doctools_enumerated">
-<li><p>Log into this site, as &quot;anonymous&quot;, using the semi-random password in the captcha.</p></li>
-<li><p>Go to the &quot;Timeline&quot;.</p></li>
-<li><p>Choose the revision you wish to have and</p></li>
-<li><p>follow its link to its detailed information page.</p></li>
-<li><p>On that page, choose either the &quot;ZIP&quot; or &quot;Tarball&quot; link to get
-a copy of this revision in the format of your choice.</p></li>
+<li><p><a href="https://core.tcl-lang.org/akupries/ankh/tarball/trunk/Ankh.tar.gz">Core Tarball</a></p></li>
+<li><p><a href="https://core.tcl-lang.org/akupries/ankh/zip/trunk/Ankh.zip">Core Zip Archive</a></p></li>
+<li><p><a href="https://chiselapp.com/user/andreas_kupries/repository/ankh/tarball/trunk/Ankh.tar.gz">ChiselApp Tarball</a></p></li>
+<li><p><a href="https://chiselapp.com/user/andreas_kupries/repository/ankh/zip/trunk/Ankh.zip">ChiselApp Zip Archive</a></p></li>
+<li><p><a href="https://github.com/andreas-kupries/ankh/archive/master.zip">Github Zip Archive</a></p></li>
 </ol>
+<p>To generalize the above, replace <b class="const">trunk</b> in the links
+above with any commit id, tag or branch name to retrieve an archive
+for that commit, the last commit having the tag, or the last commit on
+the named branch.</p>
+<p>As an example, use the links below to retrieve the last commit
+for tag <b class="const">v1.0</b>:</p>
+<ol class="doctools_enumerated">
+<li><p><a href="https://core.tcl-lang.org/akupries/ankh/tarball/v1.0/Ankh.tar.gz">Core Tarball</a></p></li>
+<li><p><a href="https://core.tcl-lang.org/akupries/ankh/zip/v1.0/Ankh.zip">Core Zip Archive</a></p></li>
+<li><p><a href="https://chiselapp.com/user/andreas_kupries/repository/ankh/tarball/v1.0/Ankh.tar.gz">ChiselApp Tarball</a></p></li>
+<li><p><a href="https://chiselapp.com/user/andreas_kupries/repository/ankh/zip/v1.0/Ankh.zip">ChiselApp Zip Archive</a></p></li>
+<li><p><a href="https://github.com/andreas-kupries/ankh/archive/v1.0.zip">Github Zip Archive</a></p></li>
+</ol>
+<p><em>Beware however</em> that fossil's <b class="const">trunk</b> branch is
+called <b class="const">master</b> in github, and that github commit ids do not
+match fossil commit ids, at all. Only tags and the other branch names
+match.</p>
 </div>
 <div id="section4" class="doctools_section"><h2><a name="section4">Source Code Management</a></h2>
 <p>For the curious (or a developer-to-be), the sources are managed by the
