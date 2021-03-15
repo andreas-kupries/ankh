@@ -9,7 +9,7 @@ secure hashes of varying new-ness and strength.
 
 # Ticket tracking
 
-Your are reading this document from either of the two fossil
+You are reading this document from either of the two fossil
 repositories for the project, i.e.
 
   - [Primary repository](http://core.tcl-lang.org/akupries/ankh)
