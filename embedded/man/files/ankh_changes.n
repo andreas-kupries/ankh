@@ -1,7 +1,7 @@
 '\"
 '\" Generated from file 'ankh_changes\&.man' by tcllib/doctools with format 'nroff'
-'\" Copyright (c) 2021 Andreas Kupries
-'\" Copyright (c) 2021 Documentation, Andreas Kupries
+'\" Copyright (c) 2021-2024 Andreas Kupries
+'\" Copyright (c) 2021-2024 Documentation, Andreas Kupries
 '\"
 .TH "ankh_changes" n 1\&.0 doc "Ankh"
 .\" The -*- nroff -*- definitions below are for supplemental macros used
@@ -275,9 +275,9 @@ Database Class:	\\fB\\$3\\fR
 .SH NAME
 ankh_changes \- Ankh - Changes
 .SH SYNOPSIS
-package require \fBTcl  8\&.5\fR
+package require \fBTcl 8\&.6 9\fR
 .sp
-package require \fBankh  ?1\&.0?\fR
+package require \fBankh ?1\&.0?\fR
 .sp
 .BE
 .SH DESCRIPTION
@@ -286,6 +286,18 @@ IMAGE: logo Ankh Welcome to Ankh, Andreas Kupries' Hashes\&.
 This document provides an overview of the changes \fBAnkh\fR
 underwent from version to version\&.
 .SH CHANGES
+.SS "CHANGES FOR VERSION 1\&.1"
+.PP
+In detail:
+.IP [1]
+Bumped minimum version of Tcl required to use the package to 8\&.6\&.
+.IP [2]
+Reworked to be \fIusable with Tcl 9\fR, while keeping ability to build against 8\&.6\&.
+.IP [3]
+Added references to the RHash project, as the origin of the majority of the hash implementations\&.
+.IP [4]
+Various small fixes (Mismatched, out-of-date version numbers, build configuration, doc typos, \&.\&.\&.)\&.
+.PP
 .SS "CHANGES FOR VERSION 1\&.0"
 .PP
 In detail:
@@ -328,7 +340,7 @@ aich, bittorrent info hash, blake, btih, cryptographically secure hashes, ed2k, 
 cryptographically secure hashes
 .SH COPYRIGHT
 .nf
-Copyright (c) 2021 Andreas Kupries
-Copyright (c) 2021 Documentation, Andreas Kupries
+Copyright (c) 2021-2024 Andreas Kupries
+Copyright (c) 2021-2024 Documentation, Andreas Kupries
 
 .fi

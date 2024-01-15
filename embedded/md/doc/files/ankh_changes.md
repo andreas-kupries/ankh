@@ -1,8 +1,8 @@
 
 [//000000001]: # (ankh\_changes \- Ankh)
 [//000000002]: # (Generated from file 'ankh\_changes\.man' by tcllib/doctools with format 'markdown')
-[//000000003]: # (Copyright &copy; 2021 Andreas Kupries)
-[//000000004]: # (Copyright &copy; 2021 Documentation, Andreas Kupries)
+[//000000003]: # (Copyright &copy; 2021\-2024 Andreas Kupries)
+[//000000004]: # (Copyright &copy; 2021\-2024 Documentation, Andreas Kupries)
 [//000000005]: # (ankh\_changes\(n\) 1\.0 doc "Ankh")
 
 <hr> [ <a href="../../../../../../home">Home</a> &#124; <a
@@ -24,9 +24,11 @@ ankh\_changes \- Ankh \- Changes
 
   - [Changes](#section2)
 
-      - [Changes for version 1\.0](#subsection1)
+      - [Changes for version 1\.1](#subsection1)
 
-      - [Changes for version 0\.0](#subsection2)
+      - [Changes for version 1\.0](#subsection2)
+
+      - [Changes for version 0\.0](#subsection3)
 
   - [Bugs, Ideas, Feedback](#section3)
 
@@ -38,7 +40,7 @@ ankh\_changes \- Ankh \- Changes
 
 # <a name='synopsis'></a>SYNOPSIS
 
-package require Tcl 8\.5  
+package require Tcl 8\.6 9  
 package require ankh ?1\.0?  
 
 # <a name='description'></a>DESCRIPTION
@@ -49,7 +51,22 @@ underwent from version to version\.
 
 # <a name='section2'></a>Changes
 
-## <a name='subsection1'></a>Changes for version 1\.0
+## <a name='subsection1'></a>Changes for version 1\.1
+
+In detail:
+
+  1. Bumped minimum version of Tcl required to use the package to 8\.6\.
+
+  1. Reworked to be *usable with Tcl 9*, while keeping ability to build
+     against 8\.6\.
+
+  1. Added references to the RHash project, as the origin of the majority of the
+     hash implementations\.
+
+  1. Various small fixes \(Mismatched, out\-of\-date version numbers, build
+     configuration, doc typos, \.\.\.\)\.
+
+## <a name='subsection2'></a>Changes for version 1\.0
 
 In detail:
 
@@ -60,7 +77,7 @@ In detail:
      __\-length__\. With these the user can control the slice of the input to
      hash\.
 
-## <a name='subsection2'></a>Changes for version 0\.0
+## <a name='subsection3'></a>Changes for version 0\.0
 
 In detail:
 
@@ -109,5 +126,5 @@ cryptographically secure hashes
 
 # <a name='copyright'></a>COPYRIGHT
 
-Copyright &copy; 2021 Andreas Kupries  
-Copyright &copy; 2021 Documentation, Andreas Kupries
+Copyright &copy; 2021\-2024 Andreas Kupries  
+Copyright &copy; 2021\-2024 Documentation, Andreas Kupries

@@ -1,7 +1,7 @@
 '\"
 '\" Generated from file 'ankh_license\&.man' by tcllib/doctools with format 'nroff'
-'\" Copyright (c) 2021 Andreas Kupries
-'\" Copyright (c) 2021 Documentation, Andreas Kupries
+'\" Copyright (c) 2021-2024 Andreas Kupries
+'\" Copyright (c) 2021-2024 Documentation, Andreas Kupries
 '\"
 .TH "ankh_license" n 1\&.0 doc "Ankh"
 .\" The -*- nroff -*- definitions below are for supplemental macros used
@@ -275,9 +275,9 @@ Database Class:	\\fB\\$3\\fR
 .SH NAME
 ankh_license \- Ankh - License
 .SH SYNOPSIS
-package require \fBTcl  8\&.5\fR
+package require \fBTcl 8\&.6 9\fR
 .sp
-package require \fBankh  ?1\&.0?\fR
+package require \fBankh ?1\&.0?\fR
 .sp
 .BE
 .SH DESCRIPTION
@@ -337,7 +337,7 @@ aich, bittorrent info hash, blake, btih, cryptographically secure hashes, ed2k, 
 cryptographically secure hashes
 .SH COPYRIGHT
 .nf
-Copyright (c) 2021 Andreas Kupries
-Copyright (c) 2021 Documentation, Andreas Kupries
+Copyright (c) 2021-2024 Andreas Kupries
+Copyright (c) 2021-2024 Documentation, Andreas Kupries
 
 .fi

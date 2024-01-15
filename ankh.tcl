@@ -1,7 +1,7 @@
 # -*- tcl -*-
 # Ankh - ANdreas Kupries Hashes
 #
-# (c) 2021 Andreas Kupries http://wiki.tcl.tk/andreas%20kupries
+# (c) 2021,2924 Andreas Kupries http://wiki.tcl.tk/andreas%20kupries
 #
 
 # # ## ### ##### ######## #############
@@ -20,8 +20,8 @@ if {![critcl::compiling]} {
 # # ## ### ##### ######## #############
 ## Introspection, Version
 
-package provide  ankh 1.0
-critcl::cconst ::ak::hash::version char* {"1.0"}
+package provide  ankh 1.1
+critcl::cconst ::ak::hash::version char* {"1.1"}
 # See also
 # - tests/version.test
 # - doc/include/version.inc
@@ -47,7 +47,7 @@ critcl::subject md4 md5 sha1 sha2 sha3 haval ripemd
 # # ## ### ##### ######## #############
 ## Implementation.
 
-critcl::tcl 8.5
+## critcl::tcl --- 8.6 or 9, dependent on `package provide Tcl`.
 
 #::critcl::debug symbols memory
 #::critcl::config trace on

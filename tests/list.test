@@ -1,12 +1,12 @@
 # -*- tcl -*- tcl.tk//DSL tcltest//EN//2.0
-## (c) 2021 Andreas Kupries
+## (c) 2021-2024 Andreas Kupries
 # # ## ### ##### ######## ############# #####################
 ## Ankh testsuite
 ## - API testing
 #
 ## ak hash list
 
-kt check Tcl     8.5
+kt check Tcl     8.6 9
 kt check tcltest 2
 
 kt local testing ankh

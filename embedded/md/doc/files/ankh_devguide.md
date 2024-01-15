@@ -1,8 +1,8 @@
 
 [//000000001]: # (ankh\_devguide \- Ankh)
 [//000000002]: # (Generated from file 'ankh\_devguide\.man' by tcllib/doctools with format 'markdown')
-[//000000003]: # (Copyright &copy; 2021 Andreas Kupries)
-[//000000004]: # (Copyright &copy; 2021 Documentation, Andreas Kupries)
+[//000000003]: # (Copyright &copy; 2021\-2024 Andreas Kupries)
+[//000000004]: # (Copyright &copy; 2021\-2024 Documentation, Andreas Kupries)
 [//000000005]: # (ankh\_devguide\(n\) 1\.0 doc "Ankh")
 
 <hr> [ <a href="../../../../../../home">Home</a> &#124; <a
@@ -36,7 +36,7 @@ ankh\_devguide \- Ankh \- The Developer's Guide
 
 # <a name='synopsis'></a>SYNOPSIS
 
-package require Tcl 8\.5  
+package require Tcl 8\.6 9  
 package require ankh ?1\.0?  
 
 # <a name='description'></a>DESCRIPTION
@@ -168,5 +168,5 @@ cryptographically secure hashes
 
 # <a name='copyright'></a>COPYRIGHT
 
-Copyright &copy; 2021 Andreas Kupries  
-Copyright &copy; 2021 Documentation, Andreas Kupries
+Copyright &copy; 2021\-2024 Andreas Kupries  
+Copyright &copy; 2021\-2024 Documentation, Andreas Kupries

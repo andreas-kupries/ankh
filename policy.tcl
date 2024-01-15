@@ -1,6 +1,6 @@
 # -*- tcl -*-
 ## Ankh - Andreas Kupries Hashes
-## (c) 2021 Andreas Kupries http://wiki.tcl.tk/andreas%20kupries
+## (c) 2021-2024 Andreas Kupries http://wiki.tcl.tk/andreas%20kupries
 
 # Generate the public ensemble structure from the low-level hash commands.
 
