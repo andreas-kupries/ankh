@@ -80,13 +80,13 @@ dict for {hash spec} [hashes] {
 	    if (opts->length == 0) goto done;
 
 	    unsigned char* receiver = Tcl_Alloc (CHUNK_SIZE);
-	    Tcl_SetChannelBufferSize(chan, BUF_SIZE);
+	    Tcl_SetChannelBufferSize(chan, BUF_SIZE); /* OK tcl9 */
 
 	    if (opts->length > 0) {
 		/* Loop limited by end of channel and user-specified maximum */
 		while (!Tcl_Eof (chan) && (opts->length > 0)) {
-		    int toget    = (opts->length < CHUNK_SIZE ? opts->length : CHUNK_SIZE);
-		    int received = Tcl_Read (chan, receiver, toget);
+		    Tcl_Size toget    = (opts->length < CHUNK_SIZE ? opts->length : CHUNK_SIZE);
+		    Tcl_Size received = Tcl_Read (chan, receiver, toget); /* OK tcl9 */
 		    if (!received) continue;
 		    @update@ (&context, receiver, received);
 		    opts->length -= received;
@@ -94,7 +94,7 @@ dict for {hash spec} [hashes] {
 	    } else {
 		/* Loop limited only by end of channel */
 		while (!Tcl_Eof (chan)) {
-		    int received = Tcl_Read (chan, receiver, CHUNK_SIZE);
+		    Tcl_Size received = Tcl_Read (chan, receiver, CHUNK_SIZE); /* OK tcl9 */
 		    if (!received) continue;
 		    @update@ (&context, receiver, received);
 		}
@@ -103,7 +103,7 @@ dict for {hash spec} [hashes] {
 	    Tcl_Free (receiver);
 	    done:
 	    @final@ (@fargs@);
-	    return Tcl_NewByteArrayObj (hash, @hsize@);
+	    return Tcl_NewByteArrayObj (hash, @hsize@); /* OK tcl9 */
 	}
     }]
 
@@ -171,7 +171,7 @@ dict for {hash spec} [hashes] {
 	@init@   (&context);
 	@update@ (&context, str.s, str.len);
 	@final@  (@fargs@);
-	return Tcl_NewByteArrayObj (hash, @hsize@);
+	return Tcl_NewByteArrayObj (hash, @hsize@); /* OK tcl9 */
     }]
 
     set map {}

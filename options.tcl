@@ -28,7 +28,7 @@ critcl::ccode {
 	options->offset = -1;
 	options->length = -1;
 	if ((objc % 2) == 1) {
-            Tcl_SetObjResult(ip, Tcl_NewStringObj("wrong # args: last option without value", -1));
+            Tcl_SetObjResult(ip, Tcl_NewStringObj("wrong # args: last option without value", -1)); /* OK tcl9 */
             EC ("WRONG#ARGS", "NO LAST VALUE");
 	    return TCL_ERROR;
 	}
